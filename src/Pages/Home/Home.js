@@ -4,9 +4,10 @@ import Faq from './Faq';
 import Review from './Review';
 const Home = () => {
     return (
-        <div>
+        <div className='m-5'>
                    
             <Banner></Banner>
+            <Review></Review>
             <Faq></Faq>
         </div>
     );
