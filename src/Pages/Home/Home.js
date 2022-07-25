@@ -5,7 +5,7 @@ import Hired from './Hired';
 import Review from './Review';
 const Home = () => {
     return (
-        <div className='m-5'>
+        <div className='m-8'>
                    
             <Banner></Banner>
             <Hired></Hired>
