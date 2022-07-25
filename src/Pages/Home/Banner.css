@@ -1,0 +1,15 @@
+
+.Banner{
+    background: url(/src/assets/images/202978.webp);
+    border-radius: 10px;
+
+}
+.Banner_button{
+   background-color: rgb(5, 5, 74);
+  
+}
+.Banner_button:hover{
+    background-color: wheat;
+    color: black;
+    border: 1px solid rgb(15, 15, 15);
+}

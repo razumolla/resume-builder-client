@@ -1,8 +1,9 @@
 import React from 'react';
+import  '../Home/Banner.css';
 
 const Banner = () => {
     return (
-        <div className='Banner mt-10'>
+        <div className='Banner mt-10 m-10'>
         <div className="  sm:bg-base-0">
             <div className="hero-content flex-col lg:flex-row-reverse gap-4 m-auto ">
                 <div className='m-20 '>
