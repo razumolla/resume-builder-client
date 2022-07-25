@@ -1,5 +1,6 @@
 import React from 'react';
 import  '../Home/Banner.css';
+import 'animate.css';
 
 const Banner = () => {
     return (
