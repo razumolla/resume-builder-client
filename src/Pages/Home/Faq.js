@@ -1,12 +1,11 @@
 import React from 'react';
-import { HiOutlineChevronDown } from "react-icons/hi";
-import FAQ from '../Assets/Images/FAQ.png';
+import FAQ from '../../assets/images/FAQ.png';
 
 
 const Faq = () => {
     return (
         <div className='my-16'>
-            <h2 className='text-3xl text-center font-semibold text-gray-500'>Frequently Asked Questions</h2>
+            <h2 className='text-3xl text-center font-semibold text-fuchsia-500'>Frequently Asked Questions</h2>
             <div class="hero bg-base-200">
                 <div class="hero-content flex-col lg:flex-row-reverse gap-20">
                     <img src={FAQ} class="max-w-sm" />
@@ -21,7 +20,7 @@ const Faq = () => {
                             </div>
 
                             <div className='absolute top-3 right-3 text-white transition-transform duration-500 rotate-0 peer-checked:rotate-180'>
-                                <HiOutlineChevronDown />
+
                             </div>
 
                             <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40'>
@@ -41,7 +40,7 @@ const Faq = () => {
                             </div>
 
                             <div className='absolute top-3 right-3 text-white transition-transform duration-500 rotate-0 peer-checked:rotate-180'>
-                                <HiOutlineChevronDown />
+
                             </div>
 
                             <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40'>
@@ -61,7 +60,7 @@ const Faq = () => {
                             </div>
 
                             <div className='absolute top-3 right-3 text-white transition-transform duration-500 rotate-0 peer-checked:rotate-180'>
-                                <HiOutlineChevronDown />
+
                             </div>
 
                             <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40'>
@@ -80,7 +79,7 @@ const Faq = () => {
                             </div>
 
                             <div className='absolute top-3 right-3 text-white transition-transform duration-500 rotate-0 peer-checked:rotate-180'>
-                                <HiOutlineChevronDown />
+
                             </div>
 
                             <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40'>
