@@ -1,10 +1,16 @@
 import React from 'react';
-
+import Banner from '../Home/Banner'
+import Faq from './Faq';
+import Hired from './Hired';
+import Review from './Review';
 const Home = () => {
     return (
-        <div>
-            <h1 className='text-3xl'> This is Home page. Ok Daisy UI done.ok done</h1>
-            <h2>ok</h2>
+        <div className='m-5'>
+                   
+            <Banner></Banner>
+            <Hired></Hired>
+            <Review></Review>
+            <Faq></Faq>
         </div>
     );
 };
