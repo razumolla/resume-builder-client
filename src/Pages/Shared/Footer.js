@@ -4,6 +4,7 @@ const Footer = () => {
     return (
         <div>
             <p>This is Footer</p>
+            <h4>this is new footer</h4>
         </div>
     );
 };
