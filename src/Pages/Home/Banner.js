@@ -1,5 +1,5 @@
 import React from 'react';
-import  '../Home/Banner.css';
+import '../Home/Banner.css';
 import 'animate.css';
 
 const Banner = () => {
@@ -17,7 +17,8 @@ const Banner = () => {
                 </div>
             </div>
         </div>
-    </div>
+  </div>
+
     );
 };
 

@@ -13,12 +13,12 @@ const CoverLetterTemp = () => {
     return (
         <div>
             <div>
-                <h1 className='text-4xl font-bold mt-10 mb-10'>Choose Cover Letter Template</h1>
+                <h1 className='text-4xl font-bold mt-10 mb-10'>Select Cover Letter Template</h1>
             </div>
               <div class="  bg-gray-400  shadow-xl p-2 m-3 rounded-md">
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
                 <div>
-                    <figure><img className='TemplateImage rounded-md' src={CoverLetterTemplate_1} alt="Shoes" /></figure>
+                    <figure><img className='TemplateImage  rounded-md' src={CoverLetterTemplate_1} alt="Shoes" /></figure>
                 </div>
                 <div>
                     <figure><img className='TemplateImage rounded-md' src={CoverLetterTemplate_2} alt="Shoes" /></figure>
