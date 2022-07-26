@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.png";
+import logo from "../../assets/images/imgMehedi/logo.png";
 
 const Navbar = () => {
     const menuItems = <>
@@ -25,7 +25,7 @@ const Navbar = () => {
 
                 <img src={logo} class="max-w-sm  rounded-full  w-12 lg:w-16" />
 
-                <a class="btn btn-ghost normal-case text-xl text-primary">Resume Creator</a>
+                {/* <a class="btn btn-ghost normal-case text-xl text-primary">Resume Creator</a> */}
 
             </div>
 

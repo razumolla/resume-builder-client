@@ -1,9 +1,18 @@
 import React from 'react';
-
+import Banner from '../Home/Banner'
+import Benefits from './Benefits';
+import Faq from './Faq';
+import Hired from './Hired';
+import Review from './Review';
 const Home = () => {
     return (
-        <div>
-            <h1 className='text-3xl'> This is Home page. Ok Daisy UI done</h1>
+        <div className='m-5'>
+                   
+            <Banner></Banner>
+            <Benefits></Benefits>
+            <Hired></Hired>
+            <Review></Review>
+            <Faq></Faq>
         </div>
     );
 };
