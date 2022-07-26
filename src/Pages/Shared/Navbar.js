@@ -3,14 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/imgMehedi/logo.png";
 
 const Navbar = () => {
-    const menuItems = 
-    <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/resume">Resume Template</Link></li>
-        <li className=' font-bold text-secondary '><NavLink to="/coverLetter">Cover Letter Template</NavLink></li>
-        <li><Link to="/cv">CV Template</Link></li>
-        <li><Link to="/signUp"></Link></li>
-    </>
+    const menuItems =
+        <>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/resume">Resume Template</Link></li>
+            <li><Link to="/cv">CV Template</Link></li>
+            <li className=' font-bold text-secondary '><NavLink to="/coverLetter">Cover Letter Template</NavLink></li>
+            <li><Link to="/signUp"></Link></li>
+        </>
 
     return (
         <div class="navbar bg-base-100">
