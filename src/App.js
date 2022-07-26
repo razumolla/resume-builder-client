@@ -8,6 +8,7 @@ import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
+import Resume from './Pages/Resume/Resume';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/resume" element={<Resume />} ></Route>
         <Route path='/cv' element={<Templates></Templates>}></Route>
         <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
