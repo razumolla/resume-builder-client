@@ -1,29 +1,29 @@
 .contact-form {
-  padding: 0 3rem 0 3rem;
   display: flex;
   height: 50vh;
   margin-top: 4rem;
-  justify-content: center;
+ justify-content:space-evenly;
+ 
   padding-top: 2rem;
 }
 .awesome > span:nth-child(1) {
   color: rgb(87, 240, 227);
   font-size: 2.9rem;
   font-weight: 700;
-  margin-left: 3rem;
+  margin-left: 5rem;
 }
 .awesome > span:nth-child(3) {
   color: rgb(26, 22, 22);
   font-size: 2.2rem;
   font-weight: 600;
-  margin-left: 3rem;
+  margin-left: 5rem;
 }
 
 .c-right {
   display: flex;
   justify-content: center;
   position: relative;
-  flex: 1;
+
 }
 
 .c-right > form {
@@ -34,7 +34,7 @@
 }
 
 .c-right .useri {
-  width: 20rem;
+  width: 25rem;
   height: 2rem;
   padding: 0.3em;
   outline: none;
@@ -44,7 +44,7 @@
 }
 
 textarea {
-  width: 20rem !important;
+  width: 25rem !important;
   min-height: 4rem;
 }
 
@@ -72,6 +72,7 @@ textarea {
   font-weight: 500;
   justify-content: center;
   line-height: 1.3em;
+  
   max-width: 100%;
   min-width: 140px;
   padding:13px;
