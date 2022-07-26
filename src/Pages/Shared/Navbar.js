@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/imgMehedi/logo.png";
 
 const Navbar = () => {
-    const menuItems = <>
+    const menuItems = 
+    <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/resume">Resume Template</Link></li>
+        <li className=' font-bold text-secondary '><NavLink to="/coverLetter">Cover Letter Template</NavLink></li>
         <li><Link to="/cv">CV Template</Link></li>
         <li><Link to="/signUp"></Link></li>
     </>
@@ -37,19 +39,23 @@ const Navbar = () => {
 
             <div class="navbar-end px-5">
 
-                <ul>
+                <ul class="flex">
+
                     <li>
                         {
-                            
+
                             <Link to="/signup" className="text-secondary font-bold btn btn-ghost ">SignUp</Link>
                         }
                     </li>
+
                     <li>
                         {
-                            
+
                             <Link to="/login" className="text-secondary font-bold btn btn-ghost ">Login</Link>
                         }
                     </li>
+
+
                 </ul>
 
             </div>
