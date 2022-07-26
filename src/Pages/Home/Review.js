@@ -8,13 +8,7 @@ const Review = () => {
     return (
         <div>
             <h1 className='text-2xl text-center font-bold text-fuchsia-500 '>Reviews</h1>
-            <div class="rating">
-                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" checked />
-                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-            </div>
+           
 
 
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 my-5 gap-5'>
