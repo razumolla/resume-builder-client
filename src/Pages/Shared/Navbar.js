@@ -39,19 +39,23 @@ const Navbar = () => {
 
             <div class="navbar-end px-5">
 
-                <ul>
+                <ul class="flex">
+
                     <li>
                         {
 
                             <Link to="/signup" className="text-secondary font-bold btn btn-ghost ">SignUp</Link>
                         }
                     </li>
+
                     <li>
                         {
 
                             <Link to="/login" className="text-secondary font-bold btn btn-ghost ">Login</Link>
                         }
                     </li>
+
+
                 </ul>
 
             </div>
