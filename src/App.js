@@ -5,7 +5,11 @@ import Footer from './Pages/Shared/Footer';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
+<<<<<<< HEAD
+import CoverLetter from './Pages/CoverLetter/CoverLetter';
+=======
 import Resume from './Pages/Home/Resume';
+>>>>>>> 5cdc5af02c3350c5120e6b49ad531baa1e019bf7
 
 function App() {
   return (
@@ -14,7 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+<<<<<<< HEAD
+        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+=======
         <Route path="resume" element={<Resume></Resume>}></Route>
+>>>>>>> 5cdc5af02c3350c5120e6b49ad531baa1e019bf7
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
 
