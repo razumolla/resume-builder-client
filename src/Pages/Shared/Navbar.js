@@ -3,14 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/imgMehedi/logo.png";
 
 const Navbar = () => {
-    const menuItems = 
-    <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/resume">Resume Template</Link></li>
-        <li className=' font-bold text-secondary '><NavLink to="/coverLetter">Cover Letter Template</NavLink></li>
-        <li><Link to="/cv">CV Template</Link></li>
-        <li><Link to="/signUp"></Link></li>
-    </>
+    const menuItems =
+        <>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/resume">Resume</NavLink></li>
+            <li><NavLink to="/cv">CV</NavLink></li>
+            <li><NavLink to="/coverLetter">Cover Letter</NavLink></li>
+
+        </>
 
     return (
         <div class="navbar bg-base-100">
@@ -27,7 +27,6 @@ const Navbar = () => {
 
                 <img src={logo} class="max-w-sm  rounded-full  w-12 lg:w-16" />
 
-                {/* <a class="btn btn-ghost normal-case text-xl text-primary">Resume Creator</a> */}
 
             </div>
 
