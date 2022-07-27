@@ -19,12 +19,12 @@ export default function Contact() {
       e.target.reset();
   };
   return(
-     <div className="contact-form bg-indigo-100" id="contact">
+     <div className="contact-form bg-indigo-100 shadow-2xl opacity-85 " id="contact">
   
     <div className="w-left">
       <div className="awesome">
        
-        <span>Get in Touch</span> <br />
+        <span >Get in Touch</span> <br />
         <span>Contact Us</span>
         <div
           className="blur s-blur"
