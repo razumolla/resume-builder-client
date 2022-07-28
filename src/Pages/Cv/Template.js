@@ -9,7 +9,7 @@ const Template = ({ template }) => {
             <div class="container animate__animated  animate__lightSpeedInLeft">
                 <img src={image} alt="" className='w-3/4 ' />
                 <figcaption>
-                    <h3 className="btn btn-primary">{name}</h3>
+                    <h3 className="btn btn-primary">Create Now</h3>
                 </figcaption>
                 <Link to="/cv/form"></Link>
             </div>
