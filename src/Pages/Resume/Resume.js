@@ -12,9 +12,6 @@ const Resume = () => {
 
             <ResumeBanner></ResumeBanner>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 justify-items-center mb-10 p-10'>
-
-
-
                 <div class="container">
                     <img src={Resume1} alt="" className='w-3/4' />
                     <figcaption>
@@ -38,15 +35,6 @@ const Resume = () => {
                     </figcaption>
                     <Link to=""></Link>
                 </div>
-
-
-
-
-
-
-
-
-
             </div >
 
         </>

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div className='Login'>
-            <h1 className='pt-10 font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>WELCOME TO LOGIN</h1>
+        <div className='Login mt-10'>
+            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>WELCOME TO LOGIN</h1>
             <div className='flex h-screen justify-center items-center '>
                
                 <div class="card w-96 bg-white  shadow-xl">
