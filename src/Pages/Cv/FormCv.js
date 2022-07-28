@@ -2,7 +2,7 @@ import React from 'react';
 
 const FormCv = () => {
     return (
-        <div>
+        <div className='mt-20'>
             <div className="card w-96 bg-base-100 shadow-2xl mx-auto my-10">
                 <div className="card-body">
                     <h2 className="card-title">Give Your Information Here...</h2>
