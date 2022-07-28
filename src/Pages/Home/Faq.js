@@ -6,9 +6,9 @@ const Faq = () => {
     return (
         <div className='my-16'>
             <h2 className='text-3xl text-center font-semibold text-fuchsia-500'>Frequently Asked Questions</h2>
-            <div class="hero bg-base-100">
-                <div class="hero-content flex-col lg:flex-row-reverse gap-20">
-                    <img src={FAQ} class="max-w-sm" />
+            <div className="hero bg-base-100">
+                <div className="hero-content flex-col lg:flex-row-reverse gap-20">
+                    <img src={FAQ} className="max-w-sm" />
                     <div className='w-70'>
 
 
