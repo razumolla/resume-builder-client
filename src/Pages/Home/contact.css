@@ -18,6 +18,10 @@
   font-weight: 600;
   margin-left: 5rem;
 }
+.awesome>img{
+padding-left: 9rem;
+padding-top: 0.5rem;
+}
 
 .c-right {
   display: flex;
@@ -48,10 +52,7 @@ textarea {
   min-height: 4rem;
 }
 
-.c-blur1 {
-  top: 0rem;
-  left: 8rem;
-}
+
 
 /* button */
 
