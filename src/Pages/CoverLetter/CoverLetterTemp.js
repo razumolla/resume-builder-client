@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CoverLetterTemplate_1 from '../../assets/images/Cover-Letter-Template-1.png';
-import CoverLetterTemplate_2 from '../../assets/images/Cover-Letter-Template-2.png';
-import CoverLetterTemplate_3 from '../../assets/images/Cover-Letter-Template-3.png';
-import CoverLetterTemplate_4 from '../../assets/images/Cover-Letter-Template-4.png';
-import CoverLetterTemplate_5 from '../../assets/images/Cover-Letter-Template-5.png';
-import CoverLetterTemplate_6 from '../../assets/images/Cover-Letter-Template-6.png';
-import CoverLetterTemplate_7 from '../../assets/images/Cover-Letter-Template-7.jpg';
-import CoverLetterTemplate_8 from '../../assets/images/Cover-Letter-Template-8.png';
+import CoverLetterTemplate_1 from '../../assets/images/imgAfruza/cover-letter-banner 1.png';
+import CoverLetterTemplate_2 from '../../assets/images/imgAfruza/Cover-Letter-Template-2.png';
+import CoverLetterTemplate_3 from '../../assets/images/imgAfruza/Cover-Letter-Template-3.png';
+import CoverLetterTemplate_4 from '../../assets/images/imgAfruza/Cover-Letter-Template-4.png';
+import CoverLetterTemplate_5 from '../../assets/images/imgAfruza/Cover-Letter-Template-5.png';
+import CoverLetterTemplate_6 from '../../assets/images/imgAfruza/Cover-Letter-Template-6.png';
+import CoverLetterTemplate_7 from '../../assets/images/imgAfruza/Cover-Letter-Template-7.jpg';
+import CoverLetterTemplate_8 from '../../assets/images/imgAfruza/Cover-Letter-Template-8.png';
 import '../Home/Banner.css';
 import 'animate.css';
 const CoverLetterTemp = () => {
