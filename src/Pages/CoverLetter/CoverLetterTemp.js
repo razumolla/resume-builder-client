@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CoverLetterTemplate_1 from '../../assets/images/imgAfruza/cover-letter-banner 1.png';
+import CoverLetterTemplate_1 from '../../assets/images/imgAfruza/Cover-Letter-Template-1.png';
 import CoverLetterTemplate_2 from '../../assets/images/imgAfruza/Cover-Letter-Template-2.png';
 import CoverLetterTemplate_3 from '../../assets/images/imgAfruza/Cover-Letter-Template-3.png';
 import CoverLetterTemplate_4 from '../../assets/images/imgAfruza/Cover-Letter-Template-4.png';
