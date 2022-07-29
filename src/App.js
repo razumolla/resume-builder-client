@@ -10,6 +10,8 @@ import CoverLetter from './Pages/CoverLetter/CoverLetter';
 // import Resume from './Pages/Home/Resume';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
+import Contact from './Pages/Home/Contact';
+import About from './Pages/Home/About';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About /> } />
+     
 
       </Routes>
       
