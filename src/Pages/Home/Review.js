@@ -7,12 +7,12 @@ import person_3 from '../../assets/images/person-3.jfif'
 const Review = () => {
     return (
         <div>
-            <h1 className='text-2xl text-center font-bold text-fuchsia-500 '>Reviews</h1>
-           
+            <h1 className='text-2xl text-center font-bold text-primary '>Reviews</h1>
+
 
 
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 my-5 gap-5'>
-                <div class="card lg:lg-w-full bg-purple-500 shadow-xl">
+                <div class="card lg:lg-w-full bg-gray-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <div class="avatar">
                             <div class="w-24 rounded-full">
@@ -39,7 +39,7 @@ const Review = () => {
                 </div>
 
 
-                <div class="card lg:lg-w-full bg-fuchsia-500 shadow-xl">
+                <div class="card lg:lg-w-full bg-gray-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <div class="avatar">
                             <div class="w-24 rounded-full">
@@ -64,7 +64,7 @@ const Review = () => {
                 </div>
 
 
-                <div class="card lg:lg-w-full bg-cyan-500 shadow-xl">
+                <div class="card lg:lg-w-full bg-gray-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <div class="avatar">
                             <div class="w-24 rounded-full">

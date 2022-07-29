@@ -9,7 +9,7 @@ import template_5 from '../../assets/images/resume-5.jfif'
 const Templates = () => {
     return (
         <div className='my-10'>
-            <h1 className='text-2xl text-center font-bold text-fuchsia-500 my-5'>Templates to win recuiters over</h1>
+            <h1 className='text-2xl text-center font-bold text-secondary my-5'>Templates to win recuiters over</h1>
             <div className='grid sm:grid-cols-1 lg:grid-cols-3 my-5 gap-10'>
 
                 <div class="card lg:lg-w-full bg-base-100 shadow-xl">

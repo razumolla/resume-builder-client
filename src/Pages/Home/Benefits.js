@@ -7,7 +7,7 @@ import download_image from '../../assets/images/download_mg.png'
 const Benefits = () => {
     return (
         <div>
-            <h1 className='text-center text-2xl font-bold text-fuchsia-500 my-10'>Easiest and most features packed CV builder available</h1>
+            <h1 className='text-center text-2xl font-bold text-primary my-10'>Easiest and most features packed CV builder available</h1>
 
             <div className='grid sm:grid-cols-1 lg:grid-cols-2 my-5 gap-5 '>
 
