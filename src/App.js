@@ -8,7 +8,7 @@ import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
-import Resume from './Pages/Home/Resume';
+// import Resume from './Pages/Home/Resume';
 import Resume from './Pages/Resume/Resume';
 
 function App() {
