@@ -14,7 +14,7 @@ const CoverLetterTemp = () => {
     return (
         <div className='m-8'>
             <div>
-                <h1 className='text-4xl font-bold  mb-10'>Select Cover Letter Template</h1>
+                <h1 className='text-4xl text-secondary font-bold  mb-10'>Select Cover Letter Template</h1>
             </div>
               <div>
 
