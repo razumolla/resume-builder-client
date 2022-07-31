@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-        <div className='Login mt-10'>
-            <h1 className='pt-10 sm:text-5xl font-extrabold text-transparent lg:text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>WELCOME TO REGISTRATION</h1>
+        <div className='mt-10'>
+            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-5xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
             <div className='flex h-screen justify-center items-center mt-5'>
 
-                <div class="card lg:lg-w-full bg-white shadow-xl mb-5">
+                <div class="card lg:lg-w-full bg-white shadow-xl mb-5 ">
 
 
-                    <div class="card-body">
+                    <div class="card-body my">
 
                         {/*   <h2 class="text-center text-xl font-bold text-primary">Login</h2> */}
 
@@ -77,19 +77,19 @@ const SignUp = () => {
                             </div>
 
 
-                            <p className='text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500'>Already have an account?? <Link className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold' to="/login">Go to Login</Link></p>
+                            <p className='text-secondary'>Already have an account?? <Link className='text-secondary font-bold' to="/login">Go to Login</Link></p>
 
 
-                            <input className='btn bg-gradient-to-r from-purple-500 to-pink-500 w-full max-w-xs mt-3' type="submit" value="Signup" />
+                            <input className='btn btn-outline bg-secondary w-full max-w-xs mt-3' type="submit" value="Signup" />
                         </form>
 
 
 
-                        <div class="divider text-orange-500">Or Continue With</div>
+                        <div class="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
-                            <button class="btn btn-outline bg-gradient-to-r from-violet-500 to-fuchsia-500 w-1/2">Google</button>
-                            <button class="btn btn-outline bg-gradient-to-r from-violet-500 to-fuchsia-500 w-1/2">Facebook</button>
+                            <button class="btn btn-outline bg-secondary w-1/2">Google</button>
+                            <button class="btn btn-outline bg-secondary w-1/2">Facebook</button>
                         </div>
                     </div>
 
