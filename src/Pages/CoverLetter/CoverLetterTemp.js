@@ -24,7 +24,8 @@ const CoverLetterTemp = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    {/* <Link to=""></Link> */}
+                    <Link to="/templateForm"></Link>
                 </div>
 
                 <div class="container animate__animated  animate__zoomIn">
