@@ -9,7 +9,12 @@ import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
+<<<<<<< HEAD
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
+=======
+import Contact from './Pages/Home/Contact';
+import About from './Pages/Home/About';
+>>>>>>> 09bd42fa27c9b62047098dfd746906c523c3b7d1
 
 function App() {
   return (
@@ -25,6 +30,9 @@ function App() {
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About /> } />
+     
 
       </Routes>
       
