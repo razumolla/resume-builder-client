@@ -5,10 +5,10 @@ import logo from "../../assets/images/imgMehedi/logo.png";
 const Navbar = () => {
     const menuItems =
         <>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/resume">Resume</NavLink></li>
-            <li><NavLink to="/cv">CV</NavLink></li>
-            <li><NavLink to="/coverLetter">Cover Letter</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/">HOME</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/resume">RESUME</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/cv">CV</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/coverLetter">COVER LETTER</NavLink></li>
 
         </>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <img src={logo} class="max-w-sm  rounded-full  w-12 lg:w-16" />
+                <img src={logo} class="max-w-sm  rounded-full  w-16 lg:w-20" />
 
 
             </div>
@@ -43,14 +43,14 @@ const Navbar = () => {
                     <li>
                         {
 
-                            <Link to="/signup" className="text-secondary font-bold btn btn-ghost ">SignUp</Link>
+                            <Link to="/signup" className="text-secondary font-bold btn btn-ghost text-xl ">SignUp</Link>
                         }
                     </li>
 
                     <li>
                         {
 
-                            <Link to="/login" className="text-secondary font-bold btn btn-ghost ">Login</Link>
+                            <Link to="/login" className="text-secondary text-xl font-bold btn btn-ghost ">Login</Link>
                         }
                     </li>
 
