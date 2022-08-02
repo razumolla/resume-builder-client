@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TemplateForm = () => {
     return (
@@ -10,7 +11,7 @@ const TemplateForm = () => {
                         <ul class="steps bg-base-300 p-3  
                         place-items-center">
                             <li class="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
-                            <li class="step ml-5 step-primary "> <p className='ml-8'>EXPERIENCE</p> </li>
+                            <li class="step ml-5  "> <p className='ml-8'>EXPERIENCE</p> </li>
                             <li class="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
                             <li class="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
                             <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
@@ -35,8 +36,9 @@ const TemplateForm = () => {
                                     <input type="text" placeholder="EMAIL" class="input input-bordered input-secondary w-full max-w-xs" />
                                 </div>
                                <div className='flex justify-end'>
-                               <button className='btn btn-primary '>Next to Experience ➜</button>
+                               <Link to="/experience" className='btn btn-primary'>Next to Experience ⟼ </Link>
                                </div>
+                             
 
                             </form>
 

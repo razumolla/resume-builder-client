@@ -9,12 +9,11 @@ import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
-<<<<<<< HEAD
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
-=======
-import Contact from './Pages/Home/Contact';
 import About from './Pages/Home/About';
->>>>>>> 09bd42fa27c9b62047098dfd746906c523c3b7d1
+import Contact from './Pages/Home/Contact';
+import Experience from './Pages/CoverLetter/Experience';
+import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
 
 function App() {
   return (
@@ -26,8 +25,10 @@ function App() {
         <Route path="/resume" element={<Resume />} ></Route>
         <Route path='/cv' element={<Templates></Templates>}></Route>
         <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
-        <Route path='/templateForm' element={<TemplateForm></TemplateForm>}></Route>
-        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path='/templateForm' element={<TemplateForm />}></Route>
+        <Route path="/coverLetter" element={<CoverLetter />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/education" element={<CoverLetterEducation />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
