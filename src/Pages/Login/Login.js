@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div className='Login mt-10'>
-            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>WELCOME TO LOGIN</h1>
+        <div className='mt-10'>
+            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-8xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
             <div className='flex h-screen justify-center items-center '>
                
                 <div class="card w-96 bg-white  shadow-xl">
@@ -52,19 +52,19 @@ const Login = () => {
                             </div>
 
 
-                            <p className='text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500'>New To This Webiste?? <Link className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold' to="/signup">Create New Account</Link></p>
+                            <p className='text-secondary'>New To This Webiste?? <Link className='text-secondary font-bold' to="/signup">Create New Account</Link></p>
                             
 
-                            <input className='btn bg-gradient-to-r from-purple-500 to-pink-500 w-full max-w-xs mt-3' type="submit" value="Login" />
+                            <input className='btn btn-outline bg-secondary w-full max-w-xs mt-3' type="submit" value="Login" />
                         </form> 
 
 
                         
-                        <div class="divider text-orange-500">Or Continue With</div>
+                        <div class="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
-                        <button class="btn btn-outline bg-gradient-to-r from-violet-500 to-fuchsia-500 w-1/2">Google</button>
-                        <button class="btn btn-outline bg-gradient-to-r from-violet-500 to-fuchsia-500 w-1/2">Facebook</button>
+                        <button class="btn btn-outline bg-secondary w-1/2">Google</button>
+                        <button class="btn btn-outline bg-secondary w-1/2">Facebook</button>
                         </div>
                     </div>
 

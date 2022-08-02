@@ -10,6 +10,7 @@ import CoverLetter from './Pages/CoverLetter/CoverLetter';
 // import Resume from './Pages/Home/Resume';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
+import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import Contact from './Pages/Home/Contact';
 import About from './Pages/Home/About';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/resume" element={<Resume />} ></Route>
         <Route path='/cv' element={<Templates></Templates>}></Route>
         <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
+        <Route path='/templateForm' element={<TemplateForm></TemplateForm>}></Route>
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
