@@ -7,14 +7,12 @@ import Templates from './Pages/Cv/Templates';
 import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
+// import Resume from './Pages/Home/Resume';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
-<<<<<<< HEAD
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
-=======
 import Contact from './Pages/Home/Contact';
 import About from './Pages/Home/About';
->>>>>>> 09bd42fa27c9b62047098dfd746906c523c3b7d1
 
 function App() {
   return (
@@ -23,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path="resume" element={<Resume></Resume>}></Route>
         <Route path="/resume" element={<Resume />} ></Route>
         <Route path='/cv' element={<Templates></Templates>}></Route>
         <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
