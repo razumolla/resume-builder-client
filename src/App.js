@@ -9,12 +9,10 @@ import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
-<<<<<<< HEAD
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
-=======
 import Contact from './Pages/Home/Contact';
 import About from './Pages/Home/About';
->>>>>>> 09bd42fa27c9b62047098dfd746906c523c3b7d1
+
 
 function App() {
   return (
@@ -35,7 +33,7 @@ function App() {
      
 
       </Routes>
-      
+    
       <Footer></Footer>
     </div>
   );

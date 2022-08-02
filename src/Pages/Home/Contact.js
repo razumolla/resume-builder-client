@@ -33,7 +33,7 @@ export default function Contact() {
     <div className="contact-form " id="contact">
       <div className="w-left">
         <div className="awesome">
-        <Roll left>
+        <Roll bottom>
             <span>Get in Touch</span>
             </Roll>
 
