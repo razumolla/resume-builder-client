@@ -1,102 +1,189 @@
 import React from 'react';
 import '../Login/Login.css'
-import { Link } from 'react-router-dom';
+import '../Login/Login.css'
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { useForm } from "react-hook-form";
+import Loding from '../Shared/Loding';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+    const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    let signInError;
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500 '><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    }
+
+    if (loading || gloading || updating) {
+        return <Loding></Loding>
+    }
+
+    if (user || gUser) {
+        console.log(gUser)
+        
+
+    }
+
+    const onSubmit = async(data,event) => {
+       
+        event.preventDefault();
+        
+        await createUserWithEmailAndPassword(data.email, data.password)
+       await updateProfile({displayFirstName:data.firstName, displayLastName:data.lastName})
+       navigate('/home')
+       console.log(data)
+    };
     return (
         <div className='mt-10'>
-            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-5xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
-            <div className='flex h-screen justify-center items-center mt-5'>
+            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
+            <div className='flex justify-center items-center mt-5 '>
 
-                <div class="card lg:lg-w-full bg-white shadow-xl mb-5 ">
+                <div class="card w-96 bg-white shadow-xl mb-5 ">
 
 
                     <div class="card-body my">
 
-                        {/*   <h2 class="text-center text-xl font-bold text-primary">Login</h2> */}
 
 
+                        <form onSubmit={handleSubmit(onSubmit)}>
 
-                        <form>
 
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">First Name</span>
-
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">First Name</span>
                                 </label>
-                                <input
-                                    type="text"
+
+                                <input type="text"
                                     placeholder="First Name"
-                                    class="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs"
+                                    {...register("firstName", {
+                                        required: {
+                                            value: true,
+                                            message: 'First Name is Required'
+                                        },
 
+                                    })}
                                 />
 
-                            </div>
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Last Name</span>
+                                <label className="label">
+                                    {errors.firstName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.firstName.message}</span>}
+
 
                                 </label>
-                                <input
-                                    type="text"
+                            </div>
+
+
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Last Name</span>
+                                </label>
+
+                                <input type="text"
                                     placeholder="Last Name"
-                                    class="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs"
+                                    {...register("lastName", {
+                                        required: {
+                                            value: true,
+                                            message: 'Last Name is Required'
+                                        },
 
+                                    })}
                                 />
 
-                            </div>
+                                <label className="label">
+                                    {errors.lastName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.lastName.message}</span>}
 
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Email</span>
 
                                 </label>
-                                <input
-                                    type="email"
-                                    placeholder="Your Email"
-                                    class="input input-bordered w-full max-w-xs"
-
-                                />
-
                             </div>
 
 
-                            <div class="form-control w-full max-w-xs mb-3">
-                                <label class="label">
-                                    <span class="label-text">Password</span>
-
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
                                 </label>
 
-                                <input
-                                    type="password"
+                                <input type="email"
+                                    placeholder="Your Eamil"
+                                    className="input input-bordered w-full max-w-xs"
+                                    {...register("email", {
+                                        required: {
+                                            value: true,
+                                            message: 'Email is Required'
+                                        },
+                                        pattern: {
+                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                            message: 'Provide a valid Eamil'
+                                        }
+                                    })}
+                                />
+
+                                <label className="label">
+                                    {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                                    {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+
+                                </label>
+                            </div>
+
+
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type="password"
                                     placeholder="Your Password"
-                                    class="input input-bordered w-full max-w-xs"
-
+                                    className="input input-bordered w-full max-w-xs"
+                                    {...register("password", {
+                                        required: {
+                                            value: true,
+                                            message: 'Password is Required'
+                                        },
+                                        minLength: {
+                                            value: 6,
+                                            message: 'Must be 6 character or longer'
+                                        }
+                                    })}
                                 />
+                                <label className="label">
+                                    {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                    {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
 
+                                </label>
                             </div>
+                            {signInError}
 
-
-                            <p className='text-secondary'>Already have an account?? <Link className='text-secondary font-bold' to="/login">Go to Login</Link></p>
-
-
-                            <input className='btn btn-outline bg-secondary w-full max-w-xs mt-3' type="submit" value="Signup" />
+                            <input className='btn btn-outline bg-secondary w-full max-w-xs' type="submit" value='Signup' />
                         </form>
 
-
+                        <p> Already have an Account?? <small><Link className='text-secondary font-bold' to="/login">Go to Login</Link></small></p>
 
                         <div class="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
-                            <button class="btn btn-outline bg-secondary w-1/2">Google</button>
-                            <button class="btn btn-outline bg-secondary w-1/2">Facebook</button>
+                            <button
+
+                                onClick={() => signInWithGoogle()}
+                                class="btn btn-outline bg-secondary w-full max-w-xs"
+                            >Google</button>
+
                         </div>
+
+
                     </div>
 
 
                 </div>
-
-
             </div>
         </div>
     );
