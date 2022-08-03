@@ -41,6 +41,9 @@ function App() {
         ></Route>
 
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path="/resume" element={<Resume />}></Route>
+        {/* <Route path="/cv" element={<Templates></Templates>}></Route>
+        <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
 
         <Route
           path="resume"
@@ -61,7 +64,6 @@ function App() {
             <Blog></Blog>
           </RequireAuth>
         } />
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/experience" element={<Experience />} />
