@@ -15,6 +15,8 @@ import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
 import Experience from './Pages/CoverLetter/Experience';
 import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
+import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
+import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<CoverLetterEducation />} />
+        <Route path="/skills" element={<CoverLetterSkills />} />
+        <Route path="/about" element={<CoverLetterAbout />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
