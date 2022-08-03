@@ -4,13 +4,15 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loding from '../Shared/Loding';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
     const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     let signInError;
 
     const [
@@ -31,7 +33,9 @@ const Login = () => {
 
     if (user || gUser) {
         console.log(gUser)
-        navigate('/home')
+        navigate(from, { replace: true });
+
+        
 
     }
 
@@ -39,10 +43,11 @@ const Login = () => {
 
         console.log(data)
         signInWithEmailAndPassword(data.email, data.password)
+        
     };
     return (
         <div className='mt-10'>
-            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-8xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
+            <h1 className='pt-20 sm:text-6xl font-extrabold text-transparent lg:text-7xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
             <div className='flex h-screen justify-center items-center '>
 
                 <div class="card w-96 bg-white  shadow-xl">

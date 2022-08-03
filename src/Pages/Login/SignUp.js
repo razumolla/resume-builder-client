@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Login/Login.css'
 import '../Login/Login.css'
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loding from '../Shared/Loding';
@@ -19,31 +19,34 @@ const SignUp = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-
-    if (error || gError) {
-        signInError = <p className='text-red-500 '><small>{error?.message || gError?.message}</small></p>
+    if (error || gError || updateError) {
+        signInError = <p className='text-red-500 '><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
-    if (loading || gloading) {
+    if (loading || gloading || updating) {
         return <Loding></Loding>
     }
 
     if (user || gUser) {
         console.log(gUser)
-        navigate('/home')
+        
 
     }
 
-    const onSubmit = (data,event) => {
+    const onSubmit = async(data,event) => {
        
         event.preventDefault();
-        console.log(data)
-        createUserWithEmailAndPassword(data.email, data.password)
+        
+        await createUserWithEmailAndPassword(data.email, data.password)
+       await updateProfile({displayFirstName:data.firstName, displayLastName:data.lastName})
+       navigate('/home')
+       console.log(data)
     };
     return (
         <div className='mt-10'>
-            <h1 className='pt-10 sm:text-6xl font-extrabold text-transparent lg:text-5xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
+            <h1 className='pt-20 sm:text-6xl font-extrabold text-transparent lg:text-5xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
             <div className='flex h-screen justify-center items-center mt-5 '>
 
                 <div class="card w-50 bg-white shadow-xl mb-5 ">
