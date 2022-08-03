@@ -46,10 +46,10 @@ const SignUp = () => {
     };
     return (
         <div className='mt-10'>
-            <h1 className='pt-20 sm:text-6xl font-extrabold text-transparent lg:text-5xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
-            <div className='flex h-screen justify-center items-center mt-5 '>
+            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
+            <div className='flex justify-center items-center mt-5 '>
 
-                <div class="card w-50 bg-white shadow-xl mb-5 ">
+                <div class="card w-96 bg-white shadow-xl mb-5 ">
 
 
                     <div class="card-body my">

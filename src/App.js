@@ -27,15 +27,19 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/home" element={<Home />} />
 
         <Route path="/resume" element={<Resume />}></Route>
+
         <Route path="/cv" element={<Templates></Templates>}></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+
         <Route
           path="/templateForm"
           element={<TemplateForm></TemplateForm>}
         ></Route>
+
         <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
 
         <Route
@@ -51,14 +55,12 @@ function App() {
             <Templates></Templates>
           </RequireAuth>
         } />
-        
+
         <Route path="blog" element={
           <RequireAuth>
             <Blog></Blog>
           </RequireAuth>
         } />
-
-
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
