@@ -4,7 +4,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loding from '../Shared/Loding';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -94,8 +94,8 @@ const Login = () => {
                                             message: 'Password is Required'
                                         },
                                         minLength: {
-                                            value: 5,
-                                            message: 'Must be 5 character or longer'
+                                            value: 6,
+                                            message: 'Must be 6 character or longer'
                                         }
                                     })}
                                 />
@@ -110,11 +110,7 @@ const Login = () => {
                             <input className='btn btn-outline bg-secondary w-full max-w-xs' type="submit" value='Login' />
                         </form>
 
-
-
-
-
-
+                        <p> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
                         <div class="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
