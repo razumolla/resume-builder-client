@@ -5,7 +5,7 @@ import FAQ from '../../assets/images/FAQ.png';
 const Faq = () => {
     return (
         <div className='my-16'>
-            <h2 className='text-3xl text-center font-semibold text-fuchsia-500'>Frequently Asked Questions</h2>
+            <h2 className='text-3xl text-center font-semibold text-primary'>Frequently Asked Questions</h2>
             <div className="hero bg-base-100">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-20">
                     <img src={FAQ} className="max-w-sm" />

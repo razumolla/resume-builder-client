@@ -40,12 +40,12 @@ const Navbar = () => {
 
                 <ul class="flex">
 
-                    <li>
+                    {/* <li>
                         {
 
                             <Link to="/signup" className="text-secondary font-bold btn btn-ghost text-xl ">SignUp</Link>
                         }
-                    </li>
+                    </li> */}
 
                     <li>
                         {
