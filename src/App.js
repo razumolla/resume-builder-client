@@ -72,10 +72,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-      <Footer></Footer>
     </div>
   );
 }
