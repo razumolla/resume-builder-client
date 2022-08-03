@@ -17,7 +17,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/form"></Link>
                 </div>
 
                 <div class="container">

@@ -34,13 +34,16 @@ export default function Contact() {
       <div className="w-left">
         <div className="awesome">
           <Roll left>
-            <span>Get in Touch</span>
-          </Roll>
+            <Roll bottom>
+              <span>Get in Touch</span>
+            </Roll>
 
-          <br />
-          <span>Contact Us</span>
-          <img src={leaves} alt="" />
+            <br />
+            <span>Contact Us</span>
+            <img src={leaves} alt="" />
+          </Roll>
         </div>
+
       </div>
       {/* right side form */}
       <div className="c-right">
