@@ -5,7 +5,7 @@ import logo from "../../assets/images/imgMehedi/logo.png";
 const Navbar = () => {
     const menuItems =
         <>
-            <li className='text-xl font-bold'><NavLink to="/">HOME</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/home">HOME</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/resume">RESUME</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/cv">CV</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/coverLetter">COVER LETTER</NavLink></li>
