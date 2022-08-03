@@ -88,8 +88,8 @@ const SignUp = () => {
                         <div class="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
-                            <button class="btn btn-outline bg-secondary w-1/2">Google</button>
-                            <button class="btn btn-outline bg-secondary w-1/2">Facebook</button>
+                            <button class="btn btn-outline bg-secondary w-full">Google</button>
+                            
                         </div>
                     </div>
 
