@@ -1,12 +1,26 @@
 .heading{
-     width:50vw;
+     width:40vw;
      text-align:left;
      margin-left:12rem;
-    
+     margin-top: -14rem !important;
+    margin-bottom: 0%;
 }
 .heading>p{
      line-height:1.5rem;
 }
 .get:hover{
 background-color:indigo;
+}
+
+
+.image-about{
+     max-width: 360px ;
+     /* margin-top:8rem !important; */
+    
+    
+}
+
+/* svg in about  */
+.svgg{
+     margin-top: -30px;
 }

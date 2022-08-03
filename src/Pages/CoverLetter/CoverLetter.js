@@ -1,11 +1,11 @@
 import React from 'react';
-import banner from '../../assets/images/cover-letter-banner 1.png';
+import banner from '../../assets/images/imgAfruza/cover-letter-banner 1.png';
 import CoverLetterTemp from './CoverLetterTemp';
 // import banner from '../../assets/images/cover-letter-banner 1.png';
 const CoverLetter = () => {
     return (
         <div >
-            <div className=" m-8 sm:bg-base-0 ">
+            <div className=" m-12 sm:bg-base-0 ">
                 <div class="hero min-h-screen ">
                     <div class="flex justify-center align-center lg:flex-row-reverse">
                         <img src={banner} class="max-w-lg rounded-lg shadow-1xl animate__zoomInDown animate__animated " />

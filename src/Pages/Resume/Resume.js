@@ -35,6 +35,30 @@ const Resume = () => {
                     </figcaption>
                     <Link to=""></Link>
                 </div>
+
+                <div class="container">
+                    <img src={Resume3} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
+                    <Link to=""></Link>
+                </div>
+
+                <div class="container">
+                    <img src={Resume1} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
+                    <Link to=""></Link>
+                </div>
+
+                <div class="container">
+                    <img src={Resume2} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
+                    <Link to=""></Link>
+                </div>
             </div >
 
         </>

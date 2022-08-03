@@ -7,8 +7,14 @@ import Templates from './Pages/Cv/Templates';
 import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
+// import Resume from './Pages/Home/Resume';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
+import TemplateForm from './Pages/CoverLetter/TemplateForm';
+import About from './Pages/Home/About';
+import Contact from './Pages/Home/Contact';
+import Experience from './Pages/CoverLetter/Experience';
+import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
 
 function App() {
   return (
@@ -17,15 +23,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path="resume" element={<Resume></Resume>}></Route>
         <Route path="/resume" element={<Resume />} ></Route>
         <Route path='/cv' element={<Templates></Templates>}></Route>
         <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
-        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path='/templateForm' element={<TemplateForm />}></Route>
+        <Route path="/coverLetter" element={<CoverLetter />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/education" element={<CoverLetterEducation />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+
 
       </Routes>
-      
+
       <Footer></Footer>
     </div>
   );
