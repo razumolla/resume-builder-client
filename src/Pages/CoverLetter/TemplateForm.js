@@ -65,10 +65,16 @@ const TemplateForm = () => {
                                     <input type="email" name="email"  placeholder="EMAIL" class="input input-bordered input-secondary w-full max-w-xs" />
                                 </div>
                                <div className='flex justify-end'>
-                                <button className='btn btn-primary' type='submit'>
-                                {/* <Link to="/experience" className='btn btn-primary'>Next to Experience ⟼ </Link> */}
-                                 submit
-                                    </button>
+                                {/* <button className='btn btn-primary' type='submit'>submit</button> */}
+
+                                {/* <Link to="/experience" className='btn btn-primary'>Next to Experience ⟼
+                                
+                                 </Link> */}
+
+                                  <Link to="/experience" className='btn btn-primary'>
+                                  <button className='btn btn-primary' type='submit'>Next to Experience ⟼</button>
+                                 </Link>
+
                                
                                </div>
                              
