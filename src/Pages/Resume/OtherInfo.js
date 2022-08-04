@@ -21,3 +21,4 @@ const OtherInfo = () => {
 };
 
 export default OtherInfo;
+

@@ -1,12 +1,39 @@
 import React, { useState } from 'react';
-import EducationalInfo from './EducationalInfo';
-import OtherInfo from './OtherInfo';
-import PersonalInfo from './PersonalInfo';
-import { Link } from 'react-router-dom';
+import EducationalInfo from '../Resume/EducationalInfo';
+import OtherInfo from '../Resume/OtherInfo';
+import PersonalInfo from '../Resume/PersonalInfo';
+
+import Projects from '../Resume/Projects';
+import Skills from './Skills';
 
 
 const ResumeForm = () => {
-    const [step, setStep] = useState(0);
+
+    const handleResumeInfo = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+
+        const resume = { name };
+
+        // console.log(resume);
+        //send data to the server
+        fetch('http://localhost:5000/resume', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(resume)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('Success', data);
+                alert('Added successfully');
+                event.target.reset();
+            })
+
+    }
+
+
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         email: '',
@@ -16,7 +43,7 @@ const ResumeForm = () => {
         other: ''
     })
 
-    const pageTitles = ["Personal Information", "Education", "Other Information"]
+    const pageTitles = ["Personal Information", "Education", "Projects", "Skills"]
 
 
     const PageDisplay = () => {
@@ -24,23 +51,26 @@ const ResumeForm = () => {
             return <PersonalInfo formData={formData} setFormData={setFormData} />;
         }
         else if (page === 1) {
-            return <EducationalInfo />;
+            return <EducationalInfo formData={formData} setFormData={setFormData} />;
         }
         else if (page === 2) {
-            return <OtherInfo />
+            return <Projects formData={formData} setFormData={setFormData} />
         }
-    }
-    const handleStep = (step) => {
-        setStep(step);
-    }
-    const stepMenu =
-        <>
+        else if (page === 3) {
+            return <Skills formData={formData} setFormData={setFormData} />
+        }
 
-            {/* <li class={"step mx-2" + (page == 0 ? 'step-primary' : '')}> <p className=''>PERSONAL</p> </li>
-            <li class="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
-            <li class="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
-            <li class="step mx-4"> <p className='ml-1'>ABOUT</p> </li> */}
-        </>
+    }
+
+    // const stepMenu =
+    //     <>
+
+    //          <li class={"step mx-2" + (page == 0 ? 'step-primary' : '')}> <p className=''>PERSONAL</p> </li>
+    //         <li class="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
+    //         <li class="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
+    //         <li class="step mx-4"> <p className='ml-1'>ABOUT</p> </li>
+    //     </>
+
     return (
         <div className='mt-28 mb-16 m-10'>
             <div className='flex '>
@@ -63,7 +93,7 @@ const ResumeForm = () => {
                                                 setPage((currPage) => currPage - 1)
                                             }}>Prev</button>
 
-                                        <button
+                                        <button onSubmit={handleResumeInfo}
                                             className='btn btn-success pt-4' onClick={() => {
                                                 if (page === pageTitles.length - 1) {
                                                     alert('form submitted');
@@ -91,40 +121,7 @@ const ResumeForm = () => {
             </div >
         </div >
 
-        // <div className='form mt-20 mb-10'>
-        //     <div className="formBox w-96 bg-base-200 mx-auto rounded-2xl p-5">
-        //         <div className='progressbar'></div>
-        //         <div className="form-container">
-        //             <div className="header">
-        //                 <h1 className='text-3xl font-bold my-5 text center'>{pageTitles[page]}</h1>
-        //             </div>
-        //             <div className="body">
-        //                 {PageDisplay()}
-        //             </div>
-        //             <div className="footer">
 
-        //                 <button
-        //                     disabled={page == 0}
-        //                     className='btn btn-success pt-4' onClick={() => {
-        //                         setPage((currPage) => currPage - 1)
-        //                     }}>Prev</button>
-
-        //                 <button
-        //                     className='btn btn-success pt-4' onClick={() => {
-        //                         if (page === pageTitles.length - 1) {
-        //                             alert('form submitted');
-        //                             console.log(formData);
-        //                         } else {
-
-        //                             setPage((currPage) => currPage + 1)
-        //                         }
-        //                     }}>
-        //                     {page === pageTitles.length - 1 ? "Submit" : "Next"}
-        //                 </button>
-        //             </div>
-        //         </div >
-        //     </div>
-        // </div >
     );
 };
 
