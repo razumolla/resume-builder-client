@@ -9,8 +9,8 @@ const CoverLetter = () => {
                 <div class="hero min-h-screen ">
                     <div class="flex justify-center align-center lg:flex-row-reverse">
                         <img src={banner} class="max-w-lg rounded-lg shadow-1xl animate__zoomInDown animate__animated " />
-                        <div className=''>
-                            <h1 class="text-4xl mt-36 font-bold animate__animated animate__zoomIn">Choose Cover Leter Template</h1>
+                        <div className='lg:text-left'>
+                            <h1 class="text-4xl mt-36 font-bold text-primary animate__animated animate__zoomIn">Choose Cover Leter Template</h1>
                             <p className='pr-10 text-2xl animate__animated  animate__lightSpeedInLeft'>A resume is a formal document that a job applicant creates to itemize their qualifications for a position.
                                 We provides the support you need to create, your resume like a professional.</p>
 

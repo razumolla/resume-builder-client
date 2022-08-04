@@ -32,7 +32,7 @@ const CoverLetterAbout = () => {
                                 <Link to="/skills" className='btn btn-info mr-48'>⟻ Back </Link>
 
                                 <div className='flex justify-start '>
-                                    <Link to="/about" className='btn btn-primary'>Next to Finishit ⟼</Link>
+                                    <Link to="/finishit" className='btn btn-primary'>Next to Finishit ⟼</Link>
                                 </div>
                             </div>
 

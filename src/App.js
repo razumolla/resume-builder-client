@@ -14,9 +14,10 @@ import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
 import Experience from './Pages/CoverLetter/Experience';
 import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
+import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
 import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
 import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
-import NotFound from './Pages/Shared/NotFound'
+import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Blog from './Pages/Login/Blog';
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/education" element={<CoverLetterEducation />} />
         <Route path="/skills" element={<CoverLetterSkills />} />
         <Route path="/about" element={<CoverLetterAbout />} />
+        <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>}/>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
