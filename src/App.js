@@ -18,6 +18,7 @@ import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
 import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
 import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound'
+import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/education" element={<CoverLetterEducation />} />
         <Route path="/skills" element={<CoverLetterSkills />} />
         <Route path="/about" element={<CoverLetterAbout />} />
+        <Route path="/finishit" element={<CoverLetterFinishit />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
