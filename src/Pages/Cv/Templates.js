@@ -6,11 +6,10 @@ const Templates = () => {
     const [templates, setTemplates] = useState([]);
 
     useEffect(() => {
-        fetch('https://pranoysarker.github.io/cv-api/cv.json')
+        fetch('http://localhost:5000/cvPhoto')
             .then(res => res.json())
             .then(data => {
                 setTemplates(data)
-                console.log(data);
             })
     }, [])
     return (
