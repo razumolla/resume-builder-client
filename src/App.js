@@ -8,6 +8,7 @@ import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
 import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
+import ResumeForm from './Pages/Resume/ResumeForm';
 import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
@@ -22,6 +23,7 @@ import RequireAuth from './Pages/Login/RequireAuth';
 import Blog from './Pages/Login/Blog';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +32,9 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/home" element={<Home />} />
+        <Route path="/resume" element={<Resume />} ></Route>
+        <Route path="/resume/form" element={<ResumeForm />} ></Route>
+
 
         <Route path="/resume" element={<Resume />}></Route>
 
@@ -79,7 +84,9 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+
+      <Footer></Footer>
+    </div >
   );
 }
 
