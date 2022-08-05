@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
@@ -19,7 +18,9 @@ import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
 import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
 import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound'
-import EducationalInfo from './Pages/Resume/EducationalInfo';
+import RequireAuth from './Pages/Login/RequireAuth';
+import Blog from './Pages/Login/Blog';
+
 
 
 function App() {
@@ -28,25 +29,46 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/home" element={<Home />} />
         <Route path="/resume" element={<Resume />} ></Route>
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
-        <Route path="/resume/education" element={<EducationalInfo />} ></Route>
 
 
+        <Route path="/resume" element={<Resume />}></Route>
 
-        <Route path='/cv' element={<Templates></Templates>}></Route>
-        <Route path='/cv/form' element={<FormCv></FormCv>}></Route>
         <Route path="/cv" element={<Templates></Templates>}></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+
         <Route
           path="/templateForm"
           element={<TemplateForm></TemplateForm>}
         ></Route>
-        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
 
-        <Route path="/cv" element={<Templates></Templates>}></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
+        <Route path="/resume" element={<Resume />}></Route>
+        {/* <Route path="/cv" element={<Templates></Templates>}></Route>
+        <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
+
+        <Route
+          path="resume"
+          element={
+            <RequireAuth>
+              <Resume />
+            </RequireAuth>
+          }></Route>
+
+        <Route path="cv" element={
+          <RequireAuth>
+            <Templates></Templates>
+          </RequireAuth>
+        } />
+
+        <Route path="blog" element={
+          <RequireAuth>
+            <Blog></Blog>
+          </RequireAuth>
+        } />
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/experience" element={<Experience />} />

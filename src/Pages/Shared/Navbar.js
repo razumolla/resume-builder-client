@@ -1,14 +1,24 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/imgMehedi/logo.png";
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+    const logout = () =>{
+        signOut(auth)
+        navigate('/login')
+    }
     const menuItems =
         <>
-            <li className='text-xl font-bold'><NavLink to="/">HOME</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/home">HOME</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/resume">RESUME</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/cv">CV</NavLink></li>
             <li className='text-xl font-bold'><NavLink to="/coverLetter">COVER LETTER</NavLink></li>
+            <li className='text-xl font-bold'><NavLink to="/blog">BLOG</NavLink></li>
 
         </>
 
@@ -48,12 +58,14 @@ const Navbar = () => {
                         }
                     </li> */}
 
-                        <li>
-                            {
-
-                                <Link to="/login" className="text-secondary text-xl font-bold btn btn-ghost ">Login</Link>
-                            }
-                        </li>
+                    <li>
+                        {
+                            user ?
+                            <button onClick={logout} class="text-secondary text-xl font-bold btn btn-ghost">Sign Out</button>
+                            :
+                            <Link to="/login" className="text-secondary text-xl font-bold btn btn-ghost ">Login</Link>
+                        }
+                    </li>
 
 
                     </ul>

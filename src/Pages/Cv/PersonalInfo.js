@@ -8,13 +8,26 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <li className="step step-primary mx-2" > <p className=''>PERSONAL</p> </li>
                 <li class="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
                 <li class="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
-                <li class="step mx-4"> <p className='ml-1'>ABOUT</p> </li>
+                <li class="step mx-4"> <p className='ml-1'>OTHERS</p> </li>
             </ul>
             <div className="header">
                 <h1 className='text-2xl font-bold my-5 text center'>Enter<span className='text-primary'> Personal </span> Details</h1>
             </div>
 
-            <input type="text" class="input input-bordered input-secondary w-full max-w-xs" name="" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+
+            <div className='m-2'>
+                <div className='grid grid-cols-1 gap-3 p-2'>
+                    <input type="text" placeholder="Name" class="input input-bordered input-primary w-full max-w-xs" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
+                    <input type="text" placeholder="Email" class="input input-bordered input-primary w-full max-w-xs" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
+                </div>
+
+                <div className='grid grid-cols-1 gap-3 p-2'>
+                    <input type="number" placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
+                    <input type="text" placeholder="City,Country" class="input input-bordered input-primary w-full max-w-xs" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
+                </div>
+            </div>
+
+            {/* <input type="text" name="" targvalue={formData.email} onChange={(e) => setFormData({ ...formData, email: e.et.value })} /> */}
         </div>
     );
 };

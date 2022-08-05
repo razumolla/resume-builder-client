@@ -2,25 +2,28 @@
   display: flex;
   height: 50vh;
   margin-top: 4rem;
- justify-content:space-evenly;
- 
+  justify-content: space-evenly;
+
   padding-top: 2rem;
 }
-.awesome > span:nth-child(1) {
+
+.awesome>span:nth-child(1) {
   color: rgb(3, 230, 211);
   font-size: 2.9rem;
   font-weight: 700;
   margin-left: 5rem;
 }
-.awesome > span:nth-child(3) {
+
+.awesome>span:nth-child(3) {
   color: rgb(26, 22, 22);
   font-size: 2.2rem;
   font-weight: 600;
   margin-left: 5rem;
 }
-.awesome>img{
-padding-left: 9rem;
-padding-top: 0.5rem;
+
+.awesome>img {
+  padding-left: 9rem;
+  padding-top: 0.5rem;
 }
 
 .c-right {
@@ -30,7 +33,7 @@ padding-top: 0.5rem;
 
 }
 
-.c-right > form {
+.c-right>form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -38,7 +41,7 @@ padding-top: 0.5rem;
 }
 
 .c-right .useri {
-  width: 25rem;
+  width: 20rem;
   height: 2rem;
   padding: 0.3em;
   outline: none;
@@ -48,7 +51,7 @@ padding-top: 0.5rem;
 }
 
 textarea {
-  width: 25rem !important;
+  width: 20rem !important;
   min-height: 4rem;
 }
 
@@ -61,7 +64,7 @@ textarea {
 
 .button {
   align-items: center;
-  background-image: linear-gradient(144deg,#18e999, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #18e999, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -73,10 +76,10 @@ textarea {
   font-weight: 500;
   justify-content: center;
   line-height: 1.3em;
-  
+
   max-width: 100%;
   min-width: 140px;
-  padding:13px;
+  padding: 13px;
   padding-top: 15px;
   padding-bottom: 8px;
   text-decoration: none;
@@ -120,11 +123,13 @@ textarea {
     gap: 4rem;
     height: 40rem;
   }
+
   .w-left {
     text-align: center;
     font-size: larger;
   }
-  .c-right > .useri {
+
+  .c-right>.useri {
     width: 18rem;
   }
 }

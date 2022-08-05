@@ -17,7 +17,7 @@ const ResumeForm = () => {
 
         // console.log(resume);
         //send data to the server
-        fetch('http://localhost:5000/resume', {
+        fetch('http://localhost:5000/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
