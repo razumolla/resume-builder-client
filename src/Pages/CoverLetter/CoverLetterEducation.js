@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const CoverLetterEducation = () => {
+
+const CoverLetterEducation = ({ formData, setFormData }) => {
     return (
         <div className='mt-28 mb-16 m-10'>
             <div className='flex '>
@@ -24,15 +24,15 @@ const CoverLetterEducation = () => {
                             <form action="" className='p-3'>
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <label for="Job Title">School/Collage/University</label>
-                                        <input type="text" placeholder="Harvard" class="input input-bordered input-secondary w-full max-w-xs" />
+                                        <label for="Job Title">Collage/University</label>
+                                        <input type="text" placeholder="Harvard" value={formData.universityName} onChange={(e) => setFormData({ ...formData, universityName: e.target.value })} class="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
-                                    
-                                        <div class="form-control w-full max-w-xs">
-                                        <label for="selectdegree">Select Degree</label>
-                                            <select class="select   p-2 border-primary-3">
+
+                                    <div class="form-control w-full max-w-xs">
+                                        <label for="selectdegree">Type Degree</label>
+                                        {/* <select class="select   p-2 border-primary-3">
                                                 <option disabled selected>Select your degree</option>
-                                                <option>SSC</option>
+                                                <option value={formData.ssc} onChange={(e) => setFormData({...formData, ssc:e.target.value})} >SSC</option>
                                                 <option>HSC</option>
                                                 <option>Bachelor of Science</option>
                                                 <option>Bachelor of Computer Science and Engineering</option>
@@ -40,17 +40,18 @@ const CoverLetterEducation = () => {
                                                 <option>MBA</option>
                                                 <option>Master's Degree</option>
                                                 <option>Undergraduate</option>
-                                            </select>
-                                        
-                                        </div>
-                                  
+                                            </select> */}
+                                        <input type="text" placeholder="Education" class="input input-bordered input-primary w-full max-w-xs" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
+
+                                    </div>
+
                                 </div>
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <div>
-                                        <label for="startdate">Graduation Date</label>
-                                        </div>
-                                        <select class="select    border-primary-3">
+                                        {/* <div>
+                                            <label for="startdate">Graduation Date</label>
+                                        </div> */}
+                                        {/* <select class="select    border-primary-3">
                                                 <option disabled selected>Select Graduation Date</option>
                                                 <option>2030</option>
                                                 <option>2029</option>
@@ -132,16 +133,19 @@ const CoverLetterEducation = () => {
                                                 <option>1952</option>
                                                 <option>1951</option>
                                                 <option>1950</option>
-                                            </select>
+                                            </select> */}
+                                        <div>
+                                            <label htmlFor="">start Date</label>
+                                            <input type="date" class="input input-bordered input-primary w-full max-w-xs" value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} required />
+                                        </div>
                                     </div>
-                                    {/* <div>
-                                        <label for="enddate">Graduation End Date</label>
-                                        <input type="date" class="input input-bordered input-secondary w-full max-w-xs" required />
-
-                                    </div> */}
                                     <div>
-                                        <label for="city">City</label>
-                                        <input type="text" placeholder="Dhaka" class="input input-bordered input-secondary w-full max-w-xs" required />
+                                        <label htmlFor="">End date</label>
+                                        <input type="date" class="input input-bordered input-primary w-full max-w-xs" value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} required />
+                                    </div>
+                                    <div>
+                                        <label for="city">Education Location</label>
+                                        <input type="text" value={formData.educationCity} onChange={(e) => setFormData({ ...formData, educationCity: e.target.value })} placeholder="Dhaka" class="input input-bordered input-secondary w-full max-w-xs" required />
                                     </div>
                                 </div>
 
@@ -150,25 +154,14 @@ const CoverLetterEducation = () => {
                                     <textarea className='w-full p-3 ' placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
                                     <label for="">Description</label>
                                 </div>
-                                <div className='flex justify-end m-5'>
-                                    <Link to="/experience" className='btn btn-info mr-48'>⟻ Back </Link>
 
-                                    <div className='flex justify-start '>
-                                        <Link to="/skills" className='btn btn-primary'>Next to Skills ⟼</Link>
-                                    </div>
-                                </div>
 
                             </form>
                         </div>
                     </div>
 
                 </div>
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        02
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
-                    </div>
-                </div>
+
             </div>
         </div>
     );

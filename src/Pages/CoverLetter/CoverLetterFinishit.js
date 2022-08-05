@@ -171,11 +171,7 @@ const CoverLetterFinishit = () => {
 
                                     <textarea className='w-full p-3 ' placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
                                     <label for="">Description</label>
-                                </div> 
-
-                                <div className='flex justify-end'>
-                               <Link to="/experience" className='btn btn-primary'>Next to Download ⟼ </Link>
-                               </div>
+                                </div>                             
 
                             </form>
 
@@ -184,12 +180,7 @@ const CoverLetterFinishit = () => {
                     </div>
 
                 </div>
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        02
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
-                    </div>
-                </div>
+            
             </div>
         </div>
     );

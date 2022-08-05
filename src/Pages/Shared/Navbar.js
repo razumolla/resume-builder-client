@@ -14,11 +14,11 @@ const Navbar = () => {
     }
     const menuItems =
         <>
-            <li className='text-xl font-bold'><NavLink to="/home">HOME</NavLink></li>
-            <li className='text-xl font-bold'><NavLink to="/resume">RESUME</NavLink></li>
-            <li className='text-xl font-bold'><NavLink to="/cv">CV</NavLink></li>
-            <li className='text-xl font-bold'><NavLink to="/coverLetter">COVER LETTER</NavLink></li>
-            <li className='text-xl font-bold'><NavLink to="/blog">BLOG</NavLink></li>
+            <li className=' font-bold'><NavLink to="/home">HOME</NavLink></li>
+            <li className=' font-bold'><NavLink to="/resume">RESUME</NavLink></li>
+            <li className=' font-bold'><NavLink to="/cv">CV</NavLink></li>
+            <li className=' font-bold'><NavLink to="/coverLetter">COVER LETTER</NavLink></li>
+            <li className=' font-bold'><NavLink to="/blog">BLOG</NavLink></li>
 
         </>
 

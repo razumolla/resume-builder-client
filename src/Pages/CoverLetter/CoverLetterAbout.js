@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const CoverLetterAbout = () => {
     return (
@@ -28,25 +28,14 @@ const CoverLetterAbout = () => {
                                 <textarea className='w-full ' placeholder='About Summary' name="Description" id="Description" cols="12" rows="10"></textarea>
                                 <label for="">Summary</label>
                             </div>
-                            <div className='flex justify-end m-5'>
-                                <Link to="/skills" className='btn btn-info mr-48'>⟻ Back </Link>
-
-                                <div className='flex justify-start '>
-                                    <Link to="/finishit" className='btn btn-primary'>Next to Finishit ⟼</Link>
-                                </div>
-                            </div>
+                            
 
                         </form>
                     </div>
                 </div>
 
             </div>
-            <div class="grid grid-rows-12 p-2">
-                <div class="col-start-1 col-end-6 ... bg-gray-200">
-                    02
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
-                </div>
-            </div>
+          
         </div>
     </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const CoverLetterSkills = () => {
     return (
@@ -47,25 +47,14 @@ const CoverLetterSkills = () => {
 
 
 
-                                <div className='flex justify-end m-5'>
-                                    <Link to="/education" className='btn btn-info mr-48'>⟻ Back </Link>
-
-                                    <div className='flex justify-start '>
-                                        <Link to="/about" className='btn btn-primary'>Next to About ⟼</Link>
-                                    </div>
-                                </div>
+                              
 
                             </form>
                         </div>
                     </div>
 
                 </div>
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        02
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
-                    </div>
-                </div>
+               
             </div>
         </div>
     );
