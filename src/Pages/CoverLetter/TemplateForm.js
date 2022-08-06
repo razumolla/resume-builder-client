@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CLPersonalInfo from './CLPersonalInfo';
 import CoverLetterAbout from './CoverLetterAbout';
 import CoverLetterDisplay from './CoverLetterDisplay';
@@ -27,12 +27,40 @@ const TemplateForm = () => {
     educationCity: '',
     projectName: '',
     projectDescription: '',
+    educationDescription: '',
+    aboutDescription: '',
     skillOne: '',
+    level: '',
     summary: '',
    })
 
    console.log(formData);
    
+        const url = `http://localhost:5000/aboutForm`
+        fetch(url,{
+            method: 'POST',
+            headers: {
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            // alert('users added successfull !!!')
+            
+        });
+
+     
+
+      const[form, setForms] = useState([]);
+      useEffect(() =>{
+           fetch('http://localhost:5000/aboutForm')
+           .then(res =>res.json())
+           .then(data => setForms([data]))
+      },[]);
+
+      console.log(form);
 
    const pageTitles = ["Personal Information","Experience", "Education", "Skill", "About",]
    const PageDisplay = () => {
@@ -87,7 +115,7 @@ const TemplateForm = () => {
                                             setPage((currPage) => currPage +1)
                                            }
                                         }}>
-                                            {page === pageTitles.length -1? "Submit":"Next"}
+                                            { page === pageTitles.length -1? "Submit":"Next"}
                                         </button>
                                 </div>
 
@@ -99,9 +127,17 @@ const TemplateForm = () => {
 
                 </div>
 
-                <div className='grid grid-rows-12 p-2'>
-                    <div className='col-start-1 col-end-6 ...bg-gray-200'>
-                        <CoverLetterDisplay></CoverLetterDisplay>
+                <div className=''>
+                    <div className=''>
+                        {
+                            form?.map(forms=><CoverLetterDisplay
+                            key={forms._id}
+                            forms={forms}
+                            ></CoverLetterDisplay>
+                               )
+                        }
+
+
                     </div>
                 </div>
 

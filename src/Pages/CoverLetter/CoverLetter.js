@@ -7,7 +7,7 @@ const CoverLetter = () => {
         <div >
             <div className=" m-12 sm:bg-base-0 ">
                 <div class="hero min-h-screen ">
-                    <div class="flex justify-center align-center lg:flex-row-reverse">
+                    <div class="flex justify-center align-center sm:flex-row-column lg:flex-row-reverse">
                         <img src={banner} class="max-w-lg rounded-lg shadow-1xl animate__zoomInDown animate__animated " />
                         <div className='lg:text-left'>
                             <h1 class="text-4xl mt-36 font-bold text-primary animate__animated animate__zoomIn">Choose Cover Leter Template</h1>

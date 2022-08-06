@@ -15,7 +15,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                             <li class="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
                             <li class="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
                             <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
-                            <li class="step   ml-3"> <p>FINISHIT</p> </li>
+                            {/* <li class="step   ml-3"> <p>FINISHIT</p> </li> */}
                         </ul>
                         <div>
                             <h1 className='text-2xl font-bold mt-8  '>Please enter your <span className='text-primary font-bold'>Education</span> information</h1>
@@ -151,7 +151,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
 
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                    <textarea className='w-full p-3 ' placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
+                                    <textarea className='w-full p-3 ' value={formData.educationDescription} onChange={(e) =>setFormData({...formData, educationDescription: e.target.value})} placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
                                     <label for="">Description</label>
                                 </div>
 

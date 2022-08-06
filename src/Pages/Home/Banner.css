@@ -1,7 +1,15 @@
 
-.Banner{
+/* .Banner{
     background: url(/src/assets/images/imgAfruza/202978.webp);
     border-radius: 10px;
+
+} */
+.Banner{
+    background: url(../../assets/images/imgAfruza/Untitled\ design.jpg);
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+    
+   
 
 }
 
@@ -14,7 +22,7 @@
 
 }
 .Banner_button{
-    background-color: rgba(5, 5, 74, 0.107);
+    background-color: rgba(12, 202, 206, 0.107);
    
  }
  
