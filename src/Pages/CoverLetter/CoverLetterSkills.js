@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CoverLetterSkills = () => {
+const CoverLetterSkills = ({formData, setFormData}) => {
     return (
         <div className='mt-28 mb-16 m-10'>
             <div className='flex '>
@@ -25,14 +25,19 @@ const CoverLetterSkills = () => {
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
                                         <label for="Job Title">Skill</label>
-                                        <input type="text" placeholder="Type your skill here" class="input input-bordered input-secondary w-full max-w-xs" />
+                                        <input type="text" value={formData.skillOne} 
+                                        onChange={(e) => setFormData({...formData, skillOne:e.target.value})} placeholder="Type your skill here" class="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
                                     <div class="form-control w-full max-w-xs">
-                                        <label for="employer">Level</label>
-                                        <select class="select    border-primary-3">
-                                            <option disabled selected>Select your Level</option>
-                                            <option>10%</option>
-                                            <option>20%</option>
+                                        <label for="employer">Type Level</label>
+
+                                        <input type="text" value={formData.level} onChange={(e) =>setFormData({...formData, level: e.target.value})} placeholder="50%" className='input input-bordered input-secondary w-full max-w-xs' />
+
+                                        {/* <select className="selectborder-primary-3                              
+                                        onChange={(e)=>setFormData({...formData, level:e.target.value})} ">
+                                            <option value={''} disabled selected>Select your Level</option>
+                                            <option value={formData.level1} >10%</option>
+                                            <option value={formData.level}>20%</option>
                                             <option>30%</option>
                                             <option>40%</option>
                                             <option>50%</option>
@@ -41,7 +46,7 @@ const CoverLetterSkills = () => {
                                             <option>80%</option>
                                             <option>90%</option>
                                             <option>100%</option>
-                                        </select>
+                                        </select> */}
                                     </div>
                                 </div>
 
