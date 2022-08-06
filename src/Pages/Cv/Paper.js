@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Paper = () => {
+const Paper = ({ formData }) => {
+
+    console.log(formData);
     return (
         <div className='my-10'>
             <div class="card w-3/4 bg-base-100 shadow-xl mx-auto">
