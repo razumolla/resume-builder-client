@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import EducationalInfo from '../Resume/EducationalInfo';
-import OtherInfo from '../Resume/OtherInfo';
+// import OtherInfo from '../Resume/OtherInfo';
 import PersonalInfo from '../Resume/PersonalInfo';
 
 import Projects from '../Resume/Projects';
@@ -11,37 +11,38 @@ const ResumeForm = () => {
 
     const handleResumeInfo = event => {
         event.preventDefault();
+
+
         const name = event.target.name.value;
+        const email = event.target.email.value;
 
-        const resume = { name };
+        const resume = { name, email }
 
-        // console.log(resume);
-        //send data to the server
-        fetch('http://localhost:5000/user', {
-            method: 'POST',
+        fetch('http://localhost:5000/resume', {
+            method: 'POST', // or 'PUT'
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(resume)
+            body: JSON.stringify(resume),
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log('Success', data);
-                alert('Added successfully');
-                event.target.reset();
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
             })
+
 
     }
 
 
     const [page, setPage] = useState(0);
-    const [formData, setFormData] = useState({
-        email: '',
-        password: '',
-        firstName: '',
-        lastName: '',
-        other: ''
-    })
+    const [formData, setFormData] = useState({});
+    // const [formData, setFormData] = useState({
+    //     email: '',
+    //     password: '',
+    //     firstName: '',
+    //     lastName: '',
+    //     other: ''
+    // })
 
     const pageTitles = ["Personal Information", "Education", "Projects", "Skills"]
 
