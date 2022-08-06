@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import EducationalInfo from '../Resume/EducationalInfo';
-// import OtherInfo from '../Resume/OtherInfo';
+
 import PersonalInfo from '../Resume/PersonalInfo';
 
 import Projects from '../Resume/Projects';
@@ -9,40 +9,53 @@ import Skills from './Skills';
 
 const ResumeForm = () => {
 
-    const handleResumeInfo = event => {
-        event.preventDefault();
-
-
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-
-        const resume = { name, email }
-
-        fetch('http://localhost:5000/resume', {
-            method: 'POST', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(resume),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Success:', data);
-            })
-
-
-    }
-
-
     const [page, setPage] = useState(0);
-    const [formData, setFormData] = useState({});
-    // const [formData, setFormData] = useState({
-    //     email: '',
-    //     password: '',
-    //     firstName: '',
-    //     lastName: '',
-    //     other: ''
-    // })
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        city: '',
+        education: '',
+        institute: '',
+        startdate: '',
+        enddate: '',
+        project: '',
+        features: '',
+        features: '',
+        skills: '',
+
+    })
+
+    // console.log(formData);
+
+
+    fetch('http://localhost:5000/resume', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data);
+            // alert('users added successfull !!!')
+
+        });
+
+
+
+
+
+    // const [form, setForms] = useState([]);
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/resume')
+    //         .then(res => res.json())
+    //         .then(data => setForms([data]))
+    // }, []);
+
+    // console.log(form);
 
     const pageTitles = ["Personal Information", "Education", "Projects", "Skills"]
 
@@ -94,11 +107,12 @@ const ResumeForm = () => {
                                                 setPage((currPage) => currPage - 1)
                                             }}>Prev</button>
 
-                                        <button onSubmit={handleResumeInfo}
+                                        <button
                                             className='btn btn-success pt-4' onClick={() => {
                                                 if (page === pageTitles.length - 1) {
                                                     alert('form submitted');
                                                     console.log(formData);
+                                                    // handleResumeInfo(formData);
                                                 } else {
 
                                                     setPage((currPage) => currPage + 1)
