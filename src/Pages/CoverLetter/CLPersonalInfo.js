@@ -29,6 +29,7 @@ const CLPersonalInfo = ({formData, setFormData}) => {
     //         e.target.reset();
     //     })
     //  }
+    
     return (
         <div className='mt-28 mb-16 m-10'>
         <div className='flex '>
