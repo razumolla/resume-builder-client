@@ -25,7 +25,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form"></Link>
                 </div>
 
                 <div class="container">
@@ -33,7 +33,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form"></Link>
                 </div>
 
                 <div class="container">
