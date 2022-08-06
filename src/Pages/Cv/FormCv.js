@@ -45,6 +45,25 @@ const FormCv = () => {
         }
     }
 
+    const handleInfo = e => {
+        e.preventDefault();
+        alert('submitted');
+        // console.log(formData);
+
+        fetch('http://localhost:5000/cvInfo', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
+    }
+
 
     return (
         <div className='mt-28 mb-16 m-10'>
@@ -66,18 +85,16 @@ const FormCv = () => {
                                             setPage((currPage) => currPage - 1)
                                         }}>Prev</button>
 
-                                    <button
-                                        className='btn btn-success pt-4' onClick={() => {
-                                            if (page === pageTitles.length - 1) {
-                                                alert('form submitted');
-                                                console.log(formData);
-                                            } else {
+                                    {page == pageTitles.length - 1 ?
+                                        <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
+                                        :
 
+                                        <button
+                                            className='btn btn-success pt-4' onClick={() => {
                                                 setPage((currPage) => currPage + 1)
-                                            }
-                                        }}>
-                                        {page === pageTitles.length - 1 ? "Submit" : "Next"}
-                                    </button>
+
+                                            }}>Next</button>
+                                    }
                                 </div>
                             </div >
                         </div>
@@ -86,7 +103,7 @@ const FormCv = () => {
 
                 <div class="grid grid-rows-12 p-2">
                     <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        <Paper></Paper>
+                        <Paper formData={formData}></Paper>
                     </div>
                 </div>
             </div >
