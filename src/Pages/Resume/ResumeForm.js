@@ -79,17 +79,17 @@ const ResumeForm = () => {
     // const stepMenu =
     //     <>
 
-    //          <li class={"step mx-2" + (page == 0 ? 'step-primary' : '')}> <p className=''>PERSONAL</p> </li>
-    //         <li class="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
-    //         <li class="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
-    //         <li class="step mx-4"> <p className='ml-1'>ABOUT</p> </li>
+    //          <li className={"step mx-2" + (page == 0 ? 'step-primary' : '')}> <p className=''>PERSONAL</p> </li>
+    //         <li className="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
+    //         <li className="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
+    //         <li className="step mx-4"> <p className='ml-1'>ABOUT</p> </li>
     //     </>
 
     return (
         <div className='mt-28 mb-16 m-10'>
             <div className='flex '>
-                <div class="grid grid-rows-12 p-2 rounded-xl ">
-                    <div class="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+                <div className="grid grid-rows-12 p-2 rounded-xl ">
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
                         <div className=''>
 
                             <div className='flex gap-2 mb-3 '>
@@ -127,8 +127,8 @@ const ResumeForm = () => {
                     </div>
                 </div >
 
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
+                <div className="grid grid-rows-12 p-2">
+                    <div className="col-start-1 col-end-6 ... bg-gray-200">
                         02
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
                     </div>

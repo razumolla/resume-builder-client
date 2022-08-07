@@ -3,12 +3,12 @@ import resume from '../../assets/images/imgMehedi/resume.png'
 
 const ResumeBanner = () => {
     return (
-        <div class="hero min-h-screen px-10 ">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <img src={resume} class="max-w-sm rounded-lg shadow-2xl" />
+        <div className="hero min-h-screen px-10 ">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <img src={resume} className="max-w-sm rounded-lg shadow-2xl" />
                 <div className='lg:text-left text-center'>
-                    <h1 class="text-5xl font-bold text-secondary">Create Your Resume</h1>
-                    <p class="py-6">A resume is a formal document that a job applicant creates to itemize their qualifications for a position.
+                    <h1 className="text-5xl font-bold text-secondary">Create Your Resume</h1>
+                    <p className="py-6">A resume is a formal document that a job applicant creates to itemize their qualifications for a position.
                         We provides the support you need to create, your resume like a professional.</p>
 
                 </div>

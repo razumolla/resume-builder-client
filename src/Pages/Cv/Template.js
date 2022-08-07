@@ -6,7 +6,7 @@ const Template = ({ template }) => {
     const { image, name } = template;
     return (
         <div className='mt-10'>
-            <div class="container animate__animated  animate__lightSpeedInLeft">
+            <div className="container animate__animated  animate__lightSpeedInLeft">
                 <img src={image} alt="" className='w-3/4 ' />
                 <figcaption>
                     <h3 className="btn btn-primary">Create Now</h3>

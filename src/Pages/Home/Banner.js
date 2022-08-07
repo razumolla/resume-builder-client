@@ -5,11 +5,11 @@ import banner from '../../assets/images/imgAfruza/vectorimg.png';
 
 const Banner = () => {
     return (
-        <div class="hero min-h-screen Banner " >
-            <div class="hero-overlay bg-gray-500 bg-opacity-80  rounded-lg "></div>
-            <div class="hero ">
-                <div class="hero-content flex-col lg:flex-row-reverse">
-                    <img src={banner} class="max-w-sm rounded-lg  shadow-2xl" />
+        <div className="hero min-h-screen Banner " >
+            <div className="hero-overlay bg-gray-500 bg-opacity-80  rounded-lg "></div>
+            <div className="hero ">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src={banner} className="max-w-sm rounded-lg  shadow-2xl" />
                     <div className='text-left text-white mr-32'>
                         <h1 className="lg:text-6xl lg:text-left sm:text-center sm:text-4xl font-bold animate__animated animate__zoomIn text-white">Create a Professional
                             CV/Resume & Cover Letter Templates</h1>

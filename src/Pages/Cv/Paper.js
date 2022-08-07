@@ -5,8 +5,8 @@ const Paper = ({ formData }) => {
     console.log(formData);
     return (
         <div className='my-10'>
-            <div class="card w-3/4 bg-base-100 shadow-xl mx-auto">
-                <div class="card-body text-left">
+            <div className="card w-3/4 bg-base-100 shadow-xl mx-auto">
+                <div className="card-body text-left">
                     <h1 className='text-3xl font-semibold'>Pranoy Sarker</h1>
                     <p className='font-semibold'>Email:pranoysarker01@gmail.com</p>
                     <p className='font-semibold'>Phone:01888888888</p>
