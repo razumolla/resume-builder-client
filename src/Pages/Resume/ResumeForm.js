@@ -4,6 +4,7 @@ import EducationalInfo from '../Resume/EducationalInfo';
 import PersonalInfo from '../Resume/PersonalInfo';
 
 import Projects from '../Resume/Projects';
+import ResumePage from './ResumePage';
 import Skills from './Skills';
 
 
@@ -21,7 +22,6 @@ const ResumeForm = () => {
         startdate: '',
         enddate: '',
         project: '',
-        features: '',
         features: '',
         skills: '',
 
@@ -124,8 +124,8 @@ const ResumeForm = () => {
 
                 <div className="grid grid-rows-12 p-2">
                     <div className="col-start-1 col-end-6 ... bg-gray-200">
-                        02
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
+
+                        <ResumePage class="w-96" formData={formData}></ ResumePage>
                     </div>
                 </div>
             </div >

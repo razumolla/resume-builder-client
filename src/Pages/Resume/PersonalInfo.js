@@ -16,11 +16,16 @@ const PersonalInfo = ({ formData, setFormData }) => {
 
             <div>
                 <input type="text" className="input input-bordered input-secondary w-full max-w-xs mb-2" name="name" placeholder='Name' value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+            </div>
 
+            <div>
                 <input type="email" className="input input-bordered input-secondary w-full max-w-xs mb-2" name="Email" placeholder='Email' value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            </div>
 
+            <div>
                 <input type="text" className="input input-bordered input-secondary w-full max-w-xs mb-2" name="phone" placeholder='Phone Number' value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-
+            </div>
+            <div>
                 <input type="text" className="input input-bordered input-secondary w-full max-w-xs mb-2" name="city" placeholder='City,Country' value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} />
             </div>
 

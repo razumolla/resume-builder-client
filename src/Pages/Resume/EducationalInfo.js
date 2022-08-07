@@ -16,19 +16,24 @@ const EducationalInfo = ({ formData, setFormData }) => {
 
 
             <div className='px-4'>
-                <input type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="education" placeholder='Education' value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} />
+                <div>
+                    <input type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="education" placeholder='Education' value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} />
+                </div>
 
-                <input type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="institute" placeholder='Institute' value={formData.institute} onChange={(e) => setFormData({ ...formData, institute: e.target.value })} />
 
-                <div className='flex gap-2 mb-3 '>
+                <div>
+                    <input type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="institute" placeholder='Institute' value={formData.institute} onChange={(e) => setFormData({ ...formData, institute: e.target.value })} />
+
+                </div>
+                <div className='flex gap-2 mb-3 px-4'>
                     <div>
                         <label htmlFor="">Start Date</label>
-                        <input type="date" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="startDate" placeholder='Start Date' value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} />
+                        <input type="date" className="input input-bordered input-secondary w-3/4 max-w-lg mb-2" name="startDate" placeholder='Start Date' value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} />
                     </div>
 
                     <div>
                         <label htmlFor="">End Date</label>
-                        <input type="date" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="endDate" placeholder='Start Date' value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} />
+                        <input type="date" className="input input-bordered input-secondary w-3/4 max-w-lg mb-2" name="endDate" placeholder='Start Date' value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} />
                     </div>
                 </div>
             </div>
