@@ -103,14 +103,10 @@ const FormCv = () => {
 
                 <div class="grid grid-rows-12 p-2 w-2/3">
                     <div class="col-start-1 col-end-6 ... bg-gray-200 rounded-xl">
-                        <Paper id='abc' formData={formData}></Paper>
-
+                        <Paper formData={formData}></Paper>
                     </div>
                 </div>
             </div >
-            {/* <div>
-                <button class="btn btn-wide" onClick={generatePdf}>Dowload as pdf</button>
-            </div> */}
         </div >
 
     );

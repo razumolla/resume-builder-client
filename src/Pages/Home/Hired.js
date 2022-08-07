@@ -10,34 +10,34 @@ const Hired = () => {
         <div>
             <h1 className='text-center text-2xl font-bold text-secondary my-10'>Our Customers were hired by:</h1>
             <div className='flex justify-center gap-10 my-10'>
-                <div class="group" >
+                <div className="group" >
                     <a href="https://www.google.com"><img src={google} alt="" className="" /></a>
-                    <div class="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
+                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
                         <span className='text-secondary text-center'>Hired by Google</span>
                     </div>
                 </div>
-                <div class="group" >
+                <div className="group" >
                     <a href="https://www.amazon.com"><img src={amazon} alt="" className="" /></a>
-                    <div class="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
+                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
                         <span className='text-secondary'>Hired by Amazon</span>
                     </div>
                 </div>
 
-                <div class="group" >
-                   <div> <a href="https://www.apple.com/"><img src={apple} alt="" className="" /></a></div>
-                    <div class="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
+                <div className="group" >
+                    <div> <a href="https://www.apple.com/"><img src={apple} alt="" className="" /></a></div>
+                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
                         <span className='text-secondary'>Hired by Apple</span>
                     </div>
                 </div>
-                
-                <div class="group">
-                   <div> <a href="https://web.facebook.com/"><img src={facebook} alt="" className="" /></a></div>
-                    <div class="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full text-center">
+
+                <div className="group">
+                    <div> <a href="https://web.facebook.com/"><img src={facebook} alt="" className="" /></a></div>
+                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full text-center">
                         <span className='text-secondary'>Hired by Facebook</span>
                     </div>
                 </div>
 
-                
+
 
 
 
