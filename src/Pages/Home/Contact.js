@@ -68,7 +68,7 @@ export default function Contact() {
             placeholder="Message"
             required
           />
-          <input type="submit" value="Submit" class="btn button" />
+          <input type="submit" value="Submit" className="btn button" />
         </form>
       </div>
       <ToastContainer

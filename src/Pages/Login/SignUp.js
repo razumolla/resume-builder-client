@@ -31,28 +31,28 @@ const SignUp = () => {
 
     if (user || gUser) {
         console.log(gUser)
-        
+
 
     }
 
-    const onSubmit = async(data,event) => {
-       
+    const onSubmit = async (data, event) => {
+
         event.preventDefault();
-        
+
         await createUserWithEmailAndPassword(data.email, data.password)
-       await updateProfile({displayFirstName:data.firstName, displayLastName:data.lastName})
-       navigate('/home')
-       console.log(data)
+        await updateProfile({ displayFirstName: data.firstName, displayLastName: data.lastName })
+        navigate('/home')
+        console.log(data)
     };
     return (
         <div className='mt-10'>
             <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
             <div className='flex justify-center items-center mt-5 '>
 
-                <div class="card w-96 bg-white shadow-xl mb-5 ">
+                <div className="card w-96 bg-white shadow-xl mb-5 ">
 
 
-                    <div class="card-body my">
+                    <div className="card-body my">
 
 
 
@@ -168,13 +168,13 @@ const SignUp = () => {
 
                         <p> Already have an Account?? <small><Link className='text-secondary font-bold' to="/login">Go to Login</Link></small></p>
 
-                        <div class="divider text-secondary">Or Continue With</div>
+                        <div className="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
                             <button
 
                                 onClick={() => signInWithGoogle()}
-                                class="btn btn-outline bg-secondary w-full max-w-xs"
+                                className="btn btn-outline bg-secondary w-full max-w-xs"
                             >Google</button>
 
                         </div>

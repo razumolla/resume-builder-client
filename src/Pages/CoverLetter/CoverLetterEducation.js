@@ -5,17 +5,17 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
     return (
         <div className='mt-28 mb-16 m-10'>
             <div className='flex '>
-                <div class="grid grid-rows-12 p-2 rounded-xl ">
-                    <div class="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+                <div className="grid grid-rows-12 p-2 rounded-xl ">
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
-                        <ul class="steps bg-base-300 p-3  
+                        <ul className="steps bg-base-300 p-3  
                         place-items-center">
-                            <li class="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
-                            <li class="step ml-5 step-primary "> <p className='ml-8'>EXPERIENCE</p> </li>
-                            <li class="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
-                            <li class="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
-                            <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
-                            {/* <li class="step   ml-3"> <p>FINISHIT</p> </li> */}
+                            <li className="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
+                            <li className="step ml-5 step-primary "> <p className='ml-8'>EXPERIENCE</p> </li>
+                            <li className="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
+                            <li className="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
+                            <li className="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
+                            {/* <li className="step   ml-3"> <p>FINISHIT</p> </li> */}
                         </ul>
                         <div>
                             <h1 className='text-2xl font-bold mt-8  '>Please enter your <span className='text-primary font-bold'>Education</span> information</h1>
@@ -25,12 +25,12 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
                                         <label for="Job Title">Collage/University</label>
-                                        <input type="text" placeholder="Harvard" value={formData.universityName} onChange={(e) => setFormData({ ...formData, universityName: e.target.value })} class="input input-bordered input-secondary w-full max-w-xs" />
+                                        <input type="text" placeholder="Harvard" value={formData.universityName} onChange={(e) => setFormData({ ...formData, universityName: e.target.value })} className="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
 
-                                    <div class="form-control w-full max-w-xs">
+                                    <div className="form-control w-full max-w-xs">
                                         <label for="selectdegree">Type Degree</label>
-                                        {/* <select class="select   p-2 border-primary-3">
+                                        {/* <select className="select   p-2 border-primary-3">
                                                 <option disabled selected>Select your degree</option>
                                                 <option value={formData.ssc} onChange={(e) => setFormData({...formData, ssc:e.target.value})} >SSC</option>
                                                 <option>HSC</option>
@@ -41,7 +41,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                                 <option>Master's Degree</option>
                                                 <option>Undergraduate</option>
                                             </select> */}
-                                        <input type="text" placeholder="Education" class="input input-bordered input-primary w-full max-w-xs" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
+                                        <input type="text" placeholder="Education" className="input input-bordered input-primary w-full max-w-xs" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
 
                                     </div>
 
@@ -51,7 +51,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                         {/* <div>
                                             <label for="startdate">Graduation Date</label>
                                         </div> */}
-                                        {/* <select class="select    border-primary-3">
+                                        {/* <select className="select    border-primary-3">
                                                 <option disabled selected>Select Graduation Date</option>
                                                 <option>2030</option>
                                                 <option>2029</option>
@@ -136,22 +136,22 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                             </select> */}
                                         <div>
                                             <label htmlFor="">start Date</label>
-                                            <input type="date" class="input input-bordered input-primary w-full max-w-xs" value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} required />
+                                            <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} required />
                                         </div>
                                     </div>
                                     <div>
                                         <label htmlFor="">End date</label>
-                                        <input type="date" class="input input-bordered input-primary w-full max-w-xs" value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} required />
+                                        <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} required />
                                     </div>
                                     <div>
                                         <label for="city">Education Location</label>
-                                        <input type="text" value={formData.educationCity} onChange={(e) => setFormData({ ...formData, educationCity: e.target.value })} placeholder="Dhaka" class="input input-bordered input-secondary w-full max-w-xs" required />
+                                        <input type="text" value={formData.educationCity} onChange={(e) => setFormData({ ...formData, educationCity: e.target.value })} placeholder="Dhaka" className="input input-bordered input-secondary w-full max-w-xs" required />
                                     </div>
                                 </div>
 
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                    <textarea className='w-full p-3 ' value={formData.educationDescription} onChange={(e) =>setFormData({...formData, educationDescription: e.target.value})} placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
+                                    <textarea className='w-full p-3 ' value={formData.educationDescription} onChange={(e) => setFormData({ ...formData, educationDescription: e.target.value })} placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
                                     <label for="">Description</label>
                                 </div>
 

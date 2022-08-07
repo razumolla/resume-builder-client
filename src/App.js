@@ -20,8 +20,14 @@ import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
 import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
-import Blog from './Pages/Login/Blog';
 import Form from './Pages/Resume/Form';
+import Blogs from './Pages/Blogs/Blogs';
+import CvResumeAll from './Pages/Blogs/CvResumeAll';
+import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
+import InspiringStories from './Pages/Blogs/InspiringStories';
+import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
+import MockInterview from './Pages/Blogs/MockInterview';
+import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 
 
 
@@ -66,11 +72,6 @@ function App() {
           </RequireAuth>
         } />
 
-        <Route path="blog" element={
-          <RequireAuth>
-            <Blog></Blog>
-          </RequireAuth>
-        } />
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/experience" element={<Experience />} />
@@ -82,10 +83,17 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path='/form' element={<Form></Form>}></Route>
+        {/* Blogs */}
+        <Route path="/blogs" element={<Blogs> </Blogs>} />
+        <Route path="/cvResumeWriting" element={<CvResumeAll> </CvResumeAll>} />
+        <Route path="/coverLetterWriting" element={<CoverLetterAll> </CoverLetterAll>} />
+        <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
+        <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
+        <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
+        <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
         <Route path="*" element={<NotFound />} />
-
-        <Route path='/form' element={<Form></Form>}></Route>
       </Routes>
 
       <Footer></Footer>
