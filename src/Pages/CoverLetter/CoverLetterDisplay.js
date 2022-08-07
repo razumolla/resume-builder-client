@@ -1,17 +1,16 @@
 import React from 'react';
 
-const CoverLetterDisplay = ({forms}) => {
-    const{firstName,lastName}=forms
+const CoverLetterDisplay = ({form}) => {
+    // const{firstName ,lastName,email,address, phone,professionalCareer,linkedin,achievements,characteristics}=form;
+    // console.log(form);
     return (
-        <div className=''>
+        <div className='my-10'>
             <div class="card w-3/4 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body text-left">
-                   <div className='bg-red-100 p-2'>
-                   <h1 className='text-3xl font-semibold'>{firstName}{lastName}</h1>
-                    <p className='font-semibold'>Email:afruzaaktersonia@gmail.com</p>
-                    <p className='font-semibold'>Phone:01888888888</p>
+                    <h1 className='text-3xl font-semibold'>Afruza Akter Sonia</h1>
+                    <p className='font-semibold'>Email:afruzaakter01@gmail.com</p>
+                    <p className='font-semibold'>Phone:017959599</p>
                     <p className='font-semibold'>Address:Dhaka</p>
-                   </div>
                     <div className='divider px-2'></div>
                     <div>
                         <h2 className='text-2xl font-bold'>Summary</h2>

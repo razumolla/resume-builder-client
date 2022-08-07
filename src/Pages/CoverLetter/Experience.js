@@ -11,14 +11,14 @@ const Experience = ({formData, setFormData}) => {
                         <ul class="steps bg-base-300 p-3  
                         place-items-center">
                             <li class="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
-                            <li class="step ml-5 step-primary "> <p className='ml-8'>EXPERIENCE</p> </li>
-                            <li class="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
+                            <li class="step ml-5 step-primary "> <p className='ml-8'>Company Details</p> </li>
+                            {/* <li class="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
                             <li class="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
-                            <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
+                            <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li> */}
                             <li class="step   ml-3"> <p>FINISHIT</p> </li>
                         </ul>
                         <div>
-                            <h1 className='text-3xl mt-8'>Tell us about your <span className='text-primary font-bold'>Experience</span> </h1>
+                            <h1 className='text-3xl mt-8'>Tell us about your <span className='text-primary font-bold'>Company Details</span> </h1>
                             <p className='p-1 mb-5'>Start with your recent job</p>
 
                             <form action="" className='p-3'>

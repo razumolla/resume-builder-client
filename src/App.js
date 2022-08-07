@@ -6,20 +6,16 @@ import Home from './Pages/Home/Home';
 import Templates from './Pages/Cv/Templates';
 import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
-import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
 import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
+import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
-import Experience from './Pages/CoverLetter/Experience';
-import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
-import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Blog from './Pages/Login/Blog';
+
 
 
 function App() {
@@ -40,8 +36,6 @@ function App() {
           path="/templateForm"
           element={<TemplateForm></TemplateForm>}
         ></Route>
-
-        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
         <Route path="/resume" element={<Resume />}></Route>
         {/* <Route path="/cv" element={<Templates></Templates>}></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
@@ -65,13 +59,8 @@ function App() {
             <Blog></Blog>
           </RequireAuth>
         } />
-        <Route path="/templateForm" element={<TemplateForm />}></Route>
-        <Route path="/coverLetter" element={<CoverLetter />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<CoverLetterEducation />} />
-        <Route path="/skills" element={<CoverLetterSkills />} />
-        <Route path="/about" element={<CoverLetterAbout />} />
-        <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>}/>
+         
+        <Route path="/coverLetter" element={<CoverLetter></CoverLetter>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
