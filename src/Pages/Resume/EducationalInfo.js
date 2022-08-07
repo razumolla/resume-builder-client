@@ -23,12 +23,12 @@ const EducationalInfo = ({ formData, setFormData }) => {
                 <div className='flex gap-2 mb-3 '>
                     <div>
                         <label htmlFor="">Start Date</label>
-                        <input name="startdate" type="date" placeholder="PHONE NUMBER" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="date" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="startDate" placeholder='Start Date' value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} />
                     </div>
 
                     <div>
                         <label htmlFor="">End Date</label>
-                        <input name="enddate" type="date" placeholder="PHONE NUMBER" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="date" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="endDate" placeholder='Start Date' value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} />
                     </div>
                 </div>
             </div>
