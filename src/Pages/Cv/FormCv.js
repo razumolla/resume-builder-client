@@ -7,6 +7,7 @@ import ProjectInfo from './ProjectInfo';
 import Paper from './Paper';
 
 
+
 const FormCv = () => {
 
     const [page, setPage] = useState(0);
@@ -64,11 +65,10 @@ const FormCv = () => {
 
     }
 
-
     return (
         <div className='mt-28 mb-16 m-10'>
-            <div className='flex'>
-                <div class=" p-2">
+            <div className='flex '>
+                <div class=" p-2 w-1/3">
                     <div class=" bg-gray-300 rounded-2xl p-2">
                         <div className='flex gap-2 mb-3'>
 
@@ -101,12 +101,16 @@ const FormCv = () => {
                     </div>
                 </div >
 
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        <Paper formData={formData}></Paper>
+                <div class="grid grid-rows-12 p-2 w-2/3">
+                    <div class="col-start-1 col-end-6 ... bg-gray-200 rounded-xl">
+                        <Paper id='abc' formData={formData}></Paper>
+
                     </div>
                 </div>
             </div >
+            {/* <div>
+                <button class="btn btn-wide" onClick={generatePdf}>Dowload as pdf</button>
+            </div> */}
         </div >
 
     );
