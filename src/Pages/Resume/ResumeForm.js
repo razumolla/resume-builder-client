@@ -27,35 +27,6 @@ const ResumeForm = () => {
 
     })
 
-    // console.log(formData);
-
-
-    fetch('http://localhost:5000/resume', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log('success', data);
-            // alert('users added successfull !!!')
-
-        });
-
-
-
-
-
-    // const [form, setForms] = useState([]);
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/resume')
-    //         .then(res => res.json())
-    //         .then(data => setForms([data]))
-    // }, []);
-
-    // console.log(form);
 
     const pageTitles = ["Personal Information", "Education", "Projects", "Skills"]
 
@@ -76,14 +47,26 @@ const ResumeForm = () => {
 
     }
 
-    // const stepMenu =
-    //     <>
 
-    //          <li className={"step mx-2" + (page == 0 ? 'step-primary' : '')}> <p className=''>PERSONAL</p> </li>
-    //         <li className="step  mx-4 "><p className='ml-5'>EDUCATION</p> </li>
-    //         <li className="step  mx-4 "> <p className='ml-2'>PROJECTS</p> </li>
-    //         <li className="step mx-4"> <p className='ml-1'>ABOUT</p> </li>
-    //     </>
+    const handleInfo = e => {
+        e.preventDefault();
+        alert('submitted');
+        console.log(formData);
+
+        fetch('http://localhost:5000/resume', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
+    }
+
 
     return (
         <div className='mt-28 mb-16 m-10'>
@@ -107,7 +90,19 @@ const ResumeForm = () => {
                                                 setPage((currPage) => currPage - 1)
                                             }}>Prev</button>
 
-                                        <button
+                                        {page == pageTitles.length - 1 ? <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
+                                            :
+                                            <button
+                                                className='btn btn-success pt-4' onClick={() => {
+                                                    setPage((currPage) => currPage + 1)
+                                                }}>
+                                                Next
+                                            </button>
+                                        }
+
+
+
+                                        {/* <button
                                             className='btn btn-success pt-4' onClick={() => {
                                                 if (page === pageTitles.length - 1) {
                                                     alert('form submitted');
@@ -118,8 +113,8 @@ const ResumeForm = () => {
                                                     setPage((currPage) => currPage + 1)
                                                 }
                                             }}>
-                                            {page === pageTitles.length - 1 ? "Submit" : "Next"}
-                                        </button>
+                                            {page === pageTitles.length - 1 ? `onClick = { handleInfo }Submit` : "Next"}
+                                        </button> */}
                                     </div>
                                 </div >
                             </div>
