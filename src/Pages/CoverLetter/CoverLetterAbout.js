@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CoverLetterAbout = () => {
+const CoverLetterAbout = ({formData, setFormData}) => {
     return (
         <div className='mt-28 mb-16 m-10'>
         <div className='flex '>
@@ -15,7 +15,7 @@ const CoverLetterAbout = () => {
                         <li class="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
                         <li class="step step-primary ml-4 "> <p className='ml-2'>SKILLS</p> </li>
                         <li class="step step-primary ml-3"> <p className='ml-1'>ABOUT</p> </li>
-                        <li class="step   ml-3"> <p>FINISHIT</p> </li>
+                        {/* <li class="step   ml-3"> <p>FINISHIT</p> </li> */}
                     </ul>
                     <div>
                         <h1 className='text-2xl mt-8'>Write down your <span className='text-primary font-bold'>Professional Summary</span> </h1>
@@ -25,7 +25,7 @@ const CoverLetterAbout = () => {
                           
                             <div className='flex flex-col-reverse  gap-2 mb-3 '>
                                
-                                <textarea className='w-full ' placeholder='About Summary' name="Description" id="Description" cols="12" rows="10"></textarea>
+                                <textarea value={formData.aboutDescription} onChange={(e) =>setFormData({...formData, aboutDescription: e.target.value})} className='w-full ' placeholder='About Summary' name="Description" id="Description" cols="12" rows="10"></textarea>
                                 <label for="">Summary</label>
                             </div>
                             
