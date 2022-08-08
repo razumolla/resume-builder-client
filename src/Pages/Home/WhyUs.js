@@ -42,7 +42,7 @@ const WhyUs = () => {
 
                 <div className=''>
                     <div className='bg-base-200 rounded-lg shadow-2xl h-80 m-5'>
-                        <h1 className='font-bold text-accent text-3xl pt-20 mb-5'>Why Choose Our Platform?</h1>
+                        <h1 className='font-bold text-center text-accent text-3xl pt-20 mb-5'>Why Choose Our Platform?</h1>
                         <p className='text-center px-10 text-xl'>
                             Whatever resume template you're looking for, we've got it! Whether it's a classic black-and-white template, or something a bit more outside the box, we have what you need!
                         </p>
