@@ -7,6 +7,7 @@ import ProjectInfo from './ProjectInfo';
 import Paper from './Paper';
 
 
+
 const FormCv = () => {
 
     const [page, setPage] = useState(0);
@@ -64,51 +65,45 @@ const FormCv = () => {
 
     }
 
-
     return (
-        <div className='mt-28 mb-16 m-10'>
-            <div className='flex'>
-                <div className=" p-2">
-                    <div className=" bg-gray-300 rounded-2xl p-2">
-                        <div className='flex gap-2 mb-3'>
+        <div className='mt-24 mb-16 m-10'>
+            <div className='flex flex-col md:flex-row gap-5'>
+                <div class="w-full md:w-1/3">
+                    <div class=" bg-gray-300 rounded-2xl p-2">
+                        <div className="form-container">
 
-                            <div className="form-container mx-auto">
+                            <div className="body">
+                                {PageDisplay()}
+                            </div>
+                            <div className="footer flex justify-between mt-5">
 
-                                <div className="body">
-                                    {PageDisplay()}
-                                </div>
-                                <div className="footer flex justify-between mt-5">
+                                <button
+                                    disabled={page == 0}
+                                    className='btn btn-success pt-4' onClick={() => {
+                                        setPage((currPage) => currPage - 1)
+                                    }}>Prev</button>
+
+                                {page == pageTitles.length - 1 ?
+                                    <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
+                                    :
 
                                     <button
-                                        disabled={page == 0}
                                         className='btn btn-success pt-4' onClick={() => {
-                                            setPage((currPage) => currPage - 1)
-                                        }}>Prev</button>
+                                            setPage((currPage) => currPage + 1)
 
-                                    {page == pageTitles.length - 1 ?
-                                        <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
-                                        :
-
-                                        <button
-                                            className='btn btn-success pt-4' onClick={() => {
-                                                setPage((currPage) => currPage + 1)
-
-                                            }}>Next</button>
-                                    }
-                                </div>
-                            </div >
-                        </div>
+                                        }}>Next</button>
+                                }
+                            </div>
+                        </div >
                     </div>
-                </div >
-
-                <div className="grid grid-rows-12 p-2">
-                    <div className="col-start-1 col-end-6 ... bg-gray-200">
+                </div>
+                <div className='w-full md:w-2/3'>
+                    <div class="bg-gray-200 rounded-xl p-2">
                         <Paper formData={formData}></Paper>
                     </div>
                 </div>
-            </div >
+            </div>
         </div >
-
     );
 };
 
