@@ -1,57 +1,146 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import CLPersonalInfo from './CLPersonalInfo';
+import CoverLetterAbout from './CoverLetterAbout';
+import CoverLetterDisplay from './CoverLetterDisplay';
+import CoverLetterEducation from './CoverLetterEducation';
+// import CoverLetterFinishit from './CoverLetterFinishit';
+import CoverLetterSkills from './CoverLetterSkills';
+import Experience from './Experience';
 
 const TemplateForm = () => {
+    const [page, setPage] = useState(0);
+
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        city: ' ',
+        postalcode: '',
+        phone: ' ',
+        email: '',
+        jobTitle: '',
+        joblocation: '',
+        jobDescription: '',
+        education: '',
+        universityName: '',
+        startDate: '',
+        endDate: '',
+        educationCity: '',
+        projectName: '',
+        projectDescription: '',
+        educationDescription: '',
+        aboutDescription: '',
+        skillOne: '',
+        level: '',
+        summary: '',
+    })
+
+    console.log(formData);
+
+    const url = `http://localhost:5000/aboutForm`
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data);
+            // alert('users added successfull !!!')
+
+        });
+
+
+
+    const [form, setForms] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/aboutForm')
+            .then(res => res.json())
+            .then(data => setForms([data]))
+    }, []);
+
+    console.log(form);
+
+    const pageTitles = ["Personal Information", "Experience", "Education", "Skill", "About",]
+    const PageDisplay = () => {
+
+        if (page === 0) {
+            return <CLPersonalInfo formData={formData} setFormData={setFormData} />;
+        }
+
+        else if (page === 1) {
+            return <Experience formData={formData} setFormData={setFormData} />;
+        }
+        else if (page === 2) {
+            return <CoverLetterEducation formData={formData} setFormData={setFormData} />;
+        }
+        else if (page === 3) {
+            return <CoverLetterSkills formData={formData} setFormData={setFormData} />;
+        }
+        else if (page === 4) {
+            return <CoverLetterAbout formData={formData} setFormData={setFormData} />;
+        }
+        // else if (page === 5) {
+        //     return <CoverLetterFinishit formData={formData} setFormData={setFormData} />;
+        // }
+
+    }
+
+
     return (
         <div className='mt-28 mb-16 m-10'>
-            <div className='flex '>
-                <div class="grid grid-rows-12 p-2 rounded-xl ">
-                    <div class="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
-
-                        <ul class="steps bg-base-300 p-3  
-                        place-items-center">
-                            <li class="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
-                            <li class="step ml-5  "> <p className='ml-8'>EXPERIENCE</p> </li>
-                            <li class="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
-                            <li class="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
-                            <li class="step ml-3"> <p className='ml-1'>ABOUT</p> </li>
-                            <li class="step   ml-3"> <p>FINISHIT</p> </li>
-                        </ul>
-                        <div>
-                            <h1 className='text-3xl mt-8'>Please enter your <span className='text-primary font-bold'>contact</span> infos</h1>
-                            <p className='p-1 mb-5'>It allows employers to see how they can cantact you</p>
-
-                            <form action="" className='p-3'>
-                                <div className='flex gap-2 mb-3 '>
-                                    <input type="text" placeholder="FIRST NAME" class="input input-bordered input-secondary w-full max-w-xs" />
-                                    <input type="text" placeholder="LAST NAME" class="input input-bordered input-secondary w-full max-w-xs" />
+            <div className='flex'>
+                <div className='p-2'>
+                    <div className='bg-gray-300 rounded-2xl p-2'>
+                        <div className='flex gap-2 mb-3'>
+                            <div className='form-container mx-auto'>
+                                <div>
+                                    {PageDisplay()}
                                 </div>
-                                <input type="text " placeholder="ADDRESS" class="input input-bordered p-3 mb-3 input-secondary w-full max-w-lg" />
-                                <div className='flex gap-2 mb-3 '>
-                                    <input type="text" placeholder="CITY" class="input input-bordered input-secondary w-full max-w-xs" />
-                                    <input type="text" placeholder="POSTAL CODE" class="input input-bordered input-secondary w-full max-w-xs" />
-                                </div>
-                                <div className='flex gap-2 mb-3 '>
-                                    <input type="text" placeholder="PHONE NUMBER" class="input input-bordered input-secondary w-full max-w-xs" />
-                                    <input type="text" placeholder="EMAIL" class="input input-bordered input-secondary w-full max-w-xs" />
-                                </div>
-                               <div className='flex justify-end'>
-                               <Link to="/experience" className='btn btn-primary'>Next to Experience ⟼ </Link>
-                               </div>
-                             
+                                <div className='footer flex justify-between mt-5'>
+                                    <button
+                                        disabled={page == 0}
+                                        className="btn btn-primary pt-4" onClick={() => {
+                                            setPage((currPage) => currPage - 1)
+                                        }}>Prev</button>
 
-                            </form>
+                                    <button
+                                        className='btn btn-primary pt-4' onClick={() => {
+                                            if (page === pageTitles.length - 1) {
+                                                alert('form submitted');
+                                                console.log(formData)
+                                            }
+                                            else {
+                                                setPage((currPage) => currPage + 1)
+                                            }
+                                        }}>
+                                        {page === pageTitles.length - 1 ? "Submit" : "Next"}
+                                    </button>
+                                </div>
+
+                            </div>
 
                         </div>
+
                     </div>
 
                 </div>
-                <div class="grid grid-rows-12 p-2">
-                    <div class="col-start-1 col-end-6 ... bg-gray-200">
-                        02
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsam, voluptatibus nostrum quod natus voluptate modi corporis et quisquam fuga officia tenetur dolore animi laborum impedit! Laudantium fugiat autem facere.
+
+                <div className=''>
+                    <div className=''>
+                        {
+                            form?.map(forms => <CoverLetterDisplay
+                                key={forms._id}
+                                forms={forms}
+                            ></CoverLetterDisplay>
+                            )
+                        }
+
+
                     </div>
                 </div>
+
             </div>
         </div>
     );

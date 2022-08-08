@@ -6,18 +6,17 @@ const Templates = () => {
     const [templates, setTemplates] = useState([]);
 
     useEffect(() => {
-        fetch('https://pranoysarker.github.io/cv-api/cv.json')
+        fetch('http://localhost:5000/cvPhoto')
             .then(res => res.json())
             .then(data => {
                 setTemplates(data)
-                console.log(data);
             })
     }, [])
     return (
-        <div className='mt-32'>
-            <div className="hero h-5/6 bg-base-100 rounded">
+        <div className='mt-2'>
+            <div className="hero h-screen bg-base-100 rounded">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-                    <img src={cvBanner} className="max-w-md rounded-lg shadow-2xl animate__zoomInDown animate__animated" />
+                    <img src={cvBanner} className="max-w-md rounded-lg shadow-2xl" />
                     <div className='lg:text-left text-center'>
                         <h1 className="text-5xl font-bold text-secondary animate__animated animate__zoomIn">Create Your CV</h1>
                         <p className="py-6 text-2xl animate__animated  animate__lightSpeedInLeft">Our CV templates are designed with your success of mind.You can use them free.Some of them are premium.</p>

@@ -35,7 +35,7 @@ const Login = () => {
         console.log(gUser)
         navigate(from, { replace: true });
 
-        
+
 
     }
 
@@ -43,17 +43,17 @@ const Login = () => {
 
         console.log(data)
         signInWithEmailAndPassword(data.email, data.password)
-        
+
     };
     return (
         <div className='mt-10'>
             <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
             <div className='flex justify-center items-center '>
 
-                <div class="card w-96 bg-white  shadow-xl mb-5">
+                <div className="card w-96 bg-white  shadow-xl mb-5">
 
 
-                    <div class="card-body">
+                    <div className="card-body">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -116,13 +116,13 @@ const Login = () => {
                         </form>
 
                         <p> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
-                        <div class="divider text-secondary">Or Continue With</div>
+                        <div className="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>
                             <button
 
                                 onClick={() => signInWithGoogle()}
-                                class="btn btn-outline bg-secondary w-full max-w-xs"
+                                className="btn btn-outline bg-secondary w-full max-w-xs"
                             >Google</button>
 
                         </div>

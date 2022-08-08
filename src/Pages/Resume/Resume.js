@@ -12,23 +12,31 @@ const Resume = () => {
 
             <ResumeBanner></ResumeBanner>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 justify-items-center mb-10 p-10'>
-                <div class="container">
+                <div className="container">
                     <img src={Resume1} alt="" className='w-3/4' />
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form"></Link>
                 </div>
 
-                <div class="container">
+                <div className="container">
                     <img src={Resume2} alt="" className='w-3/4' />
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form"></Link>
                 </div>
 
-                <div class="container">
+                <div className="container">
+                    <img src={Resume3} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
+                    <Link to="/resume/form"></Link>
+                </div>
+
+                <div className="container">
                     <img src={Resume3} alt="" className='w-3/4' />
                     <figcaption>
                         <h3>Create Now</h3>
@@ -36,15 +44,7 @@ const Resume = () => {
                     <Link to=""></Link>
                 </div>
 
-                <div class="container">
-                    <img src={Resume3} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to=""></Link>
-                </div>
-
-                <div class="container">
+                <div className="container">
                     <img src={Resume1} alt="" className='w-3/4' />
                     <figcaption>
                         <h3>Create Now</h3>
@@ -52,7 +52,7 @@ const Resume = () => {
                     <Link to=""></Link>
                 </div>
 
-                <div class="container">
+                <div className="container">
                     <img src={Resume2} alt="" className='w-3/4' />
                     <figcaption>
                         <h3>Create Now</h3>
