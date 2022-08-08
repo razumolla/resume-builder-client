@@ -1,19 +1,18 @@
-
 /* .Banner{
     background: url(/src/assets/images/imgAfruza/202978.webp);
     border-radius: 10px;
 
 } */
-.Banner{
+.Banner {
     background: url(../../assets/images/imgAfruza/Untitled\ design.jpg);
     border-radius: 20px;
     margin: 10px 10px 10px 10px;
-    
-   
+
+
 
 }
 
-.CoverLetterBanner{
+.CoverLetterBanner {
     background: url(/src/assets/images/imgAfruza/New\ Project.png);
     border-radius: 10px;
     background-repeat: no-repeat;
@@ -21,20 +20,23 @@
     height: 100%;
 
 }
-.Banner_button{
+
+.Banner_button {
     background-color: rgba(12, 202, 206, 0.107);
-   
- }
- 
- .Banner_button:hover{
-     background-color: wheat;
-     color: black;
-     border: 1px solid rgb(15, 15, 15);
- }
-.TemplateImage{
+
+}
+
+.Banner_button:hover {
+    background-color: wheat;
+    color: black;
+    border: 1px solid rgb(15, 15, 15);
+}
+
+.TemplateImage {
     height: 600px;
 }
-.TemplateImage:hover{
+
+.TemplateImage:hover {
     overflow: hidden;
     height: 600px;
     transform: scale(1.1);
@@ -43,13 +45,12 @@
 }
 
 
-.CoverLetterBtn{
+.CoverLetterBtn {
     background-color: rgb(95, 12, 228);
     border: none;
 }
 
-.CoverLetterBtn:hover{
+.CoverLetterBtn:hover {
     background-color: rgb(228, 12, 181);
-    border: none;  
+    border: none;
 }
-
