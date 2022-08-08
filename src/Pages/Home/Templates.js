@@ -1,7 +1,9 @@
 import React from 'react';
+
 import resume3 from '../../assets/images/resume-3.jpg';
 import resume2 from '../../assets/images/resume-2.jpg';
 import resume1 from '../../assets/images/resume-1.png';
+// import { Link } from 'react-router-dom';
 
 const Templates = () => {
     return (
@@ -38,6 +40,7 @@ const Templates = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     );
