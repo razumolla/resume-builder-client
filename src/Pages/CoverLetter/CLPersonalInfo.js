@@ -1,36 +1,10 @@
 import React from 'react';
 
 
-const CLPersonalInfo = ({formData, setFormData}) => {
-    // const handleAdd = (e) =>{
-    //     e.preventDefault();
-    //     const firstName = e.target.firstName.value;
-    //     const lastName = e.target.lastName.value;
-    //     const address = e.target.address.value;
-    //     const city = e.target.city.value;
-    //     const postalcode = e.target.postalcode.value;
-    //     const phone = e.target.phone.value;
-    //     const email = e.target.email.value;
-       
-    //     const aboutForm = {firstName, lastName, address, city, postalcode, phone, email};
-    //     console.log(aboutForm);
-    //     const url = `http://localhost:5000/aboutForm`
-    //     fetch(url,{
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type':'application/json'
-    //         },
-    //         body:JSON.stringify(aboutForm)
-    //     })
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         console.log('success', data);
-    //         alert('users added successfull !!!')
-    //         e.target.reset();
-    //     })
-    //  }
-    
+const CLPersonalInfo = ({ formData, setFormData }) => {
+  
     return (
+
         <div className='mt-16 mb-16 m-10'>
         <div className='flex '>
             <div class="bg-gray-200 m-4 ">
@@ -78,7 +52,7 @@ const CLPersonalInfo = ({formData, setFormData}) => {
            
         </div>
     </div>
-    
+
 
 
     );

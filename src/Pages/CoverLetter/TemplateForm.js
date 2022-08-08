@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import CLCompanyDetails from './CLCompanyDetails';
 import CLPersonalInfo from './CLPersonalInfo';
 import CoverLetterDisplay from './CoverLetterDisplay'
@@ -64,7 +64,7 @@ const TemplateForm = () => {
 
     }
 
- 
+
 
     const pageTitles = ["Personal Information", "Company Details", "Finishit",]
     const PageDisplay = () => {
@@ -125,15 +125,15 @@ const TemplateForm = () => {
 
                             </div>
 
-                         <div>
-                         <CoverLetterDisplay></CoverLetterDisplay>
-                         </div>
+                            <div>
+                                <CoverLetterDisplay></CoverLetterDisplay>
+                            </div>
 
                         </div>
 
                     </div>
 
-                   
+
 
                 </div>
 

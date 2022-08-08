@@ -33,14 +33,17 @@ export default function Contact() {
     <div className="contact-form " id="contact">
       <div className="w-left">
         <div className="awesome">
-        <Roll bottom>
-            <span>Get in Touch</span>
+          <Roll left>
+            <Roll bottom>
+              <span>Get in Touch</span>
             </Roll>
 
-          <br />
-          <span>Contact Us</span>
-          <img src={leaves} alt="" />
+            <br />
+            <span>Contact Us</span>
+            <img src={leaves} alt="" />
+          </Roll>
         </div>
+
       </div>
       {/* right side form */}
       <div className="c-right">
@@ -65,7 +68,7 @@ export default function Contact() {
             placeholder="Message"
             required
           />
-          <input type="submit" value="Submit" class="btn button" />
+          <input type="submit" value="Submit" className="btn button" />
         </form>
       </div>
       <ToastContainer
