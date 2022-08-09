@@ -6,13 +6,18 @@ import Home from './Pages/Home/Home';
 import Templates from './Pages/Cv/Templates';
 import FormCv from './Pages/Cv/FormCv';
 import Login from './Pages/Login/Login';
+import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import Resume from './Pages/Resume/Resume';
 import ResumeForm from './Pages/Resume/ResumeForm';
 import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
-import CoverLetter from './Pages/CoverLetter/CoverLetter';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
+import Experience from './Pages/CoverLetter/Experience';
+import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
+import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
+import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
+import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -24,16 +29,15 @@ import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
-import Dashboard from './Pages/Dashboard/Dashboard';
-import MyProfile from './Pages/Dashboard/MyProfile';
-import MyReview from './Pages/Dashboard/MyReview';
-
+import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
+import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
+import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
 
 
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -45,11 +49,6 @@ function App() {
           path="/templateForm"
           element={<TemplateForm></TemplateForm>}
         ></Route>
-
-        <Route path="/resume" element={<Resume />}></Route>
-        {/* <Route path="/cv" element={<Templates></Templates>}></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
-
 
         <Route
           path="resume"
@@ -70,17 +69,13 @@ function App() {
           </RequireAuth>
         } />
 
-
-        <Route path="blog" element={
-          <RequireAuth>
-            <Blogs></Blogs>
-          </RequireAuth>
-        } />
-         
-
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
-      
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/education" element={<CoverLetterEducation />} />
+        <Route path="/skills" element={<CoverLetterSkills />} />
+        <Route path="/about" element={<CoverLetterAbout />} />
+        <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
@@ -96,17 +91,9 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
-        {/* Dashboard */}
-        <Route path="dashboard" element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>
-        }>
-          <Route index element={<MyProfile />} />
-          <Route path="review" element={<MyReview />} />
-        </Route>
-
-
+        <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
+        <Route path='/paymentCardTwo' element={<PaymentCardTwo></PaymentCardTwo>}></Route>
+        <Route path='/paymentCardThree' element={<PaymentCardThree></PaymentCardThree>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 
