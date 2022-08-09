@@ -1,40 +1,65 @@
 import React from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+const CoverLetterDisplay = ({ formData }) => {
+    const{name,email,address, phone,designation,dear,professionalCareer, achievements,characteristics}=formData;
+    // console.log(form);
+   
+    const generatePdf = () => {
+        const input = document.getElementById('coverLetter');
+        html2canvas(input)
+        .then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF();
+            pdf.addImage(imgData, 'JPEG', 0, 0);
+            pdf.sav('download.pdf');
+        })
+    }
 
-const CoverLetterDisplay = ({ forms }) => {
-    const { firstName, lastName } = forms
     return (
-        <div className=''>
-            <div className="card w-3/4 bg-base-100 shadow-xl mx-auto">
-                <div className="card-body text-left">
-                    <div className='bg-red-100 p-2'>
-                        <h1 className='text-3xl font-semibold'>{firstName}{lastName}</h1>
-                        <p className='font-semibold'>Email:afruzaaktersonia@gmail.com</p>
-                        <p className='font-semibold'>Phone:01888888888</p>
-                        <p className='font-semibold'>Address:Dhaka</p>
+        <div className='my-10 mb-96 '>
+            <div class="card  bg-gray-100 shadow-xl ">
+                <div class="card-body text-left" id='coverLetter'>
+                  <div className=' p-3  '>
+                   <div>
+                   <h1 className='text-3xl font-semibold'>{name}</h1>
+                    <h1 className='text-xl font-semibold'>{designation}</h1>
+                   </div>
+                    <div className='text-left'>
+                    <small className='font-semibold'>{email}</small> <br/>
+                    <small className='font-semibold'>{phone}</small> <br/>
+                    <small className='font-semibold'>{address}</small> <br/>
+                    {/* <small className='font-semibold'>{dear}</small> <br/> */}
+                    <div className='divider px-3'></div>
                     </div>
-                    <div className='divider px-2'></div>
-                    <div>
-                        <h2 className='text-2xl font-bold'>Summary</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere reiciendis veniam dicta mollitia quidem quibusdam saepe molestias nisi culpa! Omnis autem quas voluptas dicta eaque inventore commodi saepe facilis quia!</p>
+                  </div>
+                   
+                    <div >
+                        <h2 className='text-xl font-bold'>{dear}</h2>
+                        <p>{professionalCareer}
+                        </p>
                     </div>
                     <div className='mt-3'>
-                        <h2 className='text-2xl font-bold'>Education</h2>
-                        <p className=''><span className='font-bold'>Education:</span> latest educational status</p>
-                        <p className=''><span className='font-bold'>University/College Name:</span></p>
-                        <p className=''><span className='font-bold'>Year:</span> 2010-2020</p>
+                       {achievements}
+
                     </div>
                     <div className='mt-3'>
-                        <h2 className='text-2xl font-bold'>Projects</h2>
-                        <p className=''><span className='font-bold'>Your Best Project:</span>  Resume Builder</p>
-                        <p className=''><span className='font-bold'>Project Live Link:</span>  resume-builder.com</p>
-                        <p className=''><span className='font-bold'>Your Best Project:</span>  Resume Builder</p>
+                        
+                        <p className=''>{characteristics}
+
+                          </p>
                     </div>
-                    <div className="mt-3">
-                        <h2 className="text-2xl font-bold">Skills</h2>
-                        <p className=''><span className='font-bold'>Skills:</span>  </p>
+                    <div className="mt-3 ">
+                        {/* <h2 className="text-xl font-bold">Afruza Akter Sonia</h2> */}
+                        
+            
                     </div>
                 </div>
+                <div className='mb-16'>
+                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
+            </div>
+           
         </div >
     );
 };

@@ -30,7 +30,7 @@ export default function Contact() {
     e.target.reset();
   };
   return (
-    <div className="contact-form " id="contact">
+    <div className="contact-form mb-20" id="contact">
       <div className="w-left">
         <div className="awesome">
           <Roll left>
