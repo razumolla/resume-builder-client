@@ -26,7 +26,7 @@ const CoverLetterAbout = ({ formData, setFormData }) => {
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea value={formData.aboutDescription} onChange={(e) => setFormData({ ...formData, aboutDescription: e.target.value })} className='w-full ' placeholder='About Summary' name="Description" id="Description" cols="12" rows="10"></textarea>
-                                    <label for="">Summary</label>
+                                    <label htmlFor="">Summary</label>
                                 </div>
 
 

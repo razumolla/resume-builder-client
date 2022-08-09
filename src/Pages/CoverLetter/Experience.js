@@ -24,17 +24,17 @@ const Experience = ({ formData, setFormData }) => {
                             <form action="" className='p-3'>
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <label for="Job Title">Job Title</label>
+                                        <label htmlFor="Job Title">Job Title</label>
                                         <input type="text" value={formData.jobTitle} onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })} placeholder="CEO" className="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
                                     <div>
-                                        <label for="employer">Employer</label>
+                                        <label htmlFor="employer">Employer</label>
                                         <input type="text" value={formData.employer} onChange={(e) => setFormData({ ...formData, employer: e.target.value })} placeholder="Google" className="input input-bordered input-secondary w-full max-w-xs" required />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label for="city">Job Location</label>
+                                    <label htmlFor="city">Job Location</label>
                                     <input type="text" value={formData.joblocation} onChange={(e) => setFormData({ ...formData, joblocation: e.target.value })} placeholder="Dhaka" className="input input-bordered input-secondary w-full max-w-xs" required />
                                 </div>
 
@@ -43,7 +43,7 @@ const Experience = ({ formData, setFormData }) => {
 
                                     <textarea className='w-full '
                                         value={formData.jobDescription} onChange={(e) => setFormData({ ...formData, jobDescription: e.target.value })} cols="12" rows="10"></textarea>
-                                    <label for="">Job Description</label>
+                                    <label htmlFor="">Job Description</label>
                                 </div>
 
 

@@ -46,12 +46,12 @@ const CoverLetterFinishit = () => {
 
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <label for="Job Title">School/Collage/University</label>
+                                        <label htmlFor="Job Title">School/Collage/University</label>
                                         <input type="text" placeholder="Harvard" className="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
 
                                     <div className="form-control w-full max-w-xs">
-                                        <label for="selectdegree">Select Degree</label>
+                                        <label htmlFor="selectdegree">Select Degree</label>
                                         <select className="select   p-2 border-primary-3">
                                             <option disabled selected>Select your degree</option>
                                             <option>SSC</option>
@@ -70,7 +70,7 @@ const CoverLetterFinishit = () => {
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
                                         <div>
-                                            <label for="startdate">Graduation Date</label>
+                                            <label htmlFor="startdate">Graduation Date</label>
                                         </div>
                                         <select className="select    border-primary-3">
                                             <option disabled selected>Select Graduation Date</option>
@@ -157,12 +157,12 @@ const CoverLetterFinishit = () => {
                                         </select>
                                     </div>
                                     {/* <div>
-                                        <label for="enddate">Graduation End Date</label>
+                                        <label htmlFor="enddate">Graduation End Date</label>
                                         <input type="date" className="input input-bordered input-secondary w-full max-w-xs" required />
 
                                     </div> */}
                                     <div>
-                                        <label for="city">City</label>
+                                        <label htmlFor="city">City</label>
                                         <input type="text" placeholder="Dhaka" className="input input-bordered input-secondary w-full max-w-xs" required />
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ const CoverLetterFinishit = () => {
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea className='w-full p-3 ' placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
-                                    <label for="">Description</label>
+                                    <label htmlFor="">Description</label>
                                 </div>
 
                             </form>
