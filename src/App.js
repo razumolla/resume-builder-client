@@ -29,12 +29,15 @@ import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import MyReview from './Pages/Dashboard/MyReview';
 
 
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto px-0">
+    <div className="">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -88,10 +91,21 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
+        {/* Dashboard */}
+        <Route path="dashboard" element={
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        }>
+          <Route index element={<MyProfile />} />
+          <Route path="review" element={<MyReview />} />
+        </Route>
+
+
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div >
   );
 }
