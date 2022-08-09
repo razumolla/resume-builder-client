@@ -29,7 +29,6 @@ import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
-import PaymentCard from './Pages/Pricing/PaymentCardOne';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
