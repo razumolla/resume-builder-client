@@ -48,8 +48,8 @@ const ResumePage = ({ formData }) => {
 
                         <div className='mt-3'>
                             <h2 className='text-2xl font-bold'>Education</h2>
-                            <p className=''><span className='font-bold'>Education:</span> {education}</p>
-                            <p className=''><span className='font-bold'>University/College Name:</span> {institute}</p>
+                            <p className='font-bold'>{education}</p>
+                            <p className='font-semibold'>{institute}</p>
                             <p className=''><span className='font-bold'>Year:</span> {startDate} - {endDate}</p>
                         </div>
                         <div className='mt-3'>
@@ -60,14 +60,14 @@ const ResumePage = ({ formData }) => {
                         </div>
                         <div className="mt-3">
                             <h2 className="text-2xl font-bold">Skills</h2>
-                            <p className=''><span className='font-bold'>Skills:</span> {skills} </p>
+                            <p className=''> {skills} </p>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Download as pdf</button>
+            <div className='text-center'>
+                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Download PDF</button>
             </div>
         </div >
     );

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = ({ formData, setFormData }) => {
     return (
-        <div>
+        <div className='text-center'>
             <ul className="steps bg-base-300 p-3  
                     place-items-center">
                 <li className="step step-primary mx-4" > <p className=''>PERSONAL</p> </li>

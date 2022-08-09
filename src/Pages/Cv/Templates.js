@@ -14,7 +14,8 @@ const Templates = () => {
     }, [])
     return (
         <div className='mt-2'>
-            <div className="hero h-screen bg-base-100 rounded">
+            {/* <div className="hero h-screen bg-base-100 rounded"> */}
+            <div className="hero min-h-screen px-10 ">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <img src={cvBanner} className="max-w-md rounded-lg shadow-2xl" />
                     <div className='lg:text-left text-center'>

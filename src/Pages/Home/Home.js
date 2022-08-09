@@ -12,11 +12,11 @@ import Templates from './Templates';
 
 const Home = () => {
 
-  
+
 
     return (
-        <div className='m-5'>
-       
+        <div className='m-5 dark:bg-gray-800 dark:text-white'>
+
             <Banner></Banner>
             <Templates></Templates>
             <Benefits></Benefits>
@@ -24,7 +24,7 @@ const Home = () => {
             <Review></Review>
             <Faq></Faq>
             <Contact />
-            <About/>
+            <About />
         </div>
     );
 };
