@@ -40,7 +40,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                             </div>
                             <div className='flex gap-2 mb-3 '>
                                 <input type="number" value={formData.phone} onChange={(e) => setFormData({...formData, phone:e.target.value})} placeholder="Phone Number" class="input input-bordered input-secondary w-full max-w-xs" />
-                                <input type="text" value={formData.linkedin} onChange={(e) =>setFormData({ ...formData, linkedin:e.target.value})} placeholder="www.linkedin.com" class="input input-bordered input-secondary w-full max-w-xs" />
+                                <input type="text" value={formData.dear} onChange={(e) =>setFormData({ ...formData, dear:e.target.value})} placeholder="Dear Mr. Smith" class="input input-bordered input-secondary w-full max-w-xs" />
                             </div>
                         </form>
                       </div>

@@ -14,7 +14,7 @@ const TemplateForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         designation: '',
-        linkedin: '',
+        dear: '',
         city: ' ',
         // postalcode: '',
         phone: ' ',
@@ -98,7 +98,7 @@ const TemplateForm = () => {
                 <div className='p-2 '>
                     <div className=' rounded-2xl p-3 max-h-screen'>
                         <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3  '>
-                            <div className='form-container mx-auto '>
+                            <div className='form-container '>
                                 <div>
                                     {PageDisplay()}
                                     <div className="footer flex justify-between mt-5">
@@ -126,7 +126,7 @@ const TemplateForm = () => {
                             </div>
 
                             <div>
-                                <CoverLetterDisplay></CoverLetterDisplay>
+                                <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
                             </div>
 
                         </div>
