@@ -23,34 +23,30 @@ import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
+import PricingCard from './Pages/Pricing/PricingCard';
 
 
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="max-w-7xl mx-auto px-0">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/home" element={<Home />} />
-        <Route path="/resume" element={<Resume />} ></Route>
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
-
-
-        <Route path="/resume" element={<Resume />}></Route>
-
-        <Route path="/cv" element={<Templates></Templates>}></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
 
         <Route
           path="/templateForm"
           element={<TemplateForm></TemplateForm>}
         ></Route>
+
         <Route path="/resume" element={<Resume />}></Route>
         {/* <Route path="/cv" element={<Templates></Templates>}></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
+
 
         <Route
           path="resume"
@@ -63,6 +59,11 @@ function App() {
         <Route path="cv" element={
           <RequireAuth>
             <Templates></Templates>
+          </RequireAuth>
+        } />
+        <Route path="coverLetter" element={
+          <RequireAuth>
+            <CoverLetter></CoverLetter>
           </RequireAuth>
         } />
 
@@ -90,7 +91,8 @@ function App() {
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
         <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
-
+        {/* pricing */}
+        <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 

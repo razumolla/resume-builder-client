@@ -7,6 +7,9 @@ import Faq from './Faq';
 import Hired from './Hired';
 import Review from './Review';
 import Templates from './Templates';
+import WhyUs from './WhyUs';
+
+
 
 
 
@@ -14,19 +17,24 @@ import Templates from './Templates';
 
 const Home = () => {
 
-  
+
 
     return (
         <div className='m-5'>
+
           
+
+
+
             <Banner></Banner>
+            <WhyUs></WhyUs>
             <Templates></Templates>
             <Benefits></Benefits>
-            <Hired></Hired>
             <Review></Review>
-            <Faq></Faq>
+            <Hired></Hired>
             <Contact />
-            <About/>
+            <Faq></Faq>
+            {/* <About /> */}
         </div>
     );
 };

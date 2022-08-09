@@ -16,9 +16,9 @@ const Projects = ({ formData, setFormData }) => {
 
 
             <div className='px-4'>
-                <input type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="project" placeholder='Project Name' value={formData.project} onChange={(e) => setFormData({ ...formData, project: e.target.value })} />
+                <input type="text" className="input input-bordered input-secondary w-full max-w-xs  mb-2" name="project" placeholder='Project Name' value={formData.project} onChange={(e) => setFormData({ ...formData, project: e.target.value })} />
 
-                <textarea type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2" name="features" placeholder='Project features' value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })} />
+                <textarea type="text" cols="50" className="input input-bordered input-secondary w-full  mb-2" name="features" placeholder='Project features' value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })} />
 
 
             </div>

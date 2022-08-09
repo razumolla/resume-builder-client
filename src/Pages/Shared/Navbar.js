@@ -37,9 +37,11 @@ const Navbar = () => {
             <li className='ml-3 hover:bg-primary text-black'><NavLink to="/pricing">Pricing</NavLink></li>
         </>
 
+
+
     return (
-        <div className="navbar bg-base-200 top-0 fixed z-50">
-            <div className="navbar bg-base-100 top-0 fixed z-50 shadow-lg">
+        <div className="navbar bg-base-200 top-0 sticky  z-50 ">
+            <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg">
 
                 <div className="navbar-start">
                     <div className="dropdown">
