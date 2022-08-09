@@ -24,12 +24,12 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                             <form action="" className='p-3'>
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <label for="Job Title">Collage/University</label>
+                                        <label htmlFor="Job Title">Collage/University</label>
                                         <input type="text" placeholder="Harvard" value={formData.universityName} onChange={(e) => setFormData({ ...formData, universityName: e.target.value })} className="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
 
                                     <div className="form-control w-full max-w-xs">
-                                        <label for="selectdegree">Type Degree</label>
+                                        <label htmlFor="selectdegree">Type Degree</label>
                                         {/* <select className="select   p-2 border-primary-3">
                                                 <option disabled selected>Select your degree</option>
                                                 <option value={formData.ssc} onChange={(e) => setFormData({...formData, ssc:e.target.value})} >SSC</option>
@@ -49,7 +49,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
                                         {/* <div>
-                                            <label for="startdate">Graduation Date</label>
+                                            <label htmlFor="startdate">Graduation Date</label>
                                         </div> */}
                                         {/* <select className="select    border-primary-3">
                                                 <option disabled selected>Select Graduation Date</option>
@@ -135,16 +135,16 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                                 <option>1950</option>
                                             </select> */}
                                         <div>
-                                            <label htmlFor="">start Date</label>
+                                            <label htmlhtmlFor="">start Date</label>
                                             <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} required />
                                         </div>
                                     </div>
                                     <div>
-                                        <label htmlFor="">End date</label>
+                                        <label htmlhtmlFor="">End date</label>
                                         <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} required />
                                     </div>
                                     <div>
-                                        <label for="city">Education Location</label>
+                                        <label htmlFor="city">Education Location</label>
                                         <input type="text" value={formData.educationCity} onChange={(e) => setFormData({ ...formData, educationCity: e.target.value })} placeholder="Dhaka" className="input input-bordered input-secondary w-full max-w-xs" required />
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea className='w-full p-3 ' value={formData.educationDescription} onChange={(e) => setFormData({ ...formData, educationDescription: e.target.value })} placeholder='Write your Education experience' name="Description" id="Description" cols="30" rows="10"></textarea>
-                                    <label for="">Description</label>
+                                    <label htmlFor="">Description</label>
                                 </div>
 
 
