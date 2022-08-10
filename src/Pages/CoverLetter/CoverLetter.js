@@ -5,7 +5,7 @@ import CoverLetterTemp from './CoverLetterTemp';
 
 const CoverLetter = () => {
     return (
-        <div className='mt-28'>
+        <div className='mt-28 m-10'>
             <div className=" sm:bg-base-0 mb-28">
                 <div class="hero">
                     <div class="flex justify-center align-center sm:flex-row-column lg:flex-row-reverse">

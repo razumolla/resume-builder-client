@@ -16,11 +16,9 @@ const CoverLetterFinishit = ({ formData, setFormData }) => {
                     </div>
                     <div className='w-96'>
                         <h1 className='text-2xl mt-8'>Your Cover Letter is <span className='text-primary font-bold'>Finishit</span> </h1>
-                        {/* <p className='p-1 mb-5'> Finishit your Cover Letter</p> */}
                     </div>
                     <div className='w-96'>
                         <form action="" className='p-3'>
-
                             <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                 <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="NAME" class="input input-bordered input-primary w-auto max-w-xs" />

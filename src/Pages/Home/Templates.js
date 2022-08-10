@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import resume3 from '../../assets/images/resume-3.jpg';
 import resume2 from '../../assets/images/resume-2.jpg';
 import resume1 from '../../assets/images/resume-1.png';
@@ -15,8 +15,12 @@ const Templates = () => {
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
-                            <button class="btn btn-primary rounded-2xl">Use Template</button>
-                            <button class="btn btn-outline btn-accent rounded-2xl">See Template</button>
+                        <Link to="/resume/form">
+                            <button class="btn btn-primary rounded-2xl">Use Resume</button>
+                            </Link>
+                            <Link to="/resume">
+                                <button class="btn btn-outline btn-accent rounded-2xl">See Resume</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -25,8 +29,12 @@ const Templates = () => {
                     <figure><img src={resume2} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
-                            <button class="btn btn-primary rounded-2xl">Use Template</button>
-                            <button class="btn btn-outline btn-accent rounded-2xl">See Template</button>
+                        <Link to="/cv/form">
+                            <button class="btn btn-primary rounded-2xl">Use CV Template</button>
+                            </Link>
+                            <Link to="/cv">
+                                <button class="btn btn-outline btn-accent rounded-2xl">See CV Template</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -35,8 +43,13 @@ const Templates = () => {
                     <figure><img src={resume1} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
-                            <button class="btn btn-primary rounded-2xl">Use Template</button>
-                            <button class="btn btn-outline btn-accent rounded-2xl">See Template</button>
+                            <Link to="/templateForm">
+                            <button class="btn btn-primary rounded-2xl">Use Cover Letter</button>
+                            </Link>
+                            
+                            <Link to="/coverLetter">
+                                <button class="btn btn-outline btn-accent rounded-2xl">See Cover Letter</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

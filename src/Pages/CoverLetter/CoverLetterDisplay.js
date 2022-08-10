@@ -14,18 +14,7 @@ const CoverLetterDisplay = ({ formData }) => {
         achievements,
         characteristics } 
         = formData;
-    // console.log(form);
-
-    // const generatePdf = () => {
-    //     const input = document.getElementById('coverLetter');
-    //     html2canvas(input)
-    //         .then((canvas) => {
-    //             const imgData = canvas.toDataURL('image/png');
-    //             const pdf = new jsPDF();
-    //             pdf.addImage(imgData, 'JPEG', 0, 0);
-    //             pdf.sav('download.pdf');
-    //         })
-    // }
+  
 
     const generatePdf = () => {
         const input = document.getElementById('coverLetter');
@@ -34,7 +23,6 @@ const CoverLetterDisplay = ({ formData }) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF();
                 pdf.addImage(imgData, 'JPEG', 0, 0);
-                // pdf.output('dataurlnewwindow');
                 pdf.save("download.pdf");
             })
             ;
