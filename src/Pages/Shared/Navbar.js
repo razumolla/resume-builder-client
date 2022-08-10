@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg dark:bg-gray-800 dark:text-white lg:flex lg:items-center">
+        <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg dark:bg-sky-900 dark:text-white lg:flex lg:items-center">
 
             <div className="navbar-start ">
                 <div className="dropdown">
@@ -92,7 +92,6 @@ const Navbar = () => {
                         </div>
                     </label>
                 </div> */}
-
 
 
                 <div className='px-5'> <DarkMode></DarkMode></div>
