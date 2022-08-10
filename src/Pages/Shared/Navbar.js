@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/imgMehedi/logo.png";
+import logo from "../../assets/images/imgMehedi/logo-4.png";
 import auth from '../../firebase.init';
 
 const Navbar = () => {

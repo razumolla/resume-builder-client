@@ -10,22 +10,16 @@ import CoverLetterTemplate_7 from '../../assets/images/imgAfruza/Cover-Letter-Te
 import CoverLetterTemplate_8 from '../../assets/images/imgAfruza/Cover-Letter-Template-8.png';
 import '../Home/Banner.css';
 import 'animate.css';
-import CoverLetterDisplay from './CoverLetterDisplay';
 const CoverLetterTemp = () => {
     return (
-        <div className='m-8'>
-            <div>
-                <h1 className='text-4xl text-secondary font-bold  mb-10'>Select Cover Letter Template</h1>
-            </div>
-              <div>
-
+        <div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center mb-10 p-10'>
                 <div class="container animate__animated  animate__lightSpeedInLeft">
                     <img src={CoverLetterTemplate_1} alt="" className='w-3/4 ' />
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    
+
                     <Link to="/templateForm"></Link>
                 </div>
 
@@ -86,14 +80,8 @@ const CoverLetterTemp = () => {
                     </figcaption>
                     <Link to="/templateForm"></Link>
                 </div>
-                
-               
             </div >
-           
-
         </div>
-        </div>
-       
     );
 };
 
