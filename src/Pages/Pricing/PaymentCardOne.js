@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft } from "react-icons/fa";
+import Payment from './Payment';
 
 
 
@@ -8,8 +9,8 @@ import { FaChevronLeft } from "react-icons/fa";
 
 const PaymentCardOne = () => {
     return (
-        <div className='mt-10'>
-            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
+        <div className=''>
+            <h1 className='pt-5 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
             
             <div className='flex justify-center items-center '>
                 <div className="card w-96 bg-white shadow-2xl shadow-gray-500 mb-5">
@@ -26,7 +27,11 @@ const PaymentCardOne = () => {
                             </div>
                         </div>
 
-                        <button className="btn btn-sm btn-outline bg-secondary mt-20">Pay Now</button>
+                        <div className='mt-5'>
+                            <Payment></Payment>
+                        </div>
+
+                        {/* <button className="btn btn-sm btn-outline bg-secondary mt-20">Pay Now</button> */}
                         <div className='flex justify-between '>
                             
                         <div><img style={{width:"400px", height:"150px"}} className="img-center" src="https://d.novoresume.com/images/pricing/lock-icon.svg" alt="" /></div>

@@ -4,8 +4,8 @@ import { FaChevronLeft } from "react-icons/fa";
 
 const PaymentCardThree = () => {
     return (
-        <div className='mt-10'>
-            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
+        <div className=''>
+            <h1 className='pt-5 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
             
             <div className='flex justify-center items-center '>
                 <div className="card w-96 bg-white shadow-2xl shadow-gray-500 mb-5">
