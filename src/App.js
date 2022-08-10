@@ -13,11 +13,6 @@ import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
-import Experience from './Pages/CoverLetter/Experience';
-import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
-import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -27,7 +22,7 @@ import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
 import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
-import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
+import InterviewQuestions from './Pages/Blogs/InterviewQuestions/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
@@ -69,13 +64,7 @@ function App() {
           </RequireAuth>
         } />
 
-        <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<CoverLetterEducation />} />
-        <Route path="/skills" element={<CoverLetterSkills />} />
-        <Route path="/about" element={<CoverLetterAbout />} />
-        <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
