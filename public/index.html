@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
 
 <head>
   <meta charset="utf-8" />
@@ -24,8 +24,9 @@
     -->
   <title>Resume Builder</title>
 </head>
+<!-- dark:bg-gray-800 dark:text-white -->
 
-<body class=" dark:bg-gray-800 dark:text-white">
+<body class="dark:bg-gray-800 dark:text-white">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
@@ -49,6 +50,17 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    function changeMode() {
+      if (document.getElementById('toggle').checked) {
+        document.body.classList.add('dark')
+      }
+      else {
+        document.body.classList.remove('dark')
+      }
+    }
+  </script>
 
 </body>
 

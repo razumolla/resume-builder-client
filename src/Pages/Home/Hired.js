@@ -8,7 +8,7 @@ import facebook from '../../assets/images/h_fb.png'
 const Hired = () => {
     return (
         <div>
-            <h1 className='text-center text-2xl font-bold text-secondary my-10'>Our Customers were hired by:</h1>
+            <h1 className='text-center text-3xl font-bold text-accent my-10'>Companies Loves Us</h1>
             <div className='flex justify-center gap-10 my-10'>
                 <div className="group" >
                     <a href="https://www.google.com"><img src={google} alt="" className="" /></a>

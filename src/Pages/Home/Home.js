@@ -7,6 +7,11 @@ import Faq from './Faq';
 import Hired from './Hired';
 import Review from './Review';
 import Templates from './Templates';
+import WhyUs from './WhyUs';
+
+
+
+
 
 
 
@@ -15,17 +20,25 @@ const Home = () => {
 
 
     return (
-        <div className='m-5 dark:bg-gray-800 dark:text-white'>
+
+        < div className='m-5 dark:bg-gray-800 dark:text-white' >
+
 
             <Banner></Banner>
+            <WhyUs></WhyUs>
             <Templates></Templates>
             <Benefits></Benefits>
-            <Hired></Hired>
             <Review></Review>
-            <Faq></Faq>
+            <Hired></Hired>
             <Contact />
+
             <About />
-        </div>
+
+            <Faq></Faq>
+
+            {/* <About /> */}
+
+        </div >
     );
 };
 

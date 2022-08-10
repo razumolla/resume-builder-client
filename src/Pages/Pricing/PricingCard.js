@@ -1,5 +1,6 @@
 import React from 'react';
 import payment_img from '../../assets/images/payment_img.jpg'
+import { Link } from 'react-router-dom';
 
 const PricingCard = () => {
     return (
@@ -17,7 +18,7 @@ const PricingCard = () => {
                             <div className="card-body">
                                 <h1 className='text-2xl font-bold'>1 Month</h1>
                                 <p>$<span>19.99</span></p>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <Link to="/paymentCardOne"><button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button></Link>
                             </div>
                         </div>
                         <div className="card bg-white  shadow-xl mb-5">
@@ -25,7 +26,7 @@ const PricingCard = () => {
                                 <h1 className='text-2xl font-bold'>3 Months</h1>
                                 <p>$<span>49.99</span></p>
                                 <h5 className='text-red-500'>Save $<span>29</span></h5>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <Link to="/paymentCardTwo"><button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button></Link>
                             </div>
                         </div>
                         <div className="card bg-white  shadow-xl mb-5">
@@ -33,7 +34,7 @@ const PricingCard = () => {
                                 <h1 className='text-2xl font-bold'>12 Months</h1>
                                 <p>$<span>99.99</span></p>
                                 <h5 className='text-red-500'>Save $<span>129</span></h5>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <Link to="/paymentCardThree"><button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button></Link>
                             </div>
                         </div>
 

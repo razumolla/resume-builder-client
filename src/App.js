@@ -13,10 +13,13 @@ import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
-import Experience from './Pages/CoverLetter/Experience';
-import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
+
+
+// import Experience from './Pages/CoverLetter/Experience';
+// import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
+// import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
+
 import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
 import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
@@ -29,13 +32,19 @@ import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
+import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
+import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
+import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
 
 
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto px-0">
-      <Navbar></Navbar>
+    <div className="App">
+      <Navbar>
+
+      </Navbar>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -66,11 +75,13 @@ function App() {
           </RequireAuth>
         } />
 
+        {/* 
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<CoverLetterEducation />} />
-        <Route path="/skills" element={<CoverLetterSkills />} />
+        <Route path="/skills" element={<CoverLetterSkills />} /> */}
+
         <Route path="/about" element={<CoverLetterAbout />} />
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
         <Route path="/login" element={<Login />} />
@@ -88,6 +99,9 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
+        <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
+        <Route path='/paymentCardTwo' element={<PaymentCardTwo></PaymentCardTwo>}></Route>
+        <Route path='/paymentCardThree' element={<PaymentCardThree></PaymentCardThree>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 
