@@ -1,8 +1,7 @@
 import React from 'react';
 
-const CvResume = ({ resumeBlog }) => {
-    const { _id, name, blogTitle, img, date, description } = resumeBlog;
-
+const PersonalDevBlog = ({ personalDevBlog }) => {
+    const { _id, name, blogTitle, img, date, description } = personalDevBlog;
     return (
         <>
             <div className="card w-full bg-base-100 shadow-xl">
@@ -22,4 +21,4 @@ const CvResume = ({ resumeBlog }) => {
     );
 };
 
-export default CvResume;
+export default PersonalDevBlog;

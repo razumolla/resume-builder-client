@@ -17,83 +17,83 @@ const CoverLetterTemp = () => {
             <div>
                 <h1 className='text-4xl text-secondary font-bold  mb-10'>Select Cover Letter Template</h1>
             </div>
-              <div>
+            <div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center mb-10 p-10'>
-                <div class="container animate__animated  animate__lightSpeedInLeft">
-                    <img src={CoverLetterTemplate_1} alt="" className='w-3/4 ' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    
-                    <Link to="/templateForm"></Link>
-                </div>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center mb-10 p-10'>
+                    <div className="container animate__animated  animate__lightSpeedInLeft">
+                        <img src={CoverLetterTemplate_1} alt="" className='w-3/4 ' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
 
-                <div class="container animate__animated  animate__zoomIn">
-                    <img src={CoverLetterTemplate_2} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
+                        <Link to="/templateForm"></Link>
+                    </div>
 
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_3} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_4} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_5} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_6} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to=""></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_7} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_8} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                <div class="container animate__animated  animate__lightSpeedInRight">
-                    <img src={CoverLetterTemplate_8} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/templateForm"></Link>
-                </div>
-                
-               
-            </div >
-           
+                    <div className="container animate__animated  animate__zoomIn">
+                        <img src={CoverLetterTemplate_2} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
 
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_3} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_4} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_5} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_6} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to=""></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_7} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_8} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+                    <div className="container animate__animated  animate__lightSpeedInRight">
+                        <img src={CoverLetterTemplate_8} alt="" className='w-3/4' />
+                        <figcaption>
+                            <h3>Create Now</h3>
+                        </figcaption>
+                        <Link to="/templateForm"></Link>
+                    </div>
+
+
+                </div >
+
+
+            </div>
         </div>
-        </div>
-       
+
     );
 };
 

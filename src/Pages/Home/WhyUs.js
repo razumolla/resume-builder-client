@@ -10,7 +10,7 @@ const WhyUs = () => {
             <div className='grid grid-clos-1 lg:grid-cols-2 gap-5'>
                 <div className='h-80'>
 
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 gap-8">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 gap-8">
                         <div>
                             <img src={resume} alt="" style={{ width: '80px', height: '80px' }} className='ml-2' />
                         </div>
@@ -20,7 +20,7 @@ const WhyUs = () => {
                         </div>
                     </div>
 
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24">
                         <div>
                             <img src={profile} alt="" style={{ width: '80px', height: '80px' }} />
                         </div>
@@ -29,7 +29,7 @@ const WhyUs = () => {
                             <p>Our resume builder built resume for you in step by step </p>
                         </div>
                     </div>
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24">
                         <div>
                             <img src={update} alt="" style={{ width: '80px', height: '80px' }} />
                         </div>

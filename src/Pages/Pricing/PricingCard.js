@@ -10,14 +10,14 @@ const PricingCard = () => {
                 <div className="card bg-secondary shadow-xl mb-5">
                     <img src={payment_img} alt="" />
                     <div className='text-white my-3 text-2xl font-bold'><p>No Automatic Renewal</p>
-                    <p>15 Days Money Back Guarantee</p></div>
+                        <p>15 Days Money Back Guarantee</p></div>
                     <div className="card-body grid sm:grid-cols-1 lg:grid-cols-3 my-5 gap-10">
 
                         <div className="card bg-white  shadow-xl mb-5">
                             <div className="card-body">
                                 <h1 className='text-2xl font-bold'>1 Month</h1>
                                 <p>$<span>19.99</span></p>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <button className="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
                             </div>
                         </div>
                         <div className="card bg-white  shadow-xl mb-5">
@@ -25,7 +25,7 @@ const PricingCard = () => {
                                 <h1 className='text-2xl font-bold'>3 Months</h1>
                                 <p>$<span>49.99</span></p>
                                 <h5 className='text-red-500'>Save $<span>29</span></h5>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <button className="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
                             </div>
                         </div>
                         <div className="card bg-white  shadow-xl mb-5">
@@ -33,7 +33,7 @@ const PricingCard = () => {
                                 <h1 className='text-2xl font-bold'>12 Months</h1>
                                 <p>$<span>99.99</span></p>
                                 <h5 className='text-red-500'>Save $<span>129</span></h5>
-                                <button class="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
+                                <button className="btn btn-xs btn-outline bg-secondary text-white mt-5">Upgrate Now</button>
                             </div>
                         </div>
 

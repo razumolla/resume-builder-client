@@ -27,6 +27,12 @@ import PricingCard from './Pages/Pricing/PricingCard';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import MyReview from './Pages/Dashboard/MyReview';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import AddCvResumeBlog from './Pages/Dashboard/AddCvResumeBlog';
+import AddCoverLetterBlog from './Pages/Dashboard/AddCoverLetterBlog';
+import AddPersonalDevBlog from './Pages/Dashboard/AddPersonalDevBlog';
+import AddInspiringBlog from './Pages/Dashboard/AddInspiringBlog';
 
 
 
@@ -76,11 +82,11 @@ function App() {
             <Blogs></Blogs>
           </RequireAuth>
         } />
-         
+
 
         <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
-      
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
@@ -104,13 +110,17 @@ function App() {
         }>
           <Route index element={<MyProfile />} />
           <Route path="review" element={<MyReview />} />
+          <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
+          <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
+          <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
+          <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
         </Route>
 
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-
       <Footer></Footer>
+      <ToastContainer />
     </div >
   );
 }

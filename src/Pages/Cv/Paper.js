@@ -35,8 +35,8 @@ const Paper = ({ formData }) => {
     }
     return (
         <div className='my-10'>
-            <div class="card w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="card-body text-left" id='cv'>
+            <div className="card w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="card-body text-left" id='cv'>
                     <div>
                         <h1 className='text-3xl font-semibold'>{name}</h1>
                         <p className='font-semibold'>Email: {email}</p>
@@ -71,7 +71,7 @@ const Paper = ({ formData }) => {
                 </div>
             </div>
             <div>
-                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                <button className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

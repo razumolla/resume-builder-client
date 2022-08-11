@@ -68,8 +68,8 @@ const FormCv = () => {
     return (
         <div className='mt-24 mb-16 m-10'>
             <div className='flex flex-col md:flex-row gap-5'>
-                <div class="w-full md:w-1/3">
-                    <div class=" bg-gray-300 rounded-2xl p-2">
+                <div className="w-full md:w-1/3">
+                    <div className=" bg-gray-300 rounded-2xl p-2">
                         <div className="form-container">
 
                             <div className="body">
@@ -98,7 +98,7 @@ const FormCv = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div class="bg-gray-300 rounded-xl p-2">
+                    <div className="bg-gray-300 rounded-xl p-2">
                         <Paper formData={formData}></Paper>
                     </div>
                 </div>
