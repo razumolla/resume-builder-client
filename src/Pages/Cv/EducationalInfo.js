@@ -27,11 +27,11 @@ const EducationalInfo = ({ formData, setFormData }) => {
                 </div>
                 <div className='grid grid-cols-2 gap-3 p-2'>
                     <div>
-                        <label htmlFor="">start Date</label>
+                        <label htmlhtmlFor="">start Date</label>
                         <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.startDate} onChange={(e) => setFormData({ ...formData, startDate: e.target.value })} required />
                     </div>
                     <div>
-                        <label htmlFor="">End date</label>
+                        <label htmlhtmlFor="">End date</label>
                         <input type="date" className="input input-bordered input-primary w-full max-w-xs" value={formData.endDate} onChange={(e) => setFormData({ ...formData, endDate: e.target.value })} required />
                     </div>
                 </div>

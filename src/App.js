@@ -29,12 +29,15 @@ import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
+import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
+import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
+import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
 
 
 
 function App() {
   return (
-    <div className="max-w-7xl mx-auto px-0">
+    <div className="App">
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -88,6 +91,9 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
+        <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
+        <Route path='/paymentCardTwo' element={<PaymentCardTwo></PaymentCardTwo>}></Route>
+        <Route path='/paymentCardThree' element={<PaymentCardThree></PaymentCardThree>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 
