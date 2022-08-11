@@ -27,6 +27,13 @@ import PricingCard from './Pages/Pricing/PricingCard';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
+import InterviewQuesAnsHtml from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsHtml';
+import InterviewQuesAnsCSS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsCSS';
+import InterviewQuesAnsReactJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsReactJS';
+import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsRedux';
+import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
+import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
+import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
 
 
 
@@ -76,8 +83,20 @@ function App() {
         <Route path="/coverLetterWriting" element={<CoverLetterAll> </CoverLetterAll>} />
         <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
-        <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
+       
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
+        {/* interview question page start */}
+        <Route path="/interviewQuestions" element={<InterviewQuestions />} />
+        <Route path="/html" element={<InterviewQuesAnsHtml />} />
+        <Route path="/css" element={<InterviewQuesAnsCSS />} />
+        <Route path="/reactjs" element={<InterviewQuesAnsReactJS />} />
+        <Route path="/mongodb" element={<InterviewQuesAnsMongoDB />} />
+        <Route path="/js" element={<InterviewQuesAnsJS />} />
+        <Route path="/nodejs" element={<InterviewQuesAnsNodeJS />} />
+        <Route path="/redux" element={<InterviewQuesAnsRedux />} />
+
+        {/* interview question page end */}
+
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
         <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>

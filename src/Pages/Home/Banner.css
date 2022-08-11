@@ -7,14 +7,10 @@
 .Banner{
     background: url(../../assets/images/imgAfruza/Untitled\ design.jpg);
     border-radius: 20px;
-    margin: 10px 10px 10px 10px;
-    
-   
-
+    margin: 10px 10px 10px 10px;  
 }
 
-.CoverLetterBanner{
-    background: url(/src/assets/images/imgAfruza/New\ Project.png);
+.CoverLetterBanner{   
     border-radius: 10px;
     background-repeat: no-repeat;
     width: 100%;
