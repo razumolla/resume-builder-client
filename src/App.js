@@ -13,11 +13,6 @@ import SignUp from './Pages/Login/SignUp';
 import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
-import Experience from './Pages/CoverLetter/Experience';
-import CoverLetterEducation from './Pages/CoverLetter/CoverLetterEducation';
-import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterSkills from './Pages/CoverLetter/CoverLetterSkills';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -27,11 +22,18 @@ import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
 import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
 import MockInterview from './Pages/Blogs/MockInterview';
-import InterviewQuestions from './Pages/Blogs/InterviewQuestions';
+import InterviewQuestions from './Pages/Blogs/InterviewQuestions/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
+import InterviewQuesAnsHtml from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsHtml';
+import InterviewQuesAnsCSS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsCSS';
+import InterviewQuesAnsReactJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsReactJS';
+import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsRedux';
+import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
+import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
+import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
 
 
 
@@ -69,13 +71,7 @@ function App() {
           </RequireAuth>
         } />
 
-        <Route path="/templateForm" element={<TemplateForm />}></Route>
         <Route path="/coverLetter" element={<CoverLetter />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/education" element={<CoverLetterEducation />} />
-        <Route path="/skills" element={<CoverLetterSkills />} />
-        <Route path="/about" element={<CoverLetterAbout />} />
-        <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
@@ -87,8 +83,20 @@ function App() {
         <Route path="/coverLetterWriting" element={<CoverLetterAll> </CoverLetterAll>} />
         <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
-        <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
+       
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
+        {/* interview question page start */}
+        <Route path="/interviewQuestions" element={<InterviewQuestions />} />
+        <Route path="/html" element={<InterviewQuesAnsHtml />} />
+        <Route path="/css" element={<InterviewQuesAnsCSS />} />
+        <Route path="/reactjs" element={<InterviewQuesAnsReactJS />} />
+        <Route path="/mongodb" element={<InterviewQuesAnsMongoDB />} />
+        <Route path="/js" element={<InterviewQuesAnsJS />} />
+        <Route path="/nodejs" element={<InterviewQuesAnsNodeJS />} />
+        <Route path="/redux" element={<InterviewQuesAnsRedux />} />
+
+        {/* interview question page end */}
+
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
         <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
