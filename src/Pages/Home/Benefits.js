@@ -34,7 +34,7 @@ const Benefits = () => {
                 <div className="card card-side bg-base-200 shadow-2xl">
                     <div><img src={tips_image} className="p-5" style={{ width: '350px', height: '180px' }} alt="Movie" /></div>
                     <div className="card-body text-left">
-                        <h2 className="text-2xl font-bold text-secondary">Expert tips and guidance</h2>
+                        <h2 className="text-2xl font-bold text-accent">Expert tips and guidance</h2>
                         <p>Get detailed CV-building tips and advice every step of the way. CV pro or beginner - we've got you covered.</p>
 
 
@@ -43,7 +43,7 @@ const Benefits = () => {
                 <div className="card card-side bg-base-200 shadow-2xl">
                     <div><img src={download_image} className="p-5" style={{ width: '350px', height: '180px' }} alt="Movie" /></div>
                     <div className="card-body text-left">
-                        <h2 className="text-2xl font-bold text-secondary">Unlimited CV & Resume Download </h2>
+                        <h2 className="text-2xl font-bold text-accent">Unlimited CV & Resume Download </h2>
                         <p>Our professional Resume Designs are proven to land interviews. Download free CV Templates. Landing your dream Job is your Resume, Cover Letter. Download Fully Editable Sample Now.</p>
 
                     </div>

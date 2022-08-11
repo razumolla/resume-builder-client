@@ -13,7 +13,7 @@ const EducationalInfo = ({ formData, setFormData }) => {
             </ul>
 
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text-center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
             </div>
 
             <div className='m-2'>
@@ -21,7 +21,7 @@ const EducationalInfo = ({ formData, setFormData }) => {
                 <div className='grid grid-cols-1 gap-3 p-2'>
                     <input type="text" placeholder="Education" className="input input-bordered input-primary w-full max-w-xs" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
                 </div>
-                
+
                 <div className='grid grid-cols-1 gap-3 p-2'>
                     <input type="text" placeholder="University/College Name" className="input input-bordered input-primary w-full max-w-xs" value={formData.university} onChange={(e) => setFormData({ ...formData, university: e.target.value })} required />
                 </div>

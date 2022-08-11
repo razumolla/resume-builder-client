@@ -11,7 +11,7 @@ const ProjectInfo = ({ formData, setFormData }) => {
                 <li className="step mx-4"> <p className='ml-1'>OTHERS</p> </li>
             </ul>
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text center'>Enter<span className='text-primary'> Projects </span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text-center'>Enter<span className='text-primary'> Projects </span> Details</h1>
             </div>
             <div className="m-2">
                 <div className='grid grid-cols-1 gap-3 p-2'>

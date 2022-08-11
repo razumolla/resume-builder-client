@@ -11,7 +11,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <li className="step mx-4"> <p className='ml-1'>OTHERS</p> </li>
             </ul>
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text center'>Enter<span className='text-primary'> Personal </span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text-center'>Enter<span className='text-primary'> Personal </span> Details</h1>
             </div>
 
 
@@ -27,7 +27,6 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 </div>
             </div>
 
-            {/* <input type="text" name="" targvalue={formData.email} onChange={(e) => setFormData({ ...formData, email: e.et.value })} /> */}
         </div>
     );
 };
