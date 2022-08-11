@@ -11,10 +11,10 @@ const OtherInfo = ({ formData, setFormData }) => {
                 <li className="step step-primary mx-4"> <p className='ml-1'>OTHERS</p> </li>
             </ul>
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text center'>Enter<span className='text-primary'> Other </span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text-center'>Enter<span className='text-primary'> Other </span> Details</h1>
             </div>
 
-            <div className='m-2'>
+            <form className='m-2'>
                 <div className='grid grid-cols-1 gap-3 p-2'>
                     <input type="text" placeholder="Skill 1" className="input input-bordered input-primary w-full max-w-xs" value={formData.skillOne} onChange={(e) => setFormData({ ...formData, skillOne: e.target.value })} required />
 
@@ -24,8 +24,8 @@ const OtherInfo = ({ formData, setFormData }) => {
                     <textarea className="textarea textarea-primary" style={{ width: '20rem !important' }} placeholder="Write about yourself" value={formData.summary} onChange={(e) => setFormData({ ...formData, summary: e.target.value })}></textarea>
 
                 </div>
-            </div>
-        </div>
+            </form >
+        </div >
     );
 };
 

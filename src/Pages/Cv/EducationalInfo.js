@@ -13,7 +13,7 @@ const EducationalInfo = ({ formData, setFormData }) => {
             </ul>
 
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text-center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
             </div>
 
             <div className='m-2'>

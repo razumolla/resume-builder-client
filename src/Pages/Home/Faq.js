@@ -12,7 +12,7 @@ const Faq = () => {
                     <div className='w-70'>
 
 
-                        <div className='relative w-[400px] overflow-hidden'>
+                        <div className='relative w-[400px] lg:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -32,7 +32,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[400px] overflow-hidden'>
+                        <div className='relative w-[400px] lg:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -52,7 +52,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[400px] overflow-hidden'>
+                        <div className='relative w-[400px] lg:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -71,7 +71,7 @@ const Faq = () => {
                         </div>
 
 
-                        <div className='relative w-[400px] overflow-hidden'>
+                        <div className='relative w-[400px] lg:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
