@@ -14,8 +14,9 @@ const Faq = () => {
 
                         <div className='relative w-[400px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
+                            {/* bg-emerald-300 */}
 
-                            <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
+                            <div className='bg-blue-300 h-12 w-full pl-5 flex item-center border rounded-md'>
                                 <h1 className='text-lg font-semibold text-gray-700'>Can I Use Resume Creator For Free?</h1>
                             </div>
 
@@ -35,7 +36,7 @@ const Faq = () => {
                         <div className='relative w-[400px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
-                            <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
+                            <div className='bg-blue-300 h-12 w-full pl-5 flex item-center border rounded-md'>
                                 <h1 className='text-lg font-semibold text-gray-700'>Can I customize my resume?</h1>
                             </div>
 
@@ -55,8 +56,8 @@ const Faq = () => {
                         <div className='relative w-[400px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
-                            <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
-                                <h1 className='text-lg font-semibold text-gray-700'>Can I Download My Resume PDF?</h1>
+                            <div className='bg-blue-300  h-12 w-full pl-5 flex item-center border rounded-md'>
+                                <h1 className='text-lg  font-semibold text-gray-700'>Can I Download My Resume PDF?</h1>
                             </div>
 
                             <div className='absolute top-3 right-3 text-white transition-transform duration-500 rotate-0 peer-checked:rotate-180'>
@@ -74,7 +75,7 @@ const Faq = () => {
                         <div className='relative w-[400px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
-                            <div className='bg-emerald-300 h-12 w-full pl-5 flex item-center border rounded-md'>
+                            <div className='bg-blue-300 h-12 w-full pl-5 flex item-center border rounded-md'>
                                 <h1 className='text-lg font-semibold text-gray-700'>Can I Delete My Account?</h1>
                             </div>
 
