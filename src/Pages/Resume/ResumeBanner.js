@@ -1,5 +1,5 @@
 import React from 'react';
-import resume from '../../assets/images/imgMehedi/resume.png'
+import resume from '../../assets/images/imgMehedi/resume.png';
 
 const ResumeBanner = () => {
     return (

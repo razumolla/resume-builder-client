@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import CLCompanyDetails from './CLCompanyDetails';
 import CLPersonalInfo from './CLPersonalInfo';
 import CoverLetterDisplay from './CoverLetterDisplay'
-
-
 import CoverLetterFinishit from './CoverLetterFinishit';
-
-
 
 const TemplateForm = () => {
     const [page, setPage] = useState(0);
@@ -16,34 +12,16 @@ const TemplateForm = () => {
         designation: '',
         dear: '',
         city: ' ',
-        // postalcode: '',
         phone: ' ',
         email: '',
         address: '',
-        // jobTitle: '',
-        // joblocation: '',
-        // jobDescription: '',
-        // education: '',
-        // universityName: '',
-        // startDate: '',
-        // endDate: '',
-        // educationCity: '',
-        // projectName: '',
-        // projectDescription: '',
-        // educationDescription: '',
-        // aboutDescription: '',
-        // skillOne: '',
-        // level: '',
-        // summary: '',
+        linkedin: '',
         professionalCareer: '',
         achievements: '',
         characteristics: '',
     })
 
-    console.log(formData);
-
-
-
+    // console.log(formData);
     const handleInfo = e => {
         e.preventDefault();
         alert('submitted');
@@ -64,8 +42,6 @@ const TemplateForm = () => {
 
     }
 
-
-
     const pageTitles = ["Personal Information", "Company Details", "Finishit",]
     const PageDisplay = () => {
 
@@ -76,15 +52,6 @@ const TemplateForm = () => {
         else if (page === 1) {
             return <CLCompanyDetails formData={formData} setFormData={setFormData} />;
         }
-        // else if (page === 2) {
-        //     return <CoverLetterEducation formData={formData} setFormData={setFormData} />;
-        // }
-        // else if (page === 3) {
-        //     return <CoverLetterSkills formData={formData} setFormData={setFormData} />;
-        // }
-        // else if (page === 4) {
-        //     return <CoverLetterAbout formData={formData} setFormData={setFormData} />;
-        // }
         else if (page === 2) {
             return <CoverLetterFinishit formData={formData} setFormData={setFormData} />;
         }
@@ -93,48 +60,40 @@ const TemplateForm = () => {
 
 
     return (
-        <div className='mt-16  m-10'>
-            <div className=''>
-                <div className='p-2 '>
-                    <div className=' rounded-2xl p-3 max-h-screen'>
-                        <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3  '>
-                            <div className='form-container '>
-                                <div>
-                                    {PageDisplay()}
-                                    <div className="footer flex justify-between mt-5">
+        <div className='mt-16  lg:p-5'>
+            <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3 '>
+                <div className='w-full sm:w-full md:w-2/5'>
+                    <div className='sm:bg-gray-300 lg:bg-gray-300 rounded-2xl p-2'>
+                        <div className='form-container sm:bg-gray-300 lg:bg-gray-300 rounded-2xl '>
+                            <div>
+                                {PageDisplay()}
+                                <div className="footer flex justify-between mt-5">
+
+                                    <button
+                                        disabled={page == 0}
+                                        className='btn btn-primary pt-4' onClick={() => {
+                                            setPage((currPage) => currPage - 1)
+                                        }}>Prev</button>
+
+                                    {page === pageTitles.length - 1 ?
+                                        <button className='btn btn-primary pt-4' onClick={handleInfo}>Submit</button>
+                                        :
 
                                         <button
-                                            disabled={page == 0}
-                                            className='btn btn-success pt-4' onClick={() => {
-                                                setPage((currPage) => currPage - 1)
-                                            }}>Prev</button>
+                                            className='btn btn-primary pt-4' onClick={() => {
+                                                setPage((currPage) => currPage + 1)
 
-                                        {page === pageTitles.length - 1 ?
-                                            <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
-                                            :
-
-                                            <button
-                                                className='btn btn-success pt-4' onClick={() => {
-                                                    setPage((currPage) => currPage + 1)
-
-                                                }}>Next</button>
-                                        }
-                                    </div>
+                                            }}>Next</button>
+                                    }
                                 </div>
-
-
                             </div>
-
-                            <div>
-                                <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
-                            </div>
-
                         </div>
-
                     </div>
-
-
-
+                </div>
+                <div className='w-full md:w-2/3'>
+                    <div className='bg-gray-300 rounded-xl p-2'>
+                        <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
+                    </div>
                 </div>
 
             </div>
