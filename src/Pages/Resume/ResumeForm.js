@@ -69,11 +69,11 @@ const ResumeForm = () => {
 
 
     return (
-        <div className='mt-28 mb-16 m-10 '>
+        <div className='mt-28 mb-16 m-10'>
             <div className='lg:flex'>
-                <div className="grid grid-rows-12 p-2 rounded-xl sm:col-6 ">
-                    <div className="col-start-1 col-end-12 bg-gray-300 rounded-xl">
-                        <div>
+                <div className="grid grid-rows-12 p-2 rounded-xl sm:col-6">
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+                        <div className=''>
 
                             <div className='flex gap-2 mb-3 '>
                                 <div className='progressbar'></div>
@@ -125,7 +125,7 @@ const ResumeForm = () => {
                 {/* <div className="grid grid-rows-12 p-2"> */}
                 <div className='w-full md:w-2/3 sm:col-6'>
                     {/* <div className="col-start-1 col-end-6 ... bg-gray-200"> */}
-                    <div class="bg-gray-300 rounded-xl p-2">
+                    <div class="bg-gray-200 rounded-xl p-2">
                         <ResumePage class="w-96" formData={formData}></ ResumePage>
                     </div>
                 </div>

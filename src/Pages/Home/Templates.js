@@ -11,7 +11,7 @@ const Templates = () => {
             <h1 className='text-3xl font-bold text-primary  my-10'>Templates For Every Carrer Path</h1>
             <div className='grid sm:grid-col-1 md:grid-cols-1 lg:grid-cols-3 gap-8'>
 
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div class="card w-96 bg-blue-300 shadow-xl ml-5" >
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
@@ -19,27 +19,27 @@ const Templates = () => {
                                 <button class="btn btn-primary rounded-2xl">Use Resume</button>
                             </Link>
                             <Link to="/resume">
-                                <button class="dark:btn-secondary btn btn-outline btn-accent rounded-2xl">See Resume</button>
+                                <button class="btn btn-outline btn-accent rounded-2xl">See Resume</button>
                             </Link>
                         </div>
                     </div>
                 </div>
                 {/* bg-teal-100  */}
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div class="card w-96 bg-blue-300 shadow-xl ml-5" >
                     <figure><img src={resume2} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
                             <Link to="/cv/form">
-                                <button class="btn btn-primary  rounded-2xl">Use CV Template</button>
+                                <button class="btn btn-primary rounded-2xl">Use CV Template</button>
                             </Link>
                             <Link to="/cv">
-                                <button class="dark:btn-secondary btn btn-outline  btn-accent rounded-2xl">See CV Template</button>
+                                <button class="btn btn-outline btn-accent rounded-2xl">See CV Template</button>
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div class="card w-96 bg-blue-300 shadow-xl ml-5" >
                     <figure><img src={resume1} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">
@@ -48,7 +48,7 @@ const Templates = () => {
                             </Link>
 
                             <Link to="/coverLetter">
-                                <button class="dark:btn-secondary btn btn-outline btn-accent rounded-2xl">See Cover Letter</button>
+                                <button class="btn btn-outline btn-accent rounded-2xl">See Cover Letter</button>
                             </Link>
                         </div>
                     </div>

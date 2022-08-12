@@ -1,13 +1,7 @@
-/* .Banner{
-    background: url(/src/assets/images/imgAfruza/202978.webp);
-    border-radius: 10px;
-
-} */
 .Banner {
     background: url(../../assets/images/imgAfruza/bgimg2.jpg);
     border-radius: 20px;
     margin: 10px 10px 10px 10px;
-    width: auto;
 
 
 
@@ -15,7 +9,7 @@
 }
 
 .CoverLetterBanner {
-    background: url(/src/assets/images/imgAfruza/New\ Project.png);
+    background: url(/src/assets/images/imgAfruza/vectorimg.png);
     border-radius: 10px;
     background-repeat: no-repeat;
     width: 100%;

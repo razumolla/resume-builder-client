@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Home/Banner.css';
 import 'animate.css';
-import banner from '../../assets/images/imgAfruza/vectorimg.png';
+import banner from '../../assets/images/imgAfruza/bannerimg2.jpg';
 
 const Banner = () => {
     return (
@@ -10,7 +10,6 @@ const Banner = () => {
             <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row-reverse px-10">
                     {/* <img src={banner} className="max-w-sm rounded-lg  shadow-2xl" /> */}
-
                     <div className=' text-white mr-32 lg:py-36 '>
                         <h1 className="lg:text-5xl lg:text-left sm:text-center sm:text-4xl font-bold animate__animated animate__fadeInUp animate__delay-faster text-white">Create a Professional
                             CV/Resume & Cover Letter Templates</h1>

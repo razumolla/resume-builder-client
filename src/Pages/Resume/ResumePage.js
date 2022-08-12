@@ -35,7 +35,7 @@ const ResumePage = ({ formData }) => {
     return (
         <div className='my-10'>
             <div class="card w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="card-body text-left dark:text-black" id='cv'>
+                <div class="card-body text-left" id='cv'>
                     <div>
                         <h1 className='text-3xl font-semibold'>{name}</h1>
                         <p className='font-semibold'>Email: {email}</p>
