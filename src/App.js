@@ -105,7 +105,7 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
         {/* Dashboard */}
-        <Route path="dashboard" element={
+        <Route path="/dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
