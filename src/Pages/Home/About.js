@@ -9,7 +9,7 @@ export default function About() {
         <img src={computer} className="image-about mt-12 pt-12 " />
 
         <div className="heading ">
-          <h1 className="text-5xl font-bold justify-start text-teal-400">
+          <h1 className="text-5xl font-bold justify-start text-primary">
             <AnimatedText
               type="world"
               animation={{

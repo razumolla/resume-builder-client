@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import EducationalInfo from './EducationalInfo';
 import OtherInfo from './OtherInfo';
 import PersonalInfo from './PersonalInfo';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+// import { Link } from 'react-router-dom';
 import ProjectInfo from './ProjectInfo';
 import Paper from './Paper';
+import { useForm } from "react-hook-form";
 
 
 
@@ -28,6 +30,8 @@ const FormCv = () => {
         summary: ''
     })
 
+    const [submitted, setSubmitted] = useState(false)
+
     const pageTitles = ["Personal Information", "Education", "Projects", "Other Information"]
 
 
@@ -48,20 +52,24 @@ const FormCv = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        alert('submitted');
-        // console.log(formData);
+        // alert('submitted');
+        setSubmitted(!submitted);
+        console.log(formData);
 
-        fetch('http://localhost:5000/cvInfo', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
+        // fetch('http://localhost:5000/cvInfo', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(formData),
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        // toast('Succefully added');
+        //     })
+
+
 
     }
 
@@ -79,16 +87,16 @@ const FormCv = () => {
 
                                 <button
                                     disabled={page == 0}
-                                    className='btn btn-success pt-4' onClick={() => {
+                                    className='btn btn-primary pt-4' onClick={() => {
                                         setPage((currPage) => currPage - 1)
                                     }}>Prev</button>
 
                                 {page == pageTitles.length - 1 ?
-                                    <button className='btn btn-success pt-4' onClick={handleInfo}>Submit</button>
+                                    <button className='btn btn-primary pt-4' type='button' onClick={handleInfo}>Submit</button>
                                     :
 
                                     <button
-                                        className='btn btn-success pt-4' onClick={() => {
+                                        className='btn btn-primary pt-4' onClick={() => {
                                             setPage((currPage) => currPage + 1)
 
                                         }}>Next</button>
@@ -98,8 +106,9 @@ const FormCv = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div className="bg-gray-300 rounded-xl p-2">
-                        <Paper formData={formData}></Paper>
+                    <div class="bg-gray-300 rounded-xl p-2">
+                        <Paper formData={formData}
+                            submitted={submitted}></Paper>
                     </div>
                 </div>
             </div>

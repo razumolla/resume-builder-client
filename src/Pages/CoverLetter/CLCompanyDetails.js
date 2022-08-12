@@ -20,22 +20,20 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
                             <p className='p-1 mb-5'> Describe your Company Details</p>
 
                             <form action="" className='p-3'>
-
-                                <div className='flex gap-4'>
                                     <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                        <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className='w-full p-2 ' placeholder='Professional Career' name="Description" id="Description" ></textarea>
+                                        <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Professional Career' name="Description" id="Description" ></textarea>
 
                                     </div>
                                     <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                        <textarea value={formData.achievements} onChange={(e) => setFormData({ ...formData, achievements: e.target.value })} className='w-full p-2' placeholder='Skills and Achievements' name="Description" id="Description" ></textarea>
+                                        <textarea value={formData.achievements} onChange={(e) => setFormData({ ...formData, achievements: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Skills and Achievements' name="Description" id="Description" ></textarea>
 
                                     </div>
-                                </div>
+                               
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                    <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} className='w-full p-2' placeholder='Characteristics' name="Description" id="Description" ></textarea>
+                                    <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Characteristics' name="Description" id="Description" ></textarea>
 
                                 </div>
 
