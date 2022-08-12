@@ -36,15 +36,15 @@ const ResumePage = ({ formData }) => {
         <div className='my-10'>
             <div class="card w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body text-left" id='cv'>
-                    <div>
+                    <div className='dark:text-black'>
                         <h1 className='text-3xl font-semibold'>{name}</h1>
                         <p className='font-semibold'>Email: {email}</p>
                         <p className='font-semibold'>Phone: {phone}</p>
                         <p className='font-semibold'>Address: {city}</p>
 
                     </div>
-                    <div>
-                        <div className='divider px-2'></div>
+                    <div className='dark:text-black'>
+                        <div className='divider px-2 dark:text-black'></div>
 
                         <div className='mt-3'>
                             <h2 className='text-2xl font-bold'>Education</h2>
