@@ -20,7 +20,8 @@ const CoverLetterFinishit = ({ formData, setFormData }) => {
                     <div className='w-96'>
                         <form action="" className='p-3'>
                             <div className='flex flex-col-reverse  gap-2 mb-3 '>
-                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="NAME" class="input input-bordered input-primary w-auto max-w-xs" />
+
+                                <input type="text" value={formData. signatureName} onChange={(e) => setFormData({ ...formData,  signatureName: e.target.value })} placeholder="NAME" class="input input-bordered input-primary w-auto max-w-xs" />
                                 <label for="">Signature</label>
                             </div>
                         </form>
