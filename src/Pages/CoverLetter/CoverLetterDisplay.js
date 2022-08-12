@@ -2,7 +2,8 @@ import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 const CoverLetterDisplay = ({ formData }) => {
-    const { 
+
+    const {
         name,
         email,
         address,
@@ -12,9 +13,8 @@ const CoverLetterDisplay = ({ formData }) => {
         dear,
         professionalCareer,
         achievements,
-        characteristics } 
+        characteristics }
         = formData;
-  
 
     const generatePdf = () => {
         const input = document.getElementById('coverLetter');
@@ -42,7 +42,7 @@ const CoverLetterDisplay = ({ formData }) => {
                             <small className='font-semibold'><i class="fa-solid fa-phone-flip "></i> {phone}</small> <br />
                             <small className='font-semibold'><i class="fa-solid fa-location-dot"></i> {address}</small> <br />
                             <small className='font-semibold'><i class="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
-                                                   
+
                         </div>
                     </div>
                     <div className='divider'></div>
@@ -61,10 +61,10 @@ const CoverLetterDisplay = ({ formData }) => {
                     <div className="mt-3 ">
                         <p className='text-xl '>{name}</p>
                     </div>
-                </div>              
+                </div>
             </div>
             <div className='py-4 ml-8'>
-                    <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

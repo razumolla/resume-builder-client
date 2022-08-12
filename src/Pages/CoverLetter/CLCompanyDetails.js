@@ -4,16 +4,16 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
     return (
         <div className='mt-28 mb-16 '>
             <div className='flex '>
-                <div class="grid grid-rows-12 p-2 rounded-xl ">
-                    <div class="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+                <div className="grid grid-rows-12 p-2 rounded-xl ">
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
-                        <ul class="steps bg-base-300 p-3  
+                        <ul className="steps bg-base-300 p-3  
                     place-items-center">
-                            <li class="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
-                            <li class="step step-primary "> <p className=''>Company Details</p> </li>
-                            {/* <li class="step ml-5 step-primary "> <p className=''>Company Details</p> </li> */}
+                            <li className="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
+                            <li className="step step-primary "> <p className=''>Company Details</p> </li>
+                            {/* <li className="step ml-5 step-primary "> <p className=''>Company Details</p> </li> */}
 
-                            <li class="step   ml-3"> <p>FINISHIT</p> </li>
+                            <li className="step   ml-3"> <p>FINISHIT</p> </li>
                         </ul>
                         <div>
                             <h1 className='text-2xl mt-8'>Write down your <span className='text-primary font-bold'>Company Details</span> </h1>

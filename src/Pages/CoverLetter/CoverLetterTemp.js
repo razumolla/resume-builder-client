@@ -6,18 +6,12 @@ import CoverLetterTemplate_3 from '../../assets/images/imgAfruza/Cover-Letter-Te
 import CoverLetterTemplate_4 from '../../assets/images/imgAfruza/Cover-Letter-Template-4.jpg';
 import CoverLetterTemplate_5 from '../../assets/images/imgAfruza/Cover-Letter-Template-6.jpg';
 import CoverLetterTemplate_6 from '../../assets/images/imgAfruza/Cover-Letter-Template-1.jpg';
-
 import '../Home/Banner.css';
-
 
 const CoverLetterTemp = () => {
     return (
         <div className='m-8'>
-
             <div>
-
-
-
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center mb-10 p-10'>
                     <div class="container animate__animated  animate__lightSpeedInLeft">
                         <img src={CoverLetterTemplate_1} alt="" className='w-3/4 ' />
@@ -64,14 +58,7 @@ const CoverLetterTemp = () => {
                         </figcaption>
                         <Link to=""></Link>
                     </div>
-
-
-
-
-
                 </div >
-
-
             </div>
         </div>
 
