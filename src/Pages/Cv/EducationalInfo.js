@@ -13,18 +13,27 @@ const EducationalInfo = ({ formData, setFormData }) => {
             </ul>
 
             <div className="header">
-                <h1 className='text-2xl font-bold my-5 text-center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
+                <h1 className='text-2xl font-bold my-5 text center'>Enter  <span className='text-primary'> Educational</span> Details</h1>
             </div>
 
-            <div className='m-2'>
+            <div className='m-2 flex flex-col justify-center items-center'>
 
-                <div className='grid grid-cols-1 gap-3 p-2'>
-                    <input type="text" placeholder="Education" className="input input-bordered input-primary w-full max-w-xs" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
+                <div className='p-2'>
+                    <input type="text" placeholder="Education" className="input input-bordered input-primary w-80 max-w-xs peer" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
+
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your current qualification
+                    </p>
                 </div>
 
-                <div className='grid grid-cols-1 gap-3 p-2'>
-                    <input type="text" placeholder="University/College Name" className="input input-bordered input-primary w-full max-w-xs" value={formData.university} onChange={(e) => setFormData({ ...formData, university: e.target.value })} required />
+                <div className=' p-2'>
+                    <input type="text" placeholder="University/College Name" className="input input-bordered input-primary w-80 max-w-xs peer" value={formData.university} onChange={(e) => setFormData({ ...formData, university: e.target.value })} required />
+
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter University/college name
+                    </p>
                 </div>
+
                 <div className='grid grid-cols-2 gap-3 p-2'>
                     <div>
                         <label htmlhtmlFor="">start Date</label>

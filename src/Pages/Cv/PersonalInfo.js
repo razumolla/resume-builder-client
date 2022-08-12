@@ -15,19 +15,38 @@ const PersonalInfo = ({ formData, setFormData }) => {
             </div>
 
 
-            <div className='m-2'>
-                <div className='grid grid-cols-1 gap-3 p-2'>
-                    <input type="text" placeholder="Name" className="input input-bordered input-primary w-full max-w-xs" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
-                    <input type="text" placeholder="Email" className="input input-bordered input-primary w-full max-w-xs" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
+            <div className='m-2 flex flex-col justify-center items-center gap-3'>
+
+                <div className='p-2'>
+                    <input type="text" placeholder="Name" className="input input-bordered input-primary w-80 peer" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your name
+                    </p>
+                </div>
+
+                <div className='p-2'>
+                    <input type="text" placeholder="Email" className="input input-bordered input-primary w-80 peer" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your email
+                    </p>
                 </div>
 
                 <div className='grid grid-cols-1 gap-3 p-2'>
-                    <input type="number" placeholder="Phone Number" className="input input-bordered input-primary w-full max-w-xs" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
-                    <input type="text" placeholder="City,Country" className="input input-bordered input-primary w-full max-w-xs" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
+                    <input type="number" placeholder="Phone Number" className="input input-bordered input-primary w-80 peer" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your phone
+                    </p>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="City,Country" className="input input-bordered input-primary w-80 peer" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your city
+                    </p>
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 
