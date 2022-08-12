@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Banner from '../Home/Banner'
 import Benefits from './Benefits';
 import Contact from './Contact';
@@ -12,11 +13,9 @@ import Templates from './Templates';
 
 const Home = () => {
 
-  
-
     return (
         <div className='m-5'>
-       
+      
             <Banner></Banner>
             <Templates></Templates>
             <Benefits></Benefits>
@@ -25,6 +24,7 @@ const Home = () => {
             <Faq></Faq>
             <Contact />
             <About/>
+            
         </div>
     );
 };

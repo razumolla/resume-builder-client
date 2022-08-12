@@ -1,4 +1,5 @@
 import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
@@ -97,6 +98,11 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+
+
+      
+
+
     </div >
   );
 }

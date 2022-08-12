@@ -1,5 +1,7 @@
 import React from 'react';
 import '../Login/Login.css'
+// import Lottie from 'react-lottie';
+// import * as animationData from './pinjump.json'
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
@@ -8,6 +10,16 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true, 
+    //     animationData: animationData,
+    //     rendererSettings: {
+    //       preserveAspectRatio: 'xMidYMid slice'
+    //     }
+    //   };
+
+
     const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
@@ -46,14 +58,21 @@ const Login = () => {
 
     };
     return (
-        <div className='mt-10'>
-            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
-            <div className='flex justify-center items-center '>
+        <div className='mt-10 '>
+            <h1 className='pt-20 pb-10 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
 
-                <div className="card w-96 bg-white  shadow-xl mb-5">
+            {/* <Lottie options={defaultOptions}
+              height={400}
+              width={400}
+             /> */}
+
+            <div className='flex justify-center items-center  '>
+           
+{/* <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_mjlh3hcy.json"  background="transparent"  speed="1"  style={{"height": 300, we} loop controls autoplay></lottie-player> */}
+                <div className="card w-96 bg-white mb-5  login_div">
 
 
-                    <div className="card-body">
+                    <div className="card-body ">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
