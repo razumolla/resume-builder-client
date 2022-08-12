@@ -30,16 +30,20 @@ export default function Contact() {
     e.target.reset();
   };
   return (
-    <div className="contact-form " id="contact">
+    <div className="contact-form mb-20" id="contact">
       <div className="w-left">
-        <div className="awesome">
+        <div className="awesome ">
           <Roll left>
             <Roll bottom>
+
               <span className="touch">Get in Touch</span>
+
+              <p className="text-4xl text-primary">Get in Touch</p>
+
             </Roll>
 
             <br />
-            <span>Contact Us</span>
+            <p className="text-4xl">Contact Us</p>
             <img src={leaves} alt="" />
           </Roll>
         </div>

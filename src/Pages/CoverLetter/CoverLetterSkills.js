@@ -24,12 +24,12 @@ const CoverLetterSkills = ({ formData, setFormData }) => {
                             <form action="" className='p-3'>
                                 <div className='flex gap-2 mb-3 '>
                                     <div>
-                                        <label for="Job Title">Skill</label>
+                                        <label htmlFor="Job Title">Skill</label>
                                         <input type="text" value={formData.skillOne}
                                             onChange={(e) => setFormData({ ...formData, skillOne: e.target.value })} placeholder="Type your skill here" className="input input-bordered input-secondary w-full max-w-xs" />
                                     </div>
                                     <div className="form-control w-full max-w-xs">
-                                        <label for="employer">Type Level</label>
+                                        <label htmlFor="employer">Type Level</label>
 
                                         <input type="text" value={formData.level} onChange={(e) => setFormData({ ...formData, level: e.target.value })} placeholder="50%" className='input input-bordered input-secondary w-full max-w-xs' />
 

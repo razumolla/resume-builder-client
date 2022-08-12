@@ -14,12 +14,13 @@ const Templates = () => {
     }, [])
     return (
         <div className='mt-2'>
-            <div className="hero h-screen bg-base-100 rounded">
+            {/* <div className="hero h-screen bg-base-100 rounded"> */}
+            <div className="hero min-h-screen px-10 ">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
-                    <img src={cvBanner} className="max-w-md rounded-lg shadow-2xl" />
+                    <img src={cvBanner} className="max-w-md rounded-lg shadow-2xl animate__animated animate__fadeInUp animate__delay-.9s" />
                     <div className='lg:text-left text-center'>
-                        <h1 className="text-5xl font-bold text-secondary animate__animated animate__zoomIn">Create Your CV</h1>
-                        <p className="py-6 text-2xl animate__animated  animate__lightSpeedInLeft">Our CV templates are designed with your success of mind.You can use them free.Some of them are premium.</p>
+                        <h1 className="text-5xl font-bold text-primary animate__animated animate__fadeInUp animate__delay-fast">Create Your CV</h1>
+                        <p className="py-6 text-2xl animate__animated animate__fadeInUp animate__delay-.8s">Our CV templates are designed with your success of mind.You can use them free.Some of them are premium.</p>
                     </div>
                 </div>
             </div>

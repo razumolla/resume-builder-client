@@ -1,68 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import CLCompanyDetails from './CLCompanyDetails';
 import CLPersonalInfo from './CLPersonalInfo';
-import CoverLetterAbout from './CoverLetterAbout';
-import CoverLetterDisplay from './CoverLetterDisplay';
-import CoverLetterEducation from './CoverLetterEducation';
-// import CoverLetterFinishit from './CoverLetterFinishit';
-import CoverLetterSkills from './CoverLetterSkills';
-import Experience from './Experience';
+import CoverLetterDisplay from './CoverLetterDisplay'
+import CoverLetterFinishit from './CoverLetterFinishit';
 
 const TemplateForm = () => {
     const [page, setPage] = useState(0);
 
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        name: '',
+        designation: '',
+        dear: '',
         city: ' ',
-        postalcode: '',
         phone: ' ',
         email: '',
-        jobTitle: '',
-        joblocation: '',
-        jobDescription: '',
-        education: '',
-        universityName: '',
-        startDate: '',
-        endDate: '',
-        educationCity: '',
-        projectName: '',
-        projectDescription: '',
-        educationDescription: '',
-        aboutDescription: '',
-        skillOne: '',
-        level: '',
-        summary: '',
+        address: '',
+        linkedin: '',
+        professionalCareer: '',
+        achievements: '',
+        characteristics: '',
     })
 
-    console.log(formData);
+    // console.log(formData);
+    const handleInfo = e => {
+        e.preventDefault();
+        alert('submitted');
+        // console.log(formData);
 
-    const url = `http://localhost:5000/aboutForm`
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-        .then(res => res.json())
-        .then(data => {
-            console.log('success', data);
-            // alert('users added successfull !!!')
-
-        });
-
-
-
-    const [form, setForms] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/aboutForm')
+        fetch('http://localhost:5000/aboutForm', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
             .then(res => res.json())
-            .then(data => setForms([data]))
-    }, []);
+            .then(data => {
+                console.log(data);
+            })
 
-    console.log(form);
 
-    const pageTitles = ["Personal Information", "Experience", "Education", "Skill", "About",]
+    }
+
+    const pageTitles = ["Personal Information", "Company Details", "Finishit",]
     const PageDisplay = () => {
 
         if (page === 0) {
@@ -70,78 +50,54 @@ const TemplateForm = () => {
         }
 
         else if (page === 1) {
-            return <Experience formData={formData} setFormData={setFormData} />;
+            return <CLCompanyDetails formData={formData} setFormData={setFormData} />;
         }
         else if (page === 2) {
-            return <CoverLetterEducation formData={formData} setFormData={setFormData} />;
+            return <CoverLetterFinishit formData={formData} setFormData={setFormData} />;
         }
-        else if (page === 3) {
-            return <CoverLetterSkills formData={formData} setFormData={setFormData} />;
-        }
-        else if (page === 4) {
-            return <CoverLetterAbout formData={formData} setFormData={setFormData} />;
-        }
-        // else if (page === 5) {
-        //     return <CoverLetterFinishit formData={formData} setFormData={setFormData} />;
-        // }
 
     }
 
 
     return (
-        <div className='mt-28 mb-16 m-10'>
-            <div className='flex'>
-                <div className='p-2'>
-                    <div className='bg-gray-300 rounded-2xl p-2'>
-                        <div className='flex gap-2 mb-3'>
-                            <div className='form-container mx-auto'>
-                                <div>
-                                    {PageDisplay()}
-                                </div>
-                                <div className='footer flex justify-between mt-5'>
+        <div className='mt-16  lg:p-5'>
+            <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3 '>
+                <div className='w-full sm:w-full md:w-2/5'>
+                    <div className='sm:bg-gray-300 lg:bg-gray-300 rounded-2xl p-2'>
+                        <div className='form-container sm:bg-gray-300 lg:bg-gray-300 rounded-2xl '>
+                            <div>
+                                {PageDisplay()}
+                                <div className="footer flex justify-between mt-5">
+
                                     <button
                                         disabled={page == 0}
-                                        className="btn btn-primary pt-4" onClick={() => {
+                                        className='btn btn-primary pt-4' onClick={() => {
                                             setPage((currPage) => currPage - 1)
                                         }}>Prev</button>
 
-                                    <button
-                                        className='btn btn-primary pt-4' onClick={() => {
-                                            if (page === pageTitles.length - 1) {
-                                                alert('form submitted');
-                                                console.log(formData)
-                                            }
-                                            else {
+                                    {page === pageTitles.length - 1 ?
+                                        <button className='btn btn-primary pt-4' onClick={handleInfo}>Submit</button>
+                                        :
+
+                                        <button
+                                            className='btn btn-primary pt-4' onClick={() => {
                                                 setPage((currPage) => currPage + 1)
-                                            }
-                                        }}>
-                                        {page === pageTitles.length - 1 ? "Submit" : "Next"}
-                                    </button>
+
+                                            }}>Next</button>
+                                    }
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
-                <div className=''>
-                    <div className=''>
-                        {
-                            form?.map(forms => <CoverLetterDisplay
-                                key={forms._id}
-                                forms={forms}
-                            ></CoverLetterDisplay>
-                            )
-                        }
-
-
+                <div className='w-full md:w-2/3'>
+                    <div className='bg-gray-300 rounded-xl p-2'>
+                        <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
                     </div>
                 </div>
 
             </div>
+
         </div>
     );
 };

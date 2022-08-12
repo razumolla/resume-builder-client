@@ -8,24 +8,40 @@ import Faq from './Faq';
 import Hired from './Hired';
 import Review from './Review';
 import Templates from './Templates';
+import WhyUs from './WhyUs';
+
+
+
+
 
 
 
 const Home = () => {
 
+
     return (
         <div className='m-5'>
       
+        < div className='m-5' >
             <Banner></Banner>
+            <WhyUs></WhyUs>
             <Templates></Templates>
             <Benefits></Benefits>
-            <Hired></Hired>
             <Review></Review>
-            <Faq></Faq>
+            <Hired></Hired>
             <Contact />
-            <About/>
-            
+
         </div>
+
+
+            <About />
+
+            <Faq></Faq>
+
+            {/* <About /> */}
+
+        </div >
+
     );
 };
 
