@@ -47,19 +47,19 @@ const ResumePage = ({ formData }) => {
                         <div className='divider px-2 dark:text-black'></div>
 
                         <div className='mt-3'>
-                            <h2 className='text-2xl font-bold'>Education</h2>
+                            <h2 className='text-2xl font-bold text-primary'>Education</h2>
                             <p className='font-bold'>{education}</p>
                             <p className='font-semibold'>{institute}</p>
                             <p className=''><span className='font-bold'>Year:</span> {startDate} - {endDate}</p>
                         </div>
                         <div className='mt-3'>
-                            <h2 className='text-2xl font-bold'>Projects</h2>
-                            <p className=''><span className='font-bold'>Your Best Project:</span>  {project}</p>
+                            <h2 className='text-2xl font-bold text-primary'>Projects</h2>
+                            <p className=''><span className='font-bold'>Project:</span>  {project}</p>
 
-                            <p className=''><span className='font-bold'>Describe Your Project:</span>  {features}</p>
+                            <p className=''><span className='font-bold'>Describe Project:</span>  {features}</p>
                         </div>
                         <div className="mt-3">
-                            <h2 className="text-2xl font-bold">Skills</h2>
+                            <h2 className="text-2xl font-bold text-primary">Skills</h2>
                             <p className=''> {skills} </p>
 
                         </div>
