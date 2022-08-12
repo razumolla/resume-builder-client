@@ -20,10 +20,8 @@ const Home = () => {
 
 
     return (
-        <div className='m-5'>
 
-          
-
+        < div className='m-5' >
 
 
             <Banner></Banner>
@@ -33,9 +31,14 @@ const Home = () => {
             <Review></Review>
             <Hired></Hired>
             <Contact />
+
+            <About />
+
             <Faq></Faq>
+
             {/* <About /> */}
-        </div>
+
+        </div >
     );
 };
 
