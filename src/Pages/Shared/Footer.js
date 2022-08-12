@@ -2,14 +2,14 @@ import React from 'react';
 import facebook from '../../assets/images/facebook.png'
 import linkedin from '../../assets/images/linkedin.png'
 import instagram from '../../assets/images/instagram.png'
-import logo from '../../assets/images/imgMehedi/logo3_1-removebg-preview.png'
+import logo from '../../assets/images/imgMehedi/logo.png'
 
 
 const Footer = () => {
   return (
     <footer className="footer p-10 bg-black text-white cursor-pointer">
       <div>
-        <img src ={logo} alt ="logo" className='w-36 mr-4' />
+        <img src={logo} alt="logo" className='w-36 mr-4' />
         <div className="flex">
           <img src={instagram} alt="insta" className="w-10 mr-4" />
           <img src={linkedin} alt="linkedin" className="w-10 mr-4 " />

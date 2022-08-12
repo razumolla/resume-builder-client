@@ -26,7 +26,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                       <div className='w-96'>
                       <form action="" className='p-3' >
                             <div className='flex gap-2 mb-3 '>
-                                <input type="text" value={formData.name} onChange={(e)=>setFormData({ ...formData, name:e.target.value})} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-xs" required />
+                                <input type="text" value={formData.name} onChange={(e)=>setFormData({ ...formData, name:e.target.value})} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-xs" />
                                 <input type="text" value={formData.designation} onChange={(e)=>setFormData({ ...formData, designation:e.target.value})} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-xs" />
                              
                                

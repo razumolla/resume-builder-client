@@ -34,32 +34,32 @@ const CoverLetterDisplay = ({ formData }) => {
                 <div class="card-body text-left" id='coverLetter'>
                     <div className='flex justify-between'>
                         <div>
-                            <h1 className='text-3xl font-semibold break-words'>{name}</h1>
-                            <h1 className='text-xl font-semibold break-words'>{designation}</h1>
+                            <h1 className='text-3xl font-semibold'>{name}</h1>
+                            <h1 className='text-xl font-semibold'>{designation}</h1>
                         </div>
                         <div className='text-left'>
-                            <small className='font-semibold break-words'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
-                            <small className='font-semibold break-words'><i class="fa-solid fa-phone-flip "></i> {phone}</small> <br />
-                            <small className='font-semibold break-words'><i class="fa-solid fa-location-dot"></i> {address}</small> <br />
-                            <small className='font-semibold break-words'><i class="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
+                            <small className='font-semibold'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
+                            <small className='font-semibold'><i class="fa-solid fa-phone-flip "></i> {phone}</small> <br />
+                            <small className='font-semibold'><i class="fa-solid fa-location-dot"></i> {address}</small> <br />
+                            <small className='font-semibold'><i class="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
                                                    
                         </div>
                     </div>
                     <div className='divider'></div>
                     <div >
-                        <h2 className='text-xl font-bold break-words'>{dear}</h2>
-                        <p className='break-words'>{professionalCareer}
+                        <h2 className='text-xl font-bold'>{dear}</h2>
+                        <p>{professionalCareer}
                         </p>
                     </div>
                     <div className='mt-3'>
-                       <p className='break-words'> {achievements}</p>
+                        {achievements}
                     </div>
                     <div className='mt-3'>
-                        <p className=' break-words'>{characteristics}
+                        <p className=''>{characteristics}
                         </p>
                     </div>
                     <div className="mt-3 ">
-                        <p className='text-xl break-words'>{name}</p>
+                        <p className='text-xl '>{name}</p>
                     </div>
                 </div>              
             </div>

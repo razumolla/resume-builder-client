@@ -22,7 +22,7 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
                             <form action="" className='p-3'>
                                     <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                        <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className='w-full p-2 input input-border input-primary' row='15' column='20' placeholder='Professional Career' name="Description" id="Description" ></textarea>
+                                        <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Professional Career' name="Description" id="Description" ></textarea>
 
                                     </div>
                                     <div className='flex flex-col-reverse  gap-2 mb-3 '>
@@ -33,7 +33,7 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
                                
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                    <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} className='w-3/2 p-2 input input-border input-primary' placeholder='Characteristics' name="Description" row='20' id="Description" ></textarea>
+                                    <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Characteristics' name="Description" id="Description" ></textarea>
 
                                 </div>
 

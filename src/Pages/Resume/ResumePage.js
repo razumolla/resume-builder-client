@@ -1,26 +1,25 @@
 import React from 'react';
+// import './Resume.css';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-const Paper = ({ formData }) => {
+
+const ResumePage = ({ formData }) => {
     const {
         name,
         email,
         phone,
         city,
         education,
-        university,
+        institute,
         startDate,
         endDate,
-        projectName,
-        projectLink,
-        projectDescription,
-        skillOne,
-        skillTwo,
-        summary
+        project,
+        features,
+        skills
+
     } = formData
 
-    // console.log(formData);
     const generatePdf = () => {
         const input = document.getElementById('cv');
         html2canvas(input)
@@ -46,35 +45,32 @@ const Paper = ({ formData }) => {
                     </div>
                     <div>
                         <div className='divider px-2'></div>
-                        <div>
-                            <h2 className='text-2xl font-bold'>Summary</h2>
-                            <p>{summary}</p>
-                        </div>
+
                         <div className='mt-3'>
                             <h2 className='text-2xl font-bold'>Education</h2>
-                            <p className=''><span className='font-bold'>Education:</span> {education}</p>
-                            <p className=''><span className='font-bold'>University/College Name:</span> {university}</p>
+                            <p className='font-bold'>{education}</p>
+                            <p className='font-semibold'>{institute}</p>
                             <p className=''><span className='font-bold'>Year:</span> {startDate} - {endDate}</p>
                         </div>
                         <div className='mt-3'>
                             <h2 className='text-2xl font-bold'>Projects</h2>
-                            <p className=''><span className='font-bold'>Your Best Project:</span>  {projectName}</p>
-                            <p className=''><span className='font-bold'>Project Live Link:</span>  {projectLink}</p>
-                            <p className=''><span className='font-bold'>Describe Your Project:</span>  {projectDescription}</p>
+                            <p className=''><span className='font-bold'>Your Best Project:</span>  {project}</p>
+
+                            <p className=''><span className='font-bold'>Describe Your Project:</span>  {features}</p>
                         </div>
                         <div className="mt-3">
                             <h2 className="text-2xl font-bold">Skills</h2>
-                            <p className=''><span className='font-bold'>Skill-1:</span> {skillOne} </p>
-                            <p className=''><span className='font-bold'>Skill-2:</span> {skillTwo} </p>
+                            <p className=''> {skills} </p>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+            <div className='text-center'>
+                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Download PDF</button>
             </div>
         </div >
     );
 };
 
-export default Paper;
+export default ResumePage;
