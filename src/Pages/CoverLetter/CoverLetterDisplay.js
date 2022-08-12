@@ -1,9 +1,8 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-const CoverLetterDisplay = ({ formData }) => {
-
-    const {
+const CoverLetterDisplay = ({ formData, submitted }) => {
+    const { 
         name,
         email,
         address,
@@ -13,8 +12,12 @@ const CoverLetterDisplay = ({ formData }) => {
         dear,
         professionalCareer,
         achievements,
-        characteristics }
+        characteristics ,
+        signatureName
+    
+    } 
         = formData;
+  
 
     const generatePdf = () => {
         const input = document.getElementById('coverLetter');
@@ -34,37 +37,39 @@ const CoverLetterDisplay = ({ formData }) => {
                 <div class="card-body text-left" id='coverLetter'>
                     <div className='flex justify-between'>
                         <div>
-                            <h1 className='text-3xl font-semibold'>{name}</h1>
-                            <h1 className='text-xl font-semibold'>{designation}</h1>
+                            <h1 className='text-3xl font-semibold break-words'>{name}</h1>
+                            <h1 className='text-xl font-semibold break-words'>{designation}</h1>
                         </div>
                         <div className='text-left'>
-                            <small className='font-semibold'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
-                            <small className='font-semibold'><i class="fa-solid fa-phone-flip "></i> {phone}</small> <br />
-                            <small className='font-semibold'><i class="fa-solid fa-location-dot"></i> {address}</small> <br />
-                            <small className='font-semibold'><i class="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
-
+                            <small className='font-semibold break-words'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
+                            <small className='font-semibold break-words'><i class="fa-solid fa-phone-flip "></i> {phone}</small> <br />
+                            <small className='font-semibold break-words'><i class="fa-solid fa-location-dot"></i> {address}</small> <br />
+                            <small className='font-semibold break-words'><i class="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
+                                                   
                         </div>
                     </div>
                     <div className='divider'></div>
                     <div >
-                        <h2 className='text-xl font-bold'>{dear}</h2>
-                        <p>{professionalCareer}
+                        <h2 className='text-xl font-bold break-words'>{dear}</h2>
+                        <p className='break-words'>{professionalCareer}
                         </p>
                     </div>
                     <div className='mt-3'>
-                        {achievements}
+                       <p className='break-words'> {achievements}</p>
                     </div>
                     <div className='mt-3'>
-                        <p className=''>{characteristics}
+                        <p className=' break-words'>{characteristics}
                         </p>
                     </div>
                     <div className="mt-3 ">
-                        <p className='text-xl '>{name}</p>
+                        <p className='text-xl break-words'>{ signatureName}</p>
                     </div>
-                </div>
+                </div>              
             </div>
             <div className='py-4 ml-8'>
-                <button class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    <button disabled={submitted == false}
+                    
+                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );
