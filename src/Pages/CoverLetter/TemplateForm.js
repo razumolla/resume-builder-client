@@ -19,13 +19,16 @@ const TemplateForm = () => {
         professionalCareer: '',
         achievements: '',
         characteristics: '',
+        signatureName: '',
     })
-
+ 
+    const [submitted, setSubmitted] = useState(false);
     // console.log(formData);
     const handleInfo = e => {
         e.preventDefault();
+        setSubmitted(!submitted);
         alert('submitted');
-        // console.log(formData);
+        console.log(formData);
 
         fetch('http://localhost:5000/aboutForm', {
             method: 'POST',
@@ -92,7 +95,10 @@ const TemplateForm = () => {
                 </div>
                 <div className='w-full md:w-2/3'>
                     <div className='bg-gray-300 rounded-xl p-2'>
-                        <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
+                        <CoverLetterDisplay 
+                        formData={formData}
+                        submitted={submitted}
+                        ></CoverLetterDisplay>
                     </div>
                 </div>
 
