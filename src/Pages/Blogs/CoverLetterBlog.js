@@ -6,9 +6,10 @@ const CoverLetterBlog = ({ coverLetterBlog }) => {
         <>
             <div className="card w-full bg-base-100 shadow-xl">
                 <figure><img src={img} alt="blog" /></figure>
-                <div className="card-body">
+                <div className="">
                     <h2 className="card-title">{blogTitle}</h2>
-                    <small>{date} | {name} </small>
+                    <p>  <small>{date} | {name} </small>   </p>
+
 
                     <p>{description.slice(0, 400)}</p>
 
