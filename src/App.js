@@ -58,7 +58,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+        <Route path="/cv/form/:id" element={<FormCv></FormCv>}></Route>
 
         <Route
           path="/templateForm"
@@ -130,8 +130,8 @@ function App() {
         <Route path='/paymentCardThree' element={<PaymentCardThree> </PaymentCardThree>}></Route>
 
 
-          {/* interview question page start */}
-          <Route path="/interviewQuestions" element={<InterviewQuestions />} />
+        {/* interview question page start */}
+        <Route path="/interviewQuestions" element={<InterviewQuestions />} />
         <Route path="/html" element={<InterviewQuesAnsHtml />} />
         <Route path="/css" element={<InterviewQuesAnsCSS />} />
         <Route path="/reactjs" element={<InterviewQuesAnsReactJS />} />
