@@ -11,7 +11,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                     <ul className="steps bg-base-300 p-3  
 
-                    place-items-center w-96">
+                    place-items-center ">
                         <li className="step step-primary ml-8"> <p className=''>CONTACT</p> </li>
                         <li className="step ml-5 "> <p className='ml-8'>Details</p> </li>
                         {/* <li className="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
@@ -28,11 +28,18 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                     <div className='w-96'>
                         <form action="" className='p-3' >
-                            <div className='flex gap-2 mb-3 '>
-                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-xs" />
-                                <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-xs" />
-
+                            <div className=' mb-3 '>
+                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-lg peer" required />
+                                {/* <p class="text-red-700 font-light text-left peer-invalid">
+                                    Please enter your name
+                                </p> */}
                             </div>
+
+                            <div className='mb-3'>
+                                <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-lg" />
+                            </div>
+
+
 
                             <input type="text " value={formData.address} onChange={(e) => setFormData({
                                 ...formData, address: e.target.value

@@ -47,6 +47,7 @@ import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAn
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -62,8 +63,9 @@ function App() {
 
         <Route
           path="/templateForm"
-          element={<TemplateForm></TemplateForm>}
+          element={<TemplateForm />}
         ></Route>
+      
 
         <Route
           path="resume"
