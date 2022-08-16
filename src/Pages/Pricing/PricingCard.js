@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 const PricingCard = () => {
     return (
-        <div className='mt-10'>
-            <h1 className='pt-20 sm:text-3xl font-extrabold lg:text-3xl bg-clip-text bg-secondary pb-10 text-primary'>Premium</h1>
 
+        <div className=''>
+            <h1 className='pt-3 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>Premium</h1>
+            
             <div className='flex justify-center items-center '>
                 <div className="card bg-secondary shadow-xl mb-5">
                     <img src={payment_img} alt="" />
