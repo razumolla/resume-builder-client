@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Resume1 from '../../assets/images/imgMehedi/re-01.jpg';
-import Resume2 from '../../assets/images/imgMehedi/re-02.jpg';
-import Resume3 from '../../assets/images/imgMehedi/re-03.jpg';
+import Resume1 from '../../assets/images/imgMehedi/img1.PNG';
+import Resume2 from '../../assets/images/imgMehedi/img3.PNG';
+import Resume3 from '../../assets/images/imgMehedi/img2.PNG';
 import './Resume.css';
 import ResumeBanner from './ResumeBanner';
 
@@ -25,7 +25,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to="/resume/form"></Link>
+                    <Link to="/resume/form1"></Link>
                 </div>
 
                 <div className="container">
@@ -33,7 +33,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to="/resume/form"></Link>
+                    <Link to="/resume/form2"></Link>
                 </div>
 
                 <div className="container">
@@ -41,15 +41,7 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
-                </div>
-
-                <div className="container">
-                    <img src={Resume1} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form2"></Link>
                 </div>
 
                 <div className="container">
@@ -57,8 +49,18 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
-                    <Link to=""></Link>
+                    <Link to="/resume/form1"></Link>
                 </div>
+
+                <div className="container">
+                    <img src={Resume1} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
+                    <Link to="/resume/form"></Link>
+                </div>
+
+
             </div >
 
         </>
