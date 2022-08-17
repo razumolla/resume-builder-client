@@ -38,6 +38,8 @@ import AddInspiringBlog from './Pages/Dashboard/AddInspiringBlog';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
+import ResumeForm1 from './Pages/Resume/ResumeForm1';
+import ResumeForm2 from './Pages/Resume/ResumeForm2';
 
 
 
@@ -52,6 +54,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
+        <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
+        <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
 
         <Route
