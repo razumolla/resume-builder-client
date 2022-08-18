@@ -6,7 +6,12 @@ const Templates = () => {
     const [templates, setTemplates] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cvPhoto')
+        fetch('http://localhost:5000/cvPhoto',{
+            method:'GET',
+            headers:{
+                'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setTemplates(data)

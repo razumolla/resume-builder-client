@@ -118,11 +118,25 @@ function App() {
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
         </Route>
 
+        
+        {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
-        <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
-        <Route path='/paymentCardTwo' element={<PaymentCardTwo></PaymentCardTwo>}></Route>
-        <Route path='/paymentCardThree' element={<PaymentCardThree> </PaymentCardThree>}></Route>
-
+        <Route path='paymentCardOne' element={
+        <RequireAuth>
+          <PaymentCardOne></PaymentCardOne>
+        </RequireAuth>
+        }></Route>
+        <Route path='paymentCardTwo' element={
+        <RequireAuth>
+          <PaymentCardTwo></PaymentCardTwo>
+        </RequireAuth>
+        }></Route>
+        <Route path='paymentCardThree' element={
+        <RequireAuth>
+          <PaymentCardThree></PaymentCardThree>
+        </RequireAuth>
+        }></Route>
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>

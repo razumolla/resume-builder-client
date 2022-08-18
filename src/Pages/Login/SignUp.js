@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loding from '../Shared/Loding';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../hooks/useToken';
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
@@ -21,6 +22,8 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    const [token] = useToken(user || gUser);
+
     if (error || gError || updateError) {
         signInError = <p className='text-red-500 '><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
@@ -29,8 +32,9 @@ const SignUp = () => {
         return <Loding></Loding>
     }
 
-    if (user || gUser) {
-        console.log(gUser)
+    if (token) {
+        
+        navigate('/home')
 
 
     }
@@ -40,9 +44,10 @@ const SignUp = () => {
         event.preventDefault();
 
         await createUserWithEmailAndPassword(data.email, data.password)
-        await updateProfile({ displayFirstName: data.firstName, displayLastName: data.lastName })
-        navigate('/home')
-        console.log(data)
+        await updateProfile({ displayNamef: data.firstName, displayNamel: data.lastName })
+        // navigate('/home')
+        // console.log(data)
+        
     };
     return (
         <div className='mt-10'>
