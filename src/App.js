@@ -38,6 +38,11 @@ import AddInspiringBlog from './Pages/Dashboard/AddInspiringBlog';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
+
+import ResumeForm1 from './Pages/Resume/ResumeForm1';
+import ResumeForm2 from './Pages/Resume/ResumeForm2';
+
+
 import InterviewQuesAnsHtml from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsHtml';
 import InterviewQuesAnsCSS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsCSS';
 import InterviewQuesAnsReactJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsReactJS';
@@ -59,6 +64,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
+        <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
+        <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
 
         <Route
@@ -132,8 +139,8 @@ function App() {
         <Route path='/paymentCardThree' element={<PaymentCardThree> </PaymentCardThree>}></Route>
 
 
-          {/* interview question page start */}
-          <Route path="/interviewQuestions" element={<InterviewQuestions />} />
+        {/* interview question page start */}
+        <Route path="/interviewQuestions" element={<InterviewQuestions />} />
         <Route path="/html" element={<InterviewQuesAnsHtml />} />
         <Route path="/css" element={<InterviewQuesAnsCSS />} />
         <Route path="/reactjs" element={<InterviewQuesAnsReactJS />} />
