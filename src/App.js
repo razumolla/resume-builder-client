@@ -69,9 +69,10 @@ function App() {
         <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
 
         <Route
-          path="/templateForm"
-          element={<TemplateForm></TemplateForm>}
+          path="/templateForm/:id"
+          element={<TemplateForm />}
         ></Route>
+      
 
         <Route
           path="resume"
