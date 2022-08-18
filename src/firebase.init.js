@@ -6,13 +6,6 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey: "AIzaSyC6oVYHpwKHD7wzm9N9JixvJG58Qncoe34",
-  // authDomain: "endgame-soldier.firebaseapp.com",
-  // projectId: "endgame-soldier",
-  // storageBucket: "endgame-soldier.appspot.com",
-  // messagingSenderId: "8471827524",
-  // appId: "1:8471827524:web:ca3e1702bd1fb2c0f91811"
-
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_PROJECT_ID,

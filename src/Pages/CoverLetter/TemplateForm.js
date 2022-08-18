@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import CLCompanyDetails from './CLCompanyDetails';
 import CLPersonalInfo from './CLPersonalInfo';
 import CoverLetterDisplay from './CoverLetterDisplay'
+import CoverLetterDisplayThree from './CoverLetterDisplayThree';
+import CoverLetterDisplay4 from './CoverLetterDisplay4';
+import CoverLetterDisplayTwo from './CoverLetterDisplayTwo';
 import CoverLetterFinishit from './CoverLetterFinishit';
 
 const TemplateForm = () => {
     const [page, setPage] = useState(0);
-
+    const {id} = useParams();
     const [formData, setFormData] = useState({
         name: '',
         designation: '',
@@ -19,13 +23,17 @@ const TemplateForm = () => {
         professionalCareer: '',
         achievements: '',
         characteristics: '',
+        signatureName: '',
+        
     })
-
+ 
+    const [submitted, setSubmitted] = useState(false);
     // console.log(formData);
-    const handleInfo = e => {
-        e.preventDefault();
+    const handleInfo = (e) => {
+        e.preventDefault();        
+        setSubmitted(!submitted);
         alert('submitted');
-        // console.log(formData);
+        console.log(formData);
 
         fetch('http://localhost:5000/aboutForm', {
             method: 'POST',
@@ -91,8 +99,30 @@ const TemplateForm = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div className='bg-gray-300 rounded-xl p-2'>
-                        <CoverLetterDisplay formData={formData}></CoverLetterDisplay>
+                    <div className='bg-gray-100 rounded-xl p-2'>
+                       { id == '62fb63ed4af897cd1e199ca7' && <CoverLetterDisplay 
+                        formData={formData}
+                        submitted={submitted}
+                        ></CoverLetterDisplay>
+                       }
+                       { (id == '62fb63ed4af897cd1e199ca8' || id == '62fb63ed4af897cd1e199caa') && <CoverLetterDisplayTwo 
+                        formData={formData}
+                        submitted={submitted}
+                        ></CoverLetterDisplayTwo>
+                       }
+                       { (id == '62fb63ed4af897cd1e199ca9' || id == '62fb63ed4af897cd1e199cab') && <CoverLetterDisplayThree 
+                        formData={formData}
+                        submitted={submitted}
+                        ></CoverLetterDisplayThree>
+                       }
+                       { id == '62fb63ed4af897cd1e199cac'  && <CoverLetterDisplay4
+                        formData={formData}
+                        submitted={submitted}
+                        ></CoverLetterDisplay4>
+                       }
+
+                    
+
                     </div>
                 </div>
 

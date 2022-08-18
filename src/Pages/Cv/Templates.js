@@ -4,7 +4,7 @@ import cvBanner from '../../assets/images/cvBanner.jpg';
 
 const Templates = () => {
     const [templates, setTemplates] = useState([]);
-
+    console.log(templates);
     useEffect(() => {
         fetch('http://localhost:5000/cvPhoto',{
             method:'GET',
