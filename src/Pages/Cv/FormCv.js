@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import EducationalInfo from './EducationalInfo';
 import OtherInfo from './OtherInfo';
 import PersonalInfo from './PersonalInfo';
 import { toast } from 'react-toastify';
-// import { Link } from 'react-router-dom';
 import ProjectInfo from './ProjectInfo';
 import Paper from './Paper';
-import { useForm } from "react-hook-form";
+import PaperTwo from './PaperTwo';
+import PaperThree from './PaperThree';
 
 
 
 const FormCv = () => {
-
+    const { id } = useParams();
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
@@ -27,6 +28,7 @@ const FormCv = () => {
         projectDescription: '',
         skillOne: '',
         skillTwo: '',
+        designation: '',
         summary: ''
     })
 
@@ -107,8 +109,22 @@ const FormCv = () => {
                 </div>
                 <div className='w-full md:w-2/3'>
                     <div class="bg-gray-300 rounded-xl p-2">
-                        <Paper formData={formData}
-                            submitted={submitted}></Paper>
+                        {/* <Paper formData={formData} submitted={submitted}></Paper> */}
+
+                        {/* condition for template 1 */}
+                        {(id == '62ec2ecba3816df2a607d799' || id == '62ec2ecba3816df2a607d79d') &&
+                            <PaperTwo formData={formData} submitted={submitted}></PaperTwo>
+                        }
+
+                        {/* condition for template 2 */}
+                        {(id == '62ec2ecba3816df2a607d79a' || id == '62ec2ecba3816df2a607d79c') &&
+                            <PaperThree formData={formData} submitted={submitted}></PaperThree>
+                        }
+
+                        {/* condition for template 3*/}
+                        {(id == '62ec2ecba3816df2a607d79b' || id == '62ec2ecba3816df2a607d79e') &&
+                            <Paper formData={formData} submitted={submitted}></Paper>
+                        }
                     </div>
                 </div>
             </div>

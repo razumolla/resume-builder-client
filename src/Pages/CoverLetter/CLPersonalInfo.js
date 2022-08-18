@@ -11,7 +11,11 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                     <ul className="steps bg-base-300 p-3  
 
+
                     place-items-center w-96 dark:bg-cyan-900">
+
+                    place-items-center ">
+
                         <li className="step step-primary ml-8"> <p className=''>CONTACT</p> </li>
                         <li className="step ml-5 "> <p className='ml-8'>Details</p> </li>
                         {/* <li className="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
@@ -28,32 +32,47 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                     <div className='w-96'>
                         <form action="" className='p-3' >
+
                             <div className='flex gap-2 mb-3 '>
                                 <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
                                 <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
 
+
+                                <div className=' mb-3 '>
+                                    <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-lg peer" required />
+                                    {/* <p class="text-red-700 font-light text-left peer-invalid">
+                                    Please enter your name
+                                </p> */}
+
+                                </div>
+
+                                <div className='mb-3'>
+                                    <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-lg" />
+                                </div>
+
+
+
+                                <input type="text " value={formData.address} onChange={(e) => setFormData({
+                                    ...formData, address: e.target.value
+                                })} placeholder="Address" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
+                                <div className='flex gap-2 mb-3 '>
+                                    <input type="text " value={formData.city} onChange={(e) => setFormData({
+                                        ...formData, city: e.target.value
+                                    })} placeholder='city' class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
+
+                                    <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
+
+                                </div>
+
+                                <div className='flex gap-2 mb-3 '>
+                                    <input type="number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
+                                    <input type="text" value={formData.linkedin} onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })} placeholder="www.linkedin.com" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
+                                </div>
+
+                                <input type="text " value={formData.dear} onChange={(e) => setFormData({
+                                    ...formData, dear: e.target.value
+                                })} placeholder="Dear Mr. Smith" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
                             </div>
-
-                            <input type="text " value={formData.address} onChange={(e) => setFormData({
-                                ...formData, address: e.target.value
-                            })} placeholder="Address" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
-                            <div className='flex gap-2 mb-3 '>
-                                <input type="text " value={formData.city} onChange={(e) => setFormData({
-                                    ...formData, city: e.target.value
-                                })} placeholder='city' class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
-
-                                <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
-
-                            </div>
-
-                            <div className='flex gap-2 mb-3 '>
-                                <input type="number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
-                                <input type="text" value={formData.linkedin} onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })} placeholder="www.linkedin.com" class="input input-bordered input-primary w-full max-w-xs dark:text-black" />
-                            </div>
-
-                            <input type="text " value={formData.dear} onChange={(e) => setFormData({
-                                ...formData, dear: e.target.value
-                            })} placeholder="Dear Mr. Smith" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg dark:text-black" />
                         </form>
                     </div>
 

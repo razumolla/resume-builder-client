@@ -1,4 +1,5 @@
 import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
@@ -66,12 +67,15 @@ function App() {
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
         <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
         <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+
+        <Route path="/cv/form/:id" element={<FormCv></FormCv>}></Route>
+
 
         <Route
-          path="/templateForm"
-          element={<TemplateForm></TemplateForm>}
+          path="/templateForm/:id"
+          element={<TemplateForm />}
         ></Route>
+
 
         <Route
           path="resume"
@@ -119,23 +123,37 @@ function App() {
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
         {/* Dashboard */}
-        <Route path="dashboard" element={
+        <Route path="/dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<MyProfile />} />
-          <Route path="review" element={<MyReview />} />
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
         </Route>
 
+
+        {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
-        <Route path='/paymentCardOne' element={<PaymentCardOne></PaymentCardOne>}></Route>
-        <Route path='/paymentCardTwo' element={<PaymentCardTwo></PaymentCardTwo>}></Route>
-        <Route path='/paymentCardThree' element={<PaymentCardThree> </PaymentCardThree>}></Route>
+        <Route path='paymentCardOne' element={
+          <RequireAuth>
+            <PaymentCardOne></PaymentCardOne>
+          </RequireAuth>
+        }></Route>
+        <Route path='paymentCardTwo' element={
+          <RequireAuth>
+            <PaymentCardTwo></PaymentCardTwo>
+          </RequireAuth>
+        }></Route>
+        <Route path='paymentCardThree' element={
+          <RequireAuth>
+            <PaymentCardThree></PaymentCardThree>
+          </RequireAuth>
+        }></Route>
 
 
         {/* interview question page start */}
@@ -151,10 +169,19 @@ function App() {
         {/* interview question page end */}
 
 
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
+
+
+
+
+
+
+
       <ToastContainer />
+
     </div >
   );
 }
