@@ -1,4 +1,5 @@
 import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
@@ -92,7 +93,7 @@ function App() {
             <CoverLetter></CoverLetter>
           </RequireAuth>
         } />
-
+      
         <Route path="blog" element={
           <RequireAuth>
             <Blogs></Blogs>
@@ -125,8 +126,8 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<MyProfile />} />
-          <Route path="review" element={<MyReview />} />
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
@@ -171,7 +172,15 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
+
+
+
+      
+
+
+
       <ToastContainer />
+
     </div >
   );
 }
