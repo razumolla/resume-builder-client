@@ -20,10 +20,10 @@ const Navbar = () => {
             <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/cv">CV</NavLink></li>
             <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/coverLetter">Cover_Letter</NavLink></li>
 
-            <li tabIndex="0" className='ml-3 hover:bg-primary text-black dark:text-white'>
-                <NavLink to="/blogs" className="justify-between">
-                    Blogs
-                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+            <li tabIndex="0" className='ml-3 hover:bg-primary text-black'>
+                <NavLink to="/cvResumeWriting" className="justify-between dark:text-white">
+                    Career Blogs
+                    <svg className="fill-current " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                 </NavLink>
                 <ul className="Border bg-base-100 shadow-xl dark:bg-gray-800 dark:text-white">
                     <li className='hover:bg-primary '><NavLink to="/cvResumeWriting">Cv & Resume Writing</NavLink></li>
@@ -48,13 +48,16 @@ const Navbar = () => {
 
 
 
-        return (
+
+    
+    return (
+
         <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg dark:bg-sky-900 dark:text-white lg:flex lg:items-center">
 
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
 
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52  text-white">
@@ -72,31 +75,14 @@ const Navbar = () => {
                 </ul>
             </div>
 
+
             <div className="navbar-end lg:flex lg:items-center">
-                {/* <div>
+                <div>
                     <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                </div> */}
-
-                {/* 
-                <div>
-                    <label for="toggle" class="flex items-center cursor-pointer mb-12">
-                        <div class="relative">
-                            <input type="checkbox" id="toggle" class="sr-only" onchange="changeMode()" />
-                            <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
-                            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
-                        </div>
-                        <div className='ml-3 text-gray-700 font-medium dark:text-white'>
-                            Dark Mode!
-                        </div>
-                    </label>
-                </div> */}
-
-
+                </div>
                 <div className='px-5'> <DarkMode></DarkMode></div>
-
-
             </div>
 
 
