@@ -44,7 +44,8 @@ const SignUp = () => {
         event.preventDefault();
 
         await createUserWithEmailAndPassword(data.email, data.password)
-        await updateProfile({ displayNamef: data.firstName, displayNamel: data.lastName })
+        // await updateProfile({ displayNamef: data.firstName, displayNamel: data.lastName })
+        await updateProfile({ displayName:data.name })
         // navigate('/home')
         // console.log(data)
         
@@ -66,13 +67,13 @@ const SignUp = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">First Name</span>
+                                    <span className="label-text">Your Name</span>
                                 </label>
 
                                 <input type="text"
-                                    placeholder="First Name"
+                                    placeholder="Your Name"
                                     className="input input-bordered w-full max-w-xs"
-                                    {...register("firstName", {
+                                    {...register("name", {
                                         required: {
                                             value: true,
                                             message: 'First Name is Required'
@@ -82,14 +83,14 @@ const SignUp = () => {
                                 />
 
                                 <label className="label">
-                                    {errors.firstName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.firstName.message}</span>}
+                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
 
 
                                 </label>
                             </div>
 
 
-                            <div className="form-control w-full max-w-xs">
+                           {/*  <div className="form-control w-full max-w-xs">
                                 <label className="label">
                                     <span className="label-text">Last Name</span>
                                 </label>
@@ -111,7 +112,7 @@ const SignUp = () => {
 
 
                                 </label>
-                            </div>
+                            </div> */}
 
 
                             <div className="form-control w-full max-w-xs">
