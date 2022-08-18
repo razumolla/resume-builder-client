@@ -13,7 +13,7 @@ const CoverLetterTemp = ({ coverLetterTemp }) => {
                 <figcaption>
                     <h3 className="btn btn-primary">Create Now</h3>
                 </figcaption>
-                <Link to={_id}></Link>
+                <Link to={`/templateForm/${_id}`}></Link>
             </div>
         </div>
 

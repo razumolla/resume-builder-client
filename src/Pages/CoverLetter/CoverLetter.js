@@ -4,8 +4,7 @@ import { useState } from 'react';
 import banner from '../../assets/images/imgAfruza/cover-letter-banner 1.png';
 import CoverLetterTemp from './CoverLetterTemp';
 
-
-const CoverLetter = () => {
+const CoverLetter = () => { 
     const [coverLetterTemps, setCoverLetterTemp] = useState([]);
     console.log(coverLetterTemps);
     useEffect(() =>{
@@ -15,8 +14,7 @@ const CoverLetter = () => {
 
     },[])
     return (
-        <div >
-            <div className=" m-12 sm:bg-base-0 ">
+        <div>
                 <div class="hero min-h-screen px-10">
                     <div class="flex justify-center align-center sm:flex-row-column lg:flex-row-reverse">
 
@@ -29,7 +27,7 @@ const CoverLetter = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+           
             <div className='grid sm:grid-cols-1 lg:grid-cols-3'>
                {
                   coverLetterTemps?.map(coverLetterTemp =><CoverLetterTemp
@@ -40,7 +38,7 @@ const CoverLetter = () => {
 
             </div>
            
-        </div>
+      </div>
 
 
     );

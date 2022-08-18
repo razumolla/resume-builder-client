@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^35.0.1",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
     "@emailjs/browser": "^3.6.2",
     "@stripe/react-stripe-js": "^1.10.0",
     "@stripe/stripe-js": "^1.35.0",
@@ -20,7 +22,6 @@
     "react-animated-text-content": "^1.0.1",
     "react-devtools": "^4.25.0",
     "react-dom": "^18.2.0",
-    "react-draft-wysiwyg": "^1.15.0",
     "react-firebase-hooks": "^5.0.3",
     "react-hook-form": "^7.34.0",
     "react-icons": "^4.4.0",
@@ -29,7 +30,6 @@
     "react-scripts": "5.0.1",
     "react-simple-chatbot": "^0.6.1",
     "react-toastify": "^9.0.8",
-    "react-tsparticles": "^2.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

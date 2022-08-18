@@ -1,6 +1,4 @@
 import React from 'react';
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 const CLCompanyDetails = ({ formData, setFormData }) => {
     return (
         <div className='mt-28 mb-16 '>
@@ -23,9 +21,10 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
                             <form action="" className='p-3'>
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
-                                    <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className='w-full p-2 input input-border input-primary' placeholder='Professional Career' name="Description" id="Description" ></textarea>
+                                    <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} className=' p-2 input input-border input-primary' placeholder='Professional Career' name="Description"  ></textarea>
 
                                 </div>
+
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea value={formData.achievements} onChange={(e) => setFormData({ ...formData, achievements: e.target.value })} className=' p-2 input input-border input-primary' placeholder='Skills and Achievements' name="Description" id="Description" ></textarea>
