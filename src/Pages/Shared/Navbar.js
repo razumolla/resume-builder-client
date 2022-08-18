@@ -7,26 +7,25 @@ import auth from "../../firebase.init";
 import DarkMode from "./DarkMode";
 
 const Navbar = () => {
+
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  const logout = () => {
-    signOut(auth);
-    navigate("/login");
-  };
-  const menuItems = (
-    <>
-      <li className="ml-3 hover:bg-primary text-black dark:text-white">
-        <NavLink to="/home">Home</NavLink>
-      </li>
-      <li className="ml-3 hover:bg-primary text-black dark:text-white">
-        <NavLink to="/resume">Resume</NavLink>
-      </li>
-      <li className="ml-3 hover:bg-primary text-black dark:text-white">
-        <NavLink to="/cv">CV</NavLink>
-      </li>
-      <li className="ml-3 hover:bg-primary text-black dark:text-white">
-        <NavLink to="/coverLetter">Cover_Letter</NavLink>
-      </li>
+ 
+  
+    
+    
+    const logout = () => {
+        signOut(auth)
+        // navigate('/login')
+        localStorage.removeItem('accessToken');
+    }
+    const menuItems =
+        <>
+            <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/home">Home</NavLink></li>
+            <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/resume">Resume</NavLink></li>
+            <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/cv">CV</NavLink></li>
+            <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/coverLetter">Cover_Letter</NavLink></li>
+
 
       <li tabIndex="0" className="ml-3 hover:bg-primary text-black">
         <NavLink
@@ -87,7 +86,7 @@ const Navbar = () => {
         )}
       </li>
     </>
-  );
+
 
   return (
     <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg dark:bg-sky-900 dark:text-white lg:flex lg:items-center">
