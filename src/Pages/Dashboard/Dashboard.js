@@ -37,40 +37,38 @@ const Dashboard = () => {
 
         <Outlet></Outlet>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side shadow-2xl mr-5 px-2">
         <label htmlFor="dash-sidebar" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
           <li>
-            <Link to="/dashboard/profile" className="font-bold font-serif">
+            <Link to="/dashboard/profile" className="font-bold font-serif mt-14 shadow-inner">
               My Profile
             </Link>
           </li>
-          <li>
-                  <Link to="/dashboard/review">My Review</Link>
-                </li>
+        
                 <li>
-                  <Link to="/dashboard/addCvResumeBlog">
-                    Add Cv & Resume Blog
+                  <Link to="/dashboard/addCvResumeBlog" className="font-bold font-serif  shadow-inner my-2">
+                   Cv & Resume Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/addCoverLetterBlog">
-                    Add Cover Letter Blog
+                  <Link to="/dashboard/addCoverLetterBlog" className="font-bold font-serif  shadow-inner mb-2">
+                     Cover Letter Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/addPersonalDevBlog">
-                    Add Personal Development Blog
+                  <Link to="/dashboard/addPersonalDevBlog" className="font-bold font-serif  shadow-inner mb-2">
+                   Soft Skills Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dashboard/addInspiringStoriesBlog">
-                    Add Inspiring stories Blog
+                  <Link to="/dashboard/addInspiringStoriesBlog" className="font-bold font-serif  shadow-inner mb-2">
+                   Inspiring stories 
                   </Link>
                 </li>
           <li>
-            <Link to="/dashboard/addreview" className="font-bold font-serif">
+            <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
               My Review
             </Link>
           </li>

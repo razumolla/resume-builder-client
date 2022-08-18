@@ -126,8 +126,8 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<MyProfile />} />
-          <Route path="review" element={<MyReview />} />
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
