@@ -22,7 +22,7 @@ const Dashboard = () => {
           <input type="checkbox" />
           <div className="collapse-title text-xl font-medium">
             <h2 className="text-3xl font-serif text-slate-900 my-7 font-semiBold rounded-md   bg-primary ">
-              My Dashboard 
+              My Dashboard  
             </h2>
           </div>
           <div className="collapse-content">
