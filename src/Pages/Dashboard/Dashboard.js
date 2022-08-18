@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loding from "../Shared/Loding";
-
+import { FaUserGraduate ,FaBloggerB,FaNewspaper, FaCommentAlt,FaInnosoft,FaWindowRestore} from 'react-icons/fa';
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
 
@@ -43,33 +43,33 @@ const Dashboard = () => {
           {/* <!-- Sidebar content here --> */}
           <li>
             <Link to="/dashboard/profile" className="font-bold font-serif mt-14 shadow-inner">
-              My Profile
+            <FaUserGraduate/> My Profile
             </Link>
           </li>
         
                 <li>
                   <Link to="/dashboard/addCvResumeBlog" className="font-bold font-serif  shadow-inner my-2">
-                   Cv & Resume Blog
+                  <FaBloggerB/> Cv Resume Blog
                   </Link>
                 </li>
                 <li>
                   <Link to="/dashboard/addCoverLetterBlog" className="font-bold font-serif  shadow-inner mb-2">
-                     Cover Letter Blog
+                   <FaNewspaper/>  Cover Letter Blog
                   </Link>
                 </li>
                 <li>
                   <Link to="/dashboard/addPersonalDevBlog" className="font-bold font-serif  shadow-inner mb-2">
-                   Soft Skills Blog
+                  <FaInnosoft/> Soft Skills Blog
                   </Link>
                 </li>
                 <li>
                   <Link to="/dashboard/addInspiringStoriesBlog" className="font-bold font-serif  shadow-inner mb-2">
-                   Inspiring stories 
+                   <FaWindowRestore/>Inspiring stories 
                   </Link>
                 </li>
           <li>
             <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
-              My Review
+              <FaCommentAlt/> My Review
             </Link>
           </li>
 
