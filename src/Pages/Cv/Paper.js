@@ -55,7 +55,7 @@ const Paper = ({ formData, submitted }) => {
                             <p className='font-semibold break-words'>Address: {city}</p>
                         </div>
                     </div>
-                    <div className='m-5 pb-5'>
+                    <div className='m-5 pb-5 dark:text-black'>
                         <div className=''>
                             <h2 className='text-2xl font-bold'>Summary</h2>
                             <p className='max-w-lg break-words w-full'>{summary}</p>
