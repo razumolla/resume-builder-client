@@ -4,7 +4,7 @@ import computer from "../../assets/images/Computer.png";
 import AnimatedText from "react-animated-text-content";
 export default function About() {
   return (
-    <div className="hero justify-center align-middle shadow-2xl ">
+    <div className="hero justify-center align-middle">
       <div className="hero-content flex-col lg:flex-row justify-center ml-22">
         <img src={computer} className="image-about mt-12 pt-12 " />
 

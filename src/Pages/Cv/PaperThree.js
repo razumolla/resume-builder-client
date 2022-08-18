@@ -1,8 +1,9 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { FaUniversity, FaUserAlt, FaCalendarCheck, FaListUl } from 'react-icons/fa';
 
-const Paper = ({ formData, submitted }) => {
+const PaperThree = ({ formData, submitted }) => {
     const {
         name,
         email,
@@ -41,48 +42,60 @@ const Paper = ({ formData, submitted }) => {
         });
 
     }
-
     return (
         <div className='my-10'>
             <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
                 <div class="text-left" id='cv'>
-                    <div className='bg-accent'>
-                        <div className='p-3 text-white'>
-                            <h1 className='text-3xl font-semibold break-words'>{name}</h1>
-                            <h2 className='text-xl font-semibold '>{designation}</h2>
+                    <div className=''>
+                        <div className='p-3'>
+                            <h1 className='text-3xl font-semibold break-words mb-5'>{name}</h1>
+                            <h1 className='text-xl font-semibold break-words mb-5'>{designation}</h1>
+                            <div className=''>
+                                <p className='max-w-lg break-words w-full'>{summary}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='m-5 pb-5'>
+
+                        <div className='mt-5'>
+                            <div className='flex items-center text-xl gap-2'>
+                                <span className='text-sm text-white p-1 bg-gray-800 rounded-full'><FaUserAlt /></span>
+                                <h2 className='text-2xl font-bold mb-2'>Personal Info</h2>
+                            </div>
+                            <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
                             <p className='font-semibold break-words'>Email: {email}</p>
                             <p className='font-semibold break-words'>Phone: {phone}</p>
                             <p className='font-semibold break-words'>Address: {city}</p>
                         </div>
-                    </div>
-                    <div className='m-5 pb-5'>
-                        <div className=''>
-                            <h2 className='text-2xl font-bold'>Summary</h2>
-                            <p className='max-w-lg break-words w-full'>{summary}</p>
-                        </div>
-
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
 
                         <div className='mt-5'>
-                            <h2 className='text-2xl font-bold'>Education</h2>
+                            <div className='flex items-center gap-2'>
+                                <span className='text-sm text-white p-1 bg-gray-800 rounded-full'><FaUniversity /></span>
+                                <h2 className='text-2xl font-bold mb-2'>Education</h2>
+                            </div>
+                            <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
                             <p className='break-words'><span className='font-semibold'>Education:</span> {education}</p>
                             <p className='break-words'><span className='font-semibold'>University/College Name:</span> {university}</p>
                             <p className='break-words'><span className='font-semibold'>Year:</span> {startDate} - {endDate}</p>
                         </div>
 
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
-
                         <div className='mt-5'>
-                            <h2 className='text-2xl font-bold'>Projects</h2>
+                            <div className='flex items-center gap-2'>
+                                <span className='text-sm text-white p-1 bg-gray-800 rounded-full'><FaCalendarCheck /></span>
+                                <h2 className='text-2xl font-bold mb-2'>Projects</h2>
+                            </div>
+                            <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
                             <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
                             <p className='break-words'><span className='font-semibold'>Project Live Link:</span>  {projectLink}</p>
                             <p className='break-words'><span className='font-semibold'>Describe Your Project:</span>  {projectDescription}</p>
                         </div>
 
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
-
                         <div className="mt-5">
-                            <h2 className="text-2xl font-bold">Skills</h2>
+                            <div className='flex items-center gap-2'>
+                                <span className='text-sm text-white p-1 bg-gray-800 rounded-full'><FaListUl /></span>
+                                <h2 className="text-2xl font-bold mb-2">Skills</h2>
+                            </div>
+                            <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
                             <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
                             <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
                         </div>
@@ -98,4 +111,4 @@ const Paper = ({ formData, submitted }) => {
     );
 };
 
-export default Paper;
+export default PaperThree;
