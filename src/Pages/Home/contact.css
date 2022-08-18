@@ -3,15 +3,18 @@
   height: 50vh;
   margin-top: 4rem;
   justify-content: space-evenly;
-
   padding-top: 2rem;
 }
 
-.awesome>span:nth-child(1) {
+/* ? left side style */
+
+.touch {
   color: rgb(3, 230, 211);
   font-size: 2.9rem;
-  font-weight: 700;
+  font-weight:700;
   margin-left: 5rem;
+  margin-bottom: 0rem !important;
+  padding-bottom: 0 rem !important;
 }
 
 .awesome>span:nth-child(3) {
@@ -57,9 +60,7 @@ textarea {
 
 
 
-/* button */
-
-
+/* !button */
 
 
 .button {

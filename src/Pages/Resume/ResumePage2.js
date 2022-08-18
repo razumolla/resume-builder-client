@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
-const ResumePage = ({ formData }) => {
+const ResumePage2 = ({ formData }) => {
     const {
         name,
         email,
@@ -20,7 +20,6 @@ const ResumePage = ({ formData }) => {
         language,
 
     } = formData
-
 
     const generatePdf = () => {
         const input = document.getElementById('cv');
@@ -41,19 +40,19 @@ const ResumePage = ({ formData }) => {
         });
 
     }
+
     return (
         <div className='my-10'>
             <div class="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body" id='cv'>
-                    <div className='text-white bg-primary flex p-4 w-full'>
-                        <div className='text-left px-4 w-1/2 flex items-center'>
-                            <h1 className='text-3xl font-semibold '>{name}</h1>
-                        </div>
-                        <div className='text-left w-1/2'>
+                    <div className='text-black  w-full'>
+                        <div className='text-left'>
+                            <h1 className='text-3xl font-semibold'>{name}</h1>
 
-                            <p className='font-semibold'>Email: <br /> {email}</p>
-                            <p className='font-semibold'>Phone: <br /> {phone}</p>
-                            <p className='font-semibold'>Address: <br /> {city}</p>
+
+                            <p className='font-semibold'>Email:  {email}</p>
+                            <p className='font-semibold'>Phone: {phone}</p>
+                            <p className='font-semibold'>Address:  {city}</p>
 
                         </div>
                     </div>
@@ -62,7 +61,7 @@ const ResumePage = ({ formData }) => {
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className='mt-3'>
-                                <h2 className='text-2xl font-bold text-primary'>Education</h2>
+                                <h2 className='text-2xl font-bold '>Education</h2>
                                 <p className='font-bold'>{education}</p>
                                 <p className='font-semibold'>{institute}</p>
                                 <p className=''><span className='font-bold'>Year:</span> {startDate} - {endDate}</p>
@@ -71,26 +70,25 @@ const ResumePage = ({ formData }) => {
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className='mt-3'>
-                                <h2 className='text-2xl font-bold text-primary'>Projects</h2>
+                                <h2 className='text-2xl font-bold'>Projects</h2>
                                 <p className=''><span className='font-bold'>Project:</span>  {project}</p>
                                 <p className=''><span className='font-bold'>Project LInk:</span>  {link}</p>
 
-                                <p className='break-words'><span className='font-bold'>Describe Project:</span>  {features}</p>
+                                <p className='break-words'><span className='font-bold '>Describe Project:</span> <span className='px-2 '>{features}</span> </p>
                             </div>
 
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className="mt-3">
-                                <h2 className="text-2xl font-bold text-primary">Skills</h2>
+                                <h2 className="text-2xl font-bold">Skills</h2>
                                 <p className=''><span className='font-bold'>My Skills:</span> {skills} </p>
 
                             </div>
 
-
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className="mt-3">
-                                <h2 className="text-2xl font-bold text-primary">Language</h2>
+                                <h2 className="text-2xl font-bold">Language</h2>
                                 <p className=''><span className='font-bold'>Language:</span> {language} </p>
 
                             </div>
@@ -109,4 +107,4 @@ const ResumePage = ({ formData }) => {
     );
 };
 
-export default ResumePage;
+export default ResumePage2;

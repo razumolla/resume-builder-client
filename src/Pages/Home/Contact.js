@@ -35,7 +35,8 @@ export default function Contact() {
         <div className="awesome ">
           <Roll left>
             <Roll bottom>
-              <p className="text-4xl text-primary">Get in Touch</p>
+              <span className="touch">Get in Touch</span>
+
             </Roll>
 
             <br />

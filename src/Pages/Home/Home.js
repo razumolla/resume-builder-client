@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Banner from '../Home/Banner'
 import Benefits from './Benefits';
 import Contact from './Contact';
@@ -18,12 +19,10 @@ import WhyUs from './WhyUs';
 const Home = () => {
 
 
-
     return (
-
+        <div className='m-5'>
+      
         < div className='m-5' >
-
-
             <Banner></Banner>
             <WhyUs></WhyUs>
             <Templates></Templates>
@@ -32,6 +31,9 @@ const Home = () => {
             <Hired></Hired>
             <Contact />
 
+        </div>
+
+
             <About />
 
             <Faq></Faq>
@@ -39,6 +41,7 @@ const Home = () => {
             {/* <About /> */}
 
         </div >
+
     );
 };
 
