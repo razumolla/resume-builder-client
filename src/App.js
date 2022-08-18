@@ -34,6 +34,7 @@ import PricingCard from './Pages/Pricing/PricingCard';
 import PaymentCardOne from './Pages/Pricing/PaymentCardOne';
 import PaymentCardTwo from './Pages/Pricing/PaymentCardTwo';
 import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
+import Dashboard from './Pages/Dashboard/Dashboard'
 
 
 
@@ -71,6 +72,11 @@ function App() {
         <Route path="coverLetter" element={
           <RequireAuth>
             <CoverLetter></CoverLetter>
+          </RequireAuth>
+        } />
+        <Route path="/dashboard" element={
+          <RequireAuth>
+           <Dashboard />
           </RequireAuth>
         } />
 

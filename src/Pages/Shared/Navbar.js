@@ -44,11 +44,11 @@ const Navbar = () => {
                 {user ? <button onClick={logout} className=" btn btn-ghost hover:bg-primary">Sign_Out</button> : <Link to="/login" className=" btn btn-ghost hover:bg-primary">Login</Link>
                 }
             </li>
-        </>
+            </>
 
 
 
-    return (
+        return (
         <div className="navbar bg-base-100 top-0 sticky z-50 shadow-lg dark:bg-sky-900 dark:text-white lg:flex lg:items-center">
 
             <div className="navbar-start ">

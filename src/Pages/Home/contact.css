@@ -6,6 +6,8 @@
   padding-top: 2rem;
 }
 
+/* ? left side style */
+
 .touch {
   color: rgb(3, 230, 211);
   font-size: 2.9rem;
@@ -58,9 +60,7 @@ textarea {
 
 
 
-/* button */
-
-
+/* !button */
 
 
 .button {
