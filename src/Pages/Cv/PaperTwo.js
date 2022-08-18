@@ -1,6 +1,7 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { Link } from 'react-router-dom';
 
 const PaperTwo = ({ formData, submitted }) => {
     const {
@@ -17,6 +18,7 @@ const PaperTwo = ({ formData, submitted }) => {
         projectDescription,
         skillOne,
         skillTwo,
+        designation,
         summary
     } = formData
 
@@ -28,8 +30,8 @@ const PaperTwo = ({ formData, submitted }) => {
             scale: 5
         }).then(canvas => {
             // Few necessary setting options
-            var imgWidth = 208;
-            var imgHeight = canvas.height * imgWidth / canvas.width;
+            const imgWidth = 208;
+            const imgHeight = canvas.height * imgWidth / canvas.width;
             alert(imgHeight)
             const contentDataURL = canvas.toDataURL('image/png')
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
@@ -47,6 +49,7 @@ const PaperTwo = ({ formData, submitted }) => {
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words text-red-900'>{name}</h1>
+                            <h1 className='text-xl font-semibold break-words text-red-900'>{designation}</h1>
                             <div className='divider bg-red-900 mt-1' style={{ height: '2px' }}></div>
                             <div className='flex gap-4'>
                                 <p className='font-semibold break-words'>Email: {email}</p>
@@ -70,9 +73,11 @@ const PaperTwo = ({ formData, submitted }) => {
 
                         <div className='mt-5'>
                             <h2 className='text-2xl font-bold text-red-900'>Projects</h2>
-                            <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
-                            <p className='break-words'><span className='font-semibold'>Project Live Link:</span>  {projectLink}</p>
-                            <p className='break-words'><span className='font-semibold'>Describe Your Project:</span>  {projectDescription}</p>
+                            <div className=''>
+                                <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
+                                <p className='break-words font-semibold' ><a href={projectLink} target="_blank" className={`{projectLink ? 'text-blue':'text-black'}`}>Project Live Link</a></p>
+                            </div>
+                            <p className='break-words'><span className='font-semibold'>Project Details:</span>  {projectDescription}</p>
                         </div>
 
                         <div className="mt-5">

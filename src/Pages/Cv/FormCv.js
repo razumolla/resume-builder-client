@@ -28,6 +28,7 @@ const FormCv = () => {
         projectDescription: '',
         skillOne: '',
         skillTwo: '',
+        designation: '',
         summary: ''
     })
 

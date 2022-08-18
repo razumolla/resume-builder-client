@@ -18,6 +18,7 @@ const PaperThree = ({ formData, submitted }) => {
         projectDescription,
         skillOne,
         skillTwo,
+        designation,
         summary
     } = formData
 
@@ -29,8 +30,8 @@ const PaperThree = ({ formData, submitted }) => {
             scale: 5
         }).then(canvas => {
             // Few necessary setting options
-            var imgWidth = 208;
-            var imgHeight = canvas.height * imgWidth / canvas.width;
+            const imgWidth = 208;
+            const imgHeight = canvas.height * imgWidth / canvas.width;
             alert(imgHeight)
             const contentDataURL = canvas.toDataURL('image/png')
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
@@ -48,6 +49,7 @@ const PaperThree = ({ formData, submitted }) => {
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words mb-5'>{name}</h1>
+                            <h1 className='text-xl font-semibold break-words mb-5'>{designation}</h1>
                             <div className=''>
                                 <p className='max-w-lg break-words w-full'>{summary}</p>
                             </div>
