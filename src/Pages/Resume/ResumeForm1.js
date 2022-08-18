@@ -14,17 +14,21 @@ const ResumeForm1 = () => {
 
     const [formData, setFormData] = useState({
         name: '',
+        title: '',
         email: '',
         phone: '',
         city: '',
         education: '',
         institute: '',
-        startDate: '',
-        endDate: '',
+        year: '',
         project: '',
         link: '',
         features: '',
+        project2: '',
+        link2: '',
+        features2: '',
         skills: '',
+        technology: '',
         language: '',
 
     })
@@ -104,8 +108,6 @@ const ResumeForm1 = () => {
                                             Next
                                         </button>
                                     }
-
-
 
 
                                 </div>

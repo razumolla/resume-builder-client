@@ -25,6 +25,14 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 </div>
 
                 <div className='pb-2'>
+                    <input type="text" className="input input-bordered input-secondary w-80 peer  dark:text-black" name="title" placeholder='Your Title' value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} required />
+
+                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        Please enter your title
+                    </p>
+                </div>
+
+                <div className='pb-2'>
                     <input type="email" className="input input-bordered input-secondary w-80 dark:text-black peer" name="email" placeholder='Email' value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">

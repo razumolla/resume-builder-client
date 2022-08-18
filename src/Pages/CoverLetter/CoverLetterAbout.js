@@ -9,7 +9,7 @@ const CoverLetterAbout = ({ formData, setFormData }) => {
                     <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
                         <ul className="steps bg-base-300 p-3  
-                    place-items-center">
+                    place-items-center dark:bg-cyan-900">
                             <li className="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
                             <li className="step ml-5 step-primary "> <p className='ml-8'>Company Details</p> </li>
                             <li className="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
@@ -18,7 +18,7 @@ const CoverLetterAbout = ({ formData, setFormData }) => {
                             {/* <li className="step   ml-3"> <p>FINISHIT</p> </li> */}
                         </ul>
                         <div>
-                            <h1 className='text-2xl mt-8'>Write down your <span className='text-primary font-bold'>Company Details</span> </h1>
+                            <h1 className='text-2xl mt-8 font-bold dark:text-secondary'>Write down your <span className='text-primary '>Company Details</span> </h1>
                             <p className='p-1 mb-5'> Describe your Company Details</p>
 
                             <form action="" className='p-3'>
