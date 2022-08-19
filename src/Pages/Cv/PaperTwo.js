@@ -1,8 +1,9 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { Link } from 'react-router-dom';
 
-const Paper = ({ formData, submitted }) => {
+const PaperTwo = ({ formData, submitted }) => {
     const {
         name,
         email,
@@ -41,48 +42,46 @@ const Paper = ({ formData, submitted }) => {
         });
 
     }
-
     return (
         <div className='my-10'>
             <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
                 <div class="text-left" id='cv'>
-                    <div className='bg-accent'>
-                        <div className='p-3 text-white'>
-                            <h1 className='text-3xl font-semibold break-words'>{name}</h1>
-                            <h2 className='text-xl font-semibold '>{designation}</h2>
-                            <p className='font-semibold break-words'>Email: {email}</p>
-                            <p className='font-semibold break-words'>Phone: {phone}</p>
-                            <p className='font-semibold break-words'>Address: {city}</p>
+                    <div className=''>
+                        <div className='p-3'>
+                            <h1 className='text-3xl font-semibold break-words text-red-900'>{name}</h1>
+                            <h1 className='text-xl font-semibold break-words text-red-900'>{designation}</h1>
+                            <div className='divider bg-red-900 mt-1' style={{ height: '2px' }}></div>
+                            <div className='flex gap-4'>
+                                <p className='font-semibold break-words'>Email: {email}</p>
+                                <p className='font-semibold break-words'>Phone: {phone}</p>
+                                <p className='font-semibold break-words'>Address: {city}</p>
+                            </div>
                         </div>
                     </div>
-                    <div className='m-5 pb-5 dark:text-black'>
+                    <div className='m-5 pb-5'>
                         <div className=''>
-                            <h2 className='text-2xl font-bold'>Summary</h2>
+                            <h2 className='text-2xl font-bold text-red-900'>Summary</h2>
                             <p className='max-w-lg break-words w-full'>{summary}</p>
                         </div>
 
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
-
                         <div className='mt-5'>
-                            <h2 className='text-2xl font-bold'>Education</h2>
+                            <h2 className='text-2xl font-bold text-red-900'>Education</h2>
                             <p className='break-words'><span className='font-semibold'>Education:</span> {education}</p>
                             <p className='break-words'><span className='font-semibold'>University/College Name:</span> {university}</p>
                             <p className='break-words'><span className='font-semibold'>Year:</span> {startDate} - {endDate}</p>
                         </div>
 
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
-
                         <div className='mt-5'>
-                            <h2 className='text-2xl font-bold'>Projects</h2>
-                            <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
-                            <p className='break-words'><span className='font-semibold'>Project Live Link:</span>  {projectLink}</p>
-                            <p className='break-words'><span className='font-semibold'>Describe Your Project:</span>  {projectDescription}</p>
+                            <h2 className='text-2xl font-bold text-red-900'>Projects</h2>
+                            <div className=''>
+                                <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
+                                <p className='break-words font-semibold' ><a href={projectLink} target="_blank" className={`{projectLink ? 'text-blue':'text-black'}`}>Project Live Link</a></p>
+                            </div>
+                            <p className='break-words'><span className='font-semibold'>Project Details:</span>  {projectDescription}</p>
                         </div>
 
-                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
-
                         <div className="mt-5">
-                            <h2 className="text-2xl font-bold">Skills</h2>
+                            <h2 className="text-2xl font-bold text-red-900">Skills</h2>
                             <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
                             <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
                         </div>
@@ -98,4 +97,4 @@ const Paper = ({ formData, submitted }) => {
     );
 };
 
-export default Paper;
+export default PaperTwo;

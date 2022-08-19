@@ -4,11 +4,11 @@ import EducationalInfo from '../Resume/EducationalInfo';
 import PersonalInfo from '../Resume/PersonalInfo';
 
 import Projects from '../Resume/Projects';
-import ResumePage from './ResumePage';
+import ResumePage1 from './ResumePage1';
 import Others from './Others';
 
 
-const ResumeForm = () => {
+const ResumeForm1 = () => {
 
     const [page, setPage] = useState(0);
 
@@ -121,7 +121,7 @@ const ResumeForm = () => {
 
                     <div class="bg-gray-200 rounded-xl p-2">
 
-                        <ResumePage class="w-96" formData={formData}></ ResumePage>
+                        <ResumePage1 class="w-96" formData={formData}></ ResumePage1>
                     </div>
                 </div>
             </div >
@@ -131,7 +131,7 @@ const ResumeForm = () => {
     );
 };
 
-export default ResumeForm;
+export default ResumeForm1;
 
 
 {/* submitted={submitted} */ }

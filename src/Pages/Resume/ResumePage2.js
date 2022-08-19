@@ -49,11 +49,11 @@ const ResumePage = ({ formData }) => {
         <div className='my-10'>
             <div class="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body" id='cv'>
-                    <div className='text-white bg-sky-400 flex p-4 w-full'>
-                        <div className='text-left px-4 w-3/4 flex items-center'>
+                    <div className=' flex w-full px-2'>
+                        <div className='text-left w-3/4 flex items-center'>
                             <div>
-                                <h1 className='text-2xl font-semibold '>{name}</h1>
-                                <h1 className='text-xl uppercase'>{title}</h1>
+                                <h1 className='text-2xl  font-semibold '>{name}</h1>
+                                <h1 className='text-lg text-purple-500 uppercase'>{title}</h1>
                             </div>
                         </div>
                         <div className='text-left'>
@@ -69,9 +69,9 @@ const ResumePage = ({ formData }) => {
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className="">
-                                <h2 className="text-xl font-semibold uppercase">Skills Highlights </h2>
+                                <h2 className="text-xl text-purple-500 pb-3 font-semibold uppercase">Skills Highlights </h2>
                                 <p className=''><span className='font-semibold'>My Skills:</span> {skills} </p>
-                                <p className=''><span className='font-semibold'>Technologies:</span> {technology} </p>
+                                <p className='pt-2'><span className='font-semibold'>Technologies:</span> {technology} </p>
 
                             </div>
                             <div className='divider px-2 dark:text-black'></div>
@@ -79,7 +79,7 @@ const ResumePage = ({ formData }) => {
 
 
                             <div className=''>
-                                <h2 className='text-xl font-semibold uppercase'>Projects</h2>
+                                <h2 className='text-xl text-purple-500 pb-3 font-semibold uppercase'>Projects</h2>
                                 <p className=''><span className='font-semibold'>1. Project:</span>  {project}</p>
                                 <p className=''><span className='font-semibold'>Project LInk:</span>  {link}</p>
 
@@ -98,7 +98,7 @@ const ResumePage = ({ formData }) => {
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className=''>
-                                <h2 className='text-xl font-semibold uppercase'>Education</h2>
+                                <h2 className='text-xl text-purple-500 pb-3 font-semibold uppercase'>Education</h2>
                                 <p className='font-semibold'>{education}</p>
                                 <p className=''>{institute}</p>
                                 <p className=''><span className=''>Passing Year </span> <span className=''>{year}</span> </p>
@@ -108,7 +108,7 @@ const ResumePage = ({ formData }) => {
                             <div className='divider px-2 dark:text-black'></div>
 
                             <div className="">
-                                <h2 className="text-xl font-semibold uppercase">Language</h2>
+                                <h2 className="text-xl text-purple-500 pb-3 font-semibold uppercase">Language</h2>
                                 <p className=''><span className='font-semibold'>Language:</span> {language} </p>
 
                             </div>
