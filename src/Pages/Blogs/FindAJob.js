@@ -165,8 +165,6 @@ const FindAJob = () => {
                             <td> <a href="https://angel.co/" target="_blank">Click Here</a> </td>
                             <td>Remote Job</td>
                         </tr>
-
-
                     </tbody>
                 </table>
             </div>
