@@ -4,8 +4,10 @@ import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loding from "../Shared/Loding";
 import { FaUserGraduate ,FaBloggerB,FaNewspaper, FaCommentAlt,FaInnosoft,FaWindowRestore} from 'react-icons/fa';
+import useAdmin from "../hooks/useAdmin";
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
+  const [admin] =useAdmin(user);
 
   if (loading) {
     return <Loding />;
@@ -73,7 +75,13 @@ const Dashboard = () => {
             </Link>
           </li>
 
-          
+          {(admin &&
+              <li>
+                <Link to="/dashboard/users" className="font-bold font-serif">
+                  All Users
+                </Link>
+              </li>
+            )}
         </ul>
       </div>
     </div>
