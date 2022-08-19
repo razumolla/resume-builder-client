@@ -9,13 +9,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
             <div className='flex '>
                 <div class=" m-4 ">
 
-                    <ul className="steps bg-base-300 p-3  
-
-
-                    place-items-center w-96 dark:bg-cyan-900">
-
-                    place-items-center ">
-
+                    <ul className="steps bg-base-300 p-3 place-items-center w-96 dark:bg-cyan-900">
                         <li className="step step-primary ml-8"> <p className=''>CONTACT</p> </li>
                         <li className="step ml-5 "> <p className='ml-8'>Details</p> </li>
                         {/* <li className="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>

@@ -51,6 +51,7 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import FindAJob from './Pages/Blogs/FindAJob';
 
 
 
@@ -120,6 +121,7 @@ function App() {
         <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
         <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
+        <Route path="/findAJob" element={<FindAJob> </FindAJob>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
         {/* Dashboard */}
