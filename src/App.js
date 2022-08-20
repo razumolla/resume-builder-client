@@ -24,7 +24,6 @@ import CvResumeAll from './Pages/Blogs/CvResumeAll';
 import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
 import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
-import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -51,6 +50,7 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import MockInterview from './Pages/Blogs/MockInterview/MockInterview';
 
 
 
@@ -120,7 +120,7 @@ function App() {
         <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
         <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
-        <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
+        <Route path="/mockInterview" element={<MockInterview></MockInterview>} />
 
         {/* Dashboard */}
         <Route path="/dashboard" element={
