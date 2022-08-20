@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 
 const MyReview = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
 
-    toast("WoW! Your Review Added in HomePage", {
+    toast("WoW! Your Review Added in Homepage", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -17,7 +17,7 @@ const MyReview = () => {
       draggable: true,
       progress: undefined,
     });
-    
+reset();
     const url = "http://localhost:5000/reviews";
     fetch(url, {
       method: "POST",
@@ -47,7 +47,7 @@ const MyReview = () => {
           <br />
 
           <input
-          type="file"
+            type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
             placeholder="User image"
             {...register("img", { required: true })}
@@ -55,7 +55,7 @@ const MyReview = () => {
           <br />
           <input
             className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"
-            placeholder="Rating"
+            placeholder="Rating out of 5"
             type="text"
             {...register("rating", { min: 1, max: 5 })}
           />

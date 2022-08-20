@@ -9,6 +9,8 @@ import Hired from './Hired';
 import Review from './Review';
 import Templates from './Templates';
 import WhyUs from './WhyUs';
+import MyReview from '../Dashboard/MyReview';
+import Reviews from '../Login/Reviews/Reviews';
 
 
 
@@ -27,7 +29,7 @@ const Home = () => {
             <WhyUs></WhyUs>
             <Templates></Templates>
             <Benefits></Benefits>
-            <Review></Review>
+            <Reviews />
             <Hired></Hired>
             <Contact />
 
