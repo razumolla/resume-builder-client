@@ -51,6 +51,7 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import FindAJob from './Pages/Blogs/FindAJob';
 
 
 
@@ -67,13 +68,15 @@ function App() {
         <Route path="/resume/form" element={<ResumeForm />} ></Route>
         <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
         <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+
+        <Route path="/cv/form/:id" element={<FormCv></FormCv>}></Route>
+
 
         <Route
           path="/templateForm/:id"
           element={<TemplateForm />}
         ></Route>
-      
+
 
         <Route
           path="resume"
@@ -93,7 +96,7 @@ function App() {
             <CoverLetter></CoverLetter>
           </RequireAuth>
         } />
-      
+
         <Route path="blog" element={
           <RequireAuth>
             <Blogs></Blogs>
@@ -118,10 +121,11 @@ function App() {
         <Route path="/personalDevelopment" element={<PersonalDevelopment> </PersonalDevelopment>} />
         <Route path="/inspiringStories" element={<InspiringStories> </InspiringStories>} />
         <Route path="/interviewQuestions" element={<InterviewQuestions> </InterviewQuestions>} />
+        <Route path="/findAJob" element={<FindAJob> </FindAJob>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
         {/* Dashboard */}
-        <Route path="dashboard" element={
+        <Route path="/dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
@@ -134,27 +138,26 @@ function App() {
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
         </Route>
 
-        
+
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
         <Route path='paymentCardOne' element={
-        <RequireAuth>
-          <PaymentCardOne></PaymentCardOne>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardOne></PaymentCardOne>
+          </RequireAuth>
         }></Route>
         <Route path='paymentCardTwo' element={
-        <RequireAuth>
-          <PaymentCardTwo></PaymentCardTwo>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardTwo></PaymentCardTwo>
+          </RequireAuth>
         }></Route>
         <Route path='paymentCardThree' element={
-        <RequireAuth>
-          <PaymentCardThree></PaymentCardThree>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardThree></PaymentCardThree>
+          </RequireAuth>
         }></Route>
-        
 
-       
+
         {/* interview question page start */}
         <Route path="/interviewQuestions" element={<InterviewQuestions />} />
         <Route path="/html" element={<InterviewQuesAnsHtml />} />
@@ -175,7 +178,7 @@ function App() {
 
 
 
-      
+
 
 
 

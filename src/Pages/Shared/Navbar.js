@@ -26,8 +26,26 @@ const Navbar = () => {
             <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/cv">CV</NavLink></li>
             <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/coverLetter">Cover_Letter</NavLink></li>
 
+{/* <<<<<<< HEAD */}
+            <li tabIndex="0" className='ml-3 hover:bg-primary text-black'>
+                <NavLink to="/cvResumeWriting" className="justify-between dark:text-white">
+                    Career Blogs
+                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                </NavLink>
+                <ul className="Border bg-base-100 shadow-xl dark:bg-gray-800 dark:text-white">
+                    <li className='hover:bg-primary '><NavLink to="/cvResumeWriting">Cv & Resume Writing</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/coverLetterWriting">Cover Letter Writing</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/personalDevelopment">Personal Development</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/inspiringStories">Inspiring Stories</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/interviewQuestions">Interview Questions</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/findAJob">Find a Job</NavLink></li>
+                    <li className='hover:bg-primary '><NavLink to="/mockInterview">Mock Interview</NavLink></li>
+                </ul>
+            </li>
+{/* =======
+>>>>>>> 681904fc9719e4ef982f90a51666dedb5ca0004b */}
 
-      <li tabIndex="0" className="ml-3 hover:bg-primary text-black">
+      {/* <li tabIndex="0" className="ml-3 hover:bg-primary text-black">
         <NavLink
           to="/cvResumeWriting"
           className="justify-between dark:text-white"
@@ -63,7 +81,7 @@ const Navbar = () => {
             <NavLink to="/mockInterview">Mock Interview</NavLink>
           </li>
         </ul>
-      </li>
+      </li> */}
 
       <li className="ml-3 hover:bg-primary text-black dark:text-white">
         <NavLink to="/pricing">Pricing</NavLink>
