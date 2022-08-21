@@ -14,7 +14,6 @@ import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
 import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -100,7 +99,8 @@ function App() {
         } />
 
 
-        <Route path="/about" element={<CoverLetterAbout />} />
+       
+       
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
 
         <Route path="/coverLetter" element={<CoverLetter />} />
