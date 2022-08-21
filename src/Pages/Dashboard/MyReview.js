@@ -1,12 +1,15 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
+import auth from "../../firebase.init";
 
 const MyReview = () => {
+  const [user] = useAuthState(auth);
   const { register, handleSubmit,reset } = useForm();
-
+  
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data, 'your data',data.img);
 
     toast("WoW! Your Review Added in Homepage", {
       position: "top-right",
@@ -40,18 +43,20 @@ reset();
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
-            className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs"
-            placeholder="User Name"
-            {...register("name", { required: true })}
-          />
+            className="input input-bordered z-20 mb-5 mt-3 shadow-xl  border-primary rounded-lg w-full max-w-xs"
+            value ={user.displayName}
+            placeholder={user.displayName}
+            {...register("name" )}
+    />
           <br />
 
           <input
             type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
-            placeholder="User image"
-            {...register("img", { required: true })}
-          />
+         
+            placeholder="userphoto"
+            {...register("img")}
+            />
           <br />
           <input
             className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"

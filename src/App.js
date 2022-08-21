@@ -52,6 +52,8 @@ import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQ
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
 import FindAJob from './Pages/Blogs/FindAJob';
+import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
+import Users from './Pages/Dashboard/adminUser/Users';
 
 
 
@@ -136,6 +138,10 @@ function App() {
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+          <Route  path ="users" element={<AdminAuth>
+            <Users />
+          </AdminAuth>}/>
+
         </Route>
 
 

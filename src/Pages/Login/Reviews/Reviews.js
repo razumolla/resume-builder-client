@@ -17,7 +17,7 @@ export default function Reviews() {
      <section className='mb-24 mt-20'>
            <div>
              <h4 className="text-4xl text-zinc-900 pb-3 font-bold font-serif text-center"> Our Testimonials</h4>
-             <h2 className='text-3xl font-serif font-medium text-white mb-2'>What our Consumer say?</h2>
+             <h2 className='text-3xl font-serif font-medium text-primary my-3'>What our Consumer say?</h2>
          </div>
      <div className='flex justify-between'>
         
