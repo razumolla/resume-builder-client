@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import banner from '../../assets/images/imgAfruza/cover-letter-banner 1.png';
 import CoverLetterTemp from './CoverLetterTemp';
+import Particles from "react-tsparticles";
 
 const CoverLetter = () => { 
     const [coverLetterTemps, setCoverLetterTemp] = useState([]);
@@ -17,7 +18,7 @@ const CoverLetter = () => {
         <div>
                 <div class="hero min-h-screen px-10">
                     <div class="flex justify-center align-center sm:flex-row-column lg:flex-row-reverse">
-
+       
                         <img src={banner} class="max-w-lg rounded-lg shadow-1xl animate__zoomInDown animate__animated" alt='banner' />
 
                         <div className='lg:text-left'>
