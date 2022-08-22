@@ -33,6 +33,7 @@ const ResumeForm = () => {
 
     })
 
+    const [submitted, setSubmitted] = useState(false)
 
     const pageTitles = ["Personal Information", "Education", "Projects", "Others"]
 
@@ -56,7 +57,8 @@ const ResumeForm = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        alert('submitted');
+        // alert('submitted');
+        setSubmitted(!submitted);
         console.log(formData);
 
         fetch('http://localhost:5000/resume', {
@@ -121,7 +123,7 @@ const ResumeForm = () => {
 
                     <div class="bg-gray-200 rounded-xl p-2">
 
-                        <ResumePage class="w-96" formData={formData}></ ResumePage>
+                        <ResumePage class="w-96" formData={formData} submitted={submitted}></ ResumePage>
                     </div>
                 </div>
             </div >

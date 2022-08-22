@@ -8,7 +8,7 @@ import logo from '../../assets/images/imgMehedi/logo.png'
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 bg-gray-800 text-white cursor-pointer">
+      <footer className="footer p-10 dark:bg-gray-900 bg-gray-700 text-white cursor-pointer">
         <div>
           <img src={logo} alt="logo" className='w-36 mr-4' />
           <div className="flex">
@@ -37,7 +37,7 @@ const Footer = () => {
           <a className="link link-hover">Format Cover Letter</a>
         </div>
       </footer>
-      <div className='h-32 bg-gray-900 flex items-center justify-center'>
+      <div className='h-32 dark:bg-gray-900 bg-gray-800 flex items-center justify-center'>
         <div className='text-white'>
           <p>© 2022, Resume Builder. All rights reserved</p>
           <p><span className='text-primary'>Resume Builder</span> is owned and operated by team <span className='text-primary'>Endgame Soldier</span></p>

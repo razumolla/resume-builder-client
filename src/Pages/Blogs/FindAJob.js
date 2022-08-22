@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const FindAJob = () => {
     return (
         <div className='p-10 '>
-            <h2 className='text-3xl mb-10 text-accent font-bold'>Find a Job Circular and Apply & Achieve your Dream Job </h2>
-            <div class="overflow-x-auto">
+            <h2 className='text-3xl mb-10 font-bold text-primary'>Find a Job Circular and Apply & Achieve your Dream Job </h2>
+            <div class="overflow-x-auto dark:text-black ">
                 <table class="table w-full">
                     <thead>
                         <tr>

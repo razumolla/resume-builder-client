@@ -17,7 +17,7 @@ const MyReview = () => {
       draggable: true,
       progress: undefined,
     });
-    
+
     const url = "http://localhost:5000/reviews";
     fetch(url, {
       method: "POST",
@@ -35,33 +35,33 @@ const MyReview = () => {
   return (
     <div>
       <div className="addDiv">
-        <h1 className="text-center text-zinc-900 my-5 text-3xl font-semiBold font-serif">
+        <h1 className="text-center text-zinc-900 my-5 text-3xl font-semiBold font-serif dark:text-white">
           Add User Experience
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
-            className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs"
+            className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs dark:text-black"
             placeholder="User Name"
             {...register("name", { required: true })}
           />
           <br />
 
           <input
-          type="file"
-            className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
+            type="file"
+            className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5 dark:text-black"
             placeholder="User image"
             {...register("img", { required: true })}
           />
           <br />
           <input
-            className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"
+            className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
             placeholder="Rating"
             type="text"
             {...register("rating", { min: 1, max: 5 })}
           />
           <br />
           <textarea
-            className="input input-bordered min-h-16 z-20 shadow-xl mb-5 rounded-lg w-full max-w-xs  border-primary"
+            className="input input-bordered min-h-16 z-20 shadow-xl mb-5 rounded-lg w-full max-w-xs  border-primary dark:text-black"
             placeholder="About Our Service"
             {...register("about", { required: true })}
           />
