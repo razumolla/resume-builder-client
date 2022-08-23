@@ -51,6 +51,7 @@ import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQ
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
 import MockInterview from './Pages/Blogs/MockInterview/MockInterview';
+import MyInterview from './Pages/Dashboard/MyInterview';
 
 
 
@@ -129,6 +130,7 @@ function App() {
           </RequireAuth>
         }>
           <Route path="profile" element={<MyProfile />} />
+          <Route path="myInterview" element={<MyInterview />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />

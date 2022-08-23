@@ -13,6 +13,7 @@ const Interview = ({ interview, setMock }) => {
                                 : <span className='text-red-500'>Try Another Date</span>
                         }</p>)
                     }
+                    <p>{slots.length} available seats</p>
                     <div class="card-actions justify-center">
                         <label
                             for="my-modal-6"

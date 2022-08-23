@@ -2,18 +2,47 @@ import React from 'react';
 import { format } from 'date-fns';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 
 const InterviewModal = ({ mock, setMock, selected }) => {
-    const { name, slots } = mock;
+    const { _id, name, slots } = mock;
     const [user, loading, error] = useAuthState(auth);
-
-    console.log(user);
+    const formattedDate = format(selected, 'PP');
 
     const interviewAppoint = e => {
         e.preventDefault();
         const slot = e.target.slot.value;
-        console.log(slot);
-        setMock(null);
+        console.log(_id, slot);
+        const interview = {
+            interviewId: _id,
+            interview: name,
+            date: formattedDate,
+            slot: slot,
+            student: user.email,
+            studentName: user.displayName,
+            phoneNumber: e.target.phone.value,
+        }
+
+        fetch('http://localhost:5000/appointment', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(interview)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                if (data.success) {
+                    toast.success(`Your Interview is ${formattedDate} at ${slot}`);
+                    toast('You will recieve email for the interview')
+                }
+                else {
+                    toast.error(`You have already boocked this subject !!`);
+                }
+
+                setMock(null);
+            })
     }
 
     return (
