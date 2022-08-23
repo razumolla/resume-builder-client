@@ -1,8 +1,7 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { Link } from 'react-router-dom';
-const CoverLetterDisplay = ({ formData, submitted }) => {
+const CoverLetterDisplay5 = ({formData, submitted}) => {
     const { 
         name,
         email,
@@ -18,8 +17,6 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
     
     } 
         = formData;
-
-        
   
 
         const generatePdf = () => {
@@ -30,7 +27,7 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
             }).then(canvas => {
                 // Few necessary setting options
                 const imgWidth = 208;
-               const imgHeight = canvas.height * imgWidth / canvas.width;
+                const imgHeight = canvas.height * imgWidth / canvas.width;
                 alert(imgHeight)
                 const contentDataURL = canvas.toDataURL('image/png')
                 const pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
@@ -41,15 +38,14 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
             });
                 
         }
-
     return (
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
             <div class="card  bg-gray-100  ">
                 <div class="card-body text-left ml-6 " id='coverLetter'>
                     <div>
                         <div>
-                            <h1 className='text-4xl text-pink-600 font-bold break-words '>{name}</h1>
-                            <h1 className='text-2xl mt-2 text-sky-900 mb-2 font-bold break-words'>{designation}</h1>
+                            <h1 className='text-4xl text-gray-600 font-bold break-words '>{name}</h1>
+                            <h1 className='text-2xl mt-2 text-gray-600 mb-2 font-bold break-words'>{designation}</h1>
                         </div>
                         <div className='text-left'>
                             <small className='font-semibold break-words'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
@@ -60,7 +56,7 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
-                    <div className='border border-spacing-28  border-pink-600 h-1 bg-pink-600'></div>
+                    <div className='border border-spacing-28  border-gray-400 h-1 bg-gray-300 border-none'></div>
                     <div >
                         <h2 className='text-xl font-bold break-words'>{dear}</h2>
                         <p className='break-words'>{professionalCareer}
@@ -79,23 +75,15 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
                         <p className='text-xl break-words mb-3'>Sincerely.</p>
                         <p className='text-xl break-words'>{ signatureName}</p>
                     </div>
-
-                   <div>
-                   <div className='border border-spacing-28  border-pink-600 h-3 bg-pink-600'></div>
-                   <div className='border border-36 border-sky-900/100 h-6 bg-sky-900 '></div>
-                   </div>
                 </div>              
             </div>
             <div className='py-4 ml-8'>
-                  <Link to='/dashboard/allcoverlettertemp'>
-                  
-                  <button disabled={submitted == false}
+                    <button disabled={submitted == false}
                     
                     class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
-                  </Link>
             </div>
         </div >
     );
 };
 
-export default CoverLetterDisplay;
+export default CoverLetterDisplay5;

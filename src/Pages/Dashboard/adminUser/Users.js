@@ -5,16 +5,13 @@ import Loding from "../../Shared/Loding";
 import User from "./User";
 
 const Users = () => {
-
-
   const {
     data: users,
     isLoading,
     error,
     refetch,
   } = useQuery("u", () =>
-    fetch("http://localhost:5000/user").
-    then((res) => res.json())
+    fetch("http://localhost:5000/user").then((res) => res.json())
   );
 console.log(error);
 
