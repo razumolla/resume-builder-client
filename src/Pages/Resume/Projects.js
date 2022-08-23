@@ -20,7 +20,7 @@ const Projects = ({ formData, setFormData }) => {
             <div className="m-2 flex flex-col justify-center items-center gap-3">
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Project Name (1)" name="project" className="input input-bordered input-primary w-80 peer dark:text-black" value={formData.project} onChange={(e) => setFormData({ ...formData, project: e.target.value })} required />
+                    <input type="text" placeholder="Project Name (1)" name="project" className="input input-bordered input-primary w-72 md:w-80 lg:w-80 peer dark:text-black" value={formData.project} onChange={(e) => setFormData({ ...formData, project: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your project name
@@ -28,7 +28,7 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Project Link" name="link" className="input input-bordered input-primary w-80 peer dark:text-black" value={formData.link} onChange={(e) => setFormData({ ...formData, link: e.target.value })} required />
+                    <input type="text" placeholder="Project Link" name="link" className="input input-bordered input-primary w-72 md:w-80 lg:w-80 peer dark:text-black" value={formData.link} onChange={(e) => setFormData({ ...formData, link: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter project link
@@ -36,16 +36,18 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary dark:text-black break-words"
+                    <textarea className="textarea textarea-primary text-width dark:text-black break-words"
+                        // 20rem !important
+                        // width: '20rem !important' 
                         style={
-                            { width: '20rem !important' }
+                            {}
                         } placeholder="Write some description of your project" name="features" value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })}></textarea>
 
                 </div>
 
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Project Name (2)" name="project2" className="input input-bordered input-primary w-80 peer dark:text-black" value={formData.project2} onChange={(e) => setFormData({ ...formData, project2: e.target.value })} required />
+                    <input type="text" placeholder="Project Name (2)" name="project2" className="input input-bordered input-primary w-72 md:w-80 lg:w-80  peer dark:text-black" value={formData.project2} onChange={(e) => setFormData({ ...formData, project2: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your project name
@@ -53,7 +55,7 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Project Link" name="link2" className="input input-bordered input-primary w-80 peer dark:text-black" value={formData.link2} onChange={(e) => setFormData({ ...formData, link2: e.target.value })} required />
+                    <input type="text" placeholder="Project Link" name="link2" className="input input-bordered input-primary w-72 md:w-80 lg:w-80  peer dark:text-black" value={formData.link2} onChange={(e) => setFormData({ ...formData, link2: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter project link
@@ -61,14 +63,14 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary dark:text-black break-words"
+                    <textarea className="textarea textarea-primary w-72 md:w-80 lg:w-80  dark:text-black break-words"
                         style={
-                            { width: '20rem !important' }
+                            {}
                         } placeholder="Write some description of your project" name="features2" value={formData.features2} onChange={(e) => setFormData({ ...formData, features2: e.target.value })}></textarea>
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -25,8 +25,10 @@ const Others = ({ formData, setFormData }) => {
                         </p>
                     </div>
 
+                    {/* w-72  max-w-xs */}
+
                     <div className='mb-2'>
-                        <textarea type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2 dark:text-black peer" name="technology" placeholder='Technology' value={formData.technology} onChange={(e) => setFormData({ ...formData, technology: e.target.value })} required />
+                        <textarea type="text" className="input input-bordered input-secondary textarea  mb-2 w-72 md:w-auto sm:w-auto dark:text-black peer" name="technology" placeholder='Technology' value={formData.technology} onChange={(e) => setFormData({ ...formData, technology: e.target.value })} required />
 
                         <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                             Please enter technologies

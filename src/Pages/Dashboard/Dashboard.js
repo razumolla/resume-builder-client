@@ -86,6 +86,11 @@ const Dashboard = () => {
               <FaCommentAlt/> My Review
             </Link>
           </li>
+          <li>
+            <Link to="/dashboard/allcoverlettertemp" className="font-bold font-serif  shadow-inner mb-1">
+              <FaCommentAlt/>CL Template
+            </Link>
+          </li>
 
        {admin &&
               <li>

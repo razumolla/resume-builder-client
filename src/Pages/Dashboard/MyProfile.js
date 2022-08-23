@@ -3,11 +3,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const MyProfile = () => {
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   return (
     <div>
-      <div class="card card-side bg-base-100 shadow-xl px-12 mx-10 w-3/4">
+      <div class="card card-side bg-base-100 shadow-xl px-12 mx-10 w-3/4 dark:bg-cyan-900">
         <figure>
           <img src={user.photoURL} alt="Album" />
         </figure>
