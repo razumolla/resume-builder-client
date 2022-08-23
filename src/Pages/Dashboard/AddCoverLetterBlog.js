@@ -64,20 +64,20 @@ const AddCoverLetterBlog = () => {
     };
 
     return (
-        <div className='mt-2'>
-            <h1 className='text-2xl'> Add a New Cover Letter Blog </h1>
+        <div className='mt-2 mx-auto px-auto'>
+            <h1 className='text-2xl  font-semibold mb-4'>Cover Letter Blog </h1>
             <form onSubmit={handleSubmit(onSubmit)}>
 
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Blog Title Name</span>
-                    </label>
+               
+                    {/* <label className="label">
+                        <span className="label-text">Blog Name</span>
+                    </label> */}
                     <input
                         type="text"
                         placeholder="Blog Title Name"
-                        className="input input-bordered w-full max-w-xs"
+                        className="input input-bordered w-full max-w-xs mx-auto shadow-xl rounded-lg my-3 border-primary"
                         {...register("blogTitleName", {
-                            required: {
+                            required : {
                                 value: true,
                                 message: 'Blog Title is Required'
                             },
@@ -86,16 +86,16 @@ const AddCoverLetterBlog = () => {
                     <label className="label">
                         {errors.blogTitleName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.blogTitleName.message}</span>}
                     </label>
-                </div>
+              
 
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
+                
+                    {/* <label className="label">
                         <span className="label-text">Description</span>
-                    </label>
+                    </label> */}
                     <textarea
                         type="text"
                         placeholder="Blog Description"
-                        className="input input-bordered w-full max-w-xs"
+                        className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary"
                         {...register("description", {
                             required: {
                                 value: true,
@@ -106,17 +106,17 @@ const AddCoverLetterBlog = () => {
                     <label className="label">
                         {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
                     </label>
-                </div>
+              
 
 
 
-                <div className="form-control w-full max-w-xs">
+{/*                 
                     <label className="label">
                         <span className="label-text">Blog Related Photo</span>
-                    </label>
+                    </label> */}
                     <input
                         type="file"
-                        className="input input-bordered w-full max-w-xs"
+                        className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary"
                         {...register("image", {
                             required: {
                                 value: true,
@@ -127,9 +127,9 @@ const AddCoverLetterBlog = () => {
                     <label className="label">
                         {errors.image?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
                     </label>
-                </div>
+              
 
-                <input className='btn w-full max-w-xs text-white hover:bg-primary bg-primary' type="submit" value="Add Blog" />
+                <input className='btn w-full max-w-xs text-slate-900  shadow-xl rounded-lg hover:bg-primary bg-primary' type="submit" value="Submit Blog" />
             </form>
 
 

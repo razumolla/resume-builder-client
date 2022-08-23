@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import 'animate.css';
 
 const Template = ({ template }) => {
-    const { image, name } = template;
+    const { _id, image, name } = template;
+
     return (
         <div className='mt-10'>
             <div className="container animate__animated  animate__lightSpeedInLeft">
@@ -11,7 +12,7 @@ const Template = ({ template }) => {
                 <figcaption>
                     <h3 className="btn btn-primary">Create Now</h3>
                 </figcaption>
-                <Link to="/cv/form"></Link>
+                <Link to={`/cv/form/${_id}`}></Link>
             </div>
         </div>
     );

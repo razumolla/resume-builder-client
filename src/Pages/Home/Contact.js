@@ -35,7 +35,8 @@ export default function Contact() {
         <div className="awesome ">
           <Roll left>
             <Roll bottom>
-              <p className="text-4xl text-primary">Get in Touch</p>
+              <span className="touch text-primary">Get in Touch</span>
+
             </Roll>
 
             <br />
@@ -46,7 +47,7 @@ export default function Contact() {
 
       </div>
       {/* right side form */}
-      <div className="c-right">
+      <div className="c-right dark:text-black">
         <form ref={form} onSubmit={sendEmail}>
           <input
             type="text"

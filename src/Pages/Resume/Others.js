@@ -24,6 +24,16 @@ const Others = ({ formData, setFormData }) => {
                             Please enter your skills
                         </p>
                     </div>
+
+                    <div className='mb-2'>
+                        <textarea type="text" className="input input-bordered input-secondary w-full max-w-lg mb-2 dark:text-black peer" name="technology" placeholder='Technology' value={formData.technology} onChange={(e) => setFormData({ ...formData, technology: e.target.value })} required />
+
+                        <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                            Please enter technologies
+                        </p>
+                    </div>
+
+
                     <div className='mb-2'>
                         <input type="text" className="input input-bordered input-secondary w-80   dark:text-black peer" name="language" placeholder='Your language' value={formData.language} onChange={(e) => setFormData({ ...formData, language: e.target.value })} required />
 
