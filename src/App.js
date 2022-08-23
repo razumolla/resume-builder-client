@@ -52,6 +52,7 @@ import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
+import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 
 
 
@@ -132,7 +133,7 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route path="profile" element={<MyProfile />} />
+          <Route index element={<MyProfile />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
@@ -140,8 +141,12 @@ function App() {
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
 
 
+
             {/* add all coverlett template dashboart */}
             <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
+
+
+          <Route path="updateinfo" element={<UpdateUserInfo />}/>
 
           <Route  path ="users" element={<AdminAuth>
             <Users />

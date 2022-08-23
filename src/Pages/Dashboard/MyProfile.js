@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const MyProfile = () => {
@@ -15,7 +16,7 @@ const MyProfile = () => {
           <h2 class="card-title justify-end">{user.displayName}</h2>
           <h2 className="card-title justify-end">{user.email}</h2>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Edit Now</button>
+            <button class="btn btn-primary" ><Link to="updateInfo">Edit Now</Link> </button>
           </div>
         </div>
       </div>

@@ -9,6 +9,8 @@ const MyReview = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
+    data.img = user.photoURL;
+    data.name = user.displayName
     console.log(data, 'your data', data.img);
 
     toast("WoW! Your Review Added in Homepage", {
@@ -40,38 +42,19 @@ const MyReview = () => {
   return (
     <div>
       <div className="addDiv">
-        <h1 className="text-center text-zinc-900 my-5 text-3xl font-semiBold font-serif dark:text-white">
+        <h1 className="text-center text-zinc-900 my-3 text-3xl font-semiBold font-serif dark:text-white">
           Add User Experience
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-            //   <<<<<<< HEAD
-            //   className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs dark:text-black"
-            //   placeholder="User Name"
-            //   {...register("name", { required: true })}
-            // />
-            // <br />
-
-            // <input
-            //   type="file"
-            //   className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5 dark:text-black"
-            //   placeholder="User image"
-            //   {...register("img", { required: true })}
-            // />
-            // <br />
-            // <input
-            //   className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
-            //   placeholder="Rating"
-            //   =======
-        
+       {/* <input
             className="input input-bordered z-20 mb-5 mt-3 shadow-xl  border-primary rounded-lg w-full max-w-xs"
             value={user.displayName}
             placeholder={user.displayName}
             {...register("name")}
-          />
+          /> */}
           <br />
 
-          <input
+          {/* <input
             type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
 
@@ -79,7 +62,7 @@ const MyReview = () => {
             placeholder={user.photoURL}
 
             {...register("img")}
-          />
+          /> */}
           <br />
           <input
             className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"
