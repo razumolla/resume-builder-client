@@ -11,8 +11,9 @@ const Templates = () => {
             <h1 className='text-3xl font-bold text-primary  my-10'>Templates For Every Carrer Path</h1>
             <div className='grid sm:grid-col-1 md:grid-cols-1 lg:grid-cols-3 gap-8'>
 
+                {/* bg-base-200 */}
 
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div class="card w-96 bg-blue-300  dark:bg-cyan-900 shadow-xl ml-5" >
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div class="card-body">
                         <div class="card-actions justify-between">

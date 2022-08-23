@@ -68,66 +68,66 @@ const AddCoverLetterBlog = () => {
             <h1 className='text-2xl  font-semibold mb-4'>Cover Letter Blog </h1>
             <form onSubmit={handleSubmit(onSubmit)}>
 
-               
-                    {/* <label className="label">
+
+                {/* <label className="label">
                         <span className="label-text">Blog Name</span>
                     </label> */}
-                    <input
-                        type="text"
-                        placeholder="Blog Title Name"
-                        className="input input-bordered w-full max-w-xs mx-auto shadow-xl rounded-lg my-3 border-primary"
-                        {...register("blogTitleName", {
-                            required : {
-                                value: true,
-                                message: 'Blog Title is Required'
-                            },
-                        })}
-                    />
-                    <label className="label">
-                        {errors.blogTitleName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.blogTitleName.message}</span>}
-                    </label>
-              
+                <input
+                    type="text"
+                    placeholder="Blog Title Name"
+                    className="input input-bordered w-full max-w-xs mx-auto shadow-xl rounded-lg my-3 border-primary dark:text-black"
+                    {...register("blogTitleName", {
+                        required: {
+                            value: true,
+                            message: 'Blog Title is Required'
+                        },
+                    })}
+                />
+                <label className="label">
+                    {errors.blogTitleName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.blogTitleName.message}</span>}
+                </label>
 
-                
-                    {/* <label className="label">
+
+
+                {/* <label className="label">
                         <span className="label-text">Description</span>
                     </label> */}
-                    <textarea
-                        type="text"
-                        placeholder="Blog Description"
-                        className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary"
-                        {...register("description", {
-                            required: {
-                                value: true,
-                                message: 'Description is Required'
-                            },
-                        })}
-                    />
-                    <label className="label">
-                        {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
-                    </label>
-              
+                <textarea
+                    type="text"
+                    placeholder="Blog Description"
+                    className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary dark:text-black"
+                    {...register("description", {
+                        required: {
+                            value: true,
+                            message: 'Description is Required'
+                        },
+                    })}
+                />
+                <label className="label">
+                    {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
+                </label>
 
 
 
-{/*                 
+
+                {/*                 
                     <label className="label">
                         <span className="label-text">Blog Related Photo</span>
                     </label> */}
-                    <input
-                        type="file"
-                        className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary"
-                        {...register("image", {
-                            required: {
-                                value: true,
-                                message: 'Image is Required'
-                            },
-                        })}
-                    />
-                    <label className="label">
-                        {errors.image?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
-                    </label>
-              
+                <input
+                    type="file"
+                    className="input input-bordered w-full max-w-xs  shadow-xl rounded-lg mb-3 border-primary dark:text-black"
+                    {...register("image", {
+                        required: {
+                            value: true,
+                            message: 'Image is Required'
+                        },
+                    })}
+                />
+                <label className="label">
+                    {errors.image?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
+                </label>
+
 
                 <input className='btn w-full max-w-xs text-slate-900  shadow-xl rounded-lg hover:bg-primary bg-primary' type="submit" value="Submit Blog" />
             </form>

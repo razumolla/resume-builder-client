@@ -14,21 +14,27 @@ const ResumeForm2 = () => {
 
     const [formData, setFormData] = useState({
         name: '',
+        title: '',
         email: '',
         phone: '',
         city: '',
         education: '',
         institute: '',
-        startDate: '',
-        endDate: '',
+        year: '',
         project: '',
         link: '',
         features: '',
+        project2: '',
+        link2: '',
+        features2: '',
         skills: '',
+        technology: '',
         language: '',
 
     })
 
+
+    const [submitted, setSubmitted] = useState(false)
 
     const pageTitles = ["Personal Information", "Education", "Projects", "Others"]
 
@@ -52,7 +58,8 @@ const ResumeForm2 = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        alert('submitted');
+        // alert('submitted');
+        setSubmitted(!submitted);
         console.log(formData);
 
         fetch('http://localhost:5000/resume', {
@@ -73,9 +80,11 @@ const ResumeForm2 = () => {
     return (
 
 
+
+
         <div className='mt-24 mb-16 m-10 '>
             <div className='lg:flex flex-col md:flex-row gap-5'>
-                <div className="w-full md:w-1/3 sm:my-2 md:my-2">
+                <div className="w-full md:w-5/6 lg:w-96  sm:my-2 md:my-2 md:m-auto">
 
                     <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
@@ -106,8 +115,6 @@ const ResumeForm2 = () => {
                                     }
 
 
-
-
                                 </div>
                             </div >
                         </div>
@@ -115,11 +122,12 @@ const ResumeForm2 = () => {
                     </div>
                 </div >
 
-                <div className='w-full md:w-2/3 sm:col-6'>
+
+                <div className='w-full md:w-full lg:w-2/3 md:m-auto'>
 
                     <div class="bg-gray-200 rounded-xl p-2">
 
-                        <ResumePage2 class="w-96" formData={formData}></ ResumePage2>
+                        <ResumePage2 class="w-96" formData={formData} submitted={submitted}></ ResumePage2>
                     </div>
                 </div>
             </div >
@@ -132,5 +140,4 @@ const ResumeForm2 = () => {
 export default ResumeForm2;
 
 
-{/* submitted={submitted} */ }
 

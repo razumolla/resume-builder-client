@@ -9,7 +9,7 @@ const CoverLetterEducation = ({ formData, setFormData }) => {
                     <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
                         <ul className="steps bg-base-300 p-3  
-                        place-items-center">
+                        place-items-center ">
                             <li className="step step-primary ml-2"> <p className=''>CONTACT</p> </li>
                             <li className="step ml-5 step-primary "> <p className='ml-8'>EXPERIENCE</p> </li>
                             <li className="step step-primary  ml-12 "><p className='ml-5'>EDUCATION</p> </li>

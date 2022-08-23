@@ -23,7 +23,7 @@
 }
 
 .Banner_button:hover {
-    background-color: wheat;
+    background-color: primary;
     color: black;
     border: 1px solid rgb(15, 15, 15);
 }

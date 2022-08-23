@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 
 const Login = () => {
-  
+
 
     const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -30,15 +30,15 @@ const Login = () => {
 
     const [token] = useToken(user || gUser)
 
-    useEffect(()=>{
+    useEffect(() => {
         if (token) {
-            
+
             navigate(from, { replace: true });
-    
-    
-    
+
+
+
         }
-    },[token,from,navigate])
+    }, [token, from, navigate])
 
 
 
@@ -50,7 +50,7 @@ const Login = () => {
         return <Loding></Loding>
     }
 
-    
+
     const onSubmit = data => {
 
         // console.log(data)
@@ -61,27 +61,27 @@ const Login = () => {
         <div className='mt-10 '>
             <h1 className='pt-20 pb-10 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
 
-          
+
 
             <div className='flex justify-center items-center  '>
-           
-
-                <div className="card w-96 bg-white mb-5  login_div">
 
 
-                    <div className="card-body ">
+                <div className="card w-96 bg-white mb-5  login_div p-2">
+
+
+                    <div className="card-body dark:bg-cyan-900">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text  dark:text-white">Email</span>
                                 </label>
 
                                 <input type="email"
                                     placeholder="Your Eamil"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs dark:text-black"
                                     {...register("email", {
                                         required: {
                                             value: true,
@@ -104,11 +104,11 @@ const Login = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text  dark:text-white">Password</span>
                                 </label>
                                 <input type="password"
                                     placeholder="Your Password"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs dark:text-black"
                                     {...register("password", {
                                         required: {
                                             value: true,

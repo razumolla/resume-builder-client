@@ -4,17 +4,16 @@ import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loding from "../Shared/Loding";
 import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore } from 'react-icons/fa';
+
+import useAdmin from "../hooks/useAdmin";
+
 const Dashboard = () => {
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
 
-  if (loading) {
-    return <Loding />;
-  }
-
-  console.log(user);
+  console.log(user, admin);
   return (
     <div>
-
       <div className="drawer drawer-mobile">
         <input id="dash-sidebar" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
@@ -42,36 +41,54 @@ const Dashboard = () => {
           <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <Link to="/dashboard/profile" className="font-bold font-serif mt-14 shadow-inner">
+              <Link
+                to="/dashboard"
+                className="font-bold font-serif mt-14 shadow-inner"
+              >
                 <FaUserGraduate /> My Profile
               </Link>
             </li>
 
             <li>
-              <Link to="/dashboard/addCvResumeBlog" className="font-bold font-serif  shadow-inner my-2">
+              <Link
+                to="/dashboard/addCvResumeBlog"
+                className="font-bold font-serif  shadow-inner my-2"
+              >
                 <FaBloggerB /> Cv Resume Blog
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/addCoverLetterBlog" className="font-bold font-serif  shadow-inner mb-2">
-                <FaNewspaper />  Cover Letter Blog
+              <Link
+                to="/dashboard/addCoverLetterBlog"
+                className="font-bold font-serif  shadow-inner mb-2"
+              >
+                <FaNewspaper /> Cover Letter Blog
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/addPersonalDevBlog" className="font-bold font-serif  shadow-inner mb-2">
+              <Link
+                to="/dashboard/addPersonalDevBlog"
+                className="font-bold font-serif  shadow-inner mb-2"
+              >
                 <FaInnosoft /> Soft Skills Blog
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/addInspiringStoriesBlog" className="font-bold font-serif  shadow-inner mb-2">
-                <FaWindowRestore />Inspiring stories
+              <Link
+                to="/dashboard/addInspiringStoriesBlog"
+                className="font-bold font-serif  shadow-inner mb-2"
+              >
+                <FaWindowRestore />
+                Inspiring stories
               </Link>
             </li>
+
             <li>
               <Link to="/dashboard/myInterview" className="font-bold font-serif  shadow-inner mb-1">
                 <FaNewspaper /> Mock Interview
               </Link>
             </li>
+
             <li>
               <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
                 <FaCommentAlt /> My Review
@@ -79,11 +96,36 @@ const Dashboard = () => {
             </li>
 
 
+
+            {admin && (
+              <>
+                <li>
+                  <Link to="/dashboard/users" className="font-bold font-serif">
+                    All Users
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dashboard/addtemplate"
+                    className="font-bold font-serif"
+                  >
+                    Add Template
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dashboard/blog"
+                    className="font-bold font-serif"
+                  >
+                    Blog Manage
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
     </div>
-
   );
 };
 

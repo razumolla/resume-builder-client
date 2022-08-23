@@ -8,8 +8,8 @@ import logo from '../../assets/images/imgMehedi/logo.png'
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 bg-gray-800 text-white cursor-pointer">
-        <div>
+      <footer className="footer p-10 justify-center lg:justify-around dark:bg-gray-900 bg-gray-700 text-white cursor-pointer">
+        <div className=''>
           <img src={logo} alt="logo" className='w-36 mr-4' />
           <div className="flex">
             <img src={instagram} alt="insta" className="w-10 mr-4" />
@@ -18,7 +18,7 @@ const Footer = () => {
             <img src={facebook} alt="fb" className="w-10 mr-4" />
           </div>
         </div>
-        <div>
+        <div className=''>
           <span className="footer-title hover:text-cyan-500">Resume</span>
           <a className="link link-hover">Resume Template</a>
           <a className="link link-hover">Resume Example</a>
@@ -37,7 +37,7 @@ const Footer = () => {
           <a className="link link-hover">Format Cover Letter</a>
         </div>
       </footer>
-      <div className='h-32 bg-gray-900 flex items-center justify-center'>
+      <div className='h-32 dark:bg-gray-900 bg-gray-800 flex items-center justify-center'>
         <div className='text-white'>
           <p>© 2022, Resume Builder. All rights reserved</p>
           <p><span className='text-primary'>Resume Builder</span> is owned and operated by team <span className='text-primary'>Endgame Soldier</span></p>

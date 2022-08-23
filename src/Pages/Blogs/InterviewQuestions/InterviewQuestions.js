@@ -10,9 +10,9 @@ const InterviewQuestions = () => {
                     <Link to='/css' className='btn btn-primary ml-2 mb-2'>CSS</Link>
                     <Link to='/js' className='btn btn-primary ml-2 mb-2'>JavaScript</Link>
                     <Link to='/reactjs' className='btn btn-primary ml-2 mb-2'>React JS</Link>
-                    <Link to='/mongodb' className='btn btn-primary ml-2'>Mongo DB</Link>
-                    <Link to='/nodejs' className='btn btn-primary ml-2'>Node JS</Link>
-                    <Link to='/redux' className='btn btn-primary ml-2'>Redux</Link>
+                    <Link to='/mongodb' className='btn btn-primary ml-2 mb-2'>Mongo DB</Link>
+                    <Link to='/nodejs' className='btn btn-primary ml-2 mb-2'>Node JS</Link>
+                    <Link to='/redux' className='btn btn-primary ml-2 mb-2'>Redux</Link>
                     </div>
 
                 </div>
@@ -20,7 +20,7 @@ const InterviewQuestions = () => {
                 <h1 className='p-5 text-3xl font-bold '> Most Common <span className='text-primary'>HTML</span> Interview Questions and Answers</h1>
                 <div className='lg:flex justify-center sm:flex-cols'>
                     <div>
-                        <img src={html} className='  mt-28' alt="" />
+                        <img src={html} className='ml-5 mt-16 w-3/4' alt="" />
                     </div>
                     <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 sm:w-0'>
                         <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box">
