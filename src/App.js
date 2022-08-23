@@ -55,6 +55,7 @@ import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
+import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
 
 
 
@@ -141,7 +142,10 @@ function App() {
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
           <Route path="updateinfo" element={<UpdateUserInfo />}/>
           <Route  path ="users" element={<AdminAuth>
-            <Users />
+           <Users />
+          </AdminAuth>}/>
+          <Route  path ="blogmanage" element={<AdminAuth>
+        <BlogManage />
           </AdminAuth>}/>
 
         </Route>

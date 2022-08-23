@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-const User = ({ u, refetch }) => {
+const User = ({ user, refetch }) => {
   const [show, setShow] = useState([]);
 
-  const { email, role } = u;
+  const { email, role,index } = user;
+console.log(user)
+// useEffect(() => {
+//       fetch('http://localhost:5000/user')
+//       .then((res) => res.json())
+//       .then((data) => setShow(data));
+//   }, []);
 
   const makedelete = (id) => {
     const proceed = window.confirm("are you want to delete?");
@@ -22,7 +28,7 @@ const User = ({ u, refetch }) => {
   };
 
   const makeAdmin = () => {
-    console.log("what is problem");
+    console.log("made succecfully");
     fetch(`http://localhost:5000/user/admin/${email}`, {
       method: "PUT",
       headers: {
@@ -55,16 +61,17 @@ const User = ({ u, refetch }) => {
 
   return (
     <tr>
+      <td>{index +1}</td>
       <td>{email}</td>
       <td>
         {role !== "admin" && (
-          <button onClick={makeAdmin} className="btn btn-xs">
+          <button onClick={makeAdmin} className="btn btn-xs  text-white bg-violet-600">
             Make Admin
           </button>
         )}
       </td>
       <td>
-        <button onClick={() => makedelete(u._id)} className="btn btn-xs">
+        <button onClick={() => makedelete(user._id)} className="btn btn-xs">
           Remove User
         </button>
       </td>

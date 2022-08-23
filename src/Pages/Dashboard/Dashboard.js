@@ -112,7 +112,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <Link
-                    to="/dashboard/blog"
+                    to="/dashboard/blogmanage"
                     className="font-bold font-serif"
                   >
                   Blog Manage

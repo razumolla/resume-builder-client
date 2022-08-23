@@ -12,24 +12,25 @@ const Users = () => {
     isLoading,
     error,
     refetch,
-  } = useQuery("u", () =>
-    fetch("http://localhost:5000/user").
-    then((res) => res.json())
+  } = useQuery("user", () =>
+    fetch("http://localhost:5000/user")
+    
+    .then((res) => res.json())
   );
-console.log(error);
 
-  console.log(users, users.length)
+  console.log(users, 'i find usr length')
   if (isLoading) {
     return <Loding />;
   }
   console.log(users)
   return (
     <div>
-      <h2 className="text-2xl">All Users: {users.length}</h2>
+      <h2 className="text-2xl">All Users:{users.length} </h2>
       <div className="overflow-x-auto">
-        <table className="table w-full">
+        <table className="table w-full table-cell">
           <thead>
             <tr>
+              <th>Serial</th>
               <th>Email</th>
               <th>Make Admin </th>
               <th>cancel user</th>
@@ -37,9 +38,9 @@ console.log(error);
           </thead>
           <tbody>
 
-            {users.length && users?.map((u) => (
-              <User key={u._id} u={u} refetch={refetch}></User>
-            ))}
+         {users?.map((user) => (
+              <User key={user._id} user={user} refetch={refetch}></User>
+         ))}
           </tbody>
         </table>
       </div>
