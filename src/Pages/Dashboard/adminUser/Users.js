@@ -37,7 +37,7 @@ console.log(error);
           </thead>
           <tbody>
 
-            {users.length && users.map((u) => (
+            {users.length && users?.map((u) => (
               <User key={u._id} u={u} refetch={refetch}></User>
             ))}
           </tbody>
