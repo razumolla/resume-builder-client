@@ -28,7 +28,7 @@ const MyInterview = () => {
                 <table className="table w-full text-center">
 
                     <thead>
-                        <tr>
+                        <tr className='dark:text-black'>
                             <th></th>
                             <th>Subject</th>
                             <th>Date</th>
