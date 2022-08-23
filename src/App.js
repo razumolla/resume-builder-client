@@ -1,5 +1,4 @@
 import './App.css';
-
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
@@ -23,7 +22,6 @@ import CvResumeAll from './Pages/Blogs/CvResumeAll';
 import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
 import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
-import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -48,6 +46,8 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import MockInterview from './Pages/Blogs/MockInterview/MockInterview';
+import MyInterview from './Pages/Dashboard/MyInterview';
 import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
@@ -106,8 +106,8 @@ function App() {
         } />
 
 
-       
-       
+
+
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
 
         <Route path="/coverLetter" element={<CoverLetter />} />
@@ -127,13 +127,16 @@ function App() {
         <Route path="/findAJob" element={<FindAJob> </FindAJob>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
+
         {/* Dashboard */}
         <Route path="/dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<MyProfile />} />
+
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="myInterview" element={<MyInterview />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
@@ -142,15 +145,15 @@ function App() {
 
 
 
-            {/* add all coverlett template dashboart */}
-            <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
+          {/* add all coverlett template dashboart */}
+          <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
 
 
-          <Route path="updateinfo" element={<UpdateUserInfo />}/>
+          <Route path="updateinfo" element={<UpdateUserInfo />} />
 
-          <Route  path ="users" element={<AdminAuth>
+          <Route path="users" element={<AdminAuth>
             <Users />
-          </AdminAuth>}/>
+          </AdminAuth>} />
 
         </Route>
 

@@ -2,15 +2,11 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
-import {
-  FaUserGraduate,
-  FaBloggerB,
-  FaNewspaper,
-  FaCommentAlt,
-  FaInnosoft,
-  FaWindowRestore,
-} from "react-icons/fa";
+import Loding from "../Shared/Loding";
+import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore } from 'react-icons/fa';
+
 import useAdmin from "../hooks/useAdmin";
+
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
@@ -86,14 +82,20 @@ const Dashboard = () => {
                 Inspiring stories
               </Link>
             </li>
+
             <li>
-              <Link
-                to="/dashboard/myReview"
-                className="font-bold font-serif  shadow-inner mb-1"
-              >
+              <Link to="/dashboard/myInterview" className="font-bold font-serif  shadow-inner mb-1">
+                <FaNewspaper /> Mock Interview
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
                 <FaCommentAlt /> My Review
               </Link>
             </li>
+
+
 
             {admin && (
               <>
