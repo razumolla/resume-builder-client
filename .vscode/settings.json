@@ -1,0 +1,7 @@
+{
+     "editor.minimap.size": "fill",
+     "reactSnippets.settings.prettierEnabled": true,
+     "eslint.alwaysShowStatus": true,
+     "html-css-class-completion.enableEmmetSupport": true,
+     "material-icon-theme.activeIconPack": "react"
+}

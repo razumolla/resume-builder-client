@@ -1,17 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  darkMode: 'class',
+  // media
   theme: {
     extend: {},
   },
+
+
   daisyui: {
     themes: [
       {
         theme: {
           primary: "#0FCFEC",
           secondary: "#19D3AE",
-          accent: "#3A4256",
-          neutral: "#3d4451",
+          accent: "#1e40af",
+          neutral: "#f7c5a2",
+          // pranoy: "#f7c5a2",
           "base-100": "#ffffff",
         },
       },

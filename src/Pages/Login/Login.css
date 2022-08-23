@@ -1,0 +1,19 @@
+.login_div {
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    background: #e8f1f2;
+    -webkit-box-shadow: 12px 12px 24px #9ba1a2, -12px -12px 24px #ffffff;
+    box-shadow: 12px 12px 24px #9ba1a2, -12px -12px 24px #ffffff;
+}
+
+
+
+.Login {
+    background: url(/src/assets/images/84110.jpg);
+
+}
+
+.Login_button {
+    background-color: rgba(21, 21, 193, 0.107);
+
+}
