@@ -46,42 +46,42 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                             <input type="text " value={formData.address} onChange={(e) => setFormData({
                                 ...formData, address: e.target.value
                             })} placeholder="Address" class="input input-bordered p-3  input-primary w-full max-w-lg peer" required />
-                             <p class="invisible peer-invalid:visible text-red-700 font-light text-left mb-3">
-                                    Please enter your Address
-                                </p>
+                            <p class="invisible peer-invalid:visible text-red-700 font-light text-left mb-3">
+                                Please enter your Address
+                            </p>
                             <div className='flex gap-2 mb-3 '>
-                               <div>
-                               <input type="city" value={formData.city} onChange={(e) => setFormData({
-                                    ...formData, city: e.target.value
-                                })} placeholder="City" class="input input-bordered p-3 input-primary w-full max-w-lg peer" required />
-                                 <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter your City
-                                </p>
-                               </div>
+                                <div>
+                                    <input type="city" value={formData.city} onChange={(e) => setFormData({
+                                        ...formData, city: e.target.value
+                                    })} placeholder="City" class="input input-bordered p-3 input-primary w-full max-w-lg peer" required />
+                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter your City
+                                    </p>
+                                </div>
 
-                               <div>
-                               <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail"
-                                 class="input input-bordered input-primary w-full max-w-xs peer"  required />
-                                <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter your Email
-                                </p>
-                               </div>
+                                <div>
+                                    <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail"
+                                        class="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter your Email
+                                    </p>
+                                </div>
                             </div>
 
                             <div className='flex gap-2 mb-3 '>
-                               <div>
-                               <input type="number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} 
-                                placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs peer" required/>
-                                 <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter  Phone Number
-                                </small>
-                               </div>
                                 <div>
-                                <input type="text" value={formData.linkedin} onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
-                                 placeholder="www.linkedin.com" class="input input-bordered input-primary w-full max-w-xs peer" required />
-                                  <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter linkedin Profile 
-                                </small>
+                                    <input type="number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                        placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter  Phone Number
+                                    </small>
+                                </div>
+                                <div>
+                                    <input type="text" value={formData.linkedin} onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
+                                        placeholder="www.linkedin.com" class="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter linkedin Profile
+                                    </small>
                                 </div>
                             </div>
 

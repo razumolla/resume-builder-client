@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
-const ResumePage = ({ formData }) => {
+const ResumePage = ({ formData, submitted }) => {
     const {
         name,
         title,
@@ -119,7 +119,7 @@ const ResumePage = ({ formData }) => {
             <div className='text-center'>
 
                 <button
-                    // disabled={submitted == false}
+                    disabled={submitted == false}
                     class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
                     Download PDF</button>
             </div>

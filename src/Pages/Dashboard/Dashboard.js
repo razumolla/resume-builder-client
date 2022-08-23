@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
 import {
   FaUserGraduate,
@@ -12,29 +11,11 @@ import {
   FaWindowRestore,
 } from "react-icons/fa";
 import useAdmin from "../hooks/useAdmin";
-
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
 
-
-
-
-  <div className="drawer-side shadow-lg">
-    <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-    <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-      {/* <!-- Sidebar content here --> */}
-      <li><Link to="/dashboard">My Profile</Link></li>
-      <li><NavLink to="/dashboard/review">My Review</NavLink></li>
-      <li><NavLink to="/dashboard/addCvResumeBlog">Add Cv & Resume Blog</NavLink></li>
-      <li><NavLink to="/dashboard/addCoverLetterBlog">Add Cover Letter Blog</NavLink></li>
-      <li><NavLink to="/dashboard/addPersonalDevBlog">Add Personal Development Blog</NavLink></li>
-      <li><NavLink to="/dashboard/addInspiringStoriesBlog">Add Inspiring stories Blog</NavLink></li>
-      <li><NavLink to="/dashboard/allcoverlettertemp">All Cover Letter Templates</NavLink></li>
-    </ul>
-  </div>
-  //   console.log(user);
-
+  console.log(user, admin);
   return (
     <div>
       <div className="drawer drawer-mobile">
@@ -59,45 +40,16 @@ const Dashboard = () => {
 
           <Outlet></Outlet>
         </div>
-       
         <div className="drawer-side shadow-2xl mr-5 px-2">
           <label htmlFor="dash-sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <Link to="/dashboard/profile" className="font-bold font-serif mt-14 shadow-inner">
+              <Link
+                to="/dashboard"
+                className="font-bold font-serif mt-14 shadow-inner"
+              >
                 <FaUserGraduate /> My Profile
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/dashboard/addCvResumeBlog" className="font-bold font-serif  shadow-inner my-2">
-                <FaBloggerB /> Cv Resume Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/addCoverLetterBlog" className="font-bold font-serif  shadow-inner mb-2">
-                <FaNewspaper />  Cover Letter Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/addPersonalDevBlog" className="font-bold font-serif  shadow-inner mb-2">
-                <FaInnosoft /> Soft Skills Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/addInspiringStoriesBlog" className="font-bold font-serif  shadow-inner mb-2">
-                <FaWindowRestore />Inspiring stories
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
-                <FaCommentAlt /> My Review
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/allcoverlettertemp" className="font-bold font-serif  shadow-inner mb-1">
-                <FaCommentAlt />CL Template
               </Link>
             </li>
 
@@ -142,7 +94,6 @@ const Dashboard = () => {
                 <FaCommentAlt /> My Review
               </Link>
             </li>
-
 
             {admin && (
               <>

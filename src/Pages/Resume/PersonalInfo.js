@@ -2,7 +2,7 @@ import React from 'react';
 
 const PersonalInfo = ({ formData, setFormData }) => {
     return (
-        <div className='text-center'>
+        <div className='text-center md:w-full'>
             <ul className="steps bg-base-300   
                         place-items-center dark:bg-cyan-900 p-2 lg:px-8">
                 <li className="step step-primary mx-2" > <p className='text-sm sm:text-xm'>PERSONAL</p> </li>
