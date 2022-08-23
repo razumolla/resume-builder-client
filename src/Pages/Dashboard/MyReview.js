@@ -6,10 +6,10 @@ import auth from "../../firebase.init";
 
 const MyReview = () => {
   const [user] = useAuthState(auth);
-  const { register, handleSubmit,reset } = useForm();
-  
+  const { register, handleSubmit, reset } = useForm();
+
   const onSubmit = (data) => {
-    console.log(data, 'your data',data.img);
+    console.log(data, 'your data', data.img);
 
     toast("WoW! Your Review Added in Homepage", {
       position: "top-right",
@@ -20,7 +20,9 @@ const MyReview = () => {
       draggable: true,
       progress: undefined,
     });
-reset();
+
+    reset();
+
     const url = "http://localhost:5000/reviews";
     fetch(url, {
       method: "POST",
@@ -38,35 +40,55 @@ reset();
   return (
     <div>
       <div className="addDiv">
-        <h1 className="text-center text-zinc-900 my-5 text-3xl font-semiBold font-serif">
+        <h1 className="text-center text-zinc-900 my-5 text-3xl font-semiBold font-serif dark:text-white">
           Add User Experience
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
+            //   <<<<<<< HEAD
+            //   className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs dark:text-black"
+            //   placeholder="User Name"
+            //   {...register("name", { required: true })}
+            // />
+            // <br />
+
+            // <input
+            //   type="file"
+            //   className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5 dark:text-black"
+            //   placeholder="User image"
+            //   {...register("img", { required: true })}
+            // />
+            // <br />
+            // <input
+            //   className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
+            //   placeholder="Rating"
+            //   =======
             className="input input-bordered z-20 mb-5 mt-3 shadow-xl  border-primary rounded-lg w-full max-w-xs"
-            value ={user.displayName}
+            value={user.displayName}
             placeholder={user.displayName}
-            {...register("name" )}
-    />
+            {...register("name")}
+          />
           <br />
 
           <input
             type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
-         
+
             placeholder="userphoto"
             {...register("img")}
-            />
+          />
           <br />
           <input
             className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"
             placeholder="Rating out of 5"
+
+
             type="text"
             {...register("rating", { min: 1, max: 5 })}
           />
           <br />
           <textarea
-            className="input input-bordered min-h-16 z-20 shadow-xl mb-5 rounded-lg w-full max-w-xs  border-primary"
+            className="input input-bordered min-h-16 z-20 shadow-xl mb-5 rounded-lg w-full max-w-xs  border-primary dark:text-black"
             placeholder="About Our Service"
             {...register("about", { required: true })}
           />

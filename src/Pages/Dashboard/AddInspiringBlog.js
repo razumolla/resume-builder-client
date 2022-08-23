@@ -75,7 +75,7 @@ const AddInspiringBlog = () => {
         <input
           type="text"
           placeholder="Blog Title Name"
-          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg my-3 border-primary"
+          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg my-3 border-primary dark:text-black"
           {...register("blogTitleName", {
             required: {
               value: true,
@@ -97,10 +97,10 @@ const AddInspiringBlog = () => {
         <textarea
           type="text"
           placeholder="Blog Description"
-          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg mb-3  border-primary"
+          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg mb-3  border-primary dark:text-black"
           {...register("description", {
             required: {
-              value: true,       
+              value: true,
               message: "Description is Required",
             },
           })}
@@ -112,13 +112,13 @@ const AddInspiringBlog = () => {
             </span>
           )}
         </label>
-{/* 
+        {/* 
         <label className="label">
           <span className="label-text  mx-auto">Blog Related Photo</span>
         </label> */}
         <input
           type="file"
-          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg mb-3  border-primary"
+          className="input input-bordered w-full max-w-xs shadow-xl rounded-lg mb-3  border-primary dark:text-black"
           {...register("image", {
             required: {
               value: true,

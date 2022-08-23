@@ -3,7 +3,7 @@ import React from 'react';
 const InspiringBlog = ({ inspiringBlog }) => {
     const { _id, name, blogTitle, img, date, description } = inspiringBlog;
     return (
-        <div className="card w-full bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl dark:bg-cyan-900">
             <figure><img src={img} alt="blog" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{blogTitle}</h2>
