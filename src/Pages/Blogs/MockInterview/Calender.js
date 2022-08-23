@@ -1,13 +1,10 @@
-import { format } from 'date-fns';
 import React from 'react';
-import { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
 
 
-const Calender = () => {
-    const [selected, setSelected] = useState(new Date());
+const Calender = ({ selected, setSelected }) => {
 
     return (
         <div>
@@ -22,7 +19,6 @@ const Calender = () => {
                                 onSelect={setSelected}
                             />
                         </div>
-                        <p>You have selected: {format(selected, 'PP')}</p>
                     </div>
                 </div>
             </div>
