@@ -24,6 +24,7 @@ export default function UpdateUserInfo() {
   };
   return (
     <div>
+     <h2 className="text-2xl font-serif font-semibold mb-2">Update Your Information</h2>
       <form
         className="w-full max-w-xs mx-auto"
         onSubmit={handleSubmit(onSubmit)}
