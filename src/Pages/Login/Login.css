@@ -1,5 +1,4 @@
-
-.login_div{
+.login_div {
     -webkit-border-radius: 25px;
     border-radius: 25px;
     background: #e8f1f2;
@@ -9,12 +8,12 @@
 
 
 
-.Login{
+.Login {
     background: url(/src/assets/images/84110.jpg);
 
 }
-.Login_button{
+
+.Login_button {
     background-color: rgba(21, 21, 193, 0.107);
-   
- }
- 
+
+}

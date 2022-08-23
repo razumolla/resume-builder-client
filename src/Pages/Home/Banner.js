@@ -2,6 +2,7 @@ import React from 'react';
 import '../Home/Banner.css';
 import 'animate.css';
 import banner from '../../assets/images/imgAfruza/bannerimg2.jpg';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -15,7 +16,7 @@ const Banner = () => {
                             CV/Resume & Cover Letter Templates</h1>
                         <p className="py-6 lg:text-left text-xl text-white sm:text-center animate__animated animate__fadeInUp animate__delay-fast">Our professionally designed resume templates are employer-ready, ATS-friendly and easy to customize.Fill in the blanks, choose a template, and download your resume instantly!!!</p>
                         <div className='text-left'>
-                            <button className="btn btn-primary Banner_button text-white animate__animated animate__fadeInUp animate__delay-.9s">Create Resume</button>
+                            <button className="btn btn-primary Banner_button text-white animate__animated animate__fadeInUp animate__delay-.9s"><Link to="/resume">Create Resume</Link></button>
                         </div>
                     </div>
                 </div>

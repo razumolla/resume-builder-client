@@ -45,7 +45,7 @@ const PaperThree = ({ formData, submitted }) => {
     return (
         <div className='my-10'>
             <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left" id='cv'>
+                <div class="text-left dark:text-black" id='cv'>
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words mb-5'>{name}</h1>
@@ -63,9 +63,11 @@ const PaperThree = ({ formData, submitted }) => {
                                 <h2 className='text-2xl font-bold mb-2'>Personal Info</h2>
                             </div>
                             <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
-                            <p className='font-semibold break-words'>Email: {email}</p>
-                            <p className='font-semibold break-words'>Phone: {phone}</p>
-                            <p className='font-semibold break-words'>Address: {city}</p>
+                            <div className='dark:text-black'>
+                                <p className='font-semibold break-words'>Email: {email}</p>
+                                <p className='font-semibold break-words'>Phone: {phone}</p>
+                                <p className='font-semibold break-words'>Address: {city}</p>
+                            </div>
                         </div>
 
                         <div className='mt-5'>

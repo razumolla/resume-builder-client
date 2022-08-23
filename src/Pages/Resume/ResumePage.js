@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
-const ResumePage = ({ formData }) => {
+const ResumePage = ({ formData, submitted }) => {
     const {
         name,
         title,
@@ -35,7 +35,7 @@ const ResumePage = ({ formData }) => {
             // Few necessary setting options
             var imgWidth = 208;
             var imgHeight = canvas.height * imgWidth / canvas.width;
-            alert(imgHeight)
+            // alert(imgHeight)
             const contentDataURL = canvas.toDataURL('image/png')
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
             var position = 0;
@@ -119,7 +119,8 @@ const ResumePage = ({ formData }) => {
             <div className='text-center'>
 
                 <button
-                    // disabled={submitted == false}
+
+                    disabled={submitted == false}
                     class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
                     Download PDF</button>
             </div>
