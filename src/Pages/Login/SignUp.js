@@ -57,13 +57,9 @@ const SignUp = () => {
 
                 <div className="card w-96 bg-white shadow-xl mb-5 ">
 
-
                     <div className="card-body my">
 
-
-
                         <form onSubmit={handleSubmit(onSubmit)}>
-
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
@@ -130,7 +126,7 @@ const SignUp = () => {
                                         },
                                         pattern: {
                                             value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                            message: 'Provide a valid Eamil'
+                                            message: 'Provide a valid Email'
                                         }
                                     })}
                                 />

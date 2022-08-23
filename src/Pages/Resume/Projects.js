@@ -36,7 +36,7 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary w-72 md:w-80 lg:w-80 dark:text-black break-words"
+                    <textarea className="textarea textarea-primary text-width dark:text-black break-words"
                         // 20rem !important
                         // width: '20rem !important' 
                         style={
