@@ -10,7 +10,7 @@ const Dashboard = () => {
 
  
 
-  console.log(user);
+  console.log(user,admin);
   return (
     <div>
    
