@@ -4,7 +4,7 @@ import interview from '../../../assets/images/imgPranoy/image/interview.jpg';
 const InterviewBanner = () => {
     return (
         <div>
-            <div class="hero min-h-screen bg-base-100">
+            <div class="hero min-h-screen bg-base-100 dark:bg-cyan-900">
                 <div class="hero-content flex-col lg:flex-row-reverse gap-20">
 
                     <img src={interview} className="max-w-sm md:max-w-lg rounded-2xl shadow-lg animate__animated animate__fadeInUp animate__delay-.9s rounded-tl-[120px] rounded-br-[100px]" />
