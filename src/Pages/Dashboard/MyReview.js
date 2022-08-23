@@ -45,24 +45,7 @@ const MyReview = () => {
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
-            //   <<<<<<< HEAD
-            //   className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs dark:text-black"
-            //   placeholder="User Name"
-            //   {...register("name", { required: true })}
-            // />
-            // <br />
 
-            // <input
-            //   type="file"
-            //   className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5 dark:text-black"
-            //   placeholder="User image"
-            //   {...register("img", { required: true })}
-            // />
-            // <br />
-            // <input
-            //   className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
-            //   placeholder="Rating"
-            //   =======
             className="input input-bordered z-20 mb-5 mt-3 shadow-xl  border-primary rounded-lg w-full max-w-xs"
             value={user.displayName}
             placeholder={user.displayName}

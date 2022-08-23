@@ -1,4 +1,6 @@
 import React from 'react';
+import './Resume.css';
+
 
 const Projects = ({ formData, setFormData }) => {
     return (
@@ -36,11 +38,12 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary text-width dark:text-black break-words"
+                    {/* textarea textarea-primary */}
+                    <textarea className="textarea textarea-primary  text-width dark:text-black break-words"
                         // 20rem !important
                         // width: '20rem !important' 
                         style={
-                            {}
+                            { width: '16rem !important' }
                         } placeholder="Write some description of your project" name="features" value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })}></textarea>
 
                 </div>
@@ -63,7 +66,7 @@ const Projects = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary w-72 md:w-80 lg:w-80  dark:text-black break-words"
+                    <textarea className="textarea textarea-primary text-width w-72 md:w-80 lg:w-80  dark:text-black break-words"
                         style={
                             {}
                         } placeholder="Write some description of your project" name="features2" value={formData.features2} onChange={(e) => setFormData({ ...formData, features2: e.target.value })}></textarea>

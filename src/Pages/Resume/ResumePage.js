@@ -41,7 +41,7 @@ const ResumePage = ({ formData, submitted }) => {
             var position = 0;
             pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
             pdf.save('new-file.pdf');
-            // window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
+
         });
 
     }
