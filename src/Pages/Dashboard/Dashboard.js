@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
@@ -17,11 +17,12 @@ const Dashboard = () => {
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to="/dashboard">My Profile</Link></li>
-                    <li><Link to="/dashboard/review">My Review</Link></li>
-                    <li><Link to="/dashboard/addCvResumeBlog">Add Cv & Resume Blog</Link></li>
-                    <li><Link to="/dashboard/addCoverLetterBlog">Add Cover Letter Blog</Link></li>
-                    <li><Link to="/dashboard/addPersonalDevBlog">Add Personal Development Blog</Link></li>
-                    <li><Link to="/dashboard/addInspiringStoriesBlog">Add Inspiring stories Blog</Link></li>
+                    <li><NavLink to="/dashboard/review">My Review</NavLink></li>
+                    <li><NavLink to="/dashboard/addCvResumeBlog">Add Cv & Resume Blog</NavLink></li>
+                    <li><NavLink to="/dashboard/addCoverLetterBlog">Add Cover Letter Blog</NavLink></li>
+                    <li><NavLink to="/dashboard/addPersonalDevBlog">Add Personal Development Blog</NavLink></li>
+                    <li><NavLink to="/dashboard/addInspiringStoriesBlog">Add Inspiring stories Blog</NavLink></li>
+                    <li><NavLink to="/dashboard/allcoverlettertemp">All Cover Letter Templates</NavLink></li>
                 </ul>
 
             </div>

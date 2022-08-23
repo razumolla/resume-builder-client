@@ -1,9 +1,8 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { Link } from 'react-router-dom';
-const CoverLetterDisplay = ({ formData, submitted }) => {
-    const { 
+const ShowAllCLTemp = ({allCoverLetterTemp, submitted}) => {
+    const {
         name,
         email,
         address,
@@ -17,7 +16,7 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
         signatureName
     
     } 
-        = formData;
+        = allCoverLetterTemp;
 
         
   
@@ -41,7 +40,6 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
             });
                 
         }
-
     return (
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
             <div class="card  bg-gray-100  ">
@@ -87,15 +85,15 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
                 </div>              
             </div>
             <div className='py-4 ml-8'>
-                  <Link to='/dashboard/allcoverlettertemp'>
+                 
                   
                   <button disabled={submitted == false}
                     
                     class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
-                  </Link>
+                  
             </div>
         </div >
     );
 };
 
-export default CoverLetterDisplay;
+export default ShowAllCLTemp;

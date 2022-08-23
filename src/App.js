@@ -49,6 +49,7 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 
 
 
@@ -131,6 +132,9 @@ function App() {
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+
+            {/* add all coverlett template dashboart */}
+            <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
         </Route>
 
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
