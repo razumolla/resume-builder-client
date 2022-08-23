@@ -54,6 +54,7 @@ import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQu
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
+import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 
 
 
@@ -132,12 +133,13 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route path="profile" element={<MyProfile />} />
+          <Route index element={<MyProfile />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+          <Route path="updateinfo" element={<UpdateUserInfo />}/>
           <Route  path ="users" element={<AdminAuth>
             <Users />
           </AdminAuth>}/>
