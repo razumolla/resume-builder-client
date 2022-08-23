@@ -53,8 +53,8 @@ reset();
           <input
             type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
-         
-            placeholder="userphoto"
+         value={user.photoURL}
+            placeholder={user.photoURL}
             {...register("img")}
             />
           <br />

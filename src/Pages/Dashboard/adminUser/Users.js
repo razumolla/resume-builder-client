@@ -22,6 +22,7 @@ console.log(error);
   if (isLoading) {
     return <Loding />;
   }
+  console.log(users)
   return (
     <div>
       <h2 className="text-2xl">All Users: {users.length}</h2>
@@ -36,9 +37,9 @@ console.log(error);
           </thead>
           <tbody>
 
-            {/* {users.length && users?.map((u) => (
+            {users.length && users.map((u) => (
               <User key={u._id} u={u} refetch={refetch}></User>
-            ))} */}
+            ))}
           </tbody>
         </table>
       </div>
