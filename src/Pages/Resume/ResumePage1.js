@@ -110,15 +110,15 @@ const ResumePage1 = ({ formData }) => {
                         <div className='w-1/4 bg-slate-600 text-white pl-2'>
                             <div className="pt-5">
                                 <h2 className="text-xl  font-semibold uppercase pb-2">Skills</h2>
-                                <p className='dark:text-black'><span className='font-semibold'>My Skills <br /> </span> {skills} </p>
-                                <p className='dark:text-black mt-3'><span className='font-semibold'>Technologies <br /> </span> {technology} </p>
+                                <p className=''><span className='font-semibold'>My Skills <br /> </span> {skills} </p>
+                                <p className=' mt-3'><span className='font-semibold'>Technologies <br /> </span> {technology} </p>
 
                             </div>
-                            <div className='divider px-2 dark:text-black'></div>
+                            <div className='divider px-2'></div>
 
                             <div className="">
                                 <h2 className="text-xl font-semibold uppercase mb-2">Language</h2>
-                                <p className='dark:text-black'><span className='font-semibold'>Language <br /></span> {language} </p>
+                                <p className=''><span className='font-semibold'>Language <br /></span> {language} </p>
 
                             </div>
                         </div>

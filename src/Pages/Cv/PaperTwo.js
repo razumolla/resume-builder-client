@@ -51,14 +51,14 @@ const PaperTwo = ({ formData, submitted }) => {
                             <h1 className='text-3xl font-semibold break-words text-red-900'>{name}</h1>
                             <h1 className='text-xl font-semibold break-words text-red-900'>{designation}</h1>
                             <div className='divider bg-red-900 mt-1' style={{ height: '2px' }}></div>
-                            <div className='flex gap-4'>
+                            <div className='flex gap-4 dark:text-black'>
                                 <p className='font-semibold break-words'>Email: {email}</p>
                                 <p className='font-semibold break-words'>Phone: {phone}</p>
                                 <p className='font-semibold break-words'>Address: {city}</p>
                             </div>
                         </div>
                     </div>
-                    <div className='m-5 pb-5'>
+                    <div className='m-5 pb-5 dark:text-black'>
                         <div className=''>
                             <h2 className='text-2xl font-bold text-red-900'>Summary</h2>
                             <p className='max-w-lg break-words w-full'>{summary}</p>
