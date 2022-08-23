@@ -15,7 +15,6 @@ import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
 import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -42,8 +41,6 @@ import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
 
 import ResumeForm1 from './Pages/Resume/ResumeForm1';
 import ResumeForm2 from './Pages/Resume/ResumeForm2';
-
-
 import InterviewQuesAnsHtml from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsHtml';
 import InterviewQuesAnsCSS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsCSS';
 import InterviewQuesAnsReactJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsReactJS';
@@ -51,9 +48,12 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
+import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
+
 
 
 
@@ -106,7 +106,8 @@ function App() {
         } />
 
 
-        <Route path="/about" element={<CoverLetterAbout />} />
+       
+       
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
 
         <Route path="/coverLetter" element={<CoverLetter />} />
@@ -132,12 +133,21 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route path="profile" element={<MyProfile />} />
+          <Route index element={<MyProfile />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+
+
+
+            {/* add all coverlett template dashboart */}
+            <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
+
+
+          <Route path="updateinfo" element={<UpdateUserInfo />}/>
+
           <Route  path ="users" element={<AdminAuth>
             <Users />
           </AdminAuth>}/>

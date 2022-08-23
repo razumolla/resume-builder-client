@@ -10,9 +10,9 @@ const InterviewQuesAnsNodeJS = () => {
                     <Link to='/css' className='btn btn-primary ml-2 mb-2'>CSS</Link>
                     <Link to='/js' className='btn btn-primary ml-2 mb-2'>JavaScript</Link>
                     <Link to='/reactjs' className='btn btn-primary ml-2 mb-2'>React JS</Link>
-                    <Link to='/mongodb' className='btn btn-primary ml-2'>Mongo DB</Link>
-                    <Link to='/nodejs' className='btn btn-primary ml-2'>Node JS</Link>
-                    <Link to='/redux' className='btn btn-primary ml-2'>Redux</Link>
+                    <Link to='/mongodb' className='btn btn-primary ml-2 mb-2'>Mongo DB</Link>
+                    <Link to='/nodejs' className='btn btn-primary ml-2 mb-2'>Node JS</Link>
+                    <Link to='/redux' className='btn btn-primary ml-2 mb-2'>Redux</Link>
                 </div>
 
             </div>

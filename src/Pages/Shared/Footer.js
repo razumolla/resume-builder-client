@@ -8,7 +8,7 @@ import logo from '../../assets/images/imgMehedi/logo.png'
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 justify-center lg:justify-start dark:bg-gray-900 bg-gray-700 text-white cursor-pointer">
+      <footer className="footer p-10 justify-center lg:justify-around dark:bg-gray-900 bg-gray-700 text-white cursor-pointer">
         <div className=''>
           <img src={logo} alt="logo" className='w-36 mr-4' />
           <div className="flex">

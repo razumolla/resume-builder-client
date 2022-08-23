@@ -1,7 +1,7 @@
 import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-const CoverLetterDisplay4 = ({formData, submitted}) => {
+const CoverLetterDisplay6 = ({formData, submitted}) => {
     const { 
         name,
         email,
@@ -26,7 +26,7 @@ const CoverLetterDisplay4 = ({formData, submitted}) => {
                 scale: 5
             }).then(canvas => {
                 // Few necessary setting options
-               const imgWidth = 208;
+                const imgWidth = 208;
                 const imgHeight = canvas.height * imgWidth / canvas.width;
                 alert(imgHeight)
                 const contentDataURL = canvas.toDataURL('image/png')
@@ -41,11 +41,12 @@ const CoverLetterDisplay4 = ({formData, submitted}) => {
     return (
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
         <div class="card  bg-gray-100  ">
-            <div class="card-body text-left ml-6 lg:flex md:flex-col sm:flex-col lg:flex-row " id='coverLetter'>
-                <div className='bg-blue-700 w-full sm:w-full md:w-2/5 text-white pl-3 '>
-                    <div>
-                        <h1 className='text-4xl mt-3 font-bold break-words '>{name}</h1>
-                        <h1 className='text-2xl mt-2  mb-2 font-bold break-words'>{designation}</h1>
+            <div class="card-body text-left ml-6 " id='coverLetter'>
+                <div>
+                <div className='border border-spacing-36  border-pink-900 h-3 bg-fuchsia-800 border-none'></div>
+                    <div className='text-center'>
+                        <h1 className='text-4xl text-gray-600 font-bold break-words '>{name}</h1>
+                        <h1 className='text-2xl mt-2 text-gray-600 mb-2 font-bold break-words'>{designation}</h1>
                     </div>
                     <div className='text-left'>
                         <small className='font-semibold break-words'><i class="fa-solid fa-envelope "></i> {email}</small> <br />
@@ -56,8 +57,7 @@ const CoverLetterDisplay4 = ({formData, submitted}) => {
                     </div>
                 </div>
                 {/* <div className='divider bg-pink-600'></div> */}
-               <div className='pl-3 w-full md:w-2/3'>
-               {/* <div className='border border-spacing-28  border-pink-600 h-1 bg-pink-600'></div> */}
+                
                 <div >
                     <h2 className='text-xl font-bold break-words'>{dear}</h2>
                     <p className='break-words'>{professionalCareer}
@@ -76,9 +76,6 @@ const CoverLetterDisplay4 = ({formData, submitted}) => {
                     <p className='text-xl break-words mb-3'>Sincerely.</p>
                     <p className='text-xl break-words'>{ signatureName}</p>
                 </div>
-               </div>
-
-              
             </div>              
         </div>
         <div className='py-4 ml-8'>
@@ -90,4 +87,4 @@ const CoverLetterDisplay4 = ({formData, submitted}) => {
     );
 };
 
-export default CoverLetterDisplay4;
+export default CoverLetterDisplay6;
