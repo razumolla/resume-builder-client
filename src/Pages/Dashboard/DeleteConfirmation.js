@@ -10,7 +10,7 @@ const DeleteConfirmation = ({ deletingAppointment, setDeletingAppointment, appoi
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.deletedCount > 0) {
                     toast.success('Your appointment deleted');
                     setDeletingAppointment(null);
