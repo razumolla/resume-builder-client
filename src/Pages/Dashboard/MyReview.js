@@ -44,7 +44,7 @@ const MyReview = () => {
           Add User Experience
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input
+        <input
             //   <<<<<<< HEAD
             //   className="input input-bordered z-20 mb-5 mt-3 shadow-xl   border-primary rounded-lg w-full max-w-xs dark:text-black"
             //   placeholder="User Name"
@@ -63,6 +63,7 @@ const MyReview = () => {
             //   className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
             //   placeholder="Rating"
             //   =======
+        
             className="input input-bordered z-20 mb-5 mt-3 shadow-xl  border-primary rounded-lg w-full max-w-xs"
             value={user.displayName}
             placeholder={user.displayName}
@@ -74,7 +75,9 @@ const MyReview = () => {
             type="text"
             className="input input-bordered z-20  shadow-xl rounded-lg w-full max-w-xs  border-primary mb-5"
 
-            placeholder="userphoto"
+         value={user.photoURL}
+            placeholder={user.photoURL}
+
             {...register("img")}
           />
           <br />
