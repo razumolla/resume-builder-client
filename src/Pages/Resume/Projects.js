@@ -24,7 +24,7 @@ const Projects = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Name (1)" name="project" className="input input-bordered input-primary w-72 md:w-80 lg:w-80 peer dark:text-black" value={formData.project} onChange={(e) => setFormData({ ...formData, project: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your project name
                     </p>
                 </div>
@@ -32,7 +32,7 @@ const Projects = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Link" name="link" className="input input-bordered input-primary w-72 md:w-80 lg:w-80 peer dark:text-black" value={formData.link} onChange={(e) => setFormData({ ...formData, link: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter project link
                     </p>
                 </div>
@@ -52,7 +52,7 @@ const Projects = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Name (2)" name="project2" className="input input-bordered input-primary w-72 md:w-80 lg:w-80  peer dark:text-black" value={formData.project2} onChange={(e) => setFormData({ ...formData, project2: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your project name
                     </p>
                 </div>
@@ -60,7 +60,7 @@ const Projects = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Link" name="link2" className="input input-bordered input-primary w-72 md:w-80 lg:w-80  peer dark:text-black" value={formData.link2} onChange={(e) => setFormData({ ...formData, link2: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter project link
                     </p>
                 </div>

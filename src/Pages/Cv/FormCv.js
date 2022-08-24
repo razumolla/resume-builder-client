@@ -108,7 +108,7 @@ const FormCv = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div class="bg-gray-300 rounded-xl p-2">
+                    <div className="bg-gray-300 rounded-xl p-2">
                         {/* <Paper formData={formData} submitted={submitted}></Paper> */}
 
                         {/* condition for template 1 */}

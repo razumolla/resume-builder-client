@@ -25,41 +25,41 @@ const InterviewQuesAnsJS = () => {
                     </div>
 
                     <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 sm:w-0'>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-left font-medium ">
                                 Q-1: How does JavaScript work?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>JavaScript is a single-threaded, non-blocking, asynchronous, concurrent programming language with lots of flexibility.
                                 </p>
 
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title  text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title  text-left font-medium ">
                                 Q-2: What are the differences between “==” and “===” ?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p> The differences between both the operators is that  “==”   is used to compare values whereas, “===” is used to compare both values and types.
                                 </p>
                             </div>
 
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title  text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title  text-left font-medium ">
                                 3. What is callback function?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p> A callback function is a function passed into another function as a argument, which is then invoked inside the outer function to complete some kind of routine or action.
                                 </p>
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-left font-medium ">
                                 Q-4. Tell me about bind, call and apply.?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <h1 className='font-bold'>bind()</h1>
                                 <p>This method returns a new function , where the value of “this” keyword will be bound to the owner object, which is provided as a parameter.
                                 </p>
@@ -72,11 +72,11 @@ const InterviewQuesAnsJS = () => {
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title  text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title  text-left font-medium ">
                                 Q-5: Explain Call by value VS Call by Reference?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <h1 className='font-bold'>Call by value</h1>
                                 <p>a. Call by value means calling a method with a parameter as value.</p>
                                 <p>b. Through this, the argument value is passed to the parameter.</p>
@@ -88,20 +88,20 @@ const InterviewQuesAnsJS = () => {
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title  text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title  text-left font-medium ">
                                 Q-6: What does the “this” keyword indicate in JavaScript?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p> In JavaScript , the this keyword refers to an object. Which object depends on how this is being invoked(used or called) . The this keyword refers to different objects depending on how it is used. In an object method, this refers to the object, Alone, this refers to the global object.
                                 </p>
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-left font-medium ">
                                 Q-7: Difference between get and post?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <h1 className='font-bold'>Post</h1>
                                 <p>a. Post is used to send data to a server to create/ update a resource.</p>
                                 <p>b. Post request cannot be bookmarked</p>

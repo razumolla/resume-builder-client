@@ -21,7 +21,7 @@ const EducationalInfo = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Education" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.education} onChange={(e) => setFormData({ ...formData, education: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your current qualification
                     </p>
                 </div>
@@ -29,7 +29,7 @@ const EducationalInfo = ({ formData, setFormData }) => {
                 <div className=' p-2'>
                     <input type="text" placeholder="University/College Name" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.university} onChange={(e) => setFormData({ ...formData, university: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter University/college name
                     </p>
                 </div>

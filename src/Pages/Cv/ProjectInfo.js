@@ -18,7 +18,7 @@ const ProjectInfo = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Name" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.projectName} onChange={(e) => setFormData({ ...formData, projectName: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your best project
                     </p>
                 </div>
@@ -26,7 +26,7 @@ const ProjectInfo = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Project Link" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.projectLink} onChange={(e) => setFormData({ ...formData, projectLink: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter project link
                     </p>
                 </div>

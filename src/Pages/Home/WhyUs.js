@@ -9,7 +9,7 @@ const WhyUs = () => {
         <div className='my-20'>
             <div className='grid grid-clos-1 lg:grid-cols-2 gap-5'>
                 <div className='h-80'>
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 gap-8 dark:bg-cyan-900">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 gap-8 dark:bg-cyan-900">
                         <div>
                             <img src={resume} alt="" style={{ width: '80px', height: '80px' }} className='ml-2' />
                         </div>
@@ -19,7 +19,7 @@ const WhyUs = () => {
                         </div>
                     </div>
 
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 dark:bg-cyan-900">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 dark:bg-cyan-900">
                         <div>
                             <img src={profile} alt="" style={{ width: '80px', height: '80px' }} />
                         </div>
@@ -29,7 +29,7 @@ const WhyUs = () => {
                         </div>
                     </div>
 
-                    <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 dark:bg-cyan-900">
+                    <div className="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-2xl m-5 h-24 dark:bg-cyan-900">
                         <div>
                             <img src={update} alt="" style={{ width: '80px', height: '80px' }} />
                         </div>

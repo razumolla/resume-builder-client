@@ -28,7 +28,7 @@ const OtherInfo = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Skill 1" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.skillOne} onChange={(e) => setFormData({ ...formData, skillOne: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your skills
                     </p>
                 </div>
@@ -36,7 +36,7 @@ const OtherInfo = ({ formData, setFormData }) => {
                 <div className='p-2'>
                     <input type="text" placeholder="Skill 2" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.skillTwo} onChange={(e) => setFormData({ ...formData, skillTwo: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your skills
                     </p>
                 </div>
@@ -48,7 +48,7 @@ const OtherInfo = ({ formData, setFormData }) => {
                 <div>
                     <input type="text" placeholder="Designation" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your job designation
                     </p>
                 </div>

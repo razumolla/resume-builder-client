@@ -13,44 +13,44 @@ const Templates = () => {
 
                 {/* bg-base-200 */}
 
-                <div class="card w-96 bg-blue-300  dark:bg-cyan-900 shadow-xl ml-5" >
+                <div className="card w-96 bg-blue-300  dark:bg-cyan-900 shadow-xl ml-5" >
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-between">
+                    <div className="card-body">
+                        <div className="card-actions justify-between">
                             <Link to="/resume/form">
-                                <button class="btn btn-primary rounded-2xl">Use Resume</button>
+                                <button className="btn btn-primary rounded-2xl">Use Resume</button>
                             </Link>
                             <Link to="/resume">
-                                <button class="btn btn-outline dark:btn-secondary btn-accent rounded-2xl">See Resume</button>
+                                <button className="btn btn-outline dark:btn-secondary btn-accent rounded-2xl">See Resume</button>
                             </Link>
                         </div>
                     </div>
                 </div>
                 {/* bg-teal-100  */}
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div className="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
                     <figure><img src={resume2} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-between">
+                    <div className="card-body">
+                        <div className="card-actions justify-between">
                             <Link to="/cv/form">
-                                <button class="btn btn-primary rounded-2xl">Use CV Template</button>
+                                <button className="btn btn-primary rounded-2xl">Use CV Template</button>
                             </Link>
                             <Link to="/cv">
-                                <button class="btn btn-outline btn-accent dark:btn-secondary rounded-2xl">See CV Template</button>
+                                <button className="btn btn-outline btn-accent dark:btn-secondary rounded-2xl">See CV Template</button>
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                <div class="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
+                <div className="card w-96 bg-blue-300 dark:bg-cyan-900 shadow-xl ml-5" >
                     <figure><img src={resume1} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-between">
+                    <div className="card-body">
+                        <div className="card-actions justify-between">
                             <Link to="/templateForm">
-                                <button class="btn btn-primary rounded-2xl">Use Cover Letter</button>
+                                <button className="btn btn-primary rounded-2xl">Use Cover Letter</button>
                             </Link>
 
                             <Link to="/coverLetter">
-                                <button class="btn btn-outline btn-accent dark:btn-secondary rounded-2xl">See Cover Letter</button>
+                                <button className="btn btn-outline btn-accent dark:btn-secondary rounded-2xl">See Cover Letter</button>
                             </Link>
                         </div>
                     </div>

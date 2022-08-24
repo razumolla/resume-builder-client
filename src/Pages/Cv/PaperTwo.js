@@ -44,8 +44,8 @@ const PaperTwo = ({ formData, submitted }) => {
     }
     return (
         <div className='my-10'>
-            <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left" id='cv'>
+            <div className=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="text-left" id='cv'>
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words text-red-900'>{name}</h1>
@@ -91,7 +91,7 @@ const PaperTwo = ({ formData, submitted }) => {
             <div className='flex justify-center'>
                 <button
                     disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

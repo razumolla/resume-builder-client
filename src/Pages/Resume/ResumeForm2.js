@@ -125,9 +125,9 @@ const ResumeForm2 = () => {
 
                 <div className='w-full md:w-full lg:w-2/3 md:m-auto'>
 
-                    <div class="bg-gray-200 rounded-xl p-2">
+                    <div className="bg-gray-200 rounded-xl p-2">
 
-                        <ResumePage2 class="w-96" formData={formData} submitted={submitted}></ ResumePage2>
+                        <ResumePage2 className="w-96" formData={formData} submitted={submitted}></ ResumePage2>
                     </div>
                 </div>
             </div >
