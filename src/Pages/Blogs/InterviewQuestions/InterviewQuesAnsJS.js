@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import js from '../../../../src/assets/images/imgAfruza/javascript-interview-questions-removebg-preview (1).png';
 const InterviewQuesAnsJS = () => {
     return (
-        <div className='mt-10 mb-96 '>
+        <div className='mt-10 '>
             <div className='flex flex-wrap justify-center '>
                 <div className=''>
                     <Link to='/html' className='btn btn-primary ml-2 mb-2'>Html</Link>
@@ -19,12 +19,12 @@ const InterviewQuesAnsJS = () => {
 
                 <h1 className='p-5 mt-4 sm:text-xl lg:text-3xl font-bold '> Most Common <span className='text-primary'>JavaScript/ES6</span> Interview Questions and Answers</h1>
 
-                <div className='lg:flex justify-center sm:flex-cols'>
+                <div className='lg:flex'>
                     <div>
-                        <img src={js} className='ml-16 mt-28 w-3/4  ' alt="" />
+                        <img src={js} className='m-auto lg:mt-28 w-3/4  ' alt="" />
                     </div>
 
-                    <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 sm:w-0'>
+                    <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 p-5 '>
                         <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
                             <div class="collapse-title text-left font-medium ">
                                 Q-1: How does JavaScript work?

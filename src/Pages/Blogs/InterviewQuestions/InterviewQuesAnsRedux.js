@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import html from '../../../../src/assets/images/imgAfruza/redux interview banner.jpg';
 const InterviewQuesAnsRedux = () => {
     return (
-        <div className='mt-10 mb-96 '>
-            <div className='flex flex-wrap justify-center '>
+        <div className='mt-10 '>
+            <div className='flex flex-wrap justify-center mb-8 '>
                 <div className=''>
                     <Link to='/html' className='btn btn-primary ml-2 mb-2'>Html</Link>
                     <Link to='/css' className='btn btn-primary ml-2 mb-2'>CSS</Link>
@@ -16,11 +16,13 @@ const InterviewQuesAnsRedux = () => {
                 </div>
 
             </div>
-            <div className='dark:bg-cyan-900 bg-gray-300   lg:m-10 lg:ml-16 lg:mr-16 sm:m-0 sm:ml-0 sm:mr-0'>
-                <h1 className='p-5 text-3xl font-bold '> Most Common <span className='text-primary'>Redux</span> Interview Questions and Answers</h1>
+            <div className='dark:bg-cyan-900 bg-gray-300 lg:mb-20 mb-14   lg:m-10 lg:ml-16 lg:mr-16 sm:m-0 sm:ml-0 sm:mr-0'>
+                <h1 className='p-5 text-xl md:text-2xl  lg:text-3xl font-bold '> Most Common <span className='text-primary'>Redux</span> Interview Questions and Answers</h1>
                 <div className='lg:flex justify-center sm:flex-cols'>
-
-                    <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 sm:w-0'>
+                     <div>
+                        <img src={html} className='m-auto lg:mt-24 w-3/4  mb-8' alt="" />
+                    </div>
+                    <div className='lg:m-10 p-3 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 '>
                         <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
                             <div class="collapse-title text-xl text-left font-medium ">
                                 Q-1: What is Redux & why Redux? ?
@@ -106,9 +108,7 @@ const InterviewQuesAnsRedux = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <img src={html} className=' mr-8 mt-24' alt="" />
-                    </div>
+                    
                 </div>
             </div>
         </div>

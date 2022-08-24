@@ -5,27 +5,24 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
     return (
 
-        <div className='mt-16 mb-16 m-10'>
-            <div className='flex '>
+        <div className='mt-16 mb-16 lg:m-10 bg-base-300 rounded-lg'>
+            <div className='flex md:flex-col md:justify-center md:items-center'>
                 <div class=" m-4 ">
 
-                    <ul className="steps bg-base-300 p-3  
-                    place-items-center ">
+                    <ul className="steps  p-3  
+                    place-items-center rounded-lg">
                         <li className="step step-primary ml-8"> <p className=''>CONTACT</p> </li>
                         <li className="step ml-5 "> <p className='ml-8'>Details</p> </li>
-                        {/* <li className="step  ml-12 "><p className='ml-5'>EDUCATION</p> </li>
-                        <li className="step  ml-4 "> <p className='ml-2'>SKILLS</p> </li>
-                        <li className="step ml-3"> <p className='ml-1'>ABOUT</p> </li> */}
                         <li className="step   ml-3"> <p>FINISHIT</p> </li>
                     </ul>
 
-                    <div className='w-96'>
-                        <h1 className='text-3xl mt-4'>Please enter your <span className='text-primary font-bold'>contact</span> infos</h1>
+                    <div className='lg:w-96'>
+                        <h1 className='text-xl md:text-md lg:text-3xl mt-4'>Please enter your <span className='text-primary font-bold'>contact</span> infos</h1>
                         <p className='p-1 mb-5'>It allows employers to see how they can cantact you</p>
                     </div>
 
 
-                    <div className='w-96'>
+                    <div className='lg:w-96 '>
                         <form action="" className='p-3' >
                             <div className=' mb-3 '>
                                 <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-lg peer" required />

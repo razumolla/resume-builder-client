@@ -9,9 +9,6 @@ const ResumeBanner = () => {
                 <div className='lg:text-left text-center'>
                     <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary animate__animated animate__zoomIn ">Create Your Resume</h1>
                     <p className="py-6 text-md md:text-xl lg:text-2xl animate__animated  animate__lightSpeedInLeft">A resume is a formal document that a job applicant creates to itemize their qualifications for a position. </p>
-
-
-
                 </div>
             </div>
         </div>
