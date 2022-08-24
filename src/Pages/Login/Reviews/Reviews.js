@@ -4,14 +4,13 @@ import Review from './Review';
 export default function Reviews() {
     const [testimonial, setTestimonial] = useState([]);
 
-
-    useEffect(() => {
-        fetch("http://localhost:5000/reviews")
-            .then(res => res.json())
-            .then(data => setTestimonial(data))
-
-    }, [])
-
+     useEffect(() => {
+       fetch("http://localhost:5000/reviews")
+       .then(res => res.json())
+       .then(data => setTestimonial(data))
+     
+     }, [])
+ 
 
     return (
         <section className='mb-24 mt-20'>
@@ -35,4 +34,5 @@ export default function Reviews() {
             </div>
         </section>
     )
+
 }

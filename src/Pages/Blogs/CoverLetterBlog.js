@@ -2,12 +2,16 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const CoverLetterBlog = ({ coverLetterBlog }) => {
-    const { _id, name, blogTitle, img, date, description } = coverLetterBlog;
+
+    const { name, blogTitle, img, date, description,_id } = coverLetterBlog;
+
+    
 
     const navigate = useNavigate()
     const navigateToCLBlogDetails = (id) => {
         navigate(`/coverLetterBlog/${id}`)
     }
+
 
     return (
         <>

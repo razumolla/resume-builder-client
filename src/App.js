@@ -54,6 +54,7 @@ import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
 import CLBlogDetails from './Pages/Blogs/CLBlogDetails';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
+import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
 
 
 function App() {
@@ -133,30 +134,24 @@ function App() {
           </RequireAuth>
         }>
 
-          <Route path="profile" element={<MyProfile />} />
+          <Route index element={<MyProfile />} />
           <Route path="myInterview" element={<MyInterview />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+          <Route path="updateinfo" element={<UpdateUserInfo />}/>
+         
+          <Route  path ="blogmanage" element={<AdminAuth>
+        <BlogManage />
+          </AdminAuth>}/>
+
           <Route path="users" element={<AdminAuth>
             <Users />
           </AdminAuth>} />
-
-
-
-
           {/* add all coverlett template dashboart */}
           <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
-
-
-          <Route path="updateinfo" element={<UpdateUserInfo />} />
-
-          <Route path="users" element={<AdminAuth>
-            <Users />
-          </AdminAuth>} />
-
         </Route>
 
 
