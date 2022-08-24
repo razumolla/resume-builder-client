@@ -28,7 +28,7 @@ const MyInterview = () => {
                 <table className="table w-full text-center">
 
                     <thead>
-                        <tr>
+                        <tr className='dark:text-black'>
                             <th></th>
                             <th>Subject</th>
                             <th>Date</th>
@@ -44,7 +44,7 @@ const MyInterview = () => {
                                 <td>{appointment.date}</td>
                                 <td>{appointment.slot}</td>
                                 <td>
-                                    <label onClick={() => setDeletingAppointment(appointment)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                                    <label onClick={() => setDeletingAppointment(appointment)} for="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
                                 </td>
                             </tr>
                             )

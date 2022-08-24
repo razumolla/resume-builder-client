@@ -55,22 +55,21 @@ const FormCv = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        // alert('submitted');
-        setSubmitted(!submitted);
         console.log(formData);
 
-        // fetch('http://localhost:5000/cvInfo', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //     },
-        //     body: JSON.stringify(formData),
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        // toast('Succefully added');
-        //     })
+        fetch('http://localhost:5000/cvInfo', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setSubmitted(!submitted);
+                toast.success('Succefully submitted!');
+            })
 
 
 
@@ -109,7 +108,7 @@ const FormCv = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div class="bg-gray-300 rounded-xl p-2">
+                    <div className="bg-gray-300 rounded-xl p-2">
                         {/* <Paper formData={formData} submitted={submitted}></Paper> */}
 
                         {/* condition for template 1 */}

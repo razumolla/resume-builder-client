@@ -38,7 +38,7 @@ const Dashboard = () => {
         </div>
         <div className="drawer-side shadow-2xl mr-5 px-2">
           <label htmlFor="dash-sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+          <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content dark:bg-cyan-900 dark:text-white">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link

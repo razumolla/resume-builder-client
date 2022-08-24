@@ -7,7 +7,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
         <div className='mt-16 mb-16 m-10'>
             <div className='flex '>
-                <div class=" m-4 ">
+                <div className=" m-4 ">
 
                     <ul className="steps bg-base-300 p-3  
                     place-items-center ">
@@ -28,15 +28,16 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                     <div className='w-96'>
                         <form action="" className='p-3' >
                             <div className=' mb-3 '>
-                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-lg peer" required />
-                                <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" className="input input-bordered input-primary w-full max-w-lg peer" required />
+
+                                <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                     Please enter your name
                                 </p>
                             </div>
 
                             <div className='mb-3'>
-                                <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" class="input input-bordered input-primary w-full max-w-lg peer" required />
-                                <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                <input type="text" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} placeholder="Your Designation" className="input input-bordered input-primary w-full max-w-lg peer" required />
+                                <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                     Please enter your Designation
                                 </p>
                             </div>
@@ -45,24 +46,24 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                             <input type="text " value={formData.address} onChange={(e) => setFormData({
                                 ...formData, address: e.target.value
-                            })} placeholder="Address" class="input input-bordered p-3  input-primary w-full max-w-lg peer" required />
-                            <p class="invisible peer-invalid:visible text-red-700 font-light text-left mb-3">
+                            })} placeholder="Address" className="input input-bordered p-3  input-primary w-full max-w-lg peer" required />
+                            <p className="invisible peer-invalid:visible text-red-700 font-light text-left mb-3">
                                 Please enter your Address
                             </p>
                             <div className='flex gap-2 mb-3 '>
                                 <div>
                                     <input type="city" value={formData.city} onChange={(e) => setFormData({
                                         ...formData, city: e.target.value
-                                    })} placeholder="City" class="input input-bordered p-3 input-primary w-full max-w-lg peer" required />
-                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                    })} placeholder="City" className="input input-bordered p-3 input-primary w-full max-w-lg peer" required />
+                                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                         Please enter your City
                                     </p>
                                 </div>
 
                                 <div>
                                     <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="E-mail"
-                                        class="input input-bordered input-primary w-full max-w-xs peer" required />
-                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        className="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                         Please enter your Email
                                     </p>
                                 </div>
@@ -71,15 +72,15 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                             <div className='flex gap-2 mb-3 '>
                                 <div>
                                     <input type="number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        placeholder="Phone Number" class="input input-bordered input-primary w-full max-w-xs peer" required />
-                                    <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        placeholder="Phone Number" className="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <small className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                         Please enter  Phone Number
                                     </small>
                                 </div>
                                 <div>
                                     <input type="text" value={formData.linkedin} onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
-                                        placeholder="www.linkedin.com" class="input input-bordered input-primary w-full max-w-xs peer" required />
-                                    <small class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        placeholder="www.linkedin.com" className="input input-bordered input-primary w-full max-w-xs peer" required />
+                                    <small className="invisible peer-invalid:visible text-red-700 font-light text-left">
                                         Please enter linkedin Profile
                                     </small>
                                 </div>
@@ -87,7 +88,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
 
                             <input type="text " value={formData.dear} onChange={(e) => setFormData({
                                 ...formData, dear: e.target.value
-                            })} placeholder="Dear Mr. Smith" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg" />
+                            })} placeholder="Dear Mr. Smith" className="input input-bordered p-3 mb-3 input-primary w-full max-w-lg" />
                         </form>
                     </div>
 

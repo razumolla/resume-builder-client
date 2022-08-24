@@ -49,7 +49,7 @@ const MyReview = () => {
 
           <br />
           <input
-            className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary"
+            className="input input-bordered z-20 mb-5 shadow-xl rounded-lg w-full max-w-xs  border-primary dark:text-black"
             placeholder="Rating out of 5"
 
 

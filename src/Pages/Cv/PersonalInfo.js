@@ -19,7 +19,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
 
                 <div className='p-2'>
                     <input type="text" placeholder="Name" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your name
                     </p>
                 </div>
@@ -34,21 +34,21 @@ const PersonalInfo = ({ formData, setFormData }) => {
 
                 <div className='p-2'>
                     <input type="text" placeholder="Email" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your email
                     </p>
                 </div>
 
                 <div className='p-2'>
                     <input type="number" placeholder="Phone Number" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your phone
                     </p>
                 </div>
 
                 <div>
                     <input type="text" placeholder="City,Country" className="input input-bordered input-primary w-auto md:w-80 peer dark:text-black" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your city
                     </p>
                 </div>
