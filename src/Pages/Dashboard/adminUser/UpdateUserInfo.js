@@ -49,6 +49,17 @@ export default function UpdateUserInfo() {
           className="input input-bordered mb-3 input-primary w-full max-w-xs"
           {...register("email")}
         />
+        <label className="label">
+          <span className="label-text">upload your Image</span>
+        </label>
+        <input
+          type="file"
+          name="image"
+          aria-label="img"
+         
+          className="input input-bordered mb-3 input-primary w-full max-w-xs"
+          {...register("img")}
+        />
 
         <label className="label">
           <span className="label-text">Enter Your Password</span>
