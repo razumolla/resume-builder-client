@@ -52,9 +52,8 @@ import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
+import CLBlogDetails from './Pages/Blogs/CLBlogDetails';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
-
-
 
 
 function App() {
@@ -109,9 +108,7 @@ function App() {
 
 
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
-
         <Route path="/coverLetter" element={<CoverLetter />} />
-
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
@@ -127,7 +124,8 @@ function App() {
         <Route path="/findAJob" element={<FindAJob> </FindAJob>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
-
+        {/* Blog details  */}
+        <Route path="/coverLetterBlog/:cLBlogId" element={<CLBlogDetails />} />
         {/* Dashboard */}
         <Route path="/dashboard" element={
           <RequireAuth>
@@ -142,6 +140,10 @@ function App() {
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
+          <Route path="users" element={<AdminAuth>
+            <Users />
+          </AdminAuth>} />
+
 
 
 

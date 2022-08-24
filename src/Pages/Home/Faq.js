@@ -4,15 +4,15 @@ import FAQ from '../../assets/images/FAQ.png';
 
 const Faq = () => {
     return (
-        <div className='mt-20 '>
-            <h2 className='text-3xl text-center font-bold text-primary my-10'>Frequently Asked Questions</h2>
+        <div className='overflow-x-hidden'>
+            <h2 className='text-4xl text-center font-bold text-primary my-10'>Frequently Asked Questions</h2>
             <div className="hero bg-base-100 dark:bg-cyan-900 dark:text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-20 ">
-                    <img src={FAQ} className="max-w-sm" />
+                    <img src={FAQ} className="w-72 md:max-w-sm" />
                     <div className='w-70 shadow-2xl'>
 
 
-                        <div className='relative w-[350px] md:w-[500px] overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
                             {/* bg-emerald-300 */}
 
@@ -33,7 +33,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[350px] md:w-[500px]  overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px]  overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-blue-300 h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -53,7 +53,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[350px] md:w-[500px]  overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px]  overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-blue-300  h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -73,7 +73,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[350px] md:w-[500px]  overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px]  overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
 
                             <div className='bg-blue-300 h-12 w-full pl-5 flex item-center border rounded-md'>
@@ -99,7 +99,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[350px] md:w-[500px] overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
                             {/* bg-emerald-300 */}
 
@@ -120,7 +120,7 @@ const Faq = () => {
 
 
 
-                        <div className='relative w-[350px] md:w-[500px] overflow-hidden'>
+                        <div className='relative w-[300px] md:w-[500px] overflow-hidden'>
                             <input type="checkbox" className='peer absolute top-0 inset-x-0 w-full h-12 z-10 cursor-pointer opacity-0' name="" id="" />
                             {/* bg-emerald-300 */}
 

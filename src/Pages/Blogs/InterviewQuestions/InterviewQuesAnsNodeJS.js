@@ -27,50 +27,50 @@ const InterviewQuesAnsNodeJS = () => {
                             <div class="collapse-title text-xl text-left font-medium ">
                                 Q-1: What is NodeJS?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>Answer:
                                     NodeJS is an open-source, cross-platform,back-end JavaScript runtime environment that runs on th the V8 engine and executes JavaScript code outside a web browser.
                                 </p>
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-2: Nodejs single threaded or multi threaded?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>  Answer:Nodejs is single threaded because the JavaScript programming language is
                                     single-threaded.
 
                                 </p>
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-3:  What is Npm?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>Npm stands for Node Package Manager. It is a package manager for the Node JavaScript platform.
                                     Npm is known as the world's largest software registry. Open-source developers all over the world use npm to publish and share their source code.
 
                                 </p>
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-4: What is API?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>API stands for Application Programming Interface.A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server.
                                 </p>
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-5:Node VS JavaScript?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>Node JS:
                                     Node Js is a Javascript runtime environment
                                     It is mostly  is used in server-side
@@ -85,11 +85,11 @@ const InterviewQuesAnsNodeJS = () => {
                                 </p>
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-6: What is webpack?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>Answer: Webpack is a static module bundler for JavaScript applications-it takes all the code from your applications and makes it usable in a web browser. Modules are reusable chunks of code built from your app, JavaScript, node-modules,images and the CSS styles which are packaged to be easily used in your website.
 
 
@@ -97,11 +97,11 @@ const InterviewQuesAnsNodeJS = () => {
 
                             </div>
                         </div>
-                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div class="collapse-title text-xl text-left font-medium ">
+                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div className="collapse-title text-xl text-left font-medium ">
                                 Q-7:What is the purpose of database?
                             </div>
-                            <div class="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
+                            <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
                                 <p>Answer: Database, also called electronic database, any collection of data , or information, that is specially organized for repid search and retrieval by a computer. Databases are structured to facilitate the storage, retrieval, data-processing operations.
                                 </p>
 

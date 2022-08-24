@@ -35,7 +35,7 @@ export default function Contact() {
         <div className="awesome ">
           <Roll left>
             <Roll bottom>
-              <span className="touch text-primary">Get in Touch</span>
+              <span className="text-4xl font-bold text-primary">Get in Touch</span>
 
             </Roll>
 
@@ -64,6 +64,7 @@ export default function Contact() {
             required
           />
           <textarea
+            id="text-area"
             name="message"
             className="useri"
             placeholder="Message"

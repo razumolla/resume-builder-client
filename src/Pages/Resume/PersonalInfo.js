@@ -19,7 +19,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <div className='pb-2'>
                     <input type="text" className="input input-bordered input-secondary w-72 md:w-80 lg:w-80  peer  dark:text-black" name="name" placeholder='Name' value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your name
                     </p>
                 </div>
@@ -28,7 +28,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                     <input type="text" className="input input-bordered input-secondary w-72 md:w-80
                      lg:w-80 peer  dark:text-black" name="title" placeholder='Your Title' value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your title
                     </p>
                 </div>
@@ -36,7 +36,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <div className='pb-2'>
                     <input type="email" className="input input-bordered input-secondary w-72 md:w-80 lg:w-80 dark:text-black peer" name="email" placeholder='Email' value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your email
                     </p>
                 </div>
@@ -45,7 +45,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <div className='pb-2'>
                     <input type="text" className="input input-bordered input-secondary w-72 md:w-80 lg:w-80  dark:text-black peer" name="phone" placeholder='Phone Number' value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your phone number
                     </p>
                 </div>
@@ -53,7 +53,7 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 <div className='pb-2'>
                     <input type="text" className="input input-bordered input-secondary w-72 md:w-80 lg:w-80 dark:text-black peer" name="city" placeholder='City,Country' value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
 
-                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your city
                     </p>
                 </div>

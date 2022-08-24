@@ -40,7 +40,7 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} 
-                                    className='w-full p-2 input input-border input-primary peer w-72 lg:w-80 md:w-80' required placeholder='Characteristics' name="Description" id="Description" ></textarea>
+                                    className=' p-2 input input-border input-primary peer w-72 lg:w-80 md:w-80' required placeholder='Characteristics' name="Description" id="Description" ></textarea>
                                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                                         Please enter your Characteristics
                                     </p>

@@ -19,24 +19,26 @@ import Reviews from '../Login/Reviews/Reviews';
 const Home = () => {
 
 
-    return (
-        <div className='m-5'>
-      
-          < div className='m-5' >
-            <Banner></Banner>
-            <WhyUs></WhyUs>
-            <Templates></Templates>
-            <Benefits></Benefits>
-            <Reviews />
-            <Hired></Hired>
-            <Contact />
-          </div>
-            <About />
-            <Faq></Faq>
 
-        </div >
+  return (
+    <div className='m-2 lg:m-5'>
 
-    );
+      < div className='lg:m-5' >
+        <Banner></Banner>
+        <WhyUs></WhyUs>
+        <Templates></Templates>
+        <Benefits></Benefits>
+        <Reviews />
+        <Hired></Hired>
+        <Contact />
+      </div>
+
+      <About />
+      <Faq></Faq>
+
+    </div >
+
+  );
 };
 
 export default Home;

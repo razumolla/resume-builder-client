@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const OtherInfo = ({ formData, setFormData }) => {
-    const [matches, setMatches] = useState(
-        window.matchMedia("(min-width: 768px)").matches
-    )
-    useEffect(() => {
-        window
-            .matchMedia("(min-width: 768px)")
-            .addEventListener('change', e => setMatches(e.matches));
-    }, []);
+
     return (
         <div>
             <ul className="steps bg-base-300 p-3  
@@ -26,38 +19,33 @@ const OtherInfo = ({ formData, setFormData }) => {
             <div className='m-2 flex flex-col justify-center items-center'>
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Skill 1" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.skillOne} onChange={(e) => setFormData({ ...formData, skillOne: e.target.value })} required />
+                    <input type="text" placeholder="Technical Skills: e.g. html,js etc." className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.technicalSkill} onChange={(e) => setFormData({ ...formData, technicalSkill: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                        Please enter your skills
+                        Please enter your technical skills
                     </p>
                 </div>
 
                 <div className='p-2'>
-                    <input type="text" placeholder="Skill 2" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.skillTwo} onChange={(e) => setFormData({ ...formData, skillTwo: e.target.value })} required />
+                    <input type="text" placeholder="Soft Skills: e.g. Communicational,Teamwork etc." className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.softSkill} onChange={(e) => setFormData({ ...formData, softSkill: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                        Please enter your skills
+                        Please enter your soft skills
                     </p>
                 </div>
 
                 <div className='p-2'>
-                    <textarea className="textarea textarea-primary dark:text-black mx-10" placeholder="Write about yourself" value={formData.summary} onChange={(e) => setFormData({ ...formData, summary: e.target.value })}></textarea>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="Designation" className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer" value={formData.designation} onChange={(e) => setFormData({ ...formData, designation: e.target.value })} required />
+                    <input type="text" placeholder="Soft Skills: e.g. Communicational,Teamwork etc." className="input input-bordered input-primary w-auto md:w-80 max-w-xs peer dark:text-black" value={formData.language} onChange={(e) => setFormData({ ...formData, language: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                        Please enter your job designation
+                        Please enter your Languages
                     </p>
                 </div>
 
                 <div className='p-2'>
-                    <textarea className="textarea textarea-primary" placeholder="Write about yourself" value={formData.summary} onChange={(e) => setFormData({ ...formData, summary: e.target.value })}></textarea>
-
-
+                    <textarea className="textarea textarea-primary dark:text-black mx-10 w-auto md:w-80" placeholder="Write about yourself" value={formData.summary} onChange={(e) => setFormData({ ...formData, summary: e.target.value })}></textarea>
                 </div>
+
             </div>
         </div >
     );
