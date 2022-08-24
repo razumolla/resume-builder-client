@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
-const ResumePage = ({ formData }) => {
+const ResumePage = ({ formData, submitted }) => {
     const {
         name,
         title,
@@ -35,20 +35,20 @@ const ResumePage = ({ formData }) => {
             // Few necessary setting options
             var imgWidth = 208;
             var imgHeight = canvas.height * imgWidth / canvas.width;
-            alert(imgHeight)
+            // alert(imgHeight)
             const contentDataURL = canvas.toDataURL('image/png')
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
             var position = 0;
             pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
             pdf.save('new-file.pdf');
-            // window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
+
         });
 
     }
     return (
         <div className='my-10'>
-            <div class="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="card-body" id='cv'>
+            <div className="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="card-body" id='cv'>
                     <div className='text-white bg-sky-400 flex p-4 w-full'>
                         <div className='text-left px-4 w-3/4 flex items-center'>
                             <div>
@@ -119,8 +119,9 @@ const ResumePage = ({ formData }) => {
             <div className='text-center'>
 
                 <button
-                    // disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
+
+                    disabled={submitted == false}
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
                     Download PDF</button>
             </div>
         </div >

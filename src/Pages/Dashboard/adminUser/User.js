@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 const User = ({ u, refetch }) => {
   const [show, setShow] = useState([]);
 
-  const { email, role, id } = u;
-  console.log(u)
-
+  const { email, role } = u;
   const makedelete = (id) => {
     const proceed = window.confirm("are you want to delete?");
     if (proceed) {
