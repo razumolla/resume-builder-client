@@ -16,8 +16,8 @@ const PaperThree = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
+        technicalSkill,
+        softSkill,
         designation,
         summary
     } = formData
@@ -44,8 +44,8 @@ const PaperThree = ({ formData, submitted }) => {
     }
     return (
         <div className='my-10'>
-            <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left dark:text-black" id='cv'>
+            <div className=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="text-left dark:text-black" id='cv'>
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words mb-5'>{name}</h1>
@@ -98,8 +98,8 @@ const PaperThree = ({ formData, submitted }) => {
                                 <h2 className="text-2xl font-bold mb-2">Skills</h2>
                             </div>
                             <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ const PaperThree = ({ formData, submitted }) => {
             <div className='flex justify-center'>
                 <button
                     disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

@@ -44,7 +44,7 @@ const MyInterview = () => {
                                 <td>{appointment.date}</td>
                                 <td>{appointment.slot}</td>
                                 <td>
-                                    <label onClick={() => setDeletingAppointment(appointment)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+                                    <label onClick={() => setDeletingAppointment(appointment)} for="delete-confirm-modal" className="btn btn-xs btn-error">Delete</label>
                                 </td>
                             </tr>
                             )

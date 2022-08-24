@@ -20,31 +20,31 @@ const CLCompanyDetails = ({ formData, setFormData }) => {
 
                             <form action="" className='p-3'>
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
-                               
-                              
-                               <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })} 
-                                    className=' p-2 input input-border input-primary peer' required placeholder='Professional Career' name="Description"  ></textarea>
-                          
-                               <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter your professional Career
-                                </p>
+
+
+                                    <textarea value={formData.professionalCareer} onChange={(e) => setFormData({ ...formData, professionalCareer: e.target.value })}
+                                        className=' p-2 input input-border input-primary peer' required placeholder='Professional Career' name="Description"  ></textarea>
+
+                                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter your professional Career
+                                    </p>
                                 </div>
 
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea value={formData.achievements} onChange={(e) => setFormData({ ...formData, achievements: e.target.value })} className=' p-2 input input-border input-primary peer'
-                                     required placeholder='Skills and Achievements' name="Description" id="Description" ></textarea>
-                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter your Skills and Achievements
-                                </p>
+                                        required placeholder='Skills and Achievements' name="Description" id="Description" ></textarea>
+                                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter your Skills and Achievements
+                                    </p>
                                 </div>
 
                                 <div className='flex flex-col-reverse  gap-2 mb-3 '>
 
                                     <textarea value={formData.characteristics} onChange={(e) => setFormData({ ...formData, characteristics: e.target.value })} className='w-full p-2 input input-border input-primary peer' required placeholder='Characteristics' name="Description" id="Description" ></textarea>
-                                    <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
-                                    Please enter your Characteristics
-                                </p>
+                                    <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                        Please enter your Characteristics
+                                    </p>
                                 </div>
 
 

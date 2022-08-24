@@ -8,15 +8,15 @@ const MyProfile = () => {
 
   return (
     <div>
-      <div class="card card-side bg-base-100 shadow-xl px-12 mx-10 w-3/4 dark:bg-cyan-900">
+      <div className="card card-side bg-base-100 shadow-xl px-12 mx-10 w-3/4 dark:bg-cyan-900">
         <figure>
           <img src={user.photoURL} alt="Album" />
         </figure>
-        <div class="card-body justify-center">
-          <h2 class="card-title justify-end">{user.displayName}</h2>
+        <div className="card-body justify-center">
+          <h2 className="card-title justify-end">{user.displayName}</h2>
           <h2 className="card-title justify-end">{user.email}</h2>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary" ><Link to="updateInfo">Edit Now</Link> </button>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary" ><Link to="updateInfo">Edit Now</Link> </button>
           </div>
         </div>
       </div>

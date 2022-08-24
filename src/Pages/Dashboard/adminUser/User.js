@@ -5,7 +5,6 @@ const User = ({ u, refetch }) => {
   const [show, setShow] = useState([]);
 
   const { email, role } = u;
-
   const makedelete = (id) => {
     const proceed = window.confirm("are you want to delete?");
     if (proceed) {

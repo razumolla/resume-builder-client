@@ -20,7 +20,7 @@ const Others = ({ formData, setFormData }) => {
                     <div className='mb-2'>
                         <textarea type="text" className="input input-bordered input-secondary text-width lg:w-80 mb-2 dark:text-black peer" name="skills" placeholder='Your Skills' value={formData.skills} onChange={(e) => setFormData({ ...formData, skills: e.target.value })} required />
 
-                        <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                             Please enter your skills
                         </p>
                     </div>
@@ -30,7 +30,7 @@ const Others = ({ formData, setFormData }) => {
                     <div className='mb-2'>
                         <textarea type="text" className="input input-bordered input-secondary textarea  text-width w-72 lg:w-80 sm:w-auto dark:text-black peer" name="technology" placeholder='Technology' value={formData.technology} onChange={(e) => setFormData({ ...formData, technology: e.target.value })} required />
 
-                        <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                             Please enter technologies
                         </p>
                     </div>
@@ -39,7 +39,7 @@ const Others = ({ formData, setFormData }) => {
                     <div className='mb-2'>
                         <input type="text" className="input input-bordered input-secondary w-72 lg:w-80  dark:text-black peer" name="language" placeholder='Your language' value={formData.language} onChange={(e) => setFormData({ ...formData, language: e.target.value })} required />
 
-                        <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                        <p className="invisible peer-invalid:visible text-red-700 font-light text-left">
                             Please enter your language
                         </p>
                     </div>
