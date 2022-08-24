@@ -7,7 +7,7 @@ import download_image from '../../assets/images/download_mg.png'
 const Benefits = () => {
     return (
         <div>
-            <h1 className='text-center text-3xl font-bold text-primary my-10'>Our Main Features</h1>
+            <h1 className='text-center text-4xl font-bold text-primary my-10'>Our Main Features</h1>
 
             <div className='grid sm:grid-cols-1 lg:grid-cols-2 my-5 gap-5 '>
 
@@ -17,9 +17,7 @@ const Benefits = () => {
                         <h2 className="text-2xl font-bold text-primary">Step-by-step builder</h2>
                         <p>Easy to use step-by-step builder enables you to create a well-polished, professional CV in minutes. Impress. Save time.</p>
 
-                        {/* <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Watch</button>
-                        </div> */}
+
                     </div>
                 </div>
                 <div className="card card-side bg-base-200 shadow-xl dark:bg-cyan-900">
