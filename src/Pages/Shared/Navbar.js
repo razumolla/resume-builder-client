@@ -98,7 +98,7 @@ const Navbar = () => {
 
         <img
           src={logo}
-          className="max-w-sm  rounded-full  w-16 lg:w-20"
+          className="max-w-sm  rounded-full  w-16 lg:w-16"
           alt="Logo"
         />
       </div>

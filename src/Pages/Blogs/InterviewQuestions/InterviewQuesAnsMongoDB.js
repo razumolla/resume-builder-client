@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import html from '../../../../src/assets/images/imgAfruza/banner-removebg-preview.png';
 const InterviewQuesAnsMongoDB = () => {
     return (
-        <div className='mt-10 mb-96 '>
-            <div className='flex flex-wrap justify-center '>
+        <div className='mt-10 '>
+            <div className='flex flex-wrap justify-center mb-8'>
                 <div className=''>
                     <Link to='/html' className='btn btn-primary ml-2 mb-2'>Html</Link>
                     <Link to='/css' className='btn btn-primary ml-2 mb-2'>CSS</Link>
@@ -17,12 +17,15 @@ const InterviewQuesAnsMongoDB = () => {
 
             </div>
             <div className='dark:bg-cyan-900 bg-gray-300   lg:m-10 lg:ml-16 lg:mr-16 sm:m-0 sm:ml-0 sm:mr-0'>
-                <h1 className='p-5 text-3xl font-bold '> Most Common <span className='text-primary'>MongoDB</span> Interview Questions and Answers</h1>
-                <div className='lg:flex justify-center sm:flex-cols'>
 
-                    <div className='lg:m-10 sm:m-8 lg:p-5 sm:p-4 lg:w-1/2 sm:w-0'>
-                        <div tabindex="0" className="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
-                            <div className="collapse-title text-xl text-left font-medium ">
+                <h1 className='p-5 text-xl md:text-2xl lg:text-3xl font-bold '> Most Common <span className='text-primary'>MongoDB</span> Interview Questions and Answers</h1>
+                <div className='lg:flex'>
+                   <div>
+                        <img src={html} className='m-auto lg:mt-28' alt="" />
+                    </div>
+                    <div className='lg:m-10 sm:m-8  lg:p-5 sm:p-4 lg:w-1/2 p-8'>
+                        <div tabindex="0" class="collapse collapse-plus border   border-base-300 bg-base-100 rounded-box dark:bg-cyan-900">
+                            <div class="collapse-title text-xl text-left font-medium ">
                                 Q-1: what is MongoDB ?
                             </div>
                             <div className="collapse-content text-left border-spacing-3 bg-gray-300 m-2 dark:bg-cyan-900">
@@ -105,9 +108,7 @@ const InterviewQuesAnsMongoDB = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <img src={html} className='  mt-28' alt="" />
-                    </div>
+                    
                 </div>
             </div>
         </div>

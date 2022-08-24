@@ -70,11 +70,11 @@ const TemplateForm = () => {
 
 
     return (
-        <div className='mt-16  lg:p-5'>
-            <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3 '>
-                <div className='w-full sm:w-full md:w-2/5'>
-                    <div className='sm:bg-gray-300 lg:bg-gray-300 rounded-2xl p-2'>
-                        <div className='form-container sm:bg-gray-300 lg:bg-gray-300 rounded-2xl '>
+        <div className='mt-24 mb-16 m-10'>
+            <div className='lg:flex flex-col md:flex-row gap-5 '>
+                {/* <div className='lg:w-1/2 w-96 m-auto md:w-3/4 md:m-auto rounded-xl bg-gray-300'>
+                    <div className=' lg:bg-gray-300 rounded-2xl p-2'>
+                        <div className='form-container  '>
                             <div>
                                 {PageDisplay()}
                                 <div className="footer flex justify-between mt-5">
@@ -99,9 +99,48 @@ const TemplateForm = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='w-full md:w-2/3'>
-                    <div className='bg-gray-100 rounded-xl p-2'>
+                </div> */}
+               
+               <div className="w-full md:w-5/6 lg:w-96  sm:my-2 md:my-2 md:m-auto">
+
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+
+
+                        <div className='py-2 '>
+
+                            <div className="form-container mx-auto">
+
+                                <div className="body">
+                                    {PageDisplay()}
+                                </div>
+                                <div className="footer flex justify-between mt-5 p-4">
+
+                                    <button
+                                        disabled={page == 0}
+                                        className='btn btn-primary pt-4' onClick={() => {
+                                            setPage((currPage) => currPage - 1)
+                                        }}>Prev</button>
+
+                                    {page == pageTitles.length - 1 ? <button className='btn btn-primary pt-4' onClick={handleInfo}>Submit</button>
+                                        :
+                                        <button
+                                            className='btn btn-primary pt-4' onClick={() => {
+                                                setPage((currPage) => currPage + 1)
+                                            }}>
+                                            Next
+                                        </button>
+                                    }
+
+
+                                </div>
+                            </div >
+                        </div>
+
+                    </div>
+                </div >
+
+                <div className='w-full md:w-full lg:w-2/3 md:m-auto'>
+                    <div className=' bg-gray-200 rounded-xl p-3 '>
                        { id == '62fb63ed4af897cd1e199ca7' && <CoverLetterDisplay 
                         formData={formData}
                         submitted={submitted}
