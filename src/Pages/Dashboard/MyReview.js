@@ -10,7 +10,7 @@ const MyReview = () => {
 
   const onSubmit = (data) => {
     data.img = user.photoURL;
-    data.name = user.displayName
+    data.name = user.displayName;
     console.log(data, 'your data', data.img);
 
     toast("WoW! Your Review Added in Homepage", {

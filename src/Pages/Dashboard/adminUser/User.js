@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-const User = ({ user, refetch }) => {
+const User = ({ user, refetch ,index}) => {
   const [show, setShow] = useState([]);
 
-  const { email, role,index } = user;
-console.log(user)
+  const { email, role} = user;
+
 // useEffect(() => {
 //       fetch('http://localhost:5000/user')
 //       .then((res) => res.json())
@@ -61,8 +61,8 @@ console.log(user)
 
   return (
     <tr>
-      <td>{index +1}</td>
-      <td>{email}</td>
+      <td>{index+1}</td>
+      <td className="font-bold">{email}</td>
       <td>
         {role !== "admin" && (
           <button onClick={makeAdmin} className="btn btn-xs  text-white bg-violet-600">
