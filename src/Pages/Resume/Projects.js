@@ -39,12 +39,15 @@ const Projects = ({ formData, setFormData }) => {
 
                 <div className=''>
                     {/* textarea textarea-primary */}
-                    <textarea className="textarea textarea-primary  text-width dark:text-black break-words"
+                    <textarea className="textarea textarea-primary  text-width dark:text-black 
+                    break-words"
                         // 20rem !important
                         // width: '20rem !important' 
                         style={
                             { width: '16rem !important' }
-                        } placeholder="Write some description of your project" name="features" value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })}></textarea>
+                        } placeholder="Write some description of your project" 
+                        name="features" value={formData.features} 
+                        onChange={(e) => setFormData({ ...formData, features: e.target.value })}></textarea>
 
                 </div>
 

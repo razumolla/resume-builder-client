@@ -1,32 +1,32 @@
-import React from 'react';
 
+import React from 'react';
 
 const CLPersonalInfo = ({ formData, setFormData }) => {
 
     return (
 
-        <div className='mt-16 mb-16 lg:m-10 bg-base-300 rounded-lg'>
-            <div className='flex md:flex-col md:justify-center md:items-center'>
-                <div class=" m-4 ">
+        <div className='text-center md:w-full'>       
 
-                    <ul className="steps  p-3  
-                    place-items-center rounded-lg">
+                    <ul className="steps bg-base-300   
+                         dark:bg-cyan-900 p-2 lg:px-11  md:px-44">
                         <li className="step step-primary ml-8"> <p className=''>CONTACT</p> </li>
                         <li className="step ml-5 "> <p className='ml-8'>Details</p> </li>
                         <li className="step   ml-3"> <p>FINISHIT</p> </li>
                     </ul>
 
-                    <div className='lg:w-96'>
-                        <h1 className='text-xl md:text-md lg:text-3xl mt-4'>Please enter your <span className='text-primary font-bold'>contact</span> infos</h1>
-                        <p className='p-1 mb-5'>It allows employers to see how they can cantact you</p>
+                    <div className='header'>
+                        <h1 className='text-2xl font-bold my-5 text center dark:text-cyan-900'>Please enter your
+                         <span className='font-bold'> contact </span> infos</h1>
+                        <p className='p-1 mb-5 dark:text-black'>It allows employers to see how they can cantact you</p>
                     </div>
 
 
-                    <div className='lg:w-96 '>
-                        <form action="" className='p-3' >
+                    <div className=' m-2 flex flex-col justify-center items-center gap-3'>
+                        <form action="" className='p-3 ' >
                             <div className=' mb-3 '>
-                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" class="input input-bordered input-primary w-full max-w-lg peer" required />
-                                <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
+                                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name"
+                                 class="input input-bordered input-primary w-full max-w-lg peer" required />
+                                <p class="invisible peer-invalid:visible text-red-700 font-light text-left ">
                                     Please enter your name
                                 </p>
                             </div>
@@ -86,10 +86,7 @@ const CLPersonalInfo = ({ formData, setFormData }) => {
                                 ...formData, dear: e.target.value
                             })} placeholder="Dear Mr. Smith" class="input input-bordered p-3 mb-3 input-primary w-full max-w-lg" />
                         </form>
-                    </div>
-
-                </div>
-            </div>
+                    </div>          
         </div>
     );
 };

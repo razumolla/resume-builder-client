@@ -25,7 +25,8 @@ const PersonalInfo = ({ formData, setFormData }) => {
                 </div>
 
                 <div className='pb-2'>
-                    <input type="text" className="input input-bordered input-secondary w-72 md:w-80 lg:w-80 peer  dark:text-black" name="title" placeholder='Your Title' value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} required />
+                    <input type="text" className="input input-bordered input-secondary w-72 md:w-80
+                     lg:w-80 peer  dark:text-black" name="title" placeholder='Your Title' value={formData.title} onChange={(e) => setFormData({ ...formData, title: e.target.value })} required />
 
                     <p class="invisible peer-invalid:visible text-red-700 font-light text-left">
                         Please enter your title
