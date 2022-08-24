@@ -1,6 +1,6 @@
 # Resume Creator
 ### Click for view 👇
-## [Resume Creator](https://endgame-soldier.web.app/home)
+## [Resume Builder Website](https://endgame-soldier.web.app/home)
 
 ## Feature 
 
