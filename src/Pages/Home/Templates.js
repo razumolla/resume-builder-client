@@ -8,7 +8,7 @@ import resume1 from '../../assets/images/resume-1.png';
 const Templates = () => {
     return (
         <div>
-            <h1 className='text-3xl font-bold text-primary  my-10'>Templates For Every Carrer Path</h1>
+            <h1 className='text-4xl font-bold text-primary  my-10'>Templates For Every Carrer Path</h1>
             <div className='grid sm:grid-col-1 md:grid-cols-1 lg:grid-cols-3 gap-8'>
 
                 {/* bg-base-200 */}

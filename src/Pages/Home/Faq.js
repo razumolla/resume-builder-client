@@ -4,8 +4,8 @@ import FAQ from '../../assets/images/FAQ.png';
 
 const Faq = () => {
     return (
-        <div className='mt-20 overflow-x-hidden'>
-            <h2 className='text-3xl text-center font-bold text-primary my-10'>Frequently Asked Questions</h2>
+        <div className='overflow-x-hidden'>
+            <h2 className='text-4xl text-center font-bold text-primary my-10'>Frequently Asked Questions</h2>
             <div className="hero bg-base-100 dark:bg-cyan-900 dark:text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-20 ">
                     <img src={FAQ} className="w-72 md:max-w-sm" />
