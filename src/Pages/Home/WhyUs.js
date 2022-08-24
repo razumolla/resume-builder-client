@@ -10,13 +10,17 @@ const WhyUs = () => {
             <div className='grid grid-clos-1 lg:grid-cols-2 gap-5'>
                 <div className='h-auto w-80 md:w-full md:h-80'>
                     <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-lg m-5 h-48  md:h-24 gap-8 dark:bg-cyan-900">
+
+
                         <div>
                             <img src={resume} alt="" className='ml-2 h-20 w-20  md:h-16 md:w-16' />
                         </div>
                         <div className='h-20 text-justify'>
                             <p className='font-bold text-primary text-md md:text-xl'>Easy Online resume builder</p>
                             <p className='text-sm md:text-md'>Our resume builder application is very easy to use.You can create your resume at very ease</p>
+
                         </div>
+
                     </div>
 
                     <div class="card-body flex flex-row justify-start items-center bg-base-200 rounded-lg shadow-lg m-5 h-48  md:h-24 dark:bg-cyan-900">
