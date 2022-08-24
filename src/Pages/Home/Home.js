@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <div className='m-5'>
       
-          < div className='m-5' >
+          <div className='m-5'>
             <Banner></Banner>
             <WhyUs></WhyUs>
             <Templates></Templates>
@@ -34,7 +34,7 @@ const Home = () => {
             <About />
             <Faq></Faq>
 
-        </div >
+        </div>
 
     );
 };

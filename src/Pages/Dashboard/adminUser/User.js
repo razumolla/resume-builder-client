@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 const User = ({ u, refetch }) => {
   const [show, setShow] = useState([]);
 
-  const { email, role,id  } = u;
+  const { email, role, id } = u;
   console.log(u)
 
   const makedelete = (id) => {
