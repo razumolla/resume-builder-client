@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 const Paper = ({ formData, submitted }) => {
     const {
         name,
+        designation,
         email,
         phone,
         city,
@@ -15,9 +16,9 @@ const Paper = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
-        designation,
+        technicalSkill,
+        softSkill,
+        language,
         summary
     } = formData
 
@@ -83,8 +84,15 @@ const Paper = ({ formData, submitted }) => {
 
                         <div className="mt-5">
                             <h2 className="text-2xl font-bold">Skills</h2>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
+                        </div>
+
+                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
+
+                        <div className="mt-5">
+                            <h2 className="text-2xl font-bold">Language</h2>
+                            <p className='break-words'><span className='font-semibold'>Language:</span> {language} </p>
                         </div>
                     </div>
                 </div>

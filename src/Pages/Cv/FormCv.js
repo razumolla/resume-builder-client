@@ -16,6 +16,7 @@ const FormCv = () => {
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
+        designation: '',
         email: '',
         phone: '',
         city: '',
@@ -26,9 +27,9 @@ const FormCv = () => {
         projectName: '',
         projectLink: '',
         projectDescription: '',
-        skillOne: '',
-        skillTwo: '',
-        designation: '',
+        technicalSkill: '',
+        softSkill: '',
+        language: '',
         summary: ''
     })
 
@@ -54,22 +55,21 @@ const FormCv = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        // alert('submitted');
-        setSubmitted(!submitted);
         console.log(formData);
 
-        // fetch('http://localhost:5000/cvInfo', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //     },
-        //     body: JSON.stringify(formData),
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        // toast('Succefully added');
-        //     })
+        fetch('http://localhost:5000/cvInfo', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setSubmitted(!submitted);
+                toast.success('Succefully submitted!');
+            })
 
 
 

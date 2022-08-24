@@ -16,8 +16,8 @@ const PaperThree = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
+        technicalSkill,
+        softSkill,
         designation,
         summary
     } = formData
@@ -98,8 +98,8 @@ const PaperThree = ({ formData, submitted }) => {
                                 <h2 className="text-2xl font-bold mb-2">Skills</h2>
                             </div>
                             <div className='divider bg-black-900 mt-1' style={{ height: '2px' }}></div>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
                         </div>
                     </div>
                 </div>

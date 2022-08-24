@@ -7,7 +7,7 @@ const MockInterview = () => {
     const [selected, setSelected] = useState(new Date());
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
 
             <InterviewBanner></InterviewBanner>
             <Calender selected={selected} setSelected={setSelected}></Calender>

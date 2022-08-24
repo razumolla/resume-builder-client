@@ -64,6 +64,7 @@ export default function Contact() {
             required
           />
           <textarea
+            id="text-area"
             name="message"
             className="useri"
             placeholder="Message"
