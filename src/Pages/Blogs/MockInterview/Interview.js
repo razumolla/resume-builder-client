@@ -4,7 +4,7 @@ const Interview = ({ interview, setMock }) => {
     const { name, slots } = interview;
     return (
         <div>
-            <div class="card w-96 lg:max-w-lg bg-base-200 shadow-xl mx-auto mb-10 text-center">
+            <div class="card w-80 lg:w-96 lg:max-w-lg bg-base-200 shadow-xl mx-auto mb-10 text-center">
                 <div class="card-body">
                     <h2 class="text-2xl text-accent font-bold">{name}</h2>
                     {

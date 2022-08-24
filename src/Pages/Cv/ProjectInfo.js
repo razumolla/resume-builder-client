@@ -32,7 +32,7 @@ const ProjectInfo = ({ formData, setFormData }) => {
                 </div>
 
                 <div className=''>
-                    <textarea className="textarea textarea-primary peer dark:text-black" placeholder="Write some description of your project" value={formData.projectDescription} onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })} required></textarea>
+                    <textarea className="textarea textarea-primary peer dark:text-black w-auto md:w-80" placeholder="Write some description of your project" value={formData.projectDescription} onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })} required></textarea>
 
                 </div>
 

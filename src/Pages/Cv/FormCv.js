@@ -16,6 +16,7 @@ const FormCv = () => {
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
+        designation: '',
         email: '',
         phone: '',
         city: '',
@@ -26,9 +27,9 @@ const FormCv = () => {
         projectName: '',
         projectLink: '',
         projectDescription: '',
-        skillOne: '',
-        skillTwo: '',
-        designation: '',
+        technicalSkill: '',
+        softSkill: '',
+        language: '',
         summary: ''
     })
 
