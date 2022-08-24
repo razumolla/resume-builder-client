@@ -81,7 +81,7 @@ const ResumeForm = () => {
 
         <div className='mt-24 mb-16 m-10 '>
             <div className='lg:flex flex-col md:flex-row gap-5'>
-                <div className="w-full md:w-1/3 sm:my-2 md:my-2">
+                <div className="w-full md:w-5/6 lg:w-96  sm:my-2 md:my-2 md:m-auto">
 
                     <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
 
@@ -119,11 +119,11 @@ const ResumeForm = () => {
                     </div>
                 </div >
 
-                <div className='w-full md:w-2/3 sm:col-6'>
+                <div className='w-full md:w-full lg:w-2/3 md:m-auto'>
 
-                    <div class="bg-gray-200 rounded-xl p-2">
+                    <div className="bg-gray-200 rounded-xl p-3">
 
-                        <ResumePage class="w-96" formData={formData} submitted={submitted}></ ResumePage>
+                        <ResumePage className="w-96" formData={formData} submitted={submitted}></ ResumePage>
                     </div>
                 </div>
             </div >

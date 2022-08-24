@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 const Paper = ({ formData, submitted }) => {
     const {
         name,
+        designation,
         email,
         phone,
         city,
@@ -15,9 +16,9 @@ const Paper = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
-        designation,
+        technicalSkill,
+        softSkill,
+        language,
         summary
     } = formData
 
@@ -44,8 +45,8 @@ const Paper = ({ formData, submitted }) => {
 
     return (
         <div className='my-10'>
-            <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left" id='cv'>
+            <div className=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="text-left" id='cv'>
                     <div className='bg-accent'>
                         <div className='p-3 text-white'>
                             <h1 className='text-3xl font-semibold break-words'>{name}</h1>
@@ -83,8 +84,15 @@ const Paper = ({ formData, submitted }) => {
 
                         <div className="mt-5">
                             <h2 className="text-2xl font-bold">Skills</h2>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
+                        </div>
+
+                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
+
+                        <div className="mt-5">
+                            <h2 className="text-2xl font-bold">Language</h2>
+                            <p className='break-words'><span className='font-semibold'>Language:</span> {language} </p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +100,7 @@ const Paper = ({ formData, submitted }) => {
             <div className='flex justify-center'>
                 <button
                     disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

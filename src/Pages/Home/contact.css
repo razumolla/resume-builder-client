@@ -11,7 +11,7 @@
 .touch {
   color: rgb(3, 230, 211);
   font-size: 2.9rem;
-  font-weight:700;
+  font-weight: 700;
   margin-left: 5rem;
   margin-bottom: 0rem !important;
   padding-bottom: 0 rem !important;
@@ -53,7 +53,7 @@
   font-size: 16px;
 }
 
-textarea {
+#text-area {
   width: 20rem !important;
   min-height: 4rem;
 }

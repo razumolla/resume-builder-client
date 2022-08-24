@@ -1,5 +1,4 @@
 import './App.css';
-
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './Pages/Shared/Navbar';
 import Footer from './Pages/Shared/Footer';
@@ -15,7 +14,6 @@ import TemplateForm from './Pages/CoverLetter/TemplateForm';
 import About from './Pages/Home/About';
 import Contact from './Pages/Home/Contact';
 import CoverLetterFinishit from './Pages/CoverLetter/CoverLetterFinishit';
-import CoverLetterAbout from './Pages/CoverLetter/CoverLetterAbout';
 import NotFound from './Pages/Shared/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Form from './Pages/Resume/Form';
@@ -24,7 +22,6 @@ import CvResumeAll from './Pages/Blogs/CvResumeAll';
 import CoverLetterAll from './Pages/Blogs/CoverLetterAll';
 import InspiringStories from './Pages/Blogs/InspiringStories';
 import PersonalDevelopment from './Pages/Blogs/PersonalDevelopment';
-import MockInterview from './Pages/Blogs/MockInterview';
 import InterviewQuestions from './Pages/Blogs/InterviewQuestions/InterviewQuestions';
 import PricingCard from './Pages/Pricing/PricingCard';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -42,8 +39,6 @@ import PaymentCardThree from './Pages/Pricing/PaymentCardThree';
 
 import ResumeForm1 from './Pages/Resume/ResumeForm1';
 import ResumeForm2 from './Pages/Resume/ResumeForm2';
-
-
 import InterviewQuesAnsHtml from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsHtml';
 import InterviewQuesAnsCSS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsCSS';
 import InterviewQuesAnsReactJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsReactJS';
@@ -51,12 +46,15 @@ import InterviewQuesAnsRedux from './Pages/Blogs/InterviewQuestions/InterviewQue
 import InterviewQuesAnsMongoDB from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsMongoDB';
 import InterviewQuesAnsJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsJS';
 import InterviewQuesAnsNodeJS from './Pages/Blogs/InterviewQuestions/InterviewQuesAnsNodeJS';
+import MockInterview from './Pages/Blogs/MockInterview/MockInterview';
+import MyInterview from './Pages/Dashboard/MyInterview';
+import AllCoverLetterTemp from './Pages/Dashboard/AllCoverLetterTemp';
 import FindAJob from './Pages/Blogs/FindAJob';
 import AdminAuth from './Pages/Dashboard/adminUser/AdminAuth';
 import Users from './Pages/Dashboard/adminUser/Users';
+import CLBlogDetails from './Pages/Blogs/CLBlogDetails';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
-
 
 
 function App() {
@@ -108,11 +106,10 @@ function App() {
         } />
 
 
-        <Route path="/about" element={<CoverLetterAbout />} />
+
+
         <Route path='finishit' element={<CoverLetterFinishit></CoverLetterFinishit>} />
-
         <Route path="/coverLetter" element={<CoverLetter />} />
-
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
@@ -128,26 +125,33 @@ function App() {
         <Route path="/findAJob" element={<FindAJob> </FindAJob>} />
         <Route path="/mockInterview" element={<MockInterview> </MockInterview>} />
 
+        {/* Blog details  */}
+        <Route path="/coverLetterBlog/:cLBlogId" element={<CLBlogDetails />} />
         {/* Dashboard */}
         <Route path="/dashboard" element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>
         }>
+
           <Route index element={<MyProfile />} />
+          <Route path="myInterview" element={<MyInterview />} />
           <Route path="myReview" element={<MyReview />} />
           <Route path="addCvResumeBlog" element={<AddCvResumeBlog />} />
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
           <Route path="updateinfo" element={<UpdateUserInfo />}/>
-          <Route  path ="users" element={<AdminAuth>
-           <Users />
-          </AdminAuth>}/>
+         
           <Route  path ="blogmanage" element={<AdminAuth>
         <BlogManage />
           </AdminAuth>}/>
 
+          <Route path="users" element={<AdminAuth>
+            <Users />
+          </AdminAuth>} />
+          {/* add all coverlett template dashboart */}
+          <Route path='allcoverlettertemp' element={<AllCoverLetterTemp></AllCoverLetterTemp>}></Route>
         </Route>
 
 

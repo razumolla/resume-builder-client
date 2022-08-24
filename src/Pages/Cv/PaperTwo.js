@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const PaperTwo = ({ formData, submitted }) => {
     const {
         name,
+        designation,
         email,
         phone,
         city,
@@ -16,9 +17,9 @@ const PaperTwo = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
-        designation,
+        technicalSkill,
+        softSkill,
+        language,
         summary
     } = formData
 
@@ -44,8 +45,8 @@ const PaperTwo = ({ formData, submitted }) => {
     }
     return (
         <div className='my-10'>
-            <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left" id='cv'>
+            <div className=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="text-left" id='cv'>
                     <div className=''>
                         <div className='p-3'>
                             <h1 className='text-3xl font-semibold break-words text-red-900'>{name}</h1>
@@ -75,15 +76,20 @@ const PaperTwo = ({ formData, submitted }) => {
                             <h2 className='text-2xl font-bold text-red-900'>Projects</h2>
                             <div className=''>
                                 <p className='break-words'><span className='font-semibold '>Your Best Project:</span>  {projectName}</p>
-                                <p className='break-words font-semibold' ><a href={projectLink} target="_blank" className={`{projectLink ? 'text-blue':'text-black'}`}>Project Live Link</a></p>
+                                <p className='break-words'><span className='font-semibold '>Your Best Project:</span> {projectLink}</p>
                             </div>
                             <p className='break-words'><span className='font-semibold'>Project Details:</span>  {projectDescription}</p>
                         </div>
 
                         <div className="mt-5">
                             <h2 className="text-2xl font-bold text-red-900">Skills</h2>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
+                        </div>
+
+                        <div className="mt-5">
+                            <h2 className="text-2xl font-bold text-red-900">Language</h2>
+                            <p className='break-words'><span className='font-semibold'>Language:</span> {language} </p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +97,7 @@ const PaperTwo = ({ formData, submitted }) => {
             <div className='flex justify-center'>
                 <button
                     disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

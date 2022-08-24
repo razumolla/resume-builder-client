@@ -37,10 +37,10 @@ const PaymentCardThree = () => {
                             </div>
                         </div>
 
-                        <div class="card-actions justify-start">
+                        <div className="card-actions justify-start">
 
 
-                            <Link to="/pricing"><button class="btn btn-link text-secondary p-0"><span><FaChevronLeft /></span> Back</button></Link>
+                            <Link to="/pricing"><button className="btn btn-link text-secondary p-0"><span><FaChevronLeft /></span> Back</button></Link>
                         </div>
                     </div>
                 </div>

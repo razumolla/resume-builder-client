@@ -7,6 +7,8 @@ import CoverLetterDisplayThree from './CoverLetterDisplayThree';
 import CoverLetterDisplay4 from './CoverLetterDisplay4';
 import CoverLetterDisplayTwo from './CoverLetterDisplayTwo';
 import CoverLetterFinishit from './CoverLetterFinishit';
+import CoverLetterDisplay5 from './CoverLetterDisplay5';
+import CoverLetterDisplay6 from './CoverLetterDisplay6';
 
 const TemplateForm = () => {
     const [page, setPage] = useState(0);
@@ -105,16 +107,24 @@ const TemplateForm = () => {
                         submitted={submitted}
                         ></CoverLetterDisplay>
                        }
-                       { (id == '62fb63ed4af897cd1e199ca8' || id == '62fb63ed4af897cd1e199caa') && <CoverLetterDisplayTwo 
+                       { id == '62fb63ed4af897cd1e199ca8'  && <CoverLetterDisplayTwo 
                         formData={formData}
                         submitted={submitted}
                         ></CoverLetterDisplayTwo>
                        }
-                       { (id == '62fb63ed4af897cd1e199ca9' || id == '62fb63ed4af897cd1e199cab') && <CoverLetterDisplayThree 
+                       { id == '62fb63ed4af897cd1e199ca9'  && <CoverLetterDisplayThree 
                         formData={formData}
                         submitted={submitted}
                         ></CoverLetterDisplayThree>
                        }
+                       { id == '62fb63ed4af897cd1e199cab' && <CoverLetterDisplay6 
+                       formData={formData}
+                       submitted= {submitted}
+                       ></CoverLetterDisplay6> }
+                       { id == '62fb63ed4af897cd1e199caa' && <CoverLetterDisplay5  
+                       formData={formData}
+                       submitted= {submitted}
+                       ></CoverLetterDisplay5> }
                        { id == '62fb63ed4af897cd1e199cac'  && <CoverLetterDisplay4
                         formData={formData}
                         submitted={submitted}

@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
-const ResumePage = ({ formData }) => {
+const ResumePage = ({ formData, submitted }) => {
     const {
         name,
         title,
@@ -47,8 +47,8 @@ const ResumePage = ({ formData }) => {
     }
     return (
         <div className='my-10'>
-            <div class="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="card-body" id='cv'>
+            <div className="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="card-body" id='cv'>
                     <div className=' flex w-full px-2'>
                         <div className='text-left w-3/4 flex items-center'>
                             <div>
@@ -119,8 +119,8 @@ const ResumePage = ({ formData }) => {
             <div className='text-center'>
 
                 <button
-                    // disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
+                    disabled={submitted == false}
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>
                     Download PDF</button>
             </div>
         </div >

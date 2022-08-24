@@ -2,15 +2,11 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
-import {
-  FaUserGraduate,
-  FaBloggerB,
-  FaNewspaper,
-  FaCommentAlt,
-  FaInnosoft,
-  FaWindowRestore,
-} from "react-icons/fa";
+import Loding from "../Shared/Loding";
+import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore } from 'react-icons/fa';
+
 import useAdmin from "../hooks/useAdmin";
+
 const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
@@ -42,7 +38,7 @@ const Dashboard = () => {
         </div>
         <div className="drawer-side shadow-2xl mr-5 px-2">
           <label htmlFor="dash-sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+          <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content dark:bg-cyan-900 dark:text-white">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link
@@ -86,26 +82,32 @@ const Dashboard = () => {
                 Inspiring stories
               </Link>
             </li>
+
             <li>
-              <Link
-                to="/dashboard/myReview"
-                className="font-bold font-serif  shadow-inner mb-1"
-              >
+              <Link to="/dashboard/myInterview" className="font-bold font-serif  shadow-inner mb-1">
+                <FaNewspaper /> Mock Interview
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1">
                 <FaCommentAlt /> My Review
               </Link>
             </li>
 
+
+
             {admin && (
               <>
                 <li>
-                  <Link to="/dashboard/users" className="font-bold font-serif">
+                  <Link to="/dashboard/users" className="font-bold font-serif  shadow-inner mb-1">
                     All Users
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/dashboard/addtemplate"
-                    className="font-bold font-serif"
+                    className="font-bold font-serif  shadow-inner mb-1"
                   >
                     Add Template
                   </Link>
@@ -113,9 +115,17 @@ const Dashboard = () => {
                 <li>
                   <Link
                     to="/dashboard/blogmanage"
-                    className="font-bold font-serif"
+                    className="font-bold font-serif  shadow-inner mb-1"
                   >
-                  Blog Manage
+                    Blog Manage
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dashboard/blogmanage"
+                    className="font-bold font-serif  shadow-inner mb-1"
+                  >
+                    All Review
                   </Link>
                 </li>
               </>

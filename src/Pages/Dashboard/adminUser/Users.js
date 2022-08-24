@@ -6,29 +6,28 @@ import User from "./User";
 
 const Users = () => {
 
-
   const {
     data: users,
     isLoading,
   error,
-    
     refetch,
   } = useQuery("user", () =>
     fetch("http://localhost:5000/user")
     
     .then((res) => res.json())
+
   );
 
-  console.log(users, 'i find usr length')
   if (isLoading || error) {
     return <Loding />;
   }
-  console.log(users)
+ 
+
   return (
-    <div>
+    <div className="mb-2">
       <h2 className="text-3xl mt-2 mb-4 font-semibold">All Users:{users.length} </h2>
-      <div className="overflow-x-auto ml-8  pl-10">
-        <table className="table w-screen  table-cell shadow-lg mx-auto">
+      <div className="overflow-x-auto ml-8  pl-10 mb-4 pb-4">
+        <table className="table w-full  table-cell shadow-lg mx-auto">
           <thead>
             <tr>
               <th>Serial</th>
@@ -42,7 +41,8 @@ const Users = () => {
          {users?.map((user,index) => (
               <User key={user._id} user={user}
                refetch={refetch}
-               index ={index}>
+               index={index}
+               >
 
                </User>
          ))}

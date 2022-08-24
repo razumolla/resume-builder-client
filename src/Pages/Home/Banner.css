@@ -3,9 +3,16 @@
     border-radius: 20px;
     margin: 10px 10px 10px 10px;
 
+}
 
-
-
+@media only screen and (max-width: 600px) {
+    .Banner {
+        background: url(../../assets/images/imgAfruza/snimg2.jpg);
+        margin: 0px;
+        padding: 0px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
 }
 
 .CoverLetterBanner {

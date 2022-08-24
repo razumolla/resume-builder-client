@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 const User = ({ user, refetch ,index}) => {
   const [show, setShow] = useState([]);
 
+
   const { email, role} = user;
 
 // useEffect(() => {
@@ -11,6 +12,7 @@ const User = ({ user, refetch ,index}) => {
 //       .then((res) => res.json())
 //       .then((data) => setShow(data));
 //   }, []);
+
 
   const makedelete = (id) => {
     const proceed = window.confirm("are you want to delete?");
@@ -60,11 +62,14 @@ const User = ({ user, refetch ,index}) => {
   };
 
   return (
+
+   
     <tr>
-      <td>{index+1}</td>
+      
+      <td>{index+1} </td>
       <td className="font-bold">{email}</td>
       <td>
-        {role !== "admin" && (
+        {role !== "admin" &&  (
           <button onClick={makeAdmin} className="btn btn-xs  text-white bg-violet-600">
             Make Admin
           </button>
@@ -78,6 +83,7 @@ const User = ({ user, refetch ,index}) => {
 
       <ToastContainer />
     </tr>
+   
   );
 };
 
