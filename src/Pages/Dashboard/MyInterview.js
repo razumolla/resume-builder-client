@@ -36,7 +36,7 @@ const MyInterview = () => {
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='dark:text-black'>
                         {
                             appointments.map((appointment, index) => <tr>
                                 <th>{index + 1}</th>
