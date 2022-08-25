@@ -6,12 +6,6 @@ import auth from "../../firebase.init";
 const MyProfile = () => {
   const [user] = useAuthState(auth);
 
-  // const img = user.photoURL ? user.photoURL : <div class="avatar">
-  //   <div class="w-24 rounded-full">
-  //     <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg" />
-  //   </div>
-  // </div>;
-
 
 
   return (
@@ -20,8 +14,10 @@ const MyProfile = () => {
 
         <figure>
           <img src={user.photoURL ? user.photoURL :
+
             "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg"}
             className="w-20 rounded-sm" />
+
         </figure>
 
         <div className="card-body justify-center">

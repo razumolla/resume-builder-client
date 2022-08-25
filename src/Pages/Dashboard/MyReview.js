@@ -13,12 +13,10 @@ const MyReview = () => {
 
   const onSubmit = (data) => {
 
-
-
-
     data.img = user.photoURL ? user.photoURL :
 
-      "https://placeimg.com/192/192/people";
+      "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg"
+
 
     data.name = user.displayName;
     console.log(data, 'your data', data.img);
