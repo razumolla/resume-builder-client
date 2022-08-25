@@ -3,7 +3,7 @@ import React from "react";
 export default function Review({ review }) {
   const { name, img, rating, about } = review;
   return (
-    <div className="card shadow-xl lg:max-w-lg bg-blue-300 ">
+    <div className="card shadow-xl lg:max-w-lg bg-blue-300 dark:bg-cyan-900">
       <div className="card-body">
         <div className="flex flex-col items-center justify-between">
 
