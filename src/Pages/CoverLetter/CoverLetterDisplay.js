@@ -45,39 +45,39 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
     return (
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
             <div className="card  bg-gray-100  ">
-                <div className="card-body text-left ml-6 " id='coverLetter'>
+                <div className="card-body text-left ml-6 " id='coverLetter dark:text-black'>
                     <div>
                         <div>
                             <h1 className='text-4xl text-pink-600 font-bold break-words '>{name}</h1>
                             <h1 className='text-2xl mt-2 text-sky-900 mb-2 font-bold break-words'>{designation}</h1>
                         </div>
                         <div className='text-left'>
-                            <small className='font-semibold break-words'><i className="fa-solid fa-envelope "></i> {email}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-solid fa-phone-flip "></i> {phone}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-solid fa-location-dot"></i> {address}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
+                            <small className='font-semibold break-words'><i className="fa-solid fa-envelope dark:text-black"></i> <span className='dark:text-black'> {email} </span></small> <br />
+                            <small className='font-semibold break-words'><i className="fa-solid fa-phone-flip dark:text-black"></i> <span className='dark:text-black'>  {phone}</span></small> <br />
+                            <small className='font-semibold break-words'><i className="fa-solid fa-location-dot dark:text-black"></i> <span className='dark:text-black'>{address}</span></small> <br />
+                            <small className='font-semibold break-words'><i className="fa-brands fa-linkedin-in dark:text-black"></i><span className='dark:text-black'> {linkedin} </span></small> <br />
 
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
                     <div className='border border-spacing-28  border-pink-600 h-1 bg-pink-600'></div>
                     <div >
-                        <h2 className='text-xl font-bold break-words'>{dear}</h2>
-                        <p className='break-words'>{professionalCareer}
+                        <h2 className='text-xl font-bold break-words dark:text-black'><span className='dark:text-black'>{dear}</span> </h2>
+                        <p className='break-words dark:text-black'>{professionalCareer}
                         </p>
                     </div>
                     <div className='mt-3'>
-                        <p className='break-words'> {achievements}</p>
+                        <p className='break-words dark:text-black'> {achievements}</p>
                     </div>
                     <div className='mt-3'>
-                        <p className=' break-words'>{characteristics}
+                        <p className=' break-words dark:text-black'>{characteristics}
                         </p>
                     </div>
 
                     <div className="mt-10 mb-28 ">
 
-                        <p className='text-xl break-words mb-3'>Sincerely.</p>
-                        <p className='text-xl break-words'>{signatureName}</p>
+                        <p className='text-xl break-words mb-3 dark:text-black'>Sincerely.</p>
+                        <p className='text-xl break-words dark:text-black'>{signatureName}</p>
                     </div>
 
                     <div>

@@ -25,7 +25,7 @@ const DeleteConfirmation = ({ deletingAppointment, setDeletingAppointment, appoi
         <div>
             <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box">
+                <div className="modal-box dark:bg-cyan-900">
                     <h3 className="font-bold text-lg text-red-600">Are you sure to delete {interview} appointment!</h3>
                     <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
 
@@ -43,3 +43,4 @@ const DeleteConfirmation = ({ deletingAppointment, setDeletingAppointment, appoi
 };
 
 export default DeleteConfirmation;
+

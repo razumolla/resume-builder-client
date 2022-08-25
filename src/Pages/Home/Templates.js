@@ -13,7 +13,7 @@ const Templates = () => {
 
                 {/* bg-base-200 */}
 
-                <div className="card w-96 bg-blue-300  dark:bg-cyan-900 shadow-xl ml-1 lg:ml-5" >
+                <div className="card w-96 bg-blue-300  dark:bg-cyan-900 shadow-xl sm:m-auto lg:ml-5" >
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div className="card-body">
                         <div className="card-actions justify-between">
