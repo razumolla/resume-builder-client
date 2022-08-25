@@ -9,6 +9,7 @@ import Hired from './Hired';
 import Templates from './Templates';
 import WhyUs from './WhyUs';
 import Reviews from '../Login/Reviews/Reviews';
+// import Review from './Review';
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
         <Templates></Templates>
         <Benefits></Benefits>
         <Reviews />
+        {/* <Review /> */}
         <Hired></Hired>
         <Contact />
       </div>
