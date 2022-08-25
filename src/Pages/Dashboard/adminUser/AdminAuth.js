@@ -6,7 +6,7 @@ import auth from "../../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 import Loding from "../../Shared/Loding";
 
-export default function AdminAuth({ Children }) {
+export default function AdminAuth({ children }) {
   const [user, loading] = useAuthState(auth);
   const [admin, adminLoading] = useAdmin(user);
 
@@ -21,5 +21,5 @@ export default function AdminAuth({ Children }) {
     return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
   }
 
-  return Children;
+  return children;
 }

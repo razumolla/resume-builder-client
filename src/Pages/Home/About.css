@@ -1,26 +1,36 @@
-.heading{
-     width:40vw;
-     text-align:left;
-     margin-left:12rem;
+.heading {
+     width: 40vw;
+     text-align: left;
+     margin-left: 12rem;
      margin-top: -14rem !important;
-    margin-bottom: 0%;
+     margin-bottom: 0%;
 }
-.heading>p{
-     line-height:1.5rem;
+
+@media only screen and (max-width: 600px) {
+     .heading {
+          width: 90%;
+          text-align: center;
+          margin-left: 0rem;
+     }
 }
-.get:hover{
-background-color:indigo;
+
+.heading>p {
+     line-height: 1.5rem;
+}
+
+.get:hover {
+     background-color: indigo;
 }
 
 
-.image-about{
-     max-width: 360px ;
+.image-about {
+     max-width: 360px;
      /* margin-top:8rem !important; */
-    
-    
+
+
 }
 
 /* svg in about  */
-.svgg{
+.svgg {
      margin-top: -30px;
 }

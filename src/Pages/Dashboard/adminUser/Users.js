@@ -5,28 +5,32 @@ import Loding from "../../Shared/Loding";
 import User from "./User";
 
 const Users = () => {
+
   const {
     data: users,
     isLoading,
-    error,
+  error,
     refetch,
-  } = useQuery("u", () =>
-    fetch("http://localhost:5000/user").then((res) => res.json())
-  );
-console.log(error);
+  } = useQuery("user", () =>
+    fetch("http://localhost:5000/user")
+    
+    .then((res) => res.json())
 
-  console.log(users, users.length)
-  if (isLoading) {
+  );
+
+  if (isLoading || error) {
     return <Loding />;
   }
-  console.log(users)
+ 
+
   return (
-    <div>
-      <h2 className="text-2xl">All Users: {users.length}</h2>
-      <div className="overflow-x-auto">
-        <table className="table w-full">
+    <div className="mb-2">
+      <h2 className="text-3xl mt-2 mb-4 font-semibold">All Users:{users.length} </h2>
+      <div className="overflow-x-auto ml-8  pl-10 mb-4 pb-4">
+        <table className="table w-full  table-cell shadow-lg mx-auto">
           <thead>
             <tr>
+              <th>Serial</th>
               <th>Email</th>
               <th>Make Admin </th>
               <th>cancel user</th>
@@ -34,9 +38,14 @@ console.log(error);
           </thead>
           <tbody>
 
-            {users.length && users?.map((u) => (
-              <User key={u._id} u={u} refetch={refetch}></User>
-            ))}
+         {users?.map((user,index) => (
+              <User key={user._id} user={user}
+               refetch={refetch}
+               index={index}
+               >
+
+               </User>
+         ))}
           </tbody>
         </table>
       </div>
