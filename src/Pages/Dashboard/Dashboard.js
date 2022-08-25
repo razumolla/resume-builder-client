@@ -2,7 +2,6 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
-import Loding from "../Shared/Loding";
 import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore,FaUsers,FaEdit,FaBimobject, FaRegEnvelopeOpen } from 'react-icons/fa';
 
 import useAdmin from "../hooks/useAdmin";
@@ -36,7 +35,7 @@ const Dashboard = () => {
 
           <Outlet></Outlet>
         </div>
-        <div className="drawer-side shadow-2xl mr-7 px-3">
+        <div className="drawer-side shadow-2xl mr-7 px-1">
           <label htmlFor="dash-sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content dark:bg-cyan-900 dark:text-white">
             {/* <!-- Sidebar content here --> */}
