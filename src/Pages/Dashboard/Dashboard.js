@@ -100,24 +100,32 @@ const Dashboard = () => {
             {admin && (
               <>
                 <li>
-                  <Link to="/dashboard/users" className="font-bold font-serif">
+                  <Link to="/dashboard/users" className="font-bold font-serif  shadow-inner mb-1">
                     All Users
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/dashboard/addtemplate"
-                    className="font-bold font-serif"
+                    className="font-bold font-serif  shadow-inner mb-1"
                   >
                     Add Template
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/dashboard/blog"
-                    className="font-bold font-serif"
+                    to="/dashboard/blogmanage"
+                    className="font-bold font-serif  shadow-inner mb-1"
                   >
                     Blog Manage
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/dashboard/blogmanage"
+                    className="font-bold font-serif  shadow-inner mb-1"
+                  >
+                    All Review
                   </Link>
                 </li>
               </>
