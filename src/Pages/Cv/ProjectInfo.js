@@ -4,7 +4,7 @@ const ProjectInfo = ({ formData, setFormData }) => {
     return (
         <div>
             <ul className="steps bg-base-300 p-3  
-                        place-items-center dark:bg-cyan-900 w-full">
+                        place-items-center dark:bg-cyan-900 w-auto">
                 <li className="step step-primary mx-1 lg:mx-4 text-xs md:text-base" > <p className=''>PERSONAL</p> </li>
                 <li className="step step-primary mx-1 lg:mx-4 text-xs md:text-base "><p className='ml-5'>EDUCATION</p> </li>
                 <li className="step step-primary mx-1 lg:mx-4 text-xs md:text-base "> <p className='ml-2'>PROJECTS</p> </li>
