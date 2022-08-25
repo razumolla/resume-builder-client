@@ -19,7 +19,7 @@ body {
   color: var(--text-color);
   /* font-weight: var(--font-weight); */
   transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 .App-logo {
