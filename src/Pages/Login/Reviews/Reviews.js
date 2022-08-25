@@ -4,19 +4,19 @@ import Review from './Review';
 export default function Reviews() {
     const [testimonial, setTestimonial] = useState([]);
 
-     useEffect(() => {
-       fetch("http://localhost:5000/reviews")
-       .then(res => res.json())
-       .then(data => setTestimonial(data))
-     
-     }, [])
- 
+    useEffect(() => {
+        fetch("http://localhost:5000/reviews")
+            .then(res => res.json())
+            .then(data => setTestimonial(data))
+
+    }, [])
+
 
     return (
         <section className='mb-24 mt-20'>
             <div>
-                <h4 className="text-4xl pb-3 font-bold text-primary text-center"> Our Testimonials</h4>
-                <h2 className='text-3xl font-serif font-medium text-primary my-3'>What our Consumer say?</h2>
+                <h4 className="text-4xl mb-10 font-bold text-primary text-center"> Our Testimonials</h4>
+
             </div>
             <div className='flex justify-between'>
 

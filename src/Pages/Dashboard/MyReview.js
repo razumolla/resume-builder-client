@@ -4,12 +4,22 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 
+
 const MyReview = () => {
+
   const [user] = useAuthState(auth);
   const { register, handleSubmit, reset } = useForm();
 
+
   const onSubmit = (data) => {
-    data.img = user.photoURL;
+
+
+
+
+    data.img = user.photoURL ? user.photoURL :
+
+      "https://placeimg.com/192/192/people";
+
     data.name = user.displayName;
     console.log(data, 'your data', data.img);
 
