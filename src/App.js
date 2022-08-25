@@ -55,6 +55,8 @@ import Users from './Pages/Dashboard/adminUser/Users';
 import CLBlogDetails from './Pages/Blogs/CLBlogDetails';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
+import Reviews from './Pages/Login/Reviews/Reviews';
+import Review from './Pages/Login/Reviews/Review';
 
 
 function App() {
@@ -145,6 +147,9 @@ function App() {
          
           <Route  path ="blogmanage" element={<AdminAuth>
         <BlogManage />
+          </AdminAuth>}/>
+          <Route  path ="allreview" element={<AdminAuth>
+        <Reviews />
           </AdminAuth>}/>
 
           <Route path="users" element={<AdminAuth>
