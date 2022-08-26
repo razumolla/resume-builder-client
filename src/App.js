@@ -63,35 +63,50 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/resume/form" element={<ResumeForm />} ></Route>
+        {/* <Route path="/resume/form" element={<ResumeForm />} ></Route> */}
         <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
         <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
-        <Route path="/cv/form" element={<FormCv></FormCv>}></Route>
+        {/* <Route path="/cv/form" element={<FormCv></FormCv>}></Route> */}
+
+
+
+
+        {/* normal route */}
+        <Route path="/resume" element={
+          <Resume />
+        }></Route>
+        <Route path="/cv" element={
+          <Templates></Templates>
+        } />
+        <Route path="/coverLetter" element={
+          <CoverLetter></CoverLetter>
+        } />
+
+
+
+        {/* require route */}
+        <Route path="resume/form" element={
+          <RequireAuth>
+            <ResumeForm></ResumeForm>
+          </RequireAuth>
+        } />
+        <Route path="cv/form" element={
+          <RequireAuth>
+            <FormCv></FormCv>
+          </RequireAuth>
+        } />
 
         <Route
-          path="/templateForm/:id"
-          element={<TemplateForm />}
-        ></Route>
-      
-
-        <Route
-          path="resume"
+          path="templateForm/:id"
           element={
             <RequireAuth>
-              <Resume />
+              <TemplateForm />
             </RequireAuth>
-          }></Route>
 
-        <Route path="cv" element={
-          <RequireAuth>
-            <Templates></Templates>
-          </RequireAuth>
-        } />
-        <Route path="coverLetter" element={
-          <RequireAuth>
-            <CoverLetter></CoverLetter>
-          </RequireAuth>
-        } />
+          }
+        ></Route>
+
+
 
         <Route path="blog" element={
           <RequireAuth>
@@ -133,27 +148,27 @@ function App() {
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
         </Route>
 
-        
+
         {/* pricing */}
         <Route path='/pricing' element={<PricingCard></PricingCard>}></Route>
         <Route path='paymentCardOne' element={
-        <RequireAuth>
-          <PaymentCardOne></PaymentCardOne>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardOne></PaymentCardOne>
+          </RequireAuth>
         }></Route>
         <Route path='paymentCardTwo' element={
-        <RequireAuth>
-          <PaymentCardTwo></PaymentCardTwo>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardTwo></PaymentCardTwo>
+          </RequireAuth>
         }></Route>
         <Route path='paymentCardThree' element={
-        <RequireAuth>
-          <PaymentCardThree></PaymentCardThree>
-        </RequireAuth>
+          <RequireAuth>
+            <PaymentCardThree></PaymentCardThree>
+          </RequireAuth>
         }></Route>
-        
 
-       
+
+
         {/* interview question page start */}
         <Route path="/interviewQuestions" element={<InterviewQuestions />} />
         <Route path="/html" element={<InterviewQuesAnsHtml />} />

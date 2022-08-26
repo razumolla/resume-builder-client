@@ -7,10 +7,10 @@ const Templates = () => {
     console.log(templates);
     useEffect(() => {
         fetch('http://localhost:5000/cvPhoto',{
-            method:'GET',
+            /*  method:'GET',
             headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
-            }
+            } */
         })
             .then(res => res.json())
             .then(data => {
