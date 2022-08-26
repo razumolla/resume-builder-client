@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import EducationalInfo from './EducationalInfo';
 import OtherInfo from './OtherInfo';
 import PersonalInfo from './PersonalInfo';
 import { toast } from 'react-toastify';
-// import { Link } from 'react-router-dom';
 import ProjectInfo from './ProjectInfo';
 import Paper from './Paper';
-import { useForm } from "react-hook-form";
+import PaperTwo from './PaperTwo';
+import PaperThree from './PaperThree';
 
 
 
 const FormCv = () => {
-
+    const { id } = useParams();
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
+        designation: '',
         email: '',
         phone: '',
         city: '',
@@ -25,8 +27,9 @@ const FormCv = () => {
         projectName: '',
         projectLink: '',
         projectDescription: '',
-        skillOne: '',
-        skillTwo: '',
+        technicalSkill: '',
+        softSkill: '',
+        language: '',
         summary: ''
     })
 
@@ -52,22 +55,21 @@ const FormCv = () => {
 
     const handleInfo = e => {
         e.preventDefault();
-        // alert('submitted');
-        setSubmitted(!submitted);
         console.log(formData);
 
-        // fetch('http://localhost:5000/cvInfo', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //     },
-        //     body: JSON.stringify(formData),
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        // toast('Succefully added');
-        //     })
+        fetch('http://localhost:5000/cvInfo', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setSubmitted(!submitted);
+                toast.success('Succefully submitted!');
+            })
 
 
 
@@ -106,9 +108,23 @@ const FormCv = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-2/3'>
-                    <div class="bg-gray-300 rounded-xl p-2">
-                        <Paper formData={formData}
-                            submitted={submitted}></Paper>
+                    <div className="bg-gray-300 rounded-xl p-2">
+                        {/* <Paper formData={formData} submitted={submitted}></Paper> */}
+
+                        {/* condition for template 1 */}
+                        {(id == '62ec2ecba3816df2a607d799' || id == '62ec2ecba3816df2a607d79d') &&
+                            <PaperTwo formData={formData} submitted={submitted}></PaperTwo>
+                        }
+
+                        {/* condition for template 2 */}
+                        {(id == '62ec2ecba3816df2a607d79a' || id == '62ec2ecba3816df2a607d79c') &&
+                            <PaperThree formData={formData} submitted={submitted}></PaperThree>
+                        }
+
+                        {/* condition for template 3*/}
+                        {(id == '62ec2ecba3816df2a607d79b' || id == '62ec2ecba3816df2a607d79e') &&
+                            <Paper formData={formData} submitted={submitted}></Paper>
+                        }
                     </div>
                 </div>
             </div>

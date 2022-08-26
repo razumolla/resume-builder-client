@@ -25,23 +25,15 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
+                    <Link to="/resume/form2"></Link>
+                </div>
+
+                <div className="container">
+                    <img src={Resume3} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
                     <Link to="/resume/form1"></Link>
-                </div>
-
-                <div className="container">
-                    <img src={Resume3} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/resume/form2"></Link>
-                </div>
-
-                <div className="container">
-                    <img src={Resume3} alt="" className='w-3/4' />
-                    <figcaption>
-                        <h3>Create Now</h3>
-                    </figcaption>
-                    <Link to="/resume/form2"></Link>
                 </div>
 
                 <div className="container">
@@ -49,8 +41,17 @@ const Resume = () => {
                     <figcaption>
                         <h3>Create Now</h3>
                     </figcaption>
+                    <Link to="/resume/form2"></Link>
+                </div>
+
+                <div className="container">
+                    <img src={Resume3} alt="" className='w-3/4' />
+                    <figcaption>
+                        <h3>Create Now</h3>
+                    </figcaption>
                     <Link to="/resume/form1"></Link>
                 </div>
+
 
                 <div className="container">
                     <img src={Resume1} alt="" className='w-3/4' />
@@ -59,6 +60,7 @@ const Resume = () => {
                     </figcaption>
                     <Link to="/resume/form"></Link>
                 </div>
+
 
 
             </div >

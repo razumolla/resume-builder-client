@@ -33,7 +33,7 @@ const SignUp = () => {
     }
 
     if (token) {
-        
+
         navigate('/home')
 
 
@@ -45,34 +45,30 @@ const SignUp = () => {
 
         await createUserWithEmailAndPassword(data.email, data.password)
         // await updateProfile({ displayNamef: data.firstName, displayNamel: data.lastName })
-        await updateProfile({ displayName:data.name })
+        await updateProfile({ displayName: data.name })
         // navigate('/home')
         // console.log(data)
-        
+
     };
     return (
         <div className='mt-10'>
             <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
             <div className='flex justify-center items-center mt-5 '>
 
-                <div className="card w-96 bg-white shadow-xl mb-5 ">
-
+                <div className="card w-96 bg-white shadow-xl mb-5 dark:bg-cyan-900 ">
 
                     <div className="card-body my">
 
-
-
                         <form onSubmit={handleSubmit(onSubmit)}>
-
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Your Name</span>
+                                    <span className="label-text dark:text-white">Your Name</span>
                                 </label>
 
                                 <input type="text"
                                     placeholder="Your Name"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs dark:text-black"
                                     {...register("name", {
                                         required: {
                                             value: true,
@@ -83,14 +79,14 @@ const SignUp = () => {
                                 />
 
                                 <label className="label">
-                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                    {errors.name?.type === 'required' && <span className="label-text-alt text-red-500 dark:text-black">{errors.name.message}</span>}
 
 
                                 </label>
                             </div>
 
 
-                           {/*  <div className="form-control w-full max-w-xs">
+                            {/*  <div className="form-control w-full max-w-xs">
                                 <label className="label">
                                     <span className="label-text">Last Name</span>
                                 </label>
@@ -117,12 +113,12 @@ const SignUp = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Email</span>
+                                    <span className="label-text dark:text-white">Email</span>
                                 </label>
 
                                 <input type="email"
                                     placeholder="Your Eamil"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs dark:text-black"
                                     {...register("email", {
                                         required: {
                                             value: true,
@@ -130,7 +126,7 @@ const SignUp = () => {
                                         },
                                         pattern: {
                                             value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                            message: 'Provide a valid Eamil'
+                                            message: 'Provide a valid Email'
                                         }
                                     })}
                                 />
@@ -145,11 +141,11 @@ const SignUp = () => {
 
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text dark:text-white">Password</span>
                                 </label>
                                 <input type="password"
                                     placeholder="Your Password"
-                                    className="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs dark:text-black"
                                     {...register("password", {
                                         required: {
                                             value: true,

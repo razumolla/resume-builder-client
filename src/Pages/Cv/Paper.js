@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 const Paper = ({ formData, submitted }) => {
     const {
         name,
+        designation,
         email,
         phone,
         city,
@@ -15,8 +16,9 @@ const Paper = ({ formData, submitted }) => {
         projectName,
         projectLink,
         projectDescription,
-        skillOne,
-        skillTwo,
+        technicalSkill,
+        softSkill,
+        language,
         summary
     } = formData
 
@@ -28,8 +30,8 @@ const Paper = ({ formData, submitted }) => {
             scale: 5
         }).then(canvas => {
             // Few necessary setting options
-            var imgWidth = 208;
-            var imgHeight = canvas.height * imgWidth / canvas.width;
+            const imgWidth = 208;
+            const imgHeight = canvas.height * imgWidth / canvas.width;
             alert(imgHeight)
             const contentDataURL = canvas.toDataURL('image/png')
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
@@ -43,17 +45,18 @@ const Paper = ({ formData, submitted }) => {
 
     return (
         <div className='my-10'>
-            <div class=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
-                <div class="text-left" id='cv'>
+            <div className=" w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">
+                <div className="text-left" id='cv'>
                     <div className='bg-accent'>
                         <div className='p-3 text-white'>
                             <h1 className='text-3xl font-semibold break-words'>{name}</h1>
+                            <h2 className='text-xl font-semibold '>{designation}</h2>
                             <p className='font-semibold break-words'>Email: {email}</p>
                             <p className='font-semibold break-words'>Phone: {phone}</p>
                             <p className='font-semibold break-words'>Address: {city}</p>
                         </div>
                     </div>
-                    <div className='m-5 pb-5'>
+                    <div className='m-5 pb-5 dark:text-black'>
                         <div className=''>
                             <h2 className='text-2xl font-bold'>Summary</h2>
                             <p className='max-w-lg break-words w-full'>{summary}</p>
@@ -81,8 +84,15 @@ const Paper = ({ formData, submitted }) => {
 
                         <div className="mt-5">
                             <h2 className="text-2xl font-bold">Skills</h2>
-                            <p className='break-words'><span className='font-semibold'>Skill-1:</span> {skillOne} </p>
-                            <p className='break-words'><span className='font-semibold'>Skill-2:</span> {skillTwo} </p>
+                            <p className='break-words'><span className='font-semibold'>technicalSkill:</span> {technicalSkill} </p>
+                            <p className='break-words'><span className='font-semibold'>softSkill:</span> {softSkill} </p>
+                        </div>
+
+                        <div className='divider bg-accent mt-5' style={{ height: '1px' }}></div>
+
+                        <div className="mt-5">
+                            <h2 className="text-2xl font-bold">Language</h2>
+                            <p className='break-words'><span className='font-semibold'>Language:</span> {language} </p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +100,7 @@ const Paper = ({ formData, submitted }) => {
             <div className='flex justify-center'>
                 <button
                     disabled={submitted == false}
-                    class="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
+                    className="btn btn-wide mt-8 btn-primary font-bold" onClick={generatePdf}>Dowload as pdf</button>
             </div>
         </div >
     );

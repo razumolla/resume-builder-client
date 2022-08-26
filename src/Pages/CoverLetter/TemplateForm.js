@@ -7,10 +7,12 @@ import CoverLetterDisplayThree from './CoverLetterDisplayThree';
 import CoverLetterDisplay4 from './CoverLetterDisplay4';
 import CoverLetterDisplayTwo from './CoverLetterDisplayTwo';
 import CoverLetterFinishit from './CoverLetterFinishit';
+import CoverLetterDisplay5 from './CoverLetterDisplay5';
+import CoverLetterDisplay6 from './CoverLetterDisplay6';
 
 const TemplateForm = () => {
     const [page, setPage] = useState(0);
-    const {id} = useParams();
+    const { id } = useParams();
     const [formData, setFormData] = useState({
         name: '',
         designation: '',
@@ -24,13 +26,13 @@ const TemplateForm = () => {
         achievements: '',
         characteristics: '',
         signatureName: '',
-        
+
     })
- 
+
     const [submitted, setSubmitted] = useState(false);
     // console.log(formData);
     const handleInfo = (e) => {
-        e.preventDefault();        
+        e.preventDefault();
         setSubmitted(!submitted);
         alert('submitted');
         console.log(formData);
@@ -68,14 +70,23 @@ const TemplateForm = () => {
 
 
     return (
-        <div className='mt-16  lg:p-5'>
-            <div className='lg:flex md:flex-col sm:flex-col lg:flex-row  gap-2 mb-3 '>
-                <div className='w-full sm:w-full md:w-2/5'>
-                    <div className='sm:bg-gray-300 lg:bg-gray-300 rounded-2xl p-2'>
-                        <div className='form-container sm:bg-gray-300 lg:bg-gray-300 rounded-2xl '>
-                            <div>
-                                {PageDisplay()}
-                                <div className="footer flex justify-between mt-5">
+        <div className='mt-24 mb-16 m-10'>
+            <div className='lg:flex flex-col md:flex-row gap-5 '>
+
+
+                <div className="w-full md:w-5/6 lg:w-96  sm:my-2 md:my-2 md:m-auto">
+
+                    <div className="col-start-1 col-end-12 ... bg-gray-300 rounded-xl">
+
+
+                        <div className='py-2 '>
+
+                            <div className="form-container mx-auto">
+
+                                <div className="body">
+                                    {PageDisplay()}
+                                </div>
+                                <div className="footer flex justify-between mt-5 p-4">
 
                                     <button
                                         disabled={page == 0}
@@ -83,45 +94,56 @@ const TemplateForm = () => {
                                             setPage((currPage) => currPage - 1)
                                         }}>Prev</button>
 
-                                    {page === pageTitles.length - 1 ?
-                                        <button className='btn btn-primary pt-4' onClick={handleInfo}>Submit</button>
+                                    {page == pageTitles.length - 1 ? <button className='btn btn-primary pt-4' onClick={handleInfo}>Submit</button>
                                         :
-
                                         <button
                                             className='btn btn-primary pt-4' onClick={() => {
                                                 setPage((currPage) => currPage + 1)
-
-                                            }}>Next</button>
+                                            }}>
+                                            Next
+                                        </button>
                                     }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full md:w-2/3'>
-                    <div className='bg-gray-100 rounded-xl p-2'>
-                       { id == '62fb63ed4af897cd1e199ca7' && <CoverLetterDisplay 
-                        formData={formData}
-                        submitted={submitted}
-                        ></CoverLetterDisplay>
-                       }
-                       { (id == '62fb63ed4af897cd1e199ca8' || id == '62fb63ed4af897cd1e199caa') && <CoverLetterDisplayTwo 
-                        formData={formData}
-                        submitted={submitted}
-                        ></CoverLetterDisplayTwo>
-                       }
-                       { (id == '62fb63ed4af897cd1e199ca9' || id == '62fb63ed4af897cd1e199cab') && <CoverLetterDisplayThree 
-                        formData={formData}
-                        submitted={submitted}
-                        ></CoverLetterDisplayThree>
-                       }
-                       { id == '62fb63ed4af897cd1e199cac'  && <CoverLetterDisplay4
-                        formData={formData}
-                        submitted={submitted}
-                        ></CoverLetterDisplay4>
-                       }
 
-                    
+
+                                </div>
+                            </div >
+                        </div>
+
+                    </div>
+                </div >
+
+                <div className='w-full md:w-full lg:w-2/3 md:m-auto'>
+                    <div className=' bg-gray-200 rounded-xl p-3 '>
+                        {id == '62fb63ed4af897cd1e199ca7' && <CoverLetterDisplay
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplay>
+                        }
+                        {id == '62fb63ed4af897cd1e199ca8' && <CoverLetterDisplayTwo
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplayTwo>
+                        }
+                        {id == '62fb63ed4af897cd1e199ca9' && <CoverLetterDisplayThree
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplayThree>
+                        }
+                        {id == '62fb63ed4af897cd1e199cab' && <CoverLetterDisplay6
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplay6>}
+                        {id == '62fb63ed4af897cd1e199caa' && <CoverLetterDisplay5
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplay5>}
+                        {id == '62fb63ed4af897cd1e199cac' && <CoverLetterDisplay4
+                            formData={formData}
+                            submitted={submitted}
+                        ></CoverLetterDisplay4>
+                        }
+
+
 
                     </div>
                 </div>

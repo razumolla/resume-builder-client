@@ -9,8 +9,8 @@ const PaymentCardTwo = () => {
             <h1 className='pt-5 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
 
             <div className='flex justify-center items-center '>
-                <div className="card w-96 bg-white shadow-2xl shadow-gray-500 mb-5">
-                    <div className="card-body">
+                <div className="card w-96 bg-white shadow-2xl shadow-gray-500 mb-5 p-2">
+                    <div className="card-body dark:bg-cyan-900">
                         <div className='flex justify-between'>
                             <div className='text-start'>
                                 <h3 className='text-1xl font-bold text-secondary'>Premium Account:</h3>
@@ -36,10 +36,10 @@ const PaymentCardTwo = () => {
                             </div>
                         </div>
 
-                        <div class="card-actions justify-start">
+                        <div className="card-actions justify-start">
 
 
-                            <Link to="/pricing"><button class="btn btn-link text-secondary p-0"><span><FaChevronLeft /></span> Back</button></Link>
+                            <Link to="/pricing"><button className="btn btn-link text-secondary p-0"><span><FaChevronLeft /></span> Back</button></Link>
                         </div>
                     </div>
                 </div>
