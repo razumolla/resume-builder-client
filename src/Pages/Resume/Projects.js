@@ -36,14 +36,10 @@ const Projects = ({ formData, setFormData }) => {
                         Please enter project link
                     </p>
                 </div>
-
                 <div className=''>
-                    {/* textarea textarea-primary */}
-                    <textarea className="textarea textarea-primary  text-width dark:text-black break-words"
-                        // 20rem !important
-                        // width: '20rem !important' 
+                    <textarea className="textarea textarea-primary text-width w-72 md:w-80 lg:w-80  dark:text-black break-words"
                         style={
-                            { width: '16rem !important' }
+                            { width: '20rem !important' }
                         } placeholder="Write some description of your project" name="features" value={formData.features} onChange={(e) => setFormData({ ...formData, features: e.target.value })}></textarea>
 
                 </div>
@@ -68,7 +64,7 @@ const Projects = ({ formData, setFormData }) => {
                 <div className=''>
                     <textarea className="textarea textarea-primary text-width w-72 md:w-80 lg:w-80  dark:text-black break-words"
                         style={
-                            {}
+                            { width: '20rem !important' }
                         } placeholder="Write some description of your project" name="features2" value={formData.features2} onChange={(e) => setFormData({ ...formData, features2: e.target.value })}></textarea>
 
                 </div>

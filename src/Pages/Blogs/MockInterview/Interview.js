@@ -5,8 +5,8 @@ const Interview = ({ interview, setMock }) => {
     return (
         <div>
             <div class="card w-80 lg:w-96 lg:max-w-lg bg-base-200 shadow-xl mx-auto mb-10 text-center">
-                <div class="card-body">
-                    <h2 class="text-2xl text-accent font-bold">{name}</h2>
+                <div class="card-body dark:bg-cyan-900">
+                    <h2 class="text-2xl text-accent font-bold dark:text-white">{name}</h2>
                     {
                         slots.slice(0, 2).map(slot => <p className='text-lg font-semibold'>{
                             slot.length ? <span>{slot}</span>
