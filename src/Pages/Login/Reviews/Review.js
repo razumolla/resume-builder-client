@@ -1,9 +1,15 @@
 import React from "react";
+import './Review.css';
 
 export default function Review({ review }) {
   const { name, img, rating, about } = review;
   return (
+
+       
+         
+
     <div className="card shadow-xl lg:max-w-lg bg-blue-300 dark:bg-cyan-900">
+
       <div className="card-body">
         <div className="flex flex-col items-center justify-between">
 
@@ -17,6 +23,7 @@ export default function Review({ review }) {
           </div>
           <h4 className="text-2xl font-serif font-semibold mt-4">{name}</h4>
         </div>
+
         <div className=" ml-5">
           <p className="text-left">
             {about}
@@ -26,5 +33,6 @@ export default function Review({ review }) {
 
       </div >
     </div >
+
   );
 }
