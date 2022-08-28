@@ -9,19 +9,19 @@ const Users = () => {
   const {
     data: users,
     isLoading,
-  error,
+    error,
     refetch,
   } = useQuery("user", () =>
-    fetch("http://localhost:5000/user")
-    
-    .then((res) => res.json())
+    fetch("https://resume-builder-6p08.onrender.com/user")
+
+      .then((res) => res.json())
 
   );
 
   if (isLoading || error) {
     return <Loding />;
   }
- 
+
 
   return (
     <div className="mb-2">
@@ -38,14 +38,14 @@ const Users = () => {
           </thead>
           <tbody>
 
-         {users?.map((user,index) => (
+            {users?.map((user, index) => (
               <User key={user._id} user={user}
-               refetch={refetch}
-               index={index}
-               >
+                refetch={refetch}
+                index={index}
+              >
 
-               </User>
-         ))}
+              </User>
+            ))}
           </tbody>
         </table>
       </div>

@@ -5,7 +5,7 @@ export default function Reviews() {
     const [testimonial, setTestimonial] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://resume-builder-6p08.onrender.com/reviews")
             .then(res => res.json())
             .then(data => setTestimonial(data))
 

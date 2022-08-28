@@ -5,7 +5,7 @@ const CoverLetterAll = () => {
     const [coverLetterBlogs, setCoverLetterBlogs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/coverLetterBlog')
+        fetch('https://resume-builder-6p08.onrender.com/coverLetterBlog')
             .then(res => res.json())
             .then(data => setCoverLetterBlogs(data))
     }, [])

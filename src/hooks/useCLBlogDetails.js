@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const useCLBlogDetails = cLBlogId => {
-    const [cLBlog, setCLBlog]= useState({});
+    const [cLBlog, setCLBlog] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/coverLetterBlog/${cLBlogId}`
+        const url = `https://resume-builder-6p08.onrender.com/coverLetterBlog/${cLBlogId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setCLBlog(data))

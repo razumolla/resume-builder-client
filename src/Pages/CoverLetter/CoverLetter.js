@@ -9,7 +9,7 @@ const CoverLetter = () => {
     const [coverLetterTemps, setCoverLetterTemp] = useState([]);
     console.log(coverLetterTemps);
     useEffect(() => {
-        fetch('http://localhost:5000/coverLetterPhoto')
+        fetch('https://resume-builder-6p08.onrender.com/coverLetterPhoto')
             .then(res => res.json())
             .then(data => setCoverLetterTemp(data))
 
