@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Review from "./Review";
 import "./Review.css";
+// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
+
+// import required modules
+import { EffectCoverflow, Pagination,Autoplay,Navigation } from "swiper";
 
 export default function Reviews() {
   const [testimonial, setTestimonial] = useState([]);
@@ -25,11 +36,33 @@ export default function Reviews() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"> */}
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+     
+        pagination={{
+          clickable: true,
+        }}
+        slidesPerView={"auto"}
+        navigation={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        modules={[EffectCoverflow, Pagination,Navigation]}
+        className="mySwiper"
+      >
         {testimonial.map((review) => (
-          <Review key={review._id} review={review}></Review>
+          <SwiperSlide key={review._id}>
+            <Review key={review._id} review={review}></Review>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }
