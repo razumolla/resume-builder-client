@@ -7,6 +7,7 @@ import whatsapp from '../../assets/images/whatsapp.png';
 import pathao from '../../assets/images/pathao.png';
 import mic from '../../assets/images/microsoft.png';
 import walton from '../../assets/images/walton.png';
+import air from '../../assets/images/air-bnb.png';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -48,6 +49,9 @@ const Hired = () => {
                 <SwiperSlide className='microsoft-png'><a href="https://www.Microsoft.com" target='_blank'><img src={mic} alt="" /></a></SwiperSlide>
 
                 <SwiperSlide className='walton-img'><a href="https://www.amazon.com" target='_blank'><img src={walton} alt="" className="w-30" /></a></SwiperSlide>
+
+
+                <SwiperSlide className='air-img'><a href="https://www.amazon.com" target='_blank'><img src={air} alt="" className="w-30" /></a></SwiperSlide>
             </Swiper >
         </div >
     );
