@@ -79,8 +79,6 @@ const ResumeForm1 = () => {
 
     return (
 
-
-
         <div className='mt-24 mb-16 m-10 '>
             <div className='lg:flex flex-col md:flex-row gap-5'>
                 <div className="w-full md:w-5/6 lg:w-96  sm:my-2 md:my-2 md:m-auto">
