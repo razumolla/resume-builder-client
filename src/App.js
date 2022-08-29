@@ -56,7 +56,7 @@ import CLBlogDetails from './Pages/Blogs/CLBlogDetails';
 import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
 import Reviews from './Pages/Login/Reviews/Reviews';
-import Review from './Pages/Login/Reviews/Review';
+
 
 
 function App() {
@@ -143,14 +143,14 @@ function App() {
           <Route path="addCoverLetterBlog" element={<AddCoverLetterBlog />} />
           <Route path="addPersonalDevBlog" element={<AddPersonalDevBlog />} />
           <Route path="addInspiringStoriesBlog" element={<AddInspiringBlog />} />
-          <Route path="updateinfo" element={<UpdateUserInfo />}/>
-         
-          <Route  path ="blogmanage" element={<AdminAuth>
-        <BlogManage />
-          </AdminAuth>}/>
-          <Route  path ="allreview" element={<AdminAuth>
-        <Reviews />
-          </AdminAuth>}/>
+          <Route path="updateinfo" element={<UpdateUserInfo />} />
+
+          <Route path="blogmanage" element={<AdminAuth>
+            <BlogManage />
+          </AdminAuth>} />
+          <Route path="allreview" element={<AdminAuth>
+            <Reviews />
+          </AdminAuth>} />
 
           <Route path="users" element={<AdminAuth>
             <Users />
