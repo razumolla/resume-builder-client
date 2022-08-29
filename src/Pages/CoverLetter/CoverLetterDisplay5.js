@@ -42,7 +42,7 @@ const CoverLetterDisplay5 = ({ formData, submitted }) => {
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
             <div className="card  bg-gray-100  ">
                 <div className="card-body text-left ml-6 " id='coverLetter'>
-                    <div>
+                    <div className='dark:text-black'>
                         <div>
                             <h1 className='text-4xl text-gray-600 font-bold break-words '>{name}</h1>
                             <h1 className='text-2xl mt-2 text-gray-600 mb-2 font-bold break-words'>{designation}</h1>
@@ -56,25 +56,29 @@ const CoverLetterDisplay5 = ({ formData, submitted }) => {
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
-                    <div className='border border-spacing-28  border-gray-400 h-1 bg-gray-300 border-none'></div>
-                    <div >
-                        <h2 className='text-xl font-bold break-words'>{dear}</h2>
-                        <p className='break-words'>{professionalCareer}
-                        </p>
-                    </div>
-                    <div className='mt-3'>
-                        <p className='break-words'> {achievements}</p>
-                    </div>
-                    <div className='mt-3'>
-                        <p className=' break-words'>{characteristics}
-                        </p>
+
+                    <div className='dark:text-black'>
+                        <div className='border border-spacing-28  border-gray-400 h-1 bg-gray-300 border-none'></div>
+                        <div >
+                            <h2 className='text-xl font-bold break-words'>{dear}</h2>
+                            <p className='break-words'>{professionalCareer}
+                            </p>
+                        </div>
+                        <div className='mt-3'>
+                            <p className='break-words'> {achievements}</p>
+                        </div>
+                        <div className='mt-3'>
+                            <p className=' break-words'>{characteristics}
+                            </p>
+                        </div>
+
+                        <div className="mt-10 mb-28 ">
+
+                            <p className='text-xl break-words mb-3'>Sincerely.</p>
+                            <p className='text-xl break-words'>{signatureName}</p>
+                        </div>
                     </div>
 
-                    <div className="mt-10 mb-28 ">
-
-                        <p className='text-xl break-words mb-3'>Sincerely.</p>
-                        <p className='text-xl break-words'>{signatureName}</p>
-                    </div>
                 </div>
             </div>
             <div className='py-4 ml-8'>

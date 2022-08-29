@@ -22,39 +22,7 @@ const Hired = () => {
     return (
         <div className='w-full h-52'>
             <h1 className='text-center text-4xl font-bold text-primary mt-10'>Companies Loves Us</h1>
-            {/* <div className='flex justify-center gap-10 my-10'>
-                <div className="group" >
-                    <a href="https://www.google.com"><img src={google} alt="" className="" /></a>
-                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
-                        <span className='text-secondary text-center'>Hired by Google</span>
-                    </div>
-                </div>
-                <div className="group" >
-                    <a href="https://www.amazon.com"><img src={amazon} alt="" className="" /></a>
-                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
-                        <span className='text-secondary'>Hired by Amazon</span>
-                    </div>
-                </div>
 
-                <div className="group" >
-                    <div> <a href="https://www.apple.com/"><img src={apple} alt="" className="" /></a></div>
-                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full ">
-                        <span className='text-secondary'>Hired by Apple</span>
-                    </div>
-                </div>
-
-                <div className="group">
-                    <div> <a href="https://web.facebook.com/"><img src={facebook} alt="" className="" /></a></div>
-                    <div className="opacity-0 h-50 group-hover:opacity-100 group-hover:h-full text-center">
-                        <span className='text-secondary'>Hired by Facebook</span>
-                    </div>
-                </div>
-
-
-
-
-
-            </div> */}
 
             <Swiper
                 slidesPerView={3}
@@ -80,11 +48,8 @@ const Hired = () => {
                 <SwiperSlide className='microsoft-png'><a href="https://www.Microsoft.com" target='_blank'><img src={mic} alt="" /></a></SwiperSlide>
 
                 <SwiperSlide className='walton-img'><a href="https://www.amazon.com" target='_blank'><img src={walton} alt="" className="w-30" /></a></SwiperSlide>
-            </Swiper>
-
-
-
-        </div>
+            </Swiper >
+        </div >
     );
 };
 
