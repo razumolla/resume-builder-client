@@ -6,7 +6,7 @@ const Templates = () => {
     const [templates, setTemplates] = useState([]);
     console.log(templates);
     useEffect(() => {
-        fetch('http://localhost:5000/cvPhoto'
+        fetch('https://resume-builder-6p08.onrender.com/cvPhoto'
             , {
                 method: 'GET',
                 headers: {

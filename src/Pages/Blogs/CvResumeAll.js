@@ -5,7 +5,7 @@ const CvResumeAll = () => {
     const [resumeBlogs, setResumeBlogs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/cvResumeBlog')
+        fetch('https://resume-builder-6p08.onrender.com/cvResumeBlog')
             .then(res => res.json())
             .then(data => setResumeBlogs(data))
     }, [])

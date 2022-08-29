@@ -57,7 +57,7 @@ const FormCv = () => {
         e.preventDefault();
         console.log(formData);
 
-        fetch('http://localhost:5000/cvInfo', {
+        fetch('https://resume-builder-6p08.onrender.com/cvInfo', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
