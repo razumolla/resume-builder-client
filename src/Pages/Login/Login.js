@@ -58,8 +58,8 @@ const Login = () => {
 
     };
     return (
-        <div className='mt-10 '>
-            <h1 className='pt-20 pb-10 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO LOGIN</h1>
+        <div className=' login'>
+            <h1 className='pt-20 text-primary pb-10 sm:text-3xl font-extrabold  lg:text-3xl'>WELCOME TO LOGIN</h1>
 
 
 
@@ -69,7 +69,7 @@ const Login = () => {
                 <div className="card w-96 bg-white mb-5  login_div p-2">
 
 
-                    <div className="card-body dark:bg-cyan-900">
+                    <div className="card-body">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
