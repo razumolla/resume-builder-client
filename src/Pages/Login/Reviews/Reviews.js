@@ -40,19 +40,18 @@ export default function Reviews() {
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
-        centeredSlides={true}
      
         pagination={{
           clickable: true,
         }}
-        slidesPerView={"auto"}
+        slidesPerView={3}
         navigation={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         modules={[EffectCoverflow, Pagination,Navigation]}
         className="mySwiper"
