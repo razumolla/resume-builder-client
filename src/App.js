@@ -93,7 +93,7 @@ function App() {
             <ResumeForm></ResumeForm>
           </RequireAuth>
         } />
-        <Route path="cv/form" element={
+        <Route path="cv/form/:id" element={
           <RequireAuth>
             <FormCv></FormCv>
           </RequireAuth>

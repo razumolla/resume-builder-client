@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import Loding from '../Shared/Loding';
 import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../hooks/useToken';
+import login_img_1 from '../../assets/images/login_image.jpg'
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
@@ -52,13 +53,25 @@ const SignUp = () => {
     };
     return (
         <div className='mt-10'>
-            <h1 className='pt-20 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>WELCOME TO REGISTRATION</h1>
+            <h1 className='sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
+
+
+             <div class="avatar">
+                        <div class="w-40 mx-auto rounded-full">
+                            <img src={login_img_1} alt=""/>
+                        </div>
+                    </div>
+                    <h1 className='sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>REGISTRATION</h1>
+
             <div className='flex justify-center items-center mt-5 '>
 
-                <div className="card w-96 bg-white shadow-xl mb-5 dark:bg-cyan-900 ">
+           
+
+                <div className="card w-96 shadow-xl mb-5 dark:bg-cyan-900 login_div">
 
                     <div className="card-body my">
 
+                   
                         <form onSubmit={handleSubmit(onSubmit)}>
 
                             <div className="form-control w-full max-w-xs">
@@ -85,30 +98,6 @@ const SignUp = () => {
                                 </label>
                             </div>
 
-
-                            {/*  <div className="form-control w-full max-w-xs">
-                                <label className="label">
-                                    <span className="label-text">Last Name</span>
-                                </label>
-
-                                <input type="text"
-                                    placeholder="Last Name"
-                                    className="input input-bordered w-full max-w-xs"
-                                    {...register("lastName", {
-                                        required: {
-                                            value: true,
-                                            message: 'Last Name is Required'
-                                        },
-
-                                    })}
-                                />
-
-                                <label className="label">
-                                    {errors.lastName?.type === 'required' && <span className="label-text-alt text-red-500">{errors.lastName.message}</span>}
-
-
-                                </label>
-                            </div> */}
 
 
                             <div className="form-control w-full max-w-xs">
