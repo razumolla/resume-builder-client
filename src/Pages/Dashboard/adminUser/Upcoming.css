@@ -1,0 +1,27 @@
+
+   
+   .turning {
+     width:28px;
+     height:28px;
+     border-radius: 50%;
+     background:rgb(4, 49, 63);
+     box-shadow: 0 0 0 0 rgba(3, 37, 51, 0.267);
+     animation:pl2 2s infinite linear;
+     position: relative;
+   }
+   .turning:before,
+   .turning:after {
+     content:"";
+     position: absolute;
+     inset:0;
+     border-radius: inherit;
+     box-shadow: 0 0 0 0 rgba(9, 32, 43, 0.267);
+     animation: inherit;
+     animation-delay: -0.5s;
+   }
+   .turning:after {
+     animation-delay: -1s;
+   }
+   @keyframes pl2 {
+       100% {box-shadow: 0 0 0 40px #0000}
+   }
