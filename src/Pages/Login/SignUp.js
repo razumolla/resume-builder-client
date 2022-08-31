@@ -178,7 +178,7 @@ const SignUp = () => {
                   />
                 </form>
 
-                <p>
+                <p className="text-white">
                   {" "}
                   Already have an Account??{" "}
                   <small>

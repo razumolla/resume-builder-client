@@ -131,7 +131,7 @@ const Login = () => {
                             <input className='btn btn-outline bg-secondary w-full max-w-xs' type="submit" value='Login' />
                         </form>
 
-                        <p> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
+                        <p className='text-white'> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
                         <div className="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>

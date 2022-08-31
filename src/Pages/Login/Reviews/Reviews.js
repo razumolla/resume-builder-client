@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
+import { EffectCoverflow, Pagination,  Navigation } from "swiper";
 
 export default function Reviews() {
   const [testimonial, setTestimonial] = useState([]);
@@ -41,17 +41,17 @@ export default function Reviews() {
         pagination={{
           clickable: true,
         }}
-        slidesPerView={3}
+        slidesPerView={"auto"}
         navigation={true}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 55,
           stretch: 0,
           depth: 100,
           modifier: 1,
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper px-5 mx-auto gap-5"
       >
         {testimonial.map((review) => (
           <SwiperSlide key={review._id}>

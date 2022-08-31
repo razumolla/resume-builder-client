@@ -27,13 +27,15 @@ const Hired = () => {
 
             <Swiper
                 slidesPerView={3}
-                spaceBetween={50}
+                spaceBetween={70}
+                loop={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
 
                 modules={[Autoplay]}
+       
                 className="mySwiper h-48 pb-20 mb-14"
             >
                 <SwiperSlide className='google-img' ><a href="https://www.google.com" target='_blank'><img src={google} alt="" /></a></SwiperSlide>
@@ -48,10 +50,13 @@ const Hired = () => {
 
                 <SwiperSlide className='microsoft-png'><a href="https://www.Microsoft.com" target='_blank'><img src={mic} alt="" /></a></SwiperSlide>
 
+
                 <SwiperSlide className='walton-img'><a href="https://www.amazon.com" target='_blank'><img src={walton} alt="" className="w-30" /></a></SwiperSlide>
 
 
                 <SwiperSlide className='air-img'><a href="https://www.amazon.com" target='_blank'><img src={air} alt="" className="w-30" /></a></SwiperSlide>
+
+               
             </Swiper >
         </div >
     );
