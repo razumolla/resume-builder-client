@@ -10,7 +10,7 @@ const Form = () => {
 
         const user = { name, email }
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://resume-builder-6p08.onrender.com/user', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

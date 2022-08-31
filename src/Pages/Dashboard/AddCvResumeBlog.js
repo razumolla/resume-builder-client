@@ -40,7 +40,7 @@ const AddCvResumeBlog = () => {
                         img: img,
                     }
                     // send to your database
-                    fetch('http://localhost:5000/cvResumeBlog', {
+                    fetch('https://resume-builder-6p08.onrender.com/cvResumeBlog', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

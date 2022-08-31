@@ -5,7 +5,7 @@ const PersonalDevelopment = () => {
     const [personalDevBlogs, setPersonalDevBlogs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/personalDevBlog')
+        fetch('https://resume-builder-6p08.onrender.com/personalDevBlog')
             .then(res => res.json())
             .then(data => setPersonalDevBlogs(data))
     }, [])

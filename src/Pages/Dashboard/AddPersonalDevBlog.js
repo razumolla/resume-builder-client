@@ -40,7 +40,7 @@ const AddPersonalDevBlog = () => {
                         img: img,
                     }
                     // send to your database
-                    fetch('http://localhost:5000/personalDevBlog', {
+                    fetch('https://resume-builder-6p08.onrender.com/personalDevBlog', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

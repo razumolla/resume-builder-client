@@ -41,41 +41,44 @@ const CoverLetterDisplay6 = ({ formData, submitted }) => {
     return (
         <div className='my-10 mb-96 bg-gray-100 shadow-xl'>
             <div className="card  bg-gray-100  ">
-                <div className="card-body text-left ml-6 " id='coverLetter'>
+                <div className="card-body text-left ml-6 dark:text-black" id='coverLetter'>
                     <div>
                         <div className='border border-spacing-36  border-pink-900 h-3 bg-fuchsia-800 border-none'></div>
                         <div className='text-center'>
                             <h1 className='text-4xl text-gray-600 font-bold break-words '>{name}</h1>
                             <h1 className='text-2xl mt-2 text-gray-600 mb-2 font-bold break-words'>{designation}</h1>
                         </div>
-                        <div className='text-left'>
-                            <small className='font-semibold break-words'><i className="fa-solid fa-envelope "></i> {email}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-solid fa-phone-flip "></i> {phone}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-solid fa-location-dot"></i> {address}</small> <br />
-                            <small className='font-semibold break-words'><i className="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
+                        <div className='text-left dark:text-black'>
+                            <small className='font-semibold break-words dark:text-black'><i className="fa-solid fa-envelope "></i> {email}</small> <br />
+                            <small className='font-semibold break-words dark:text-black'><i className="fa-solid fa-phone-flip "></i> {phone}</small> <br />
+                            <small className='font-semibold break-words dark:text-black'><i className="fa-solid fa-location-dot"></i> {address}</small> <br />
+                            <small className='font-semibold break-words dark:text-black'><i className="fa-brands fa-linkedin-in"></i> {linkedin}</small> <br />
 
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
 
-                    <div >
-                        <h2 className='text-xl font-bold break-words'>{dear}</h2>
-                        <p className='break-words'>{professionalCareer}
-                        </p>
-                    </div>
-                    <div className='mt-3'>
-                        <p className='break-words'> {achievements}</p>
-                    </div>
-                    <div className='mt-3'>
-                        <p className=' break-words'>{characteristics}
-                        </p>
+                    <div className='dark:text-black'>
+                        <div >
+                            <h2 className='text-xl font-bold break-words'>{dear}</h2>
+                            <p className='break-words'>{professionalCareer}
+                            </p>
+                        </div>
+                        <div className='mt-3'>
+                            <p className='break-words'> {achievements}</p>
+                        </div>
+                        <div className='mt-3'>
+                            <p className=' break-words'>{characteristics}
+                            </p>
+                        </div>
+
+                        <div className="mt-10 mb-28 ">
+
+                            <p className='text-xl break-words mb-3'>Sincerely.</p>
+                            <p className='text-xl break-words'>{signatureName}</p>
+                        </div>
                     </div>
 
-                    <div className="mt-10 mb-28 ">
-
-                        <p className='text-xl break-words mb-3'>Sincerely.</p>
-                        <p className='text-xl break-words'>{signatureName}</p>
-                    </div>
                 </div>
             </div>
             <div className='py-4 ml-8'>

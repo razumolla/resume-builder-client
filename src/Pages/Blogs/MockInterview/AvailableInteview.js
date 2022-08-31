@@ -13,7 +13,7 @@ const AvailableInteview = ({ selected }) => {
     const formattedDate = format(selected, 'PP');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/available?date=${formattedDate}`)
+        fetch(`https://resume-builder-6p08.onrender.com/available?date=${formattedDate}`)
             .then(res => res.json())
             .then(data => setInterviews(data))
     }, [formattedDate])

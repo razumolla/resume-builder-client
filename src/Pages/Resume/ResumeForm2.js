@@ -62,7 +62,7 @@ const ResumeForm2 = () => {
         setSubmitted(!submitted);
         console.log(formData);
 
-        fetch('http://localhost:5000/resume', {
+        fetch('https://resume-builder-6p08.onrender.com/resume', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

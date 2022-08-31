@@ -1,17 +1,17 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
-const User = ({ user, refetch ,index}) => {
+const User = ({ user, refetch, index }) => {
   const [show, setShow] = useState([]);
 
 
-  const { email, role} = user;
+  const { email, role } = user;
 
-// useEffect(() => {
-//       fetch('http://localhost:5000/user')
-//       .then((res) => res.json())
-//       .then((data) => setShow(data));
-//   }, []);
+  // useEffect(() => {
+  //       fetch('https://resume-builder-6p08.onrender.com/user')
+  //       .then((res) => res.json())
+  //       .then((data) => setShow(data));
+  //   }, []);
 
 
   const makedelete = (id) => {
@@ -19,7 +19,7 @@ const User = ({ user, refetch ,index}) => {
     if (proceed) {
       console.log("deleted");
 
-      fetch(`http://localhost:5000/user/${id}`, {
+      fetch(`https://resume-builder-6p08.onrender.com/user/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -31,7 +31,7 @@ const User = ({ user, refetch ,index}) => {
 
   const makeAdmin = () => {
     console.log("made succecfully");
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://resume-builder-6p08.onrender.com/user/admin/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -63,13 +63,13 @@ const User = ({ user, refetch ,index}) => {
 
   return (
 
-   
+
     <tr>
-      
-      <td>{index+1} </td>
+
+      <td>{index + 1} </td>
       <td className="font-bold">{email}</td>
       <td>
-        {role !== "admin" &&  (
+        {role !== "admin" && (
           <button onClick={makeAdmin} className="btn btn-xs  text-white bg-violet-600">
             Make Admin
           </button>
@@ -83,7 +83,7 @@ const User = ({ user, refetch ,index}) => {
 
       <ToastContainer />
     </tr>
-   
+
   );
 };
 

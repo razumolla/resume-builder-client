@@ -56,7 +56,8 @@ const CoverLetterDisplay4 = ({ formData, submitted }) => {
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
-                    <div className='pl-3 w-full md:w-2/3'>
+
+                    <div className='pl-3 w-full md:w-2/3 dark:text-black'>
                         {/* <div className='border border-spacing-28  border-pink-600 h-1 bg-pink-600'></div> */}
                         <div >
                             <h2 className='text-xl font-bold break-words'>{dear}</h2>

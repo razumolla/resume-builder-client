@@ -61,7 +61,7 @@ const CoverLetterDisplayThree = ({ formData, submitted }) => {
                         </div>
                     </div>
                     <div className='divider'></div>
-                    <div className='p-3'>
+                    <div className='p-3 dark:text-black'>
                         <div >
                             <h2 className='text-2xl font-bold break-words mb-6'>{dear}</h2>
                             <p className='break-words text-xl'>{professionalCareer}

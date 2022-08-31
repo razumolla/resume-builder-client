@@ -17,7 +17,7 @@
     "daisyui": "^2.20.0",
     "date-fns": "^2.29.2",
     "draft-js": "^0.11.7",
-    "firebase": "^9.9.2",
+    "firebase": "^9.9.3",
     "html2canvas": "^1.4.1",
     "i18next": "^21.9.0",
     "jspdf": "^2.5.1",
