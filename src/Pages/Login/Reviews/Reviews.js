@@ -8,21 +8,17 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
-
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
 export default function Reviews() {
   const [testimonial, setTestimonial] = useState([]);
 
-
   useEffect(() => {
     fetch("https://resume-builder-6p08.onrender.com/reviews")
       .then((res) => res.json())
       .then((data) => setTestimonial(data));
   }, []);
-
 
   return (
     <section className="mb-24 mt-20">
@@ -42,19 +38,17 @@ export default function Reviews() {
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
-        centeredSlides={true}
-
         pagination={{
           clickable: true,
         }}
-        slidesPerView={"auto"}
+        slidesPerView={3}
         navigation={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
