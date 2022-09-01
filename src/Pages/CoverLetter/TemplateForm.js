@@ -37,7 +37,7 @@ const TemplateForm = () => {
         alert('submitted');
         console.log(formData);
 
-        fetch('http://localhost:5000/aboutForm', {
+        fetch('https://resume-builder-6p08.onrender.com/aboutForm', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

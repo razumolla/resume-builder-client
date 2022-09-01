@@ -60,6 +60,7 @@ const Login = () => {
 
     };
     return (
+
         <div className='mt-10 '>
             <h1 className='sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
             <div class="avatar">
@@ -68,13 +69,16 @@ const Login = () => {
                 </div>
             </div>
 
+
             <h1 className='sm:text-3xl p-3 font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>LOGIN</h1>
             <div className='flex justify-center items-center'>
 
                 <div className="card w-96 bg-white mb-5 login_div">
 
+
                 
                     <div className="card-body dark:bg-cyan-900">
+
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -136,7 +140,7 @@ const Login = () => {
                             <input className='btn btn-outline bg-secondary w-full max-w-xs' type="submit" value='Login' />
                         </form>
 
-                        <p> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
+                        <p className='text-white'> New to Resume Builder?? <small><Link className='text-secondary font-bold' to="/signup">Create an Account</Link></small></p>
                         <div className="divider text-secondary">Or Continue With</div>
 
                         <div className='flex justify-center items-center gap-5'>

@@ -60,6 +60,7 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
                         </div>
                     </div>
                     {/* <div className='divider bg-pink-600'></div> */}
+
                     <div className='border border-spacing-28  border-pink-600 h-1 bg-pink-600'></div>
                     <div >
                         <h2 className='text-xl font-bold break-words dark:text-black'><span className='dark:text-black'>{dear}</span> </h2>
@@ -79,6 +80,7 @@ const CoverLetterDisplay = ({ formData, submitted }) => {
                         <p className='text-xl break-words mb-3 dark:text-black'>Sincerely.</p>
                         <p className='text-xl break-words dark:text-black'>{signatureName}</p>
                     </div>
+
 
                     <div>
                         <div className='border border-spacing-28  border-pink-600 h-3 bg-pink-600'></div>

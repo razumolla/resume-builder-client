@@ -10,7 +10,7 @@ const MyProfile = () => {
 
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl px-12 mx-10 w-3/4 dark:bg-cyan-900">
+      <div className="card card-side  bg-base-100 shadow-xl px-12 mx-10 w-3/4 dark:bg-cyan-900 sm:w-auto">
 
         <figure>
           <img src={user.photoURL ? user.photoURL :

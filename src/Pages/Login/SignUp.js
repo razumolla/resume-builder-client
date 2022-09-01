@@ -1,29 +1,40 @@
-import React from 'react';
-import '../Login/Login.css'
-import '../Login/Login.css'
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
+import React from "react";
+import "../Login/Login.css";
+import "../Login/Login.css";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
+
 import Loding from '../Shared/Loding';
 import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../hooks/useToken';
 import login_img_1 from '../../assets/images/login_image.jpg'
 
+
 const SignUp = () => {
-    const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
-    const navigate = useNavigate();
-    let signInError;
+  const [signInWithGoogle, gUser, gloading, gError] = useSignInWithGoogle(auth);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+  const navigate = useNavigate();
+  let signInError;
 
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth);
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    const [token] = useToken(user || gUser);
+  const [token] = useToken(user || gUser);
+
 
     if (error || gError || updateError) {
         signInError = <p className='text-red-500 '><small>{error?.message || gError?.message || updateError?.message}</small></p>
@@ -51,6 +62,7 @@ const SignUp = () => {
         // console.log(data)
 
     };
+
     return (
         <div className='mt-10'>
             <h1 className='sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
@@ -177,7 +189,9 @@ const SignUp = () => {
                 </div>
             </div>
         </div>
+
     );
-};
+  }
+
 
 export default SignUp;

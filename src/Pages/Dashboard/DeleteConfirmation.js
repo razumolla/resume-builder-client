@@ -5,7 +5,7 @@ const DeleteConfirmation = ({ deletingAppointment, setDeletingAppointment, appoi
     const { _id, interview } = deletingAppointment;
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/appointment/${id}`, {
+        fetch(`https://resume-builder-6p08.onrender.com/appointment/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

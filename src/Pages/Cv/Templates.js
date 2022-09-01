@@ -7,7 +7,9 @@ const Templates = () => {
     console.log(templates);
     useEffect(() => {
 
+
         fetch('http://localhost:5000/cvPhoto')
+
             .then(res => res.json())
             .then(data => {
                 setTemplates(data)

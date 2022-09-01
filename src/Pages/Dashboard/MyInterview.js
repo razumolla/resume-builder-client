@@ -13,7 +13,7 @@ const MyInterview = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/appointment?student=${user.email}`)
+            fetch(`https://resume-builder-6p08.onrender.com/appointment?student=${user.email}`)
                 .then(res => res.json())
                 .then(data => setAppointments(data))
         }

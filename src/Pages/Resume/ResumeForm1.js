@@ -62,7 +62,7 @@ const ResumeForm1 = () => {
         setSubmitted(!submitted);
         console.log(formData);
 
-        fetch('http://localhost:5000/resume', {
+        fetch('https://resume-builder-6p08.onrender.com/resume', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -78,8 +78,6 @@ const ResumeForm1 = () => {
 
 
     return (
-
-
 
         <div className='mt-24 mb-16 m-10 '>
             <div className='lg:flex flex-col md:flex-row gap-5'>

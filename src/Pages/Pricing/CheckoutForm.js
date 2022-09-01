@@ -11,7 +11,11 @@ const CheckoutForm = ({ price }) => {
 
     const [user, loading] = useAuthState(auth);
     // console.log(price)
+
     const navigate = useNavigate();
+
+
+
     // console.log(user.email)
     const email = user.email;
 
@@ -27,7 +31,7 @@ const CheckoutForm = ({ price }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://resume-builder-6p08.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -130,7 +134,11 @@ const CheckoutForm = ({ price }) => {
                     success && <div className='text-secondary mt-3'>
                         <ToastContainer />
                         <p>{success}</p>
+
                         {/* <p>Your transaction id: <span className='text-secondary font-bold'>{transactionId}</span></p> */}
+
+                        <p>Your transaction id: <span className='text-secondary font-bold'>{transactionId}</span></p>
+
                     </div>
                 }
 

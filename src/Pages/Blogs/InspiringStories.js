@@ -5,7 +5,7 @@ const InspiringStories = () => {
     const [inspiringBlogs, setInspiringBlogs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/inspiringBlog')
+        fetch('https://resume-builder-6p08.onrender.com/inspiringBlog')
             .then(res => res.json())
             .then(data => setInspiringBlogs(data))
     }, [])

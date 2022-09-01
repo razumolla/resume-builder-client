@@ -33,7 +33,7 @@ const MyReview = () => {
 
     reset();
 
-    const url = "http://localhost:5000/reviews";
+    const url = "https://resume-builder-6p08.onrender.com/reviews";
     fetch(url, {
       method: "POST",
       headers: {

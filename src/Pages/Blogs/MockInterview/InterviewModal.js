@@ -23,7 +23,7 @@ const InterviewModal = ({ mock, setMock, selected }) => {
             phoneNumber: e.target.phone.value,
         }
 
-        fetch('http://localhost:5000/appointment', {
+        fetch('https://resume-builder-6p08.onrender.com/appointment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
