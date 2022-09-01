@@ -21,6 +21,7 @@ const Navbar = () => {
   }
   const menuItems =
     <>
+
       <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/home">Home</NavLink></li>
       <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/resume">Resume</NavLink></li>
       <li className='ml-3 hover:bg-primary text-black dark:text-white'><NavLink to="/cv">CV</NavLink></li>
@@ -48,12 +49,12 @@ const Navbar = () => {
         <NavLink to="/pricing">Pricing</NavLink>
       </li>
       {user && (
-        <li className="hover:bg-primary text-black  dark:text-white">
+        <li className="hover:bg-primary ml-3 text-black  dark:text-white">
           <NavLink to="/dashboard">Dashboard </NavLink>
         </li>
       )}
 
-      <li className=" text-black dark:text-white">
+      <li className="text-black dark:text-white">
         {user ? (
           <button onClick={logout} className=" btn btn-ghost hover:bg-primary">
             Sign_Out
@@ -64,6 +65,7 @@ const Navbar = () => {
           </Link>
         )}
       </li>
+
     </>
 
 
@@ -136,6 +138,7 @@ const Navbar = () => {
             </svg>
           </label>
         )}
+
         <div className="px-5">
           {" "}
           <DarkMode></DarkMode>

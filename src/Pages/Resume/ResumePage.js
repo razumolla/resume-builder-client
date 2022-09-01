@@ -45,6 +45,7 @@ const ResumePage = ({ formData, submitted }) => {
         });
 
     }
+
     return (
         <div className='my-10'>
             <div className="w-full md:w-4/5 bg-base-100 shadow-xl mx-auto">

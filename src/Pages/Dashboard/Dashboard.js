@@ -2,7 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
-import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore,FaUsers,FaEdit,FaBimobject, FaRegEnvelopeOpen } from 'react-icons/fa';
+import { FaUserGraduate, FaBloggerB, FaNewspaper, FaCommentAlt, FaInnosoft, FaWindowRestore, FaUsers, FaEdit, FaBimobject, FaRegEnvelopeOpen } from 'react-icons/fa';
 
 import useAdmin from "../hooks/useAdmin";
 
@@ -42,7 +42,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/dashboard"
-                className="font-bold font-serif mt-14 shadow-inner  focus:bg-teal-300"
+                className="font-semiBold   font-serif mt-14 shadow-inner  focus:bg-teal-300"
               >
                 <FaUserGraduate /> My Profile
               </Link>
@@ -51,7 +51,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/dashboard/addCvResumeBlog"
-                className="font-bold font-serif  shadow-inner my-2 focus:bg-teal-300"
+                className="font-semiBold  font-serif  shadow-inner my-2 focus:bg-teal-300"
               >
                 <FaBloggerB /> Cv Resume Blog
               </Link>
@@ -59,7 +59,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/dashboard/addCoverLetterBlog"
-                className="font-bold font-serif  shadow-inner mb-2 focus:bg-teal-300"
+                className="font-semiBold  font-serif  shadow-inner mb-2 focus:bg-teal-300"
               >
                 <FaNewspaper /> Cover Letter Blog
               </Link>
@@ -67,7 +67,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/dashboard/addPersonalDevBlog"
-                className="font-bold font-serif  shadow-inner mb-2 focus:bg-teal-300"
+                className="font-semiBold  font-serif  shadow-inner mb-2 focus:bg-teal-300"
               >
                 <FaInnosoft /> Soft Skills Blog
               </Link>
@@ -75,7 +75,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/dashboard/addInspiringStoriesBlog"
-                className="font-bold font-serif  shadow-inner mb-2 focus:bg-teal-300"
+                className="font-semiBold  font-serif  shadow-inner mb-2 focus:bg-teal-300"
               >
                 <FaWindowRestore />
                 Inspiring stories
@@ -83,13 +83,13 @@ const Dashboard = () => {
             </li>
 
             <li>
-              <Link to="/dashboard/myInterview" className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300">
+              <Link to="/dashboard/myInterview" className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300">
                 <FaNewspaper /> Mock Interview
               </Link>
             </li>
 
             <li>
-              <Link to="/dashboard/myReview" className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300">
+              <Link to="/dashboard/myReview" className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300">
                 <FaCommentAlt /> My Review
               </Link>
             </li>
@@ -99,32 +99,32 @@ const Dashboard = () => {
             {admin && (
               <>
                 <li>
-                  <Link to="/dashboard/users" className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300">
-                  <FaUsers/>  All Users
+                  <Link to="/dashboard/users" className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300">
+                    <FaUsers />  All Users
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/dashboard/addtemplate"
-                    className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300"
+                    className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300"
                   >
-                 <FaEdit/>  Add Template
+                    <FaEdit />  Add Template
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/dashboard/blogmanage"
-                    className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300"
+                    className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300"
                   >
-                 <FaBimobject/>   Blog Manage
+                    <FaBimobject />   Blog Manage
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/dashboard/allreview"
-                    className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300"
+                    className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300"
                   >
-                <FaRegEnvelopeOpen/> All Review
+                    <FaRegEnvelopeOpen /> All Review
                   </Link>
                 </li>
               </>

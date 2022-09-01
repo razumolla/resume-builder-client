@@ -17,7 +17,7 @@ const Templates = () => {
                     <figure><img src={resume3} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div className="card-body">
                         <div className="card-actions justify-between">
-                            <Link to="/resume/form">
+                            <Link to="/resume">
                                 <button className="btn btn-primary rounded-2xl">Use Resume</button>
                             </Link>
                             <Link to="/resume">
@@ -31,7 +31,7 @@ const Templates = () => {
                     <figure><img src={resume2} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div className="card-body">
                         <div className="card-actions justify-between">
-                            <Link to="/cv/form">
+                            <Link to="/cv">
                                 <button className="btn btn-primary rounded-2xl">Use CV Template</button>
                             </Link>
                             <Link to="/cv">
@@ -45,7 +45,7 @@ const Templates = () => {
                     <figure><img src={resume1} alt="Shoes" className='mt-5' style={{ widht: '28rem', height: '28rem' }} /></figure>
                     <div className="card-body">
                         <div className="card-actions justify-between">
-                            <Link to="/templateForm">
+                            <Link to="/coverLetter">
                                 <button className="btn btn-primary rounded-2xl">Use Cover Letter</button>
                             </Link>
 

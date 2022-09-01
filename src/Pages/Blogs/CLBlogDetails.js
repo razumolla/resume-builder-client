@@ -8,7 +8,7 @@ const CLBlogDetails = () => {
 
     return (
         <div className='flex justify-center p-10'>
-            <div className="card w-full lg:w-3/4  bg-base-100 shadow-xl">
+            <div className="card w-full lg:w-3/4  bg-base-100 shadow-xl dark:bg-cyan-900">
                 <figure><img src={cLBlog.img} alt="blog" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{cLBlog.blogTitle}</h2>
