@@ -70,38 +70,45 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/resume/form" element={<ResumeForm />} ></Route>
+        
         <Route path="/resume/form1" element={<ResumeForm1 />} ></Route>
         <Route path="/resume/form2" element={<ResumeForm2 />} ></Route>
 
-        <Route path="/cv/form/:id" element={<FormCv></FormCv>}></Route>
+        
+        {/* normal route */}
+        <Route path="/resume" element={
+          <Resume />
+        }></Route>
+        <Route path="/cv" element={
+          <Templates></Templates>
+        } />
+        <Route path="/coverLetter" element={
+          <CoverLetter></CoverLetter>
+        } />
 
+
+
+        {/* require route */}
+        <Route path="resume/form" element={
+          <RequireAuth>
+            <ResumeForm></ResumeForm>
+          </RequireAuth>
+        } />
+        <Route path="cv/form/:id" element={
+          <RequireAuth>
+            <FormCv></FormCv>
+          </RequireAuth>
+        } />
 
         <Route
-          path="/templateForm/:id"
-          element={<TemplateForm />}
-        ></Route>
-
-
-        <Route
-          path="resume"
+          path="templateForm/:id"
           element={
             <RequireAuth>
-              <Resume />
+              <TemplateForm />
             </RequireAuth>
-          }></Route>
 
-        <Route path="cv" element={
-          <RequireAuth>
-            <Templates></Templates>
-          </RequireAuth>
-        } />
-        <Route path="coverLetter" element={
-          <RequireAuth>
-            <CoverLetter></CoverLetter>
-          </RequireAuth>
-        } />
-
+          }
+        ></Route>
         <Route path="blog" element={
           <RequireAuth>
             <Blogs></Blogs>
@@ -179,7 +186,6 @@ function App() {
           </RequireAuth>
         }></Route>
 
-
         {/* interview question page start */}
         <Route path="/interviewQuestions" element={<InterviewQuestions />} />
         <Route path="/html" element={<InterviewQuesAnsHtml />} />
@@ -198,16 +204,11 @@ function App() {
       </Routes>
       <Footer></Footer>
 
-
-
-
-
-
-
       <ToastContainer />
 
     </div >
   );
+
 }
 
 export default App;

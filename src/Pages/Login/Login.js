@@ -9,6 +9,8 @@ import Loding from '../Shared/Loding';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../hooks/useToken';
 import { useEffect } from 'react';
+import login_img_1 from '../../assets/images/login_image.jpg'
+import login_img_2 from '../../assets/images/login-image2.jpg'
 
 
 const Login = () => {
@@ -58,18 +60,25 @@ const Login = () => {
 
     };
     return (
-        <div className=' login'>
-            <h1 className='pt-20 text-primary pb-10 sm:text-3xl font-extrabold  lg:text-3xl'>WELCOME TO LOGIN</h1>
+
+        <div className='mt-10 '>
+            <h1 className='sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
+            <div class="avatar">
+                <div class="w-40 mx-auto rounded-full">
+                    <img src={login_img_1} alt="" />
+                </div>
+            </div>
 
 
+            <h1 className='sm:text-3xl p-3 font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'>LOGIN</h1>
+            <div className='flex justify-center items-center'>
 
-            <div className='flex justify-center items-center  '>
+                <div className="card w-96 bg-white mb-5 login_div">
 
 
-                <div className="card w-96 bg-white mb-5  login_div p-2">
+                
+                    <div className="card-body dark:bg-cyan-900">
 
-
-                    <div className="card-body">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
 
