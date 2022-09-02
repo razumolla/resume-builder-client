@@ -57,6 +57,7 @@ import UpdateUserInfo from './Pages/Dashboard/adminUser/UpdateUserInfo';
 import BlogManage from './Pages/Dashboard/adminUser/BlogManage';
 import Reviews from './Pages/Login/Reviews/Reviews';
 import AllReviews from './Pages/Dashboard/adminUser/AllReviews';
+import AboutDev from './Pages/Home/AboutDev';
 
 
 
@@ -192,7 +193,7 @@ function App() {
 
         {/* interview question page end */}
 
-
+<Route path="/aboutdev" element={<AboutDev />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
