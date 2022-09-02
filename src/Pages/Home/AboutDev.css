@@ -1,28 +1,24 @@
 
 
 
+  /* !parent div */
+    .about-container
+    {
 
-    /* !new  */
     
-
-.about-container {
-     display: grid;
-     grid-template-columns: 300px 300px 300px;
-     grid-gap: 50px;
      justify-content: center;
-     align-items: center;
-     /* height: 80vh; */
-    
-   }
-   
+    }
+
+   /*? sigle div */
    .every-card {
      background-color: #edfcfd;
      box-shadow: 0px 0px 20px 1px rgba(3, 106, 124, 0.767);
      border-radius: 8px;
      display: flex;
      flex-direction: column;
+     margin-right: 1rem;
      align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
      color: rgb(27, 1, 14);
    }
    .every-card:hover{
@@ -32,7 +28,7 @@
    
    .card__name {
      margin-top: 10px;
-     font-size: 1.7em;
+     font-size: 1.4em;
      font-weight: 700;
      color: #6d053e;
    }
@@ -86,7 +82,7 @@
    
    .drawer-border:hover::before,
    .drawer-border:hover::after {
-     border-color: #eb196e;
+     border-color: #e70c72;
      -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
      transition: border-color 0s, width 0.25s, height 0.25s;
      width: 100%;
