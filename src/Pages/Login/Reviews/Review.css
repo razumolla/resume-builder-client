@@ -1,17 +1,18 @@
 .swiper {
-     width: 100%;
-     padding-top: 50px;
-     padding-bottom: 50px;
-   }
-   
-   .swiper-slide {
-     background-position: center;
-     background-size: cover;
-     width: 400px;
-     height: 400px;
-   }
-   
-   .swiper-slide img {
-     display: block;
-     width: 100%;
-   }
+  width: 100%;
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+  /* padding-right: 50px; */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 440px;
+  height: 400px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}

@@ -4,12 +4,17 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const CheckoutForm = ({ price }) => {
 
     const [user, loading] = useAuthState(auth);
     // console.log(price)
+
+    const navigate = useNavigate();
+
+
 
     // console.log(user.email)
     const email = user.email;
@@ -129,12 +134,18 @@ const CheckoutForm = ({ price }) => {
                     success && <div className='text-secondary mt-3'>
                         <ToastContainer />
                         <p>{success}</p>
+
+                        {/* <p>Your transaction id: <span className='text-secondary font-bold'>{transactionId}</span></p> */}
+
                         <p>Your transaction id: <span className='text-secondary font-bold'>{transactionId}</span></p>
+
                     </div>
                 }
-                <button className="btn btn-sm btn-outline bg-secondary w-full mt-10" type="submit" disabled={!stripe || !clientSecret}>
-                    Pay Now
-                </button>
+
+                {
+                    transactionId ? <Link to="/home"><button className="btn btn-sm btn-outline bg-secondary w-full mt-10" type="submit"> Go to Home Page</button></Link>:<button className="btn btn-sm btn-outline bg-secondary w-full mt-10" type="submit" disabled={!stripe || !clientSecret}>Pay Now</button>
+                }
+
             </form>
 
 

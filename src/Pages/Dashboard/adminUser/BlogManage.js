@@ -1,15 +1,13 @@
 import React from 'react'
-import CoverLetterAll from '../../Blogs/CoverLetterAll'
-import CoverLetterBlog from '../../Blogs/CoverLetterBlog'
-import CvResume from '../../Blogs/CvResume'
-import PersonalDevBlog from '../../Blogs/PersonalDevBlog'
+
+import Upcoming from './Upcoming'
 
 export default function BlogManage() {
      
   return (
-    <div>
+    <div className='flex justify-center items-center mt-20'>
 
-<h1>All Blogs Here</h1>
+<Upcoming/>
 
 
     </div>

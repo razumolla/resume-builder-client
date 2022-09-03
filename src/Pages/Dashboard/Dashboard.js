@@ -105,8 +105,13 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <Link
+
                     to="/dashboard/addtemplate"
                     className="font-semiBold  font-serif  shadow-inner mb-1 focus:bg-teal-300"
+
+                    to="/dashboard/blogmanage"
+                    className="font-bold font-serif  shadow-inner mb-1 focus:bg-teal-300"
+
                   >
                     <FaEdit />  Add Template
                   </Link>
