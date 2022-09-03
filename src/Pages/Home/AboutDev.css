@@ -1,0 +1,176 @@
+
+
+
+  /* !parent div */
+    .about-container
+    {
+
+    
+     justify-content: center;
+    }
+
+   /*? sigle div */
+   .every-card {
+     background-color: #edfcfd;
+     box-shadow: 0px 0px 20px 1px rgba(3, 106, 124, 0.767);
+     border-radius: 8px;
+     display: flex;
+     flex-direction: column;
+     margin-right: 1rem;
+     align-items: center;
+    margin-bottom: 0.5rem;
+     color: rgb(27, 1, 14);
+   }
+   .every-card:hover{
+     background-color: rgb(245, 238, 229);
+     box-shadow: 0px 0px 20px 1px rgba(180, 175, 108, 0.89);
+   }
+   
+   .card__name {
+     margin-top: 10px;
+     font-size: 1.4em;
+     font-weight: 700;
+     color: #6d053e;
+   }
+   
+   .card__image {
+     height: 140px;
+     width: 140px;
+     border-radius: 50%;
+     border: 3px solid #059c9c;
+     margin-top: 15px;
+     box-shadow: 0 10px 50px rgb(136, 198, 223);
+   }
+   
+   
+   .drawer-border {
+     box-shadow: inset 0 0 0 4px #58cdd1;
+     color: #f1f6f8;
+     text-align: center;
+     font-weight: 700;
+     -webkit-transition: color 0.25s 0.0833333333s;
+     transition: color 0.25s 0.0833333333s;
+     position: relative;
+   }
+   
+   .drawer-border::before,
+   .drawer-border::after {
+     border: 0 solid transparent;
+     box-sizing: border-box;
+     content: '';
+     pointer-events: none;
+     position: absolute;
+     width: 0rem;
+     height: 0;
+     bottom: 0;
+     right: 0;
+   }
+   
+   .drawer-border::before {
+     border-bottom-width: 3px;
+     border-left-width: 3px;
+   }
+   
+   .drawer-border::after {
+     border-top-width: 3px;
+     border-right-width: 3px;
+   }
+   
+   .drawer-border:hover {
+     color: #ebca5f;
+   }
+   
+   .drawer-border:hover::before,
+   .drawer-border:hover::after {
+     border-color: #e70c72;
+     -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+     transition: border-color 0s, width 0.25s, height 0.25s;
+     width: 100%;
+     height: 100%;
+   }
+   
+   .drawer-border:hover::before {
+     -webkit-transition-delay: 0s, 0s, 0.35s;
+     transition-delay: 0s, 0s, 0.35s;
+   }
+   
+   .drawer-border:hover::after {
+     -webkit-transition-delay: 0s, 0.25s, 0s;
+     transition-delay: 0s, 0.25s, 0s;
+   }
+   
+   .btn-about {
+    background-color: #1a0208;
+     border: none;
+     cursor: pointer;
+ 
+     font: 700 1.2rem ;
+     padding: 0.75em 2em;
+     letter-spacing: 0.05rem;
+     margin: 1em;
+     width: 13rem;
+   }
+   
+   .btn-about:focus {
+     outline: 2px dotted #24e4eb;
+   }
+   
+   
+   .social-icons {
+     padding: 0;
+     list-style: none;
+     margin: 1em;
+   }
+   
+   .social-icons li {
+     display: inline-block;
+     margin: 0.3em;
+     position: relative;
+     font-size: 1.3em;
+   }
+   
+   .social-icons svg{
+     color: rgb(228, 205, 217);
+     background-color: #adf8f8;
+     position: absolute;
+     text-align: center;
+     bottom: .8rem !important;
+   right: .28rem;
+     transition: all 265ms ease-out;
+   }
+   
+   .social-icons a {
+     display: inline-block;
+   }
+   
+   .social-icons a:before {
+     transform: scale(1);
+     -ms-transform: scale(1);
+     -webkit-transform: scale(1);
+     content: " ";
+     width: 50px;
+     height: 50px;
+     
+     border-radius: 100%;
+     display: block;
+     background: linear-gradient(25deg, #4ce7e7, #0d95f0);
+     transition: all 265ms ease-out;
+   }
+   
+   .social-icons a:hover:before {
+     transform: scale(0);
+     transition: all 265ms ease-in;
+   }
+   
+   .social-icons a:hover svg {
+     transform: scale(1.2);
+     -ms-transform: scale(1.3);
+     -webkit-transform: scale(1.7);
+     color: #f7f3f4;
+     background: -webkit-linear-gradient(45deg, #f12ff1, #f51690);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     transition: all 265ms ease-in;
+   }
+   
+  

@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import computer from "../../assets/images/Computer.png";
 import AnimatedText from "react-animated-text-content";
+import { Link } from "react-router-dom";
 export default function About() {
   return (
     <div className="hero justify-center align-middle sm:mt-0 lg:mt-40">
@@ -44,7 +45,7 @@ export default function About() {
             website for create your unique and favoulous cv.You can create and customize your resume.
           </p>
           <div className="flex justify-center lg:justify-start">
-            <button className="btn button get">Get Started</button>
+            <button className="btn button get"> <Link to="/aboutdev">Get Started</Link></button>
           </div>
         </div>
       </div>
