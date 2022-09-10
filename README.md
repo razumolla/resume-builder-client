@@ -7,4 +7,5 @@
 *
 *
 
+### `npm install`
 ### `npm start`
