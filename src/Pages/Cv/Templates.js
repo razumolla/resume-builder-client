@@ -13,7 +13,7 @@ const Templates = () => {
             .then(res => res.json())
             .then(data => {
                 setTemplates(data)
-                // console.log(setTemplates(data))
+                
             })
     }, [])
     return (
