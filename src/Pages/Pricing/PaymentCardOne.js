@@ -9,7 +9,7 @@ import Payment from './Payment';
 
 const PaymentCardOne = () => {
 
-    const price1 = 19.99;
+    const price1 = 19.99; // this is price for checking
     return (
         <div className=''>
             <h1 className='pt-5 sm:text-3xl font-extrabold text-transparent lg:text-3xl bg-clip-text bg-secondary'></h1>
